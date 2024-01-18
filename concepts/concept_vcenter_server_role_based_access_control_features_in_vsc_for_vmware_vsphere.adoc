@@ -38,7 +38,7 @@ Pour effectuer correctement une tâche, vous devez disposer des rôles RBAC vCen
 
 NOTE: Les rôles de serveur vCenter s'appliquent aux utilisateurs vCenter des outils ONTAP, et non aux administrateurs. Par défaut, les administrateurs disposent d'un accès complet au produit et n'ont pas besoin de rôles qui leur sont attribués.
 
-Les utilisateurs et les groupes n'ont pas de rôles qui leur sont attribués. Ils peuvent accéder à un rôle en faisant partie d'un rôle vCenter Server.
+Les utilisateurs et les groupes peuvent accéder à un rôle en faisant partie d'un rôle vCenter Server.
 
 
 

@@ -404,7 +404,6 @@ Get Aggregate ID, Storage_ID(SVM UUID) using ONTAP REST API.</block>
   <block id="ce7cb9480d630713fc44a2f9e2273a42" category="list-text">Cliquez sur l'icône *Ajouter*.</block>
   <block id="ef59b5af74d1b1aa24395b9491647640" category="list-text">Entrez les informations de connexion du fournisseur de stockage :</block>
   <block id="77cef77e665ad7d002465ac0ebd7fb15" category="list-text">Nom : tout nom convivial comme « ScaleoutVP »</block>
-  <block id="8830b67cd089d24cc92948e8271a67b0" category="list-text">URL :<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - Le nom dans l'URL correspond à l'adresse IP virtuelle fournie lors du déploiement d'OVA pour le déploiement d'un seul vCenter (ou) Nom de domaine pour les déploiements multi-vCenter.</block>
   <block id="7a7e4311e3d4256bb5dc8666f51daccb" category="list-text">Informations d'identification : &lt;nom d'utilisateur du fournisseur VASA&gt;/&lt; mot de passe du fournisseur VASA&gt; fourni lors du déploiement d'OVA.</block>
   <block id="fbce45ba9d44733fbab7b187a96af41e" category="list-text">Une fois le fichier VASA enregistré, cliquez sur *OK*.
 Assurez-vous qu'il est répertorié sous fournisseur de stockage et que l'état est en ligne.</block>
@@ -795,7 +794,6 @@ Pour une transmission réussie, vous devez utiliser la liste blanche 216.240.21.
   <block id="344687b1f8337fc7dd37917a74d46f9a" category="cell">Entité sur laquelle les actions sont exécutées. Les objets VMware vCenter sont des data centers, des dossiers, des pools de ressources, des clusters, des hôtes, et machines virtuelles</block>
   <block id="05206c56912863d79578b5fcb147092f" category="paragraph">Pour effectuer correctement une tâche, vous devez disposer des rôles RBAC vCenter Server appropriés. Au cours d'une tâche, les outils ONTAP vérifient les rôles du serveur vCenter d'un utilisateur avant de vérifier les privilèges ONTAP de l'utilisateur.</block>
   <block id="aafdd15db41596697a2eae0a7f4a1e48" category="admonition">Les rôles de serveur vCenter s'appliquent aux utilisateurs vCenter des outils ONTAP, et non aux administrateurs. Par défaut, les administrateurs disposent d'un accès complet au produit et n'ont pas besoin de rôles qui leur sont attribués.</block>
-  <block id="f8482d25f67ff16f85cd357691527065" category="paragraph">Les utilisateurs et les groupes n'ont pas de rôles qui leur sont attribués. Ils peuvent accéder à un rôle en faisant partie d'un rôle vCenter Server.</block>
   <block id="0f9feaf083615e8846e538d5b34566ac" category="section-title">Points clés sur l'attribution et la modification de rôles pour vCenter Server</block>
   <block id="3314432e9743e55f152832883016d5bb" category="paragraph">Vous n'avez besoin de configurer des rôles vCenter Server que si vous souhaitez limiter l'accès aux objets et aux tâches vSphere. Sinon, vous pouvez vous connecter en tant qu'administrateur. Cette connexion vous permet automatiquement d'accéder à tous les objets vSphere.</block>
   <block id="5fb4985540d209a017332028f425ead8" category="paragraph">L'emplacement où vous attribuez un rôle détermine les tâches des outils ONTAP qu'un utilisateur peut effectuer. Vous pouvez modifier un rôle à tout moment.
@@ -837,5 +835,10 @@ Effectuez les tâches associées au stockage back-end et aux outils ONTAP. Les r
   <block id="956040396bc93fbe70e3c9e235f5bfdb" category="sidebar">Accédez à la console de maintenance des outils ONTAP</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">Concepts</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">Contrôle d'accès basé sur des rôles</block>
-  <block id="96ab5f4eecc9217c7e8b30303647f507" category="sidebar">Présentation du contrôle d'accès basé sur des rôles pour les outils ONTAP</block>
+  <block id="d24271a1f22c82f9f35e39eb3c1987a9" category="list-text">URL :<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - Le nom dans l'URL correspond à l'adresse IP virtuelle fournie lors du déploiement d'OVA pour le déploiement d'un seul vCenter (ou) Nom de domaine pour les déploiements multi-vCenter. Ajoutez les certificats à l'URL. Les mêmes certificats sont publiés dans vCenter.</block>
+  <block id="706d26bec853805e4de29044300749ad" category="list-text">Nom d'utilisateur administrateur et mot de passe administrateur : il s'agit du mot de passe utilisé pour se connecter à l'interface utilisateur *ONTAP Tools Manager*.</block>
+  <block id="b910beb5fe2953d304ea1b38de1c4fa3" category="list-text">Obtenez les certificats CA (certificats racine, feuille et intermédiaire) auprès de l'autorité de certification commerciale.</block>
+  <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">Les utilisateurs et les groupes peuvent accéder à un rôle en faisant partie d'un rôle vCenter Server.</block>
+  <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">Delete vVols datastore workflow supprime datastore-volumes si vous avez passé l'indicateur delete_volume comme TRUE, que le datastore-volume soit géré ou non.</block>
+  <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Présentation du contrôle d'accès basé sur les rôles pour les outils ONTAP</block>
 </blocks>

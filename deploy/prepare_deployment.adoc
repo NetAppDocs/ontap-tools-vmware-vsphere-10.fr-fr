@@ -27,6 +27,7 @@ Voici la configuration requise pour les outils ONTAP avant de procéder au dépl
 * Assurez-vous que l'hôte ou le pool de ressources sur lequel l'OVA est déployé dispose des ressources minimales mentionnées dans la section *Configuration requise pour le déploiement des outils ONTAP*.
 * Supprimez le cache du navigateur.
 * Vous avez besoin de deux adresses IP virtuelles pour Load Balancer et Kubernetes API Server. Obtenez deux adresses IP gratuites dans le VLAN, utilisé pour le déploiement, qui est utilisé pour accéder aux services après le déploiement.
+* Obtenez les certificats CA (certificats racine, feuille et intermédiaire) auprès de l'autorité de certification commerciale.
 * Dans le cas d'un déploiement multi-vCenter où les certificats d'autorité de certification personnalisée sont obligatoires, mappez le *Nom de domaine* sur lequel le certificat est émis sur *Virtual IP*. Effectuez une vérification ping sur le nom de domaine pour vérifier si le domaine est résolu sur l'adresse IP prévue.
 * Une machine virtuelle de stockage sur ONTAP avec NFS activé est requise. Pour configurer la machine virtuelle de stockage, procédez comme suit :
 +
