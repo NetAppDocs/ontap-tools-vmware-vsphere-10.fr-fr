@@ -441,7 +441,6 @@ Exemple : pour une configuration mutualisée, vous pouvez ajouter le système ba
   <block id="f6a8c4418598dbac9139a7fe52e99cd9" category="admonition">En tant qu'utilisateur existant, vous devez effectuer la sauvegarde OVA à partir du 9.10/9.11 avant de passer au correctif 9.10D ou au correctif 9.11D</block>
   <block id="2db68a279bc2b75d7d1a4b6e68d05ff4" category="list-text">Activez le PORT Derby 1527 sur les outils ONTAP existants pour VMware vSphere 9.10D2 et 9.11D4. Pour activer le port, connectez-vous à l'interface de ligne de commande avec l'utilisateur root et exécutez la commande suivante :</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="inline-link-macro">Outils ONTAP démarrage rapide</block>
-  <block id="6f6b7bd58886693f11eb96bd0341b5b3" category="list-text">Déploiement des outils OVA pour ONTAP pour VMware vSphere 10.0. Voir <block ref="a02083ee995a4c6975877ba810ab5474" category="inline-link-macro-rx"></block></block>
   <block id="17a7ed8efe05072366e69496ed1711fb" category="list-text">Ajoutez le vCenter que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.0. Voir <block ref="a10f9e2fb5f93213a95f892ddd0bf865" category="inline-link-macro-rx"></block>.</block>
   <block id="184c4f313c0a230f7a83d7121fa485d7" category="inline-link-macro">Système back-end intégré</block>
   <block id="bf632d416dbc3267749473a4eedebc79" category="list-text">Système back-end de stockage intégré localement à partir des API vCenter du plug-in distant. Voir <block ref="3019410685f421965726529ee880cf27" category="inline-link-macro-rx"></block>. Ajoutez le stockage en tant que périmètre local pour la migration.</block>
@@ -675,7 +674,6 @@ Le menu Rapport récapitulatif de machine virtuelle de vvols fournit les indicat
   <block id="ff31982aef870d546d52f49bb30ef34b" category="section-title">De déploiement</block>
   <block id="26d3524e83da73ce160fdf15b9ee1f7f" category="paragraph">Avant de déployer les outils ONTAP pour VMware vSphere, vous devez vous familiariser avec les exigences en termes d'espace pour le package de déploiement et avec certaines exigences de base en matière de système hôte.</block>
   <block id="f4930bf161a0a7075db869066f0839f9" category="paragraph">Vous pouvez utiliser les outils ONTAP avec un serveur Windows vCenter ou avec un serveur virtuel VMware vCenter Server (vCSA). Vous devez déployer les outils ONTAP sur un système vSphere pris en charge qui inclut VMware ESXi.</block>
-  <block id="ec86808f81c82b9651e18a844d1ea19f" category="paragraph">Pour plus d'informations, voir <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
   <block id="86f56c72e0832c1bb59b9394dbcb0853" category="section-title">Configuration minimale requise pour les outils ONTAP</block>
   <block id="dfa57bc5abba0952197bf25265b987c7" category="list-text">Téléchargez le fichier .ova.</block>
   <block id="a81177e1cbc66e893d0b2b880b7fb4f4" category="list-text">Les informations d'identification de votre instance de vCenter Server.</block>
@@ -841,4 +839,6 @@ Effectuez les tâches associées au stockage back-end et aux outils ONTAP. Les r
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">Les utilisateurs et les groupes peuvent accéder à un rôle en faisant partie d'un rôle vCenter Server.</block>
   <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">Delete vVols datastore workflow supprime datastore-volumes si vous avez passé l'indicateur delete_volume comme TRUE, que le datastore-volume soit géré ou non.</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Présentation du contrôle d'accès basé sur les rôles pour les outils ONTAP</block>
+  <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">Déploiement des outils OVA pour ONTAP pour VMware vSphere 10.0. Voir <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
+  <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">Pour plus d'informations, voir <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -33,7 +33,7 @@ NOTE: En tant qu'utilisateur existant, vous devez effectuer la sauvegarde OVA à
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Déploiement des outils OVA pour ONTAP pour VMware vSphere 10.0. Voir link:../qsg_10.html["Outils ONTAP démarrage rapide"]
+. Déploiement des outils OVA pour ONTAP pour VMware vSphere 10.0. Voir link:../deploy/qsg_10.html["Outils ONTAP démarrage rapide"]
 . Ajoutez le vCenter que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.0. Voir link:../configure/add_vcenter.html["Ajoutez vCenter"].
 . Système back-end de stockage intégré localement à partir des API vCenter du plug-in distant. Voir link:../configure/onboard_svm.html["Système back-end intégré"]. Ajoutez le stockage en tant que périmètre local pour la migration.
 . Utilisez l'API suivante pour migrer :
