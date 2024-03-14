@@ -15,7 +15,7 @@ Vous pouvez configurer de nouveaux rôles et privilèges utilisateur pour la ges
 
 *Ce dont vous aurez besoin*
 
-* Vous devez avoir téléchargé le fichier privilèges ONTAP depuis les outils ONTAP en utilisant \https://<loadbalancerIP>:8443/Virtualization/user-Privileges/Users_roles.zip.
+* Vous devez avoir téléchargé le fichier privilèges ONTAP à partir des outils ONTAP à l'aide de `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 
 NOTE: La création d'utilisateurs s'effectue au niveau du cluster ou des serveurs virtuels de stockage directs (SVM). Vous pouvez également créer des utilisateurs sans utiliser le fichier user_roles.json et, si c'est le cas, vous devez disposer d'un ensemble minimal de privilèges au niveau du SVM.

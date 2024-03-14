@@ -19,7 +19,7 @@ Cette tâche vous permet d'instruments d'instruments ONTAP.
 
 *Étapes*
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez *systèmes back-end de stockage* dans la barre latérale.
 . Sélectionnez *Ajouter*.
 . Indiquez l'adresse IP du serveur ou le nom de domaine complet, le nom d'utilisateur et le mot de passe, puis sélectionnez *Ajouter*.

@@ -15,7 +15,7 @@ Vous pouvez collecter les fichiers journaux des outils ONTAP pour VMware vSphere
 
 *Étapes*
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez *Log Bundles* dans la barre latérale.
 +
 Cette opération peut prendre plusieurs minutes.

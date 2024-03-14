@@ -35,7 +35,7 @@ Utilisez l'URI suivant pour vérifier l'état :
 +
 [listing]
 ----
-https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+`\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 +
 Corps de demande pour le datastore NFS

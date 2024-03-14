@@ -21,7 +21,7 @@ Vous pouvez ajouter et gérer plusieurs instances vCenter 10.0 à l'aide d'une s
 
 *Étapes*
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez vCenters dans la barre latérale
 . Sélectionnez *ADD* pour intégrer les vCenters avec l'adresse IP/le nom d'hôte vCenter, le nom d'utilisateur, le mot de passe et le port.
 . Naviguez jusqu'à la page *Storage Backend* et sélectionnez *Ajouter au système de stockage interne* (cluster ONTAP) avec le nom d'hôte, le nom d'utilisateur, le mot de passe et le port.
@@ -38,7 +38,7 @@ Cette tâche vous permet de créer un mappage entre le système back-end de stoc
 
 *Étapes*
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez vCenters dans la barre latérale.
 . Cliquez sur les points de suspension verticaux en regard du vCenter que vous souhaitez associer ou dissocier avec les systèmes back-end de stockage.
 . Sélectionnez *associer ou dissocier le backend de stockage* en fonction de l'action que vous souhaitez effectuer.
@@ -53,7 +53,7 @@ Voir link:../configure/task_configure_user_role_and_privileges.html["Liste des p
 
 Suivez les étapes ci-dessous pour modifier les vCenters.
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez vCenters dans la barre latérale
 . Cliquez sur les points de suspension verticaux en regard du vCenter que vous souhaitez modifier et sélectionnez *Modifier*.
 . Modifiez les détails du vCenter et sélectionnez *Modifier*.
@@ -65,7 +65,7 @@ Suivez les étapes ci-dessous pour modifier les vCenters.
 
 Vous devez supprimer tous les systèmes back-end associés à vCenter avant de les supprimer.
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez vCenters dans la barre latérale
 . Cliquez sur les points de suspension verticaux en regard du vCenter que vous souhaitez supprimer et sélectionnez *Supprimer*.
 +

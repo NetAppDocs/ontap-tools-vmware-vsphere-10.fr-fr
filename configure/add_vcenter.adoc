@@ -19,7 +19,7 @@ Vous pouvez ajouter et gérer plusieurs instances vCenter 10.0 à l'aide d'une s
 
 *Étapes*
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez vCenters dans la barre latérale
 . Sélectionnez *ADD* pour intégrer les vCenters avec l'adresse IP/le nom d'hôte vCenter, le nom d'utilisateur, le mot de passe et le port.
 

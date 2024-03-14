@@ -26,7 +26,7 @@ Exemple : pour une configuration mutualisée, vous pouvez ajouter le système ba
 * Téléchargements de lots de journaux
 
 
-Pour accéder à l'interface utilisateur des outils ONTAP, lancez https://loadBalanceIP:8443/virtualization/ui/[] Depuis le navigateur et connectez-vous avec les informations d'identification de l'administrateur des outils ONTAP fournies lors du déploiement.
+Pour accéder à l'interface utilisateur des outils ONTAP, lancez `\https://loadBalanceIP:8443/virtualization/ui/` Depuis le navigateur et connectez-vous avec les informations d'identification de l'administrateur des outils ONTAP fournies lors du déploiement.
 
 image::../media/ontap_tools_manager.png[Interface du gestionnaire d'outils ONTAP]
 

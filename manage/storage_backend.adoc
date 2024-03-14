@@ -21,7 +21,7 @@ Pour ajouter des systèmes back-end, procédez comme suit :
 
 *Étapes*
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez *systèmes back-end de stockage* dans la barre latérale.
 . Sélectionnez *Ajouter*.
 
@@ -32,7 +32,7 @@ Pour ajouter des systèmes back-end, procédez comme suit :
 
 Suivez les étapes ci-dessous pour modifier le système back-end de stockage existant.
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez les systèmes back-end de stockage dans la barre latérale.
 . Sélectionnez le *back-end de stockage* que vous souhaitez modifier
 . Cliquez sur le menu des points de suspension verticaux et sélectionnez *Modifier*.
@@ -46,7 +46,7 @@ Suivez les étapes ci-dessous pour modifier le système back-end de stockage exi
 Vous devez supprimer tous les datastores connectés au système back-end de stockage avant de supprimer le système back-end.
 Suivez les étapes ci-dessous pour supprimer le système back-end de stockage.
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez *systèmes back-end de stockage* dans la barre latérale.
 . Sélectionnez le système back-end de stockage à supprimer
 . Cliquez sur le menu des points de suspension verticaux et sélectionnez *Supprimer*.

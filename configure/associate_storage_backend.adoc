@@ -19,7 +19,7 @@ Cette tâche vous permet de créer un mappage entre le système back-end de stoc
 
 *Étapes*
 
-. Lancement https://loadBalanceIP:8443/virtualization/ui/[] À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
+. Lancement `\https://loadBalanceIP:8443/virtualization/ui/` À partir d'un navigateur avec les informations d'identification de l'administrateur des outils ONTAP fournies pendant le déploiement.
 . Sélectionnez vCenters dans la barre latérale.
 . Cliquez sur les points de suspension verticaux en regard du vCenter que vous souhaitez associer aux systèmes back-end de stockage.
 . Sélectionnez Storage backend dans la liste déroulante.
