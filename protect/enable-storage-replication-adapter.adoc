@@ -1,0 +1,30 @@
+---
+permalink: protect/enable-storage-replication-adapter.html 
+sidebar: sidebar 
+keywords:  
+summary: Les outils ONTAP pour VMware vSphere permettent de configurer la reprise après incident en utilisant la fonctionnalité SRA avec les outils ONTAP pour VMware vSphere. 
+---
+= Activez SRA pour protéger les datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les outils ONTAP pour VMware vSphere permettent de configurer la reprise après incident en utilisant la fonctionnalité SRA avec les outils ONTAP pour VMware vSphere.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir configuré votre instance vCenter Server et votre hôte ESXi.
+* Vous devez avoir déployé des outils ONTAP.
+* Vous devez avoir téléchargé l'adaptateur SRA `.tar.gz` fichier du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^].
+
+
+*Étapes*
+
+. Connectez-vous à l'interface de gestion de l'appliance SRM à l'aide de l'URL : `\https://:<srm_ip>:5480`, Puis accédez à Storage Replication Adapters dans l'interface de gestion de l'appliance VMware SRM.
+. Sélectionnez *nouvel adaptateur*.
+. Téléchargez le programme d'installation _.tar.gz_ pour le plug-in SRA sur SRM.
+. Relancez l'analyse des cartes pour vérifier que les détails sont mis à jour sur les cartes de réplication de stockage SRM
+page.
+

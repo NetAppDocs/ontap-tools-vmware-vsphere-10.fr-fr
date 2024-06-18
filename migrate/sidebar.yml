@@ -2,5 +2,5 @@
 section: migrate
 title: Migrez les outils ONTAP
 entries:
-- title: Migrez vers la dernière version des outils ONTAP
-  url: "/migrate/migrate_to_ng.html"
+- title: Migrez vers les derniers outils ONTAP pour VMware vSphere
+  url: "/migrate/migrate-to-latest-ontaptools.html"
