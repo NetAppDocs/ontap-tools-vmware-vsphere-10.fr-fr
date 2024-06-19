@@ -23,7 +23,7 @@ Voici les outils ONTAP pour la configuration VMware vSphere requise avant de pro
 . Configurez et configurez votre environnement vCenter Server.
 . Téléchargez le fichier _.ova_.
 . (Facultatif) utilisé pour l'utilisateur d'automatisation : rassemblez le fichier JSON de collections Postman fourni par NetApp.
-. Informations d'identification du serveur vCenter parent pour déployer l'OVA.
+. Informations d'identification du serveur vCenter parent pour déployer l'OVA. Le mot de passe du serveur vCenter parent ne doit pas contenir ces caractères spéciaux ($, ', ")
 . Assurez-vous que l'hôte ou le pool de ressources sur lequel l'OVA est déployé dispose des ressources minimales mentionnées dans le link:../deploy/sizing-requirements.html["Conditions préalables au déploiement des outils ONTAP pour VMware vSphere"] section.
 . Les informations de connexion de votre instance vCenter Server à laquelle les outils ONTAP pour VMware vSphere se connecteront pour l'enregistrement après le déploiement.
 . Supprimez le cache du navigateur.
@@ -47,7 +47,7 @@ Les noms d'hôte doivent être mappés aux adresses IP libres sur le DNS avant l
 .. Protocole
 .. Adresses IP virtuelles pour le plan de contrôle Kubernetes.
 .. Liste déroulante HA/NON HA
-.. Liste des noms d'hôte)
+.. Liste des noms d'hôtes
 .. Adresses IP (chaîne)
 .. Nom de la bibliothèque de contenu
 .. Nom du modèle OVF

@@ -43,37 +43,32 @@ NOTE: Vous devez conserver l'adresse IP de l'équilibreur de charge et l'adresse
 +
 .. Nom d'utilisateur et mot de passe de l'application : ce nom d'utilisateur et ce mot de passe sont utilisés pour enregistrer à la fois le fournisseur VASA et SRA dans vCenter Server. Ceci peut être différent du nom d'utilisateur et du mot de passe fournis lors du déploiement initial.
 .. La case *Activer ASUP* est cochée par défaut.
-+
-AutoSupport peut être activé ou désactivé uniquement pendant le déploiement.
 
+
+
+
+AutoSupport peut être activé ou désactivé uniquement pendant le déploiement.
 .. Dans le champ *URL proxy ASUP*, indiquez cette URL pour éviter le blocage du pare-feu pour la transmission de données AutoSupport.
 .. Nom d'utilisateur administrateur et mot de passe administrateur : il s'agit du mot de passe utilisé pour se connecter au Gestionnaire d'outils ONTAP. Ceci peut être différent du nom d'utilisateur et du mot de passe fournis lors du déploiement initial.
 .. Entrez les informations relatives à votre serveur NTP dans le champ *serveurs NTP*.
 .. Mot de passe utilisateur de maintenance : permet d'accorder l'accès aux options de la console de maintenance.
-
-
 . Dans la fenêtre *Personnaliser le modèle* > *Configuration du déploiement*, entrez les détails fournis pendant le déploiement. Toutes les valeurs de cette section doivent être identiques à celles fournies lors du déploiement initial, à l'exception de la valeur de la LIF de données.
-+
+
 
 NOTE: Le nom du SVM de stockage ne doit pas être modifié, car il s'agit de l'emplacement de stockage des données de restauration. Cela s'applique également au compte utilisateur SVM directement ajouté.
-
 . Dans le cas d'une restauration à déploiement haute disponibilité, fournissez les détails suivants :
-+
 .. Détails de la bibliothèque de contenu.
 .. Détails de la configuration de vCenter.
-
-
 . Dans la fenêtre *Personnaliser le modèle* > *Configuration du nœud*, entrez les détails selon la configuration que vous essayez de restaurer, la configuration non HA ou HA.
 . Consultez les détails dans la fenêtre *prêt à terminer*, sélectionnez *Terminer*.
+
 +
 Au fur et à mesure de la création de la tâche de déploiement, la progression s'affiche dans la barre des tâches vSphere.
-
 . Mettez le serveur virtuel sous tension une fois la tâche terminée.
+
 +
 L'installation commence. Vous pouvez suivre la progression de l'installation dans la console Web de la machine virtuelle.
 Dans le cadre de l'installation, les configurations de nœuds sont validées. Les entrées fournies sous différentes sections sous le modèle Personnaliser du formulaire OVF sont validées. En cas de divergence, une boîte de dialogue vous invite à prendre des mesures correctives.
-
 . Apportez les modifications nécessaires dans l'invite de la boîte de dialogue. Utilisez le bouton Tab pour naviguer dans le panneau et entrer vos valeurs, *OK* ou *Annuler*.
 . Lorsque vous sélectionnez *OK* ou *Annuler*, les valeurs fournies seront à nouveau validées. Vous avez la disposition pour corriger n'importe quelle valeur 3 fois. Si vous ne parvenez pas à corriger au cours des 3 tentatives, l'installation du produit s'arrête et il est conseillé d'essayer l'installation sur une nouvelle machine virtuelle.
 . Une fois l'installation terminée, la console Web affiche l'état des outils ONTAP pour VMware vSphere. Une fois l'installation terminée, vous devez modifier manuellement la configuration matérielle requise conformément aux instructions de la section link:../deploy/sizing-requirements.html["Conditions préalables au déploiement des outils ONTAP pour VMware vSphere"] page.
-

@@ -50,13 +50,10 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
 | ONTAP | Dernière version de correctif de ONTAP 9.12.1, 9.13.1 ou 9.14.1 
 
 
-| VMware vSphere | VMware 7.0U3, 8.0U1 ou 8.0U2 
-
-
 | Hôtes ESXi | ESXi 7.0.3 
 
 
-| Serveur vCenter | VCenter 7.0U3, 8.0U1 ou 8.0U2 
+| Serveur vCenter | VCenter 7.0U3 
 
 
 | Fournisseur VASA | 3.0 

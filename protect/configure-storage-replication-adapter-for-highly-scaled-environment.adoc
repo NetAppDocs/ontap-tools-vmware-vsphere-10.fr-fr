@@ -62,7 +62,7 @@ https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GU
 
 == Paramètres de stockage
 
-Dans les environnements hautement évolutifs, vous devez définir la valeur de `storage.commandTimeout` et `storage.maxConcurrentCommandCnt` délai de temporisation de 99,999 secondes.
+Lorsque vous appuyez sur une temporisation, augmentez les valeurs de `storage.commandTimeout` et `storage.maxConcurrentCommandCnt` à une valeur supérieure.
 
 
 NOTE: L'intervalle de temporisation spécifié est la valeur maximale. Il n'est pas nécessaire d'attendre que le délai maximum soit atteint. La plupart des commandes se terminent dans l'intervalle maximal défini de temps d'attente.
