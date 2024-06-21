@@ -65,3 +65,5 @@ entries:
     url: "/manage/reset-app-password.html"
   - title: Réinitialiser le mot de passe utilisateur de la console de maintenance
     url: "/manage/reset-maint-password.html"
+- title: Nettoyer les volumes
+  url: "/manage/delete-deployment.html"

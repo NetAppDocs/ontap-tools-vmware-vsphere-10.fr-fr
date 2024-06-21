@@ -27,6 +27,10 @@ Exemple : C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM
 . Connectez-vous au serveur vSphere.
 . Accédez au pool de ressources, au cluster ou à l'hôte sur lequel vous souhaitez déployer l'OVA.
 . Cliquez avec le bouton droit de la souris sur l'emplacement requis et sélectionnez *déployer le modèle OVF...*.
++
+
+NOTE: Ne déployez pas la machine virtuelle VMware vSphere des outils ONTAP sur un datastore vVols qu'il gère.
+
 . Vous pouvez entrer l'URL du fichier _.ova_ ou naviguer jusqu'au dossier dans lequel le fichier _.ova_ est enregistré, puis sélectionner *Suivant*.
 . Sélectionnez un nom et un dossier pour la machine virtuelle et sélectionnez *Suivant*.
 . Sélectionnez l'hôte et sélectionnez *Suivant*

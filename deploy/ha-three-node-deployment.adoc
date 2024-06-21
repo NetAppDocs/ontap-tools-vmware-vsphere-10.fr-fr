@@ -36,6 +36,10 @@ NOTE: Avant de procéder au déploiement, définissez le gestionnaire de ressour
 +
 .. Connectez-vous au serveur vSphere.
 .. Naviguez jusqu'au pool de ressources ou à l'hôte où vous souhaitez déployer l'OVA et cliquez avec le bouton droit de la souris sur l'emplacement où vous souhaitez déployer la VM, puis sélectionnez *déployer le modèle OVF...*
++
+
+NOTE: Ne déployez pas la machine virtuelle VMware vSphere des outils ONTAP sur un datastore vVols qu'il gère.
+
 .. Vous pouvez entrer l'URL du fichier _.ova_ ou naviguer jusqu'au dossier dans lequel le fichier _.ova_ est enregistré, puis sélectionner *Suivant*
 
 

@@ -18,7 +18,7 @@ Vous pouvez utiliser les outils ONTAP pour VMware vSphere avec VMware vCenter Se
 * *Espace requis pour le package d'installation par nœud*
 +
 ** 10 Go pour les installations à provisionnement fin
-** 200 Go pour les installations à provisionnement lourd
+** 248 Go pour les installations à provisionnement lourd
 
 
 * *Exigences de dimensionnement du système hôte par nœud*
