@@ -15,8 +15,6 @@ Vous pouvez utiliser le tableau de bord des outils ONTAP pour VMware vSphere afi
 
 *Ce dont vous aurez besoin*
 
-Vous devez avoir configuré un système hôte ESXi pour votre instance vCenter Server.
-
 En cas de problème avec vos paramètres d'hôte ESXi, le problème s'affiche dans le portlet des systèmes hôtes ESXi du tableau de bord. Vous pouvez cliquer sur le problème pour afficher le nom d'hôte ou l'adresse IP de l'hôte ESXi qui présente le problème.
 
 *Étapes*
@@ -25,12 +23,11 @@ En cas de problème avec vos paramètres d'hôte ESXi, le problème s'affiche da
 . Dans la page des raccourcis, cliquez sur *NetApp ONTAP Tools* dans la section des modules externes.
 . Accédez au portlet *ESXi Host Compliance* dans la Présentation (Tableau de bord) du plug-in ONTAP Tools for VMware vSphere.
 . Sélectionnez le lien *appliquer les paramètres recommandés*.
-. Dans la fenêtre *appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes que vous souhaitez respecter avec les paramètres d'hôte recommandés par NetApp et cliquez sur *Suivant*
+. Dans la fenêtre *appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes que vous souhaitez respecter avec les paramètres d'hôte recommandés par NetApp et cliquez sur *Suivant*.
 +
 
-NOTE: Vous pouvez développer l'hôte ESXi pour voir les valeurs actuelles
+NOTE: Vous pouvez développer l'hôte ESXi pour voir les valeurs actuelles.
 
 . Dans la page des paramètres, sélectionnez les valeurs recommandées.
-. Dans le volet récapitulatif, vérifiez les valeurs et cliquez sur *Terminer*
-Vous pouvez suivre la progression dans le panneau des tâches récentes.
+. Dans le volet récapitulatif, vérifiez les valeurs et cliquez sur *Terminer*. Vous pouvez suivre la progression dans le panneau des tâches récentes.
 

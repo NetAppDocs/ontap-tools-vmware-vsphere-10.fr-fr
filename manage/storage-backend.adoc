@@ -17,7 +17,7 @@ Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilis
 
 == Découverte du stockage
 
-Vous pouvez exécuter la détection d'un système back-end de stockage à la demande sans attendre la détection planifiée pour mettre à jour les détails du stockage.
+Vous pouvez exécuter la détection d'un système back-end de stockage à la demande sans attendre une découverte planifiée pour mettre à jour les détails du stockage.
 
 Suivez les étapes ci-dessous pour découvrir les systèmes back-end.
 
@@ -32,9 +32,9 @@ Vous pouvez suivre la progression dans le panneau tâches récentes.
 
 
 
-== Modifier le back-end de stockage
+== Modification des systèmes back-end de stockage
 
-Suivez les étapes de cette section pour modifier le système back-end de stockage existant.
+Suivez les étapes de cette section pour modifier un système back-end de stockage.
 
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Dans la page des raccourcis, cliquez sur *NetApp ONTAP Tools* dans la section des modules externes.
@@ -43,22 +43,21 @@ Suivez les étapes de cette section pour modifier le système back-end de stocka
 Vous pouvez suivre la progression dans le panneau tâches récentes.
 
 
-Vous pouvez effectuer l'opération Modifier pour les clusters ONTAP globaux à l'aide du Gestionnaire d'outils ONTAP en procédant comme suit
+Vous pouvez effectuer l'opération Modifier pour les clusters ONTAP globaux à l'aide du Gestionnaire d'outils ONTAP en procédant comme suit.
 
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalanceIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez les systèmes back-end de stockage dans la barre latérale.
-. Sélectionnez le back-end de stockage à modifier
+. Sélectionnez le back-end de stockage à modifier.
 . Cliquez sur le menu des ellipses verticales et sélectionnez *Modifier*.
 . Vous pouvez modifier les informations d'identification ou le port. Entrez *Nom d'utilisateur* et *Mot de passe* pour modifier le backend de stockage.
 
 
 
 
-== Supprimer le back-end de stockage
+== Suppression des systèmes back-end
 
-Vous devez supprimer tous les datastores connectés au système back-end de stockage avant de supprimer le système back-end.
-Suivez les étapes ci-dessous pour supprimer le système back-end de stockage.
+Vous devez supprimer tous les datastores connectés au système back-end de stockage avant de supprimer le système back-end. Suivez les étapes ci-dessous pour supprimer un système back-end de stockage.
 
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Dans la page des raccourcis, cliquez sur *NetApp ONTAP Tools* dans la section des modules externes.

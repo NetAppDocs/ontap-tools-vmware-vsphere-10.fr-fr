@@ -105,8 +105,7 @@ Ajoutez le *REST API Path* et l'accès correspondant dans le menu déroulant.
 
 == Liste des privilèges minimaux requis pour les utilisateurs du cluster dont le périmètre global n'est pas défini sur admin
 
-Les privilèges minimaux requis pour l'utilisateur de cluster avec périmètre global non-admin créé sans utiliser le fichier JSON d'utilisateurs sont répertoriés dans cette section.
-Si un cluster est ajouté au périmètre local, il est recommandé d'utiliser le fichier JSON pour créer les utilisateurs, car les outils ONTAP pour VMware vSphere requièrent bien plus que les privilèges de lecture pour le provisionnement sur ONTAP.
+Les privilèges minimaux requis pour l'utilisateur de cluster avec périmètre global non-admin créé sans utiliser le fichier JSON d'utilisateurs sont répertoriés dans cette section. Si un cluster est ajouté au périmètre local, il est recommandé d'utiliser le fichier JSON pour créer les utilisateurs, car les outils ONTAP pour VMware vSphere requièrent bien plus que les privilèges de lecture pour le provisionnement sur ONTAP.
 
 À l'aide d'API :
 

@@ -13,7 +13,7 @@ summary: 'L"action Supprimer le datastore supprime le datastore. Dans le cas d"u
 [role="lead"]
 L'action Supprimer le stockage du datastore est prise en charge sur tous les outils ONTAP pour les datastores VMware vSphere découverts ou gérés vVols du serveur vCenter. Cette action permet de supprimer des volumes du datastore vVols.
 
-L'option Supprimer est désactivée lorsqu'il y a des vVols résidant sur un volume particulier. En plus de supprimer des volumes du datastore, vous pouvez supprimer le volume sélectionné sur le stockage ONTAP.
+L'option remove est désactivée lorsqu'il y a des vVols résidant sur un volume particulier. En plus de supprimer des volumes du datastore, vous pouvez supprimer le volume sélectionné sur le stockage ONTAP.
 
 La suppression d'une tâche de datastore des outils ONTAP pour VMware vSphere dans vCenter Server effectue les opérations suivantes :
 

@@ -15,7 +15,7 @@ Vous devez configurer les systèmes de stockage avant d'exécuter Storage Replic
 
 
 
-== Configurez SRA pour l'environnement SAN
+== Configurez SRA pour les environnements SAN
 
 *Ce dont vous aurez besoin*
 
@@ -38,7 +38,7 @@ L'adaptateur est installé sur SRM.
 
 . Vérifiez que les hôtes ESXi principaux sont connectés aux LUN du système de stockage principal du site protégé.
 . Vérifiez que LES LUN sont dans des igroups qui ont `ostype` Option définie sur _VMware_ sur le système de stockage principal.
-. Vérifier que les hôtes ESXi sur le site de reprise disposent d'une connectivité iSCSI appropriée à la machine virtuelle de stockage (SVM). Les hôtes ESXi du site secondaire doivent avoir accès au système de stockage du site secondaire, de même que les hôtes ESXi du site principal doivent avoir accès au stockage du site principal.
+. Vérifier que les hôtes ESXi sur le site de reprise disposent d'une connectivité iSCSI appropriée à la machine virtuelle de stockage (SVM). Les hôtes ESXi du site secondaire doivent avoir accès au stockage du site secondaire et les hôtes ESXi du site principal doivent avoir accès au stockage du site principal.
 +
 Vous pouvez le faire en vérifiant que les hôtes ESXi disposent de LUN locales connectées au SVM ou au `iscsi show initiators` Commande sur les SVM.
 Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectivité iSCSI.
@@ -47,7 +47,7 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
 
 
 
-== Configurez SRA pour l'environnement NAS
+== Configurez SRA pour les environnements NAS
 
 *Ce dont vous aurez besoin*
 

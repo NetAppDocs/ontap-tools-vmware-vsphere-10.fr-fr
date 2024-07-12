@@ -11,9 +11,9 @@ summary: 'Vous pouvez choisir d"autoriser peu d"adresses hôtes ESXi spécifique
 
 
 [role="lead"]
-Lorsque vous avez plusieurs adresses IP d'hôtes ESXi, toutes les adresses IP découvertes de l'hôte sont ajoutées à une export policy par défaut. Si vous ne souhaitez pas ajouter toutes les adresses IP à la règle d'export, indiquez un paramètre permettant d'autoriser des adresses IP spécifiques dans une liste ou une plage séparées par des virgules ou CIDR, ou une combinaison des trois pour chaque vCenter.
+Lorsque vous avez plusieurs adresses IP d'hôte ESXi, toutes les adresses IP découvertes de l'hôte sont ajoutées à une export policy par défaut. Si vous ne souhaitez pas ajouter toutes les adresses IP à une export policy, indiquez un paramètre permettant d'autoriser des adresses IP spécifiques dans une liste ou une plage séparées par des virgules ou CIDR, ou une combinaison des trois pour chaque vCenter.
 
-Vous pouvez choisir d'autoriser quelques adresses hôtes ESXi spécifiques pour l'opération de montage du datastore. Si le paramètre n'est pas fourni, export policy ajoute toutes les adresses IP découvertes lors de l'étape de pré-montage. Si le paramètre est fourni, les outils ONTAP pour VMware vSphere ajoutent uniquement ceux qui sont compris dans la plage ou les adresses IP répertoriées. Si aucune des adresses IP d'un hôte n'appartient aux adresses IP répertoriées, le montage sur cet hôte échoue.
+Vous pouvez choisir d'autoriser quelques adresses hôtes ESXi spécifiques pour l'opération de montage du datastore. Si le paramètre n'est pas fourni, la règle d'export ajoute toutes les adresses IP découvertes lors de l'étape de pré-montage. Si le paramètre est fourni, les outils ONTAP pour VMware vSphere ajoutent uniquement ceux qui sont compris dans la plage ou les adresses IP répertoriées. Si aucune des adresses IP d'un hôte n'appartient aux adresses IP répertoriées, le montage sur cet hôte échoue.
 
 .Étapes
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
@@ -22,5 +22,5 @@ Vous pouvez choisir d'autoriser quelques adresses hôtes ESXi spécifiques pour 
 +
 Utilisez une virgule (,) pour séparer les adresses IP. Vous pouvez spécifier une adresse IP spécifique, une plage d'adresses IP ou des adresses IPv6.
 
-. Cliquez sur *ENREGISTRER*.
+. Cliquez sur *Enregistrer*.
 

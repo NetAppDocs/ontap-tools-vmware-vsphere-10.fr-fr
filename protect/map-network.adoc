@@ -36,8 +36,8 @@ L'assistant de création de mappage réseau s'affiche.
 
 . Dans l'assistant de création de mappage réseau, effectuez les opérations suivantes :
 +
-.. Sélectionnez *préparer automatiquement les mappages pour les réseaux avec des noms correspondants*, puis cliquez sur *Suivant*.
-.. Sélectionnez les objets de centre de données requis pour les sites protégés et de reprise, puis cliquez sur *Ajouter des mappages*.
+.. Sélectionnez *préparer automatiquement les mappages pour les réseaux avec des noms correspondants* et cliquez sur *Suivant*.
+.. Sélectionnez les objets de centre de données requis pour les sites protégés et de récupération, puis cliquez sur *Ajouter des mappages*.
 .. Cliquez sur *Suivant* une fois les mappages créés.
 .. Sélectionnez l'objet utilisé précédemment pour créer le mappage inverse, puis cliquez sur *Terminer*.
 

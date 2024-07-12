@@ -24,7 +24,7 @@ Vous devez vérifier que le site protégé et le site de reprise sont correcteme
 
 . Connectez-vous à votre serveur vCenter.
 . Accédez à *site Recovery* > *Array Based Replication*.
-. Sélectionnez la paire d'ArrayPair requise et vérifiez les détails correspondants.
+. Sélectionnez la paire de matrices requise et vérifiez les détails correspondants.
 +
 Les systèmes de stockage doivent être découverts sur le site protégé et le site de reprise dont le statut est « activé ».
 

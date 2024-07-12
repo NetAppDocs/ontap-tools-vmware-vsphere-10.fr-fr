@@ -2,7 +2,7 @@
 permalink: protect/configure-on-srm-appliance.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Une fois l"appliance SRM déployée, vous devez configurer SRA sur l"appliance SRM. La configuration de SRA permet de communiquer avec SRM Appliance et SRA pour la gestion de la reprise après incident. Vous devez stocker les outils ONTAP pour les informations d"identification VMware vSphere \(adresse IP et mot de passe d"administrateur\) dans l"appliance SRM pour permettre la communication entre l"appliance SRM et SRA.' 
+summary: 'Une fois l"appliance SRM déployée, vous devez configurer SRA sur l"appliance SRM. La configuration réussie de SRA permet à l"appliance SRM de communiquer avec SRA pour la gestion de la reprise après incident. Vous devez stocker les outils ONTAP pour les informations d"identification VMware vSphere \(adresse IP et mot de passe d"administrateur\) sur l"appliance SRM pour permettre la communication entre l"appliance SRM et SRA.' 
 ---
 = Configurez SRA sur l'appliance SRM
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Une fois l"appliance SRM déployée, vous devez configurer SRA sur l"a
 
 
 [role="lead"]
-Une fois l'appliance SRM déployée, vous devez configurer SRA sur l'appliance SRM. La configuration de SRA permet de communiquer avec SRM Appliance et SRA pour la gestion de la reprise après incident. Vous devez stocker les outils ONTAP pour les informations d'identification VMware vSphere (adresse IP) sur l'appliance SRM pour permettre la communication entre l'appliance SRM et SRA.
+Une fois l'appliance SRM déployée, vous devez configurer SRA sur l'appliance SRM. La configuration réussie de SRA permet à l'appliance SRM de communiquer avec SRA pour la gestion de la reprise après incident. Vous devez stocker les outils ONTAP pour les informations d'identification VMware vSphere (adresse IP) sur l'appliance SRM pour permettre la communication entre l'appliance SRM et SRA.
 
 *Ce dont vous aurez besoin*
 
@@ -27,8 +27,8 @@ La configuration de SRA sur l'appliance SRM stocke les informations d'identifica
 . Téléchargez le fichier _.tar.gz_ vers SRM.
 . Connectez-vous à l'aide d'un compte administrateur à l'appliance SRM à l'aide de putty.
 . Basculer vers l'utilisateur root à l'aide de la commande : `su root`
-. Exécutez la commande `cd /var/log/vmware/srm` pour accéder au répertoire du journal.
-. Dans le journal location, entrez la commande pour obtenir l'ID docker utilisé par SRA : `docker ps -l`
+. Exécutez la commande `cd /var/log/vmware/srm` pour accéder au répertoire de journaux.
+. À l'emplacement du journal, entrez la commande pour obtenir l'ID docker utilisé par SRA : `docker ps -l`
 . Pour vous connecter à l'ID de conteneur, entrez la commande : `docker exec -it -u srm <container id> sh`
 . Configurer SRM avec les outils ONTAP pour l'adresse IP et le mot de passe VMware vSphere à l'aide de la commande : `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>'`
 +

@@ -21,6 +21,6 @@ Vous pouvez uniquement augmenter la taille des datastores NFS et VMFS. Un volume
 
 . Dans la page d'accueil de vSphere client, cliquez sur *hôtes et clusters*.
 . Dans le volet de navigation, sélectionnez le centre de données qui contient le datastore.
-. Cliquez avec le bouton droit de la souris sur le datastore NFS ou VMFS et sélectionnez *NetApp ONTAP Tools* > *Redimensionner datastore*.
+. Cliquez avec le bouton droit de la souris sur le datastore NFS ou VMFS et sélectionnez *NetApp ONTAP Tools* > *Redimensionner le datastore*.
 . Dans la boîte de dialogue Redimensionner, spécifiez une nouvelle taille pour le datastore, puis cliquez sur *OK*.
 

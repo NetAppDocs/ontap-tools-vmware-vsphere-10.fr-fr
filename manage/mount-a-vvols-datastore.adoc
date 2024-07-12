@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Mount vVol 
 summary: 'Vous pouvez monter un datastore VMware Virtual volumes \(vVvols\) sur un ou plusieurs hôtes supplémentaires en utilisant la boîte de dialogue Mount vvols datastore. Le montage du datastore permet d"accéder au stockage à des hôtes supplémentaires. Vous pouvez démonter le datastore vVols uniquement à l"aide des API.' 
 ---
-= Monter le datastore vVols
+= Montez un datastore vvols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

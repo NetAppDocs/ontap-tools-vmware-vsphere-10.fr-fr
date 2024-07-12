@@ -83,11 +83,11 @@ image:../media/ha-deploy-config.png["Configuration du déploiement"]
 
 NOTE: Lorsque l'étendue de SVM est activée, vous devez avoir déjà activé la prise en charge des SVM avec l'adresse IP de gestion.
 
-.. Sélectionnez NFS ou iSCSI dans le champ *Protocol*.
+.. Sélectionnez NFS, iSCSI, NVME/TCP ou NVME/FC dans le champ *Protocol*.
 .. Entrer l'adresse IP de gestion du cluster ONTAP ou du SVM dans le champ *LIF* de gestion ONTAP/SVM.
 .. Entrer dans le cluster ONTAP ou la LIF de données SVM ONTAP/SVM La LIF de données doit appartenir au protocole sélectionné. Par exemple, si le protocole iSCSI est sélectionné, une LIF de données iSCSI doit être fournie.
 .. Pour la VM de stockage, vous pouvez choisir de fournir les détails par défaut de votre VM de stockage ONTAP ou de créer une nouvelle VM de stockage. Ne pas entrer la valeur dans le champ *Storage VM* lorsque l'option Activer le périmètre SVM est sélectionnée car ce champ est ignoré.
-.. Entrer le nom d'utilisateur ONTAP/SVM Le nom d'utilisateur et le mot de passe ONTAP/SVM sont requis pour que Trident crée des volumes pour stocker les données des services en cas de déploiement avancé ou haute disponibilité, et pour récupérer les données des volumes en cas de défaillance d'un nœud.
+.. Entrez le nom d'utilisateur ONTAP/SVM. Le nom d'utilisateur et le mot de passe ONTAP/SVM sont requis pour que Trident crée des volumes pour stocker les données des services en cas de déploiement avancé ou haute disponibilité, et pour récupérer les données des volumes en cas de défaillance d'un nœud.
 .. Entrez le mot de passe ONTAP/SVM. Le mot de passe de connexion ONTAP/SVM de cette VM de stockage ne doit pas contenir les caractères spéciaux suivants ($,',").
 .. La VM principale est activée par défaut. Ne modifiez pas ce choix.
 
@@ -125,10 +125,9 @@ Au fur et à mesure de la création de la tâche de déploiement, la progression
 
 . Mettez le serveur virtuel sous tension une fois la tâche terminée.
 +
-L'installation commence. Vous pouvez suivre la progression de l'installation dans la console Web de la machine virtuelle.
-Dans le cadre de l'installation, les configurations de nœuds sont validées. Les entrées fournies sous différentes sections sous le modèle Personnaliser du formulaire OVF sont validées. En cas de divergence, une boîte de dialogue vous invite à prendre des mesures correctives.
+L'installation commence. Vous pouvez suivre la progression de l'installation dans la console Web de la machine virtuelle. Dans le cadre de l'installation, les configurations de nœuds sont validées. Les entrées fournies sous différentes sections sous le modèle Personnaliser du formulaire OVF sont validées. En cas de divergence, une boîte de dialogue vous invite à prendre des mesures correctives.
 
 . Apportez les modifications nécessaires dans l'invite de la boîte de dialogue. Utilisez le bouton Tab pour naviguer dans le panneau et entrer vos valeurs, *OK* ou *Annuler*.
-. Lorsque vous sélectionnez *OK*, les valeurs fournies seront à nouveau validées. Vous disposez de la disposition permettant de corriger les valeurs jusqu'à 3 fois. Si vous ne parvenez pas à corriger au cours des 3 tentatives, l'installation du produit s'arrête et il est conseillé d'essayer l'installation sur une nouvelle machine virtuelle.
+. Lorsque vous sélectionnez *OK*, les valeurs fournies seront à nouveau validées. Les outils ONTAP pour VMware vous permettent de corriger les valeurs non valides à trois reprises. Si vous ne parvenez pas à corriger les problèmes après trois tentatives, l'installation du produit s'arrête et il vous est conseillé d'essayer l'installation sur une nouvelle machine virtuelle.
 . Une fois l'installation terminée, la console Web affiche l'état des outils ONTAP pour VMware vSphere.
 

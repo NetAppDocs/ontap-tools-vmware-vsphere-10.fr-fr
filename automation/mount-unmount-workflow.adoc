@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: 'Vous pouvez monter un datastore VMware Virtual volumes (vVols) sur un ou plusieurs hôtes supplémentaires pour fournir un accès au stockage à des hôtes supplémentaires. Vous pouvez démonter le datastore vVols à l"aide d"API.' 
 ---
-= Monter et démonter le datastore vVols
+= Monter et démonter un datastore vVols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

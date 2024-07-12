@@ -24,12 +24,11 @@ Ce processus peut prendre un certain temps, selon votre configuration et la char
 . Dans la page des raccourcis, cliquez sur *NetApp ONTAP Tools* dans la section des modules externes.
 . Accédez à la carte de conformité des hôtes VMware ESXi dans la Présentation (tableau de bord) du plug-in ONTAP Tools for VMware vSphere.
 . Sélectionnez le lien *appliquer les paramètres recommandés*.
-. Dans la fenêtre *appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes que vous souhaitez respecter avec les paramètres d'hôte recommandés par NetApp et cliquez sur *Suivant*
+. Dans la fenêtre *appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes que vous souhaitez respecter avec les paramètres d'hôte recommandés par NetApp et cliquez sur *Suivant*.
 +
 
-NOTE: Vous pouvez développer l'hôte ESXi pour voir les valeurs actuelles
+NOTE: Vous pouvez développer l'hôte ESXi pour voir les valeurs actuelles.
 
 . Dans la page des paramètres, sélectionnez les valeurs recommandées.
-. Dans le volet récapitulatif, vérifiez les valeurs et cliquez sur *Terminer*
-Vous pouvez suivre la progression dans le panneau des tâches récentes.
+. Dans le volet récapitulatif, vérifiez les valeurs et cliquez sur *Terminer*. Vous pouvez suivre la progression dans le panneau des tâches récentes.
 

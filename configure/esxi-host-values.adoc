@@ -43,9 +43,9 @@ Utilisez la valeur par défaut.
 
 == Paramètres MPIO
 
-Configuration des chemins d'accès privilégiés pour les systèmes de stockage NetApp Les paramètres MPIO déterminent quels chemins disponibles sont optimisés (par opposition aux chemins non optimisés qui traversent le câble d'interconnexion) et définissent le chemin préféré sur l'un de ces chemins.
+Les paramètres MPIO définissent les chemins préférés des systèmes de stockage NetApp. Les paramètres MPIO déterminent quels chemins disponibles sont optimisés (par opposition aux chemins non optimisés qui traversent le câble d'interconnexion) et définissent le chemin préféré sur l'un de ces chemins.
 
-Dans les environnements hautes performances ou lors des tests de performances avec un seul datastore LUN, envisagez de modifier le paramètre d'équilibrage de charge de la règle de sélection de chemin Round-Robin (VMW_PSP_RR) entre la valeur de 1000 IOPS par défaut et la valeur de 1.
+Dans les environnements hautes performances, ou lorsque vous testez les performances avec un seul datastore LUN, pensez à modifier le paramètre d'équilibrage de charge de la règle de sélection de chemin (PSP) de Round Robin (VMW_PSP_RR) du paramètre d'IOPS par défaut de 1000 à une valeur de 1.
 
 
 

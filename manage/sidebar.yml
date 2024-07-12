@@ -6,7 +6,7 @@ entries:
   entries:
   - title: Montez des datastores NFS et VMFS
     url: "/manage/mount-datastores-on-host.html"
-  - title: Monter le datastore vVols
+  - title: Montez un datastore vvols
     url: "/manage/mount-a-vvols-datastore.html"
   - title: Redimensionner les datastores NFS et VMFS
     url: "/manage/resize-datastores.html"
@@ -28,7 +28,7 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: Gérer les certificats
   url: "/manage/certificate-manage.html"
-- title: Gestion du groupe initiateur et des règles d'exportation
+- title: Gestion des igroups et des règles d'export
   url: "/manage/igroup-management.html"
 - title: Accès aux outils ONTAP pour la console de maintenance VMware vSphere
   entries:
@@ -36,7 +36,7 @@ entries:
     url: "/manage/maintenance-console.html"
   - title: Configurer l'accès aux diagnostics à distance
     url: "/manage/configure-remote-diagnostic-access.html"
-  - title: Démarrez la SSH sur les autres nœuds
+  - title: Démarrez SSH sur les autres nœuds
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: Mettez à jour les informations d'identification vCenter et ONTAP
     url: "/manage/update-vcenter-credentials.html"
@@ -67,3 +67,5 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: Nettoyer les volumes
   url: "/manage/delete-deployment.html"
+- title: Protéger le cluster hôte
+  url: "/manage/protect-cluster.html"

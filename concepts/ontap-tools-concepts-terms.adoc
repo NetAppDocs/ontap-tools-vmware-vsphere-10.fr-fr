@@ -45,6 +45,12 @@ OVA est une norme ouverte pour le packaging et la distribution d'appliances ou d
 
 
 
+=== SnapMirror actif (SMAS)
+
+La synchronisation active SnapMirror assure la continuité des services, même en cas de défaillance complète d'un site. Les applications peuvent ainsi basculer en toute transparence au moyen d'une copie secondaire. Une intervention manuelle, ainsi que des scripts personnalisés sont requis pour déclencher un basculement avec la synchronisation active SnapMirror.
+
+
+
 === Storage Replication adapter (SRA)
 
 SRA est le logiciel spécifique au fournisseur de stockage installé dans l'appliance SRM. L'adaptateur permet la communication entre site Recovery Manager et un contrôleur de stockage au niveau du SVM (Storage Virtual machine) et la configuration au niveau du cluster.

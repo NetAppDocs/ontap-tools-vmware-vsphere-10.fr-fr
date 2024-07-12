@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Vous devez configurer les intervalles de délai de stockage en fonction des paramètres recommandés pour Storage Replication adapter \(SRA\) afin de garantir des performances optimales dans des environnements hautement évolutifs.' 
 ---
-= Configurez SRA pour un environnement hautement évolutif
+= Configurez SRA pour les environnements hautement évolutifs
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -67,6 +67,6 @@ Lorsque vous appuyez sur une temporisation, augmentez les valeurs de `storage.co
 
 NOTE: L'intervalle de temporisation spécifié est la valeur maximale. Il n'est pas nécessaire d'attendre que le délai maximum soit atteint. La plupart des commandes se terminent dans l'intervalle maximal défini de temps d'attente.
 
-La documentation VMware sur la modification des paramètres du fournisseur de SAN contient davantage d'informations.
+Pour plus d'informations, reportez-vous à la documentation VMware relative à la modification des paramètres du fournisseur SAN.
 
 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentation de VMware site Recovery Manager : modifiez les paramètres de stockage"]

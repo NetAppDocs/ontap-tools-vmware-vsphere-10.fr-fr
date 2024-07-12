@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'besoin d"informations.' 
 ---
-= Associez le système back-end de stockage à une instance vCenter Server
+= Associer un back-end de stockage à une instance vCenter Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
