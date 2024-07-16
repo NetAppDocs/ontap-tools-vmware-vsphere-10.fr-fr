@@ -88,7 +88,7 @@ NOTE: Lorsque l'étendue de SVM est activée, vous devez avoir déjà activé la
 .. Entrer dans le cluster ONTAP ou la LIF de données SVM ONTAP/SVM La LIF de données doit appartenir au protocole sélectionné. Par exemple, si le protocole iSCSI est sélectionné, une LIF de données iSCSI doit être fournie.
 .. Pour la VM de stockage, vous pouvez choisir de fournir les détails par défaut de votre VM de stockage ONTAP ou de créer une nouvelle VM de stockage. Ne pas entrer la valeur dans le champ *Storage VM* lorsque l'option Activer le périmètre SVM est sélectionnée car ce champ est ignoré.
 .. Entrez le nom d'utilisateur ONTAP/SVM. Le nom d'utilisateur et le mot de passe ONTAP/SVM sont requis pour que Trident crée des volumes pour stocker les données des services en cas de déploiement avancé ou haute disponibilité, et pour récupérer les données des volumes en cas de défaillance d'un nœud.
-.. Entrez le mot de passe ONTAP/SVM. Le mot de passe de connexion ONTAP/SVM de cette VM de stockage ne doit pas contenir les caractères spéciaux suivants ($,',").
+.. Entrez le mot de passe ONTAP/SVM.
 .. La VM principale est activée par défaut. Ne modifiez pas ce choix.
 
 

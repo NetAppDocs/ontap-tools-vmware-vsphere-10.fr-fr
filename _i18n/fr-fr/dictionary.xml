@@ -188,10 +188,6 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">Entrez<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> Pour sélectionner support et Diagnostics.</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">Entrez<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> Pour sélectionner accès au shell de diagnostic.</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">Entrez<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> pour continuer.</block>
-  <block id="6e1ee8250e4dc3ce6e26c0ebdbaab54a" category="list-text">Mettez à jour les informations d'identification si nécessaire :</block>
-  <block id="512e6df6579ba9be187fcdaf015cd5e6" category="paragraph">otv-update --ontapUserName &lt;new username&gt; --ontapPassword &lt;new password&gt;</block>
-  <block id="7291058dd83795e1ab1d74629e7b59d5" category="paragraph">otv-update --vcenterUsername &lt;new username&gt; --vcenterPassword &lt;new password&gt;</block>
-  <block id="1c7a1c71a372b297fb2ddde652f24fcc" category="paragraph">otv-update --dataLif &lt;New Datalif IP&gt;</block>
   <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">Bouton de lecture</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">*Menu Console*</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">*Options*</block>
@@ -1696,7 +1692,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
 Au fur et à mesure de la création de la tâche de déploiement, la progression s'affiche dans la barre des tâches vSphere.
 . Mettez le serveur virtuel sous tension une fois la tâche terminée.</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">VCenter 7.0U3</block>
-  <block id="b5a405460149721025d3f0b33b133321" category="list-text">Entrez le mot de passe ONTAP/SVM. Le mot de passe de connexion ONTAP/SVM de cette VM de stockage ne doit pas contenir les caractères spéciaux suivants ($,',").</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99126fb772977a83acb4723e429a29c0" category="admonition">Ne déployez pas la machine virtuelle VMware vSphere des outils ONTAP sur un datastore vVols qu'il gère.</block>
@@ -1825,9 +1820,6 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">Suppression des systèmes back-end</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">Vous devez supprimer tous les datastores connectés au système back-end de stockage avant de supprimer le système back-end. Suivez les étapes ci-dessous pour supprimer un système back-end de stockage.</block>
   <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">Cliquez sur l'onglet *configurer* dans le volet de droite.</block>
-  <block id="167eaea484341a685fe24829668ec35c" category="list-text">Pour mettre à jour les informations d'identification ONTAP, lancer la commande :</block>
-  <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">Pour mettre à jour les informations d'identification vCenter, exécutez la commande :</block>
-  <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">Pour mettre à jour la LIF data lancer la commande :</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">Cliquez sur l'onglet *Monitor* dans le volet de droite.</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">Ajoutez les outils ONTAP pour le fournisseur de stockage VMware vSphere au serveur vCenter et <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>.</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">Une fois l'ancien fournisseur VASA arrêté, vCenter Server bascule vers les outils ONTAP pour VMware vSphere. Tous les datastores et machines virtuelles sont accessibles et servis à partir des outils ONTAP pour VMware vSphere.</block>
@@ -1867,4 +1859,8 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">Lorsque vous effectuez une mise à niveau depuis les outils ONTAP pour VMware vSphere 10.0 et 10.1 vers 10.1, un volume de restauration est créé et tous les détails nécessaires sont pris en compte dans le volume de restauration.</block>
   <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">Lorsque vous effectuez une mise à niveau depuis les outils ONTAP pour VMware vSphere 10.0 et 10.1 vers 10.1, un volume de restauration est créé et tous les détails nécessaires sont pris en compte dans le volume de restauration. Le volume de restauration peut être utilisé pour restaurer les outils ONTAP pour la configuration de VMware vSphere si vous devez restaurer votre configuration. Si vous effectuez une mise à niveau au niveau des correctifs des outils ONTAP pour VMware vSphere 10.1, le même volume de restauration est utilisé et les détails sont actualisés. La mise à niveau est prise en charge pour les déploiements haute disponibilité et non haute disponibilité.</block>
   <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">Documentation relative aux outils ONTAP pour VMware vSphere 10.1</block>
+  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">Entrez le mot de passe ONTAP/SVM.</block>
+  <block id="cea5a13834803a12adaeb249165351df" category="list-text">Entrez<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> pour sélectionner le menu de configuration du système.</block>
+  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Entrez<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> pour modifier les informations d'identification ONTAP.</block>
+  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Entrez<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> pour modifier les informations d'identification de vCenter.</block>
 </blocks>
