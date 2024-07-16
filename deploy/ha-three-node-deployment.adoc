@@ -83,7 +83,7 @@ image:../media/ha-deploy-config.png["Configuration du déploiement"]
 
 NOTE: Lorsque l'étendue de SVM est activée, vous devez avoir déjà activé la prise en charge des SVM avec l'adresse IP de gestion.
 
-.. Sélectionnez NFS, iSCSI, NVME/TCP ou NVME/FC dans le champ *Protocol*.
+.. Sélectionnez NFS ou iSCSI dans le champ *Protocol*.
 .. Entrer l'adresse IP de gestion du cluster ONTAP ou du SVM dans le champ *LIF* de gestion ONTAP/SVM.
 .. Entrer dans le cluster ONTAP ou la LIF de données SVM ONTAP/SVM La LIF de données doit appartenir au protocole sélectionné. Par exemple, si le protocole iSCSI est sélectionné, une LIF de données iSCSI doit être fournie.
 .. Pour la VM de stockage, vous pouvez choisir de fournir les détails par défaut de votre VM de stockage ONTAP ou de créer une nouvelle VM de stockage. Ne pas entrer la valeur dans le champ *Storage VM* lorsque l'option Activer le périmètre SVM est sélectionnée car ce champ est ignoré.

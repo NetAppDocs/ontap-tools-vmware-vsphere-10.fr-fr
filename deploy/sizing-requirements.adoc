@@ -47,7 +47,7 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
 | Stockage, hôte et applications | Configuration minimale requise pour la version 
 
 
-| ONTAP | Dernière version des correctifs de ONTAP 9.13.1, 9.14.1 et 9.15.1. 
+| ONTAP | Dernière version de correctif de ONTAP 9.12.1, 9.13.1 ou 9.14.1 
 
 
 | Hôtes ESXi | ESXi 7.0.3 
@@ -59,7 +59,7 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
 | Fournisseur VASA | 3.0 
 
 
-| Application OVA | 10,2 
+| Application OVA | 10,1 
 |===
 La matrice d'interopérabilité (IMT) contient les dernières informations sur les versions prises en charge de ONTAP, de vCenter Server, d'hôtes ESXi et d'applications de plug-in.
 
