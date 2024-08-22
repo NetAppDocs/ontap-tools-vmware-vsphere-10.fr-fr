@@ -6,6 +6,8 @@ entries:
   url: "/deploy/sizing-requirements.html"
 - title: Téléchargez les outils ONTAP
   url: "/deploy/download-ontap-tools.html"
+- title: Limites de configuration
+  url: "/deploy/config-limits.html"
 - title: Préparez-vous à déployer les outils ONTAP
   url: "/deploy/prepare-deployment.html"
 - title: Déployez une configuration à un seul nœud non HA

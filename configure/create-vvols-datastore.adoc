@@ -11,7 +11,7 @@ summary: Vous pouvez créer un datastore vVols avec de nouveaux volumes ou avec 
 
 
 [role="lead"]
-Selon la destination choisie pour l'action, le datastore est créé et monté sur tous les hôtes de la destination et l'action est activée uniquement si l'utilisateur actuel a le privilège d'exécuter.
+Lorsque vous créez un datastore au niveau du cluster hôte, le datastore est créé et monté sur tous les hôtes de la destination et l'action est activée uniquement si l'utilisateur actuel a le privilège d'exécuter.
 
 L'assistant d'action CREATE datastore prend en charge la création de datastores NFS, VMFS et vVols.
 
@@ -24,20 +24,19 @@ Vous pouvez créer un datastore vVols avec de nouveaux volumes ou des volumes ex
 
 NOTE: Cette option permet de vérifier que les agrégats racine ne sont pas mappés sur un SVM.
 
+.Avant de commencer
+Assurez-vous que VASA Provider est enregistré avec le vCenter sélectionné.
+
 .Étapes
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un centre de données, puis sélectionnez *NetApp ONTAP Tools* > *Create datastore*.
 . Dans le volet *Type*, sélectionnez vVols dans *Type de datastore*.
-+
-
-NOTE: Vous obtenez l'option vVols uniquement si le fournisseur VASA est enregistré avec le vCenter sélectionné.
-
 . Dans le volet *Nom et Protocole*, indiquez *nom du datastore* et *Protocole*.
 . Dans le volet *Storage*, sélectionnez *Platform* et *Storage VM*. Dans la section *Options avancées*, sélectionnez une règle d'export personnalisée (pour le protocole NFS) ou un nom de groupe initiateur personnalisé (pour le protocole iSCSI), le cas échéant.
 +
 ** Les options de plateforme et asymétriques vous aident à filtrer les options déroulantes des SVM. On doit sélectionner la SVM pour créer ou utiliser le ou les volume(s) pour créer les datastores.
 ** Le bouton bascule *asymétrique* n'est visible que si iSCSI a été sélectionné à l'étape précédente et si les performances ou la capacité sont sélectionnées dans la liste déroulante plate-forme.
-** Le protocole asymétrique est vrai pour la plateforme AFF et faux pour la plateforme ASA.
+** Sélectionnez le bouton bascule *asymétrique* pour la plate-forme AFF et désactivez-le pour la plate-forme ASA.
 
 
 . Dans le volet *attributs de stockage*, vous pouvez créer de nouveaux volumes ou utiliser les volumes existants. Lors de la création d'un volume, vous pouvez activer la QoS sur le datastore.
@@ -54,7 +53,7 @@ Un datastore VMware Network File System (NFS) utilise le protocole NFS pour conn
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un centre de données, puis sélectionnez *NetApp ONTAP Tools* > *Create datastore*.
 . Dans le volet *Type*, sélectionnez NFS dans *Type de datastore*.
-. Dans le volet *Nom et protocole*, entrez le nom, la taille et les informations de protocole du datastore. Dans les options avancées, sélectionnez *datastore cluster* et authentification Kerberos.
+. Dans le volet *Nom et protocole*, entrez le nom, la taille et les informations de protocole du datastore. Dans les options avancées, sélectionnez *datastore cluster* et *Kerberos Authentication*.
 +
 
 NOTE: L'authentification Kerberos est disponible uniquement lorsque le protocole NFS 4.1 est sélectionné.
@@ -76,25 +75,6 @@ Le datastore NFS est créé et monté sur tous les hôtes.
 == Créer un datastore VMFS
 
 VMFS (Virtual machine File System) est un système de fichiers en cluster spécialement conçu pour le stockage de fichiers de machines virtuelles dans des environnements VMware vSphere. Elle permet à plusieurs hôtes ESXi d'accéder simultanément aux mêmes fichiers de machine virtuelle, ce qui permet d'utiliser des fonctionnalités telles que vMotion et haute disponibilité.
-
-*Avant de commencer*
-
-Vérifier les éléments suivants avant de continuer :
-
-* Vérifiez que tous les hôtes cibles sont en bon état et que l'hôte prend en charge le protocole.
-* Créer un nouveau volume (taille min. 2 Go)
-* Définissez les options de volume avec QoS
-* Créer une LUN de type VMware
-* Get initiators for all target hosts
-* Créez/réutilisez un groupe initiateur en fonction d'initiateurs correspondants
-* Mapper la LUN sur le groupe initiateur
-* Ajoutez des cibles iSCSI aux hôtes ESXi
-* Relancez l'analyse des adaptateurs de bus hôte (HBA) sur tous les hôtes
-* Montage du volume en tant que datastore VMFS6 (pour plus de 6.5 hôtes)
-* Relancez l'analyse du stockage VMFS sur les hôtes ESXi
-* Déplacez le datastore vers le cluster datastore
-* Rééquilibrer les chemins iSCSI
-
 
 .Étapes
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`

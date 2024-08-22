@@ -28,7 +28,7 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
 |===
 
 
-| Type de déploiement | Processeurs | Mémoire (Go) 
+| *Type de déploiement* | *CPU* | *Mémoire (Go)* 
 
 
 | Petit (S) | 8 | 16 
@@ -39,6 +39,8 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
 
 | Grand (L) | 16 | 32 
 |===
+Voir link:../deploy/config-limits.html["Limites de configuration pour le déploiement des outils ONTAP pour VMware vSphere"]pour plus de détails.
+
 
 
 == Exigences minimales en matière de stockage et d'applications

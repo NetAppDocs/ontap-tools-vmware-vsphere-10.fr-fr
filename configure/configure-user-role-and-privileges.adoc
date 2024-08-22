@@ -24,9 +24,6 @@ NOTE: La création d'utilisateurs s'effectue au niveau du cluster ou directement
 * Vous devez vous être connecté avec des privilèges d'administrateur pour le back-end de stockage.
 
 
-
-NOTE: La création d'utilisateurs peut s'effectuer au niveau du cluster ou au niveau des SVM. Vous pouvez également créer des utilisateurs sans utiliser le fichier user_roles.json et, si c'est le cas, vous devez disposer d'un ensemble minimal de privilèges au niveau du SVM.
-
 *Étapes*
 
 . Extrayez le fichier téléchargé _\https://<loadbalancerIP>:8443/Virtualization/user-Privileges/Users_roles.zip_.

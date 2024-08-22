@@ -21,6 +21,12 @@ CA est une entité de confiance qui émet des certificats SSL (Secure Sockets La
 
 
 
+=== Double pile
+
+Un réseau à double pile est un environnement réseau qui prend en charge l'utilisation simultanée des adresses IPv4 et IPv6.
+
+
+
 === Haute disponibilité (HA)
 
 Les nœuds de cluster sont configurés en paires haute disponibilité pour assurer la continuité de l'activité.

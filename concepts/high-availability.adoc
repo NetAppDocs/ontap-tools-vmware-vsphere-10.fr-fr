@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Les outils ONTAP pour VMware vSphere prennent en charge une configuration haute disponibilité \(HA\) afin d"assurer la continuité des fonctionnalités des outils ONTAP pour VMware vSphere en cas de défaillance.' 
 ---
-= Configurez la haute disponibilité des outils ONTAP pour VMware vSphere
+= Haute disponibilité des outils ONTAP pour VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
