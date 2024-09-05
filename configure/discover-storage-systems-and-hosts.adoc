@@ -28,7 +28,7 @@ Lors de la découverte des systèmes de stockage, les outils ONTAP pour VMware v
 *Étapes*
 
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.
-. Cliquez avec le bouton droit de la souris sur le centre de données requis, puis sélectionnez *NetApp ONTAP Tools* > *Update Host Data* .
+. Cliquez avec le bouton droit de la souris sur le centre de données requis et sélectionnez *NetApp ONTAP Tools* > *Update Host Data* .
 +
 Les outils ONTAP pour VMware vSphere affichent une boîte de dialogue *Confirm* avec le message suivant :
 
@@ -36,7 +36,7 @@ Les outils ONTAP pour VMware vSphere affichent une boîte de dialogue *Confirm* 
 « Cette action va redémarrer la détection de tous les systèmes de stockage connectés et peut prendre quelques minutes. Voulez-vous continuer ? »
 
 . Cliquez sur *Oui*.
-. Sélectionnez les contrôleurs de stockage détectés qui sont à l'état `Authentication Failure`, Puis cliquez sur *actions* > *Modifier*.
+. Sélectionnez les contrôleurs de stockage détectés qui ont l'état `Authentication Failure` et cliquez sur *actions* > *Modifier*.
 . Renseignez les informations requises dans la boîte de dialogue *Modifier le système de stockage*.
 . Répétez les étapes 4 et 5 pour tous les contrôleurs de stockage avec `Authentication Failure` état.
 

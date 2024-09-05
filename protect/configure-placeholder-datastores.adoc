@@ -22,10 +22,10 @@ Vous devez configurer un datastore de marque de réservation pour qu'il garde un
 *Étapes*
 
 . Connectez-vous à vCenter Server et cliquez sur *site Recovery* > *sites*.
-. Sélectionnez votre site protégé, puis cliquez sur *gérer*.
+. Sélectionnez votre site protégé et cliquez sur *gérer*.
 . Dans l'onglet gérer, sélectionnez *espace de stockage réservé*.
 . Cliquez sur *Nouveau* pour créer un nouveau datastore de marque de réservation.
-. Sélectionnez le datastore approprié, puis cliquez sur *OK*.
+. Sélectionnez le datastore approprié et cliquez sur *OK*.
 +
 
 NOTE: Les datastores à espace réservé peuvent être locaux ou distants et ne doivent pas être répliqués.

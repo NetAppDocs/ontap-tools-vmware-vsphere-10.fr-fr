@@ -35,10 +35,11 @@ La vue du stockage ONTAP sous l'onglet configurer des outils ONTAP pour VMware v
 .Étapes
 . Dans le client vSphere, accédez au datastore VMFS.
 . Cliquez sur l'onglet *configurer* dans le volet de droite.
-. Sélectionnez *Outils NetApp ONTAP* > *stockage ONTAP*. Les informations *Storage Details* et *LUN Details* apparaissent dans le volet de droite.
+. Sélectionnez *Outils NetApp ONTAP* > *stockage ONTAP*. Les informations *Storage details* et *LUN details* ou *Namespace details* en cas de protocole NVMe/TCP ou NVMe/FC apparaissent dans le volet de droite.
 +
 ** La page de détails du stockage contient des informations sur les systèmes back-end, l'agrégat et le volume.
 ** La page de détails de la LUN contient les données relatives à la LUN.
+** Lors de l'utilisation du protocole NVMe/TCP ou NVMe/FC pour le datastore VMFS, la page d'informations sur l'espace de noms contient les données liées à l'espace de noms.
 
 
 
@@ -53,6 +54,6 @@ La vue du stockage ONTAP sous l'onglet configurer des outils ONTAP pour VMware v
 . Sélectionnez *Outils NetApp ONTAP* > *stockage ONTAP*.
 . La vue stockage ONTAP répertorie tous les volumes. Vous pouvez développer ou supprimer du stockage à partir du volet de stockage ONTAP.
 +
-Suivez les instructions de la section link:../manage/expand-storage-of-vvol-datastore.html["Développez les datastores vVols"] Pour ajouter le datastore vVols et link:../manage/remove-storage-from-a-vvols-datastore.html["Réduire les datastores vVols"] pour supprimer le datastore.
+Suivez les instructions de link:../manage/expand-storage-of-vvol-datastore.html["Développez votre datastore vVols"] la section pour ajouter link:../manage/remove-storage-from-a-vvols-datastore.html["Réduire le datastore vVols"]le datastore vVols et  la section pour supprimer le datastore.
 
 

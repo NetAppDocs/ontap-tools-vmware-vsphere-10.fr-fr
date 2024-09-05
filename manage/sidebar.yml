@@ -4,18 +4,20 @@ title: Gérer les outils ONTAP
 entries:
 - title: Gérer les datastores
   entries:
-  - title: Montez des datastores NFS et VMFS
+  - title: Montez les datastores NFS et VMFS
     url: "/manage/mount-datastores-on-host.html"
+  - title: Démontez les datastores NFS et VMFS
+    url: "/manage/unmount-datastores-on-host.html"
   - title: Montez un datastore vvols
     url: "/manage/mount-a-vvols-datastore.html"
   - title: Redimensionner les datastores NFS et VMFS
     url: "/manage/resize-datastores.html"
-  - title: Étendez les datastores vVol
+  - title: Développez le datastore vVol
     url: "/manage/expand-storage-of-vvol-datastore.html"
-  - title: Réduire les datastores vVols
+  - title: Réduire le datastore vVols
     url: "/manage/remove-storage-from-a-vvols-datastore.html"
   - title: Supprimer les datastores
-    url: "/manage/delete-vvols.html"
+    url: "/manage/delete-ds.html"
   - title: Vues de stockage ONTAP pour les datastores
     url: "/manage/storage-view-datastore.html"
   - title: Vue du stockage des machines virtuelles
@@ -38,7 +40,8 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: Démarrez SSH sur les autres nœuds
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: Mettez à jour les informations d'identification vCenter et ONTAP
+  - title: Mettez à jour les informations d'identification du serveur vCenter et de
+      ONTAP
     url: "/manage/update-vcenter-credentials.html"
 - title: Rapports sur l'outil ONTAP
   url: "/manage/reports.html"
@@ -67,3 +70,9 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: Nettoyer les volumes
   url: "/manage/delete-deployment.html"
+- title: Gestion de la protection des clusters hôtes
+  entries:
+  - title: Modifier la protection du cluster hôte
+    url: "/manage/edit-hostcluster-protection.html"
+  - title: Retirez la protection du cluster hôte
+    url: "/manage/delete-hostcluster-protection.html"

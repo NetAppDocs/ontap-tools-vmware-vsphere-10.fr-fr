@@ -1,5 +1,5 @@
 ---
-permalink: manage/delete-vvols.html 
+permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
 summary: 'L"action Supprimer le datastore supprime le datastore. Dans le cas d"un datastore NFS ou VMFS, une boîte de dialogue s"affiche avec la liste des machines virtuelles qui utilisent le datastore.' 
@@ -27,10 +27,10 @@ Pour supprimer un datastore NFS, VMFS ou vvol des outils ONTAP du serveur vCente
 
 .Étapes
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
-. Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un datastore, puis sélectionnez *NetApp ONTAP Tools* > *Delete datastore*.
+. Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un datastore et sélectionnez *NetApp ONTAP Tools* > *Delete datastore*.
 +
 
-NOTE: Vous ne pouvez pas supprimer les datastores si des machines virtuelles utilisent ce datastore. Vous devez déplacer les machines virtuelles vers un autre datastore avant de supprimer le datastore.
+NOTE: Vous ne pouvez pas supprimer les datastores si des machines virtuelles utilisent ce datastore. Vous devez déplacer les machines virtuelles vers un autre datastore avant de supprimer le datastore. Vous ne pouvez pas cocher la case de suppression de volume si le datastore appartient à un cluster hôte protégé.
 
 +
 .. Dans le cas d'un datastore NFS ou VMFS, une boîte de dialogue s'affiche avec la liste des machines virtuelles qui utilisent le datastore.
@@ -38,4 +38,8 @@ NOTE: Vous ne pouvez pas supprimer les datastores si des machines virtuelles uti
 
 
 . Pour supprimer les volumes de sauvegarde sur le stockage ONTAP, sélectionnez *Supprimer les volumes sur le cluster ONTAP*.
++
+
+NOTE: Vous ne pouvez pas supprimer le volume sur le cluster ONTAP d'un datastore VMFS faisant partie du cluster hôte protégé.
+
 

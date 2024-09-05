@@ -17,7 +17,7 @@ Une fois le déploiement terminé, les outils ONTAP pour les produits VMware vSp
 
 
 
-== Bibliothèque de contenu
+== Créer une bibliothèque de contenu
 
 Une bibliothèque de contenu dans VMware est un objet conteneur qui stocke les modèles de machine virtuelle, les modèles vApp et d'autres types de fichiers. Le déploiement avec la bibliothèque de contenu vous offre une expérience transparente car il ne dépend pas de la connectivité réseau.
 

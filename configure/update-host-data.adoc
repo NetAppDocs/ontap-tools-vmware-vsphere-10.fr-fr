@@ -16,6 +16,6 @@ Vous pouvez exécuter une détection à la demande sur l'hôte ESXi pour obtenir
 *Étapes*
 
 . Sur la page d'accueil du client Web VMware vSphere, cliquez sur *hosts and clusters*.
-. Cliquez avec le bouton droit de la souris sur un hôte, puis sélectionnez *NetApp ONTAP Tools* > *Update host data*.
+. Cliquez avec le bouton droit de la souris sur un hôte et sélectionnez *NetApp ONTAP Tools* > *Update host data*.
 . Dans la fenêtre contextuelle *mettre à jour les données de l'hôte*, sélectionnez *Oui* pour redémarrer la détection de tous les systèmes de stockage connectés.
 

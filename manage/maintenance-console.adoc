@@ -41,7 +41,7 @@ Configuration du système
  a| 
 . Redémarrez la machine virtuelle
 . Arrêter la machine virtuelle
-. Générez un jeton pour réinitialiser le mot de passe de l'interface utilisateur du gestionnaire
+. Modifier le mot de passe utilisateur « familiariser »
 . Modifier le fuseau horaire
 . Ajouter un nouveau serveur NTP
 . Augmentation de la taille des disques de prison (/prison)

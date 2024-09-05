@@ -125,5 +125,23 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 
 
 | 088 | La configuration de la rotation du journal pour journald a échoué | Réessayez la mise à niveau. 
+
+
+| 089 | La modification de la propriété du fichier de configuration de rotation du journal de synthèse a échoué | Réessayez la mise à niveau. 
+
+
+| 091 | Échec de la mise à niveau iSCSI | Réessayez la mise à niveau. 
+
+
+| 092 | Échec de la restauration iSCSI | Réessayez la mise à niveau. 
+
+
+| 093 | échec de la mise à niveau de Trident | Réessayez la mise à niveau. 
+
+
+| 094 | échec de la restauration Trident | Réessayez la mise à niveau. 
+
+
+| 095 | Échec de la mise à niveau de Debian | Pas de récupération pour la mise à niveau Debian. Les services sont mis à niveau et de nouveaux pods seront en cours d'exécution 
 |===
 En savoir plus sur https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["Restauration des outils ONTAP pour VMware vSphere en cas d'échec de la mise à niveau de la version 10.0 vers la version 10.1"]

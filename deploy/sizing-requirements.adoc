@@ -66,27 +66,3 @@ Voir link:../deploy/config-limits.html["Limites de configuration pour le déploi
 La matrice d'interopérabilité (IMT) contient les dernières informations sur les versions prises en charge de ONTAP, de vCenter Server, d'hôtes ESXi et d'applications de plug-in.
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Matrice d'interopérabilité"^]
-
-
-
-== Autres considérations relatives au déploiement
-
-Lors de la personnalisation du déploiement des outils ONTAP, vous devez tenir compte de quelques exigences.
-
-
-
-=== Mot de passe utilisateur de l'application
-
-Il s'agit du mot de passe attribué au compte administrateur. Pour des raisons de sécurité, il est recommandé que la longueur du mot de passe soit comprise entre huit et trente caractères et qu'elle contienne au moins un caractère supérieur, un chiffre inférieur, un chiffre et un caractère spécial.
-
-
-
-=== Identifiants de la console de maintenance de l'appliance
-
-Vous devez accéder à la console de maintenance en utilisant le nom d'utilisateur « maint ». Vous pouvez définir le mot de passe pour l'utilisateur "saint" pendant le déploiement. Vous pouvez utiliser l'option redémarrer le système d'exploitation invité disponible lors du redémarrage de la machine virtuelle dans vCenter Server pour modifier le mot de passe.
-
-
-
-=== Propriétés du réseau de l'appliance
-
-Spécifiez un nom d'hôte DNS valide (non qualifié) ainsi que l'adresse IP statique des outils ONTAP pour VMware vSphere et les autres paramètres réseau. Les adresses IP fournies doivent être accessibles à partir du réseau VLAN que vous sélectionnez pendant le déploiement. DHCP n'est pas pris en charge pour les outils ONTAP pour VMware vSphere version 10.1. Tous ces paramètres sont requis pour une installation et un fonctionnement corrects.

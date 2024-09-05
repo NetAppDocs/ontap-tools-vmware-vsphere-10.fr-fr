@@ -24,7 +24,7 @@ NOTE: Storage Replication adapter (SRA) ne prend pas en charge les configuration
 
 *Étapes*
 
-. Double-cliquez sur *site Recovery* sur la page d'accueil de vSphere client, puis cliquez sur *sites*.
+. Double-cliquez sur *site Recovery* sur la page d'accueil du client vSphere et cliquez sur *sites*.
 . Cliquez sur *objets* > *actions* > *paire de sites*.
 . Dans la boîte de dialogue paire de serveurs de Gestionnaire de récupération de site, entrez l'adresse du contrôleur des services de plate-forme du site protégé, puis cliquez sur *Suivant*.
 . Dans la section Select vCenter Server, procédez comme suit :

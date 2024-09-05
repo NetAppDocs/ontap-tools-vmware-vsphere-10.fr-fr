@@ -34,5 +34,7 @@ entries:
 - title: Présentation du tableau de bord des outils NetApp ONTAP pour le plug-in VMware
     vSphere
   url: "/configure/dashboard-overview.html"
+- title: Création de la protection de cluster hôte
+  url: "/configure/protect-cluster.html"
 - title: Créer un datastore
   url: "/configure/create-vvols-datastore.html"

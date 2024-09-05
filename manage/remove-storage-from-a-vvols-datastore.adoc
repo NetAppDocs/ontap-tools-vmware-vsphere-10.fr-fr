@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 'L"action Supprimer le datastore supprime le datastore lorsqu"il n"y a pas de vVols sur le datastore sélectionné.' 
 ---
-= Réduire les datastores vVols
+= Réduire le datastore vVols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

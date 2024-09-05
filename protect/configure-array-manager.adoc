@@ -25,7 +25,7 @@ SRA prend en charge la gestion au niveau du cluster et de la SVM. Si vous ajoute
 
 *Étapes*
 
-. Dans SRM, cliquez sur *Array Managers*, puis sur *Add Array Manager*.
+. Dans SRM, cliquez sur *Array Managers* et cliquez sur *Add Array Manager*.
 . Entrez les informations suivantes pour décrire la matrice dans SRM :
 +
 .. Entrez un nom pour identifier le gestionnaire de matrice dans le champ *Nom d'affichage*.
