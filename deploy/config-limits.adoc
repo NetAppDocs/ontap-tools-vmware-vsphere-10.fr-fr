@@ -42,28 +42,6 @@ Pour plus de détails sur les exigences de dimensionnement du système hôte par
 Le tableau suivant présente les chiffres pris en charge par instance SRM à l'aide des outils ONTAP pour VMware vSphere.
 
 |===
-
-
-| Nombre total de machines virtuelles configurées pour la protection à l'aide de la réplication basée sur les baies | 5000 
-
-
-| Nombre total de groupes de protection de réplication basés sur les baies | 250 
-
-
-| Nombre total de groupes de protection par plan de reprise d'activité | 50 
-
-
-| Nombre de datastores répliqués | 255 
-|===
-Pour plus d'informations sur les exigences de dimensionnement du système hôte par nœud, reportez-vous à la section link:../deploy/sizing-requirements.html["Conditions préalables au déploiement des outils ONTAP pour VMware vSphere"].
-
-
-
-== Outils ONTAP pour VMware vSphere - Storage Replication adapter (SRA)
-
-Le tableau suivant présente les chiffres pris en charge par instance SRM à l'aide des outils ONTAP pour VMware vSphere.
-
-|===
 | *Taille du déploiement vCenter* | *Petit* | *Moyen* 
 
 

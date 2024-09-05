@@ -1550,8 +1550,6 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Exécutez la commande Perl pour configurer SRA avec les nouvelles informations d'identification :</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Sélectionnez la paire de matrices requise et vérifiez les détails correspondants.</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*Prendre le snapshot des outils ONTAP pour les machines virtuelles VMware vSphere dans vCenter (3 machines virtuelles en cas de déploiement HA, 1 machine virtuelle en cas de déploiement non HA)*</block>
-  <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">Dernière version de correctif de ONTAP 9.12.1, 9.13.1 ou 9.14.1</block>
-  <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">La migration est prise en charge à partir des outils ONTAP pour VMware vSphere 9.10D2, 9.11D4, 9.12 et 9.13 vers la version 10.1.</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">Déploiement des outils OVA pour ONTAP pour VMware vSphere 10.1.</block>
   <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">Installez les outils ONTAP pour l'adaptateur VMware vSphere 10.1 SRA sur les sites de protection et de reprise en suivant la procédure décrite à la section <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">Une fois la migration réussie et après avoir enregistré les outils ONTAP 10.1 sur le serveur vCenter, procédez comme suit :</block>
@@ -1581,7 +1579,6 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="72fa3a55085ed575e69d7aaa8847dce6" category="cell">environ 50 000</block>
   <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128</block>
   <block id="a767227b9eba64196b4788edef7ac1b7" category="cell">environ 100 000</block>
-  <block id="4817fc1db77ffd3d9559878c1947be09" category="paragraph">Pour plus d'informations sur les exigences de dimensionnement du système hôte par nœud, reportez-vous à la section <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block>.</block>
   <block id="38c5b65e97cdb4c6de7600ae7479af40" category="section-title">Outils ONTAP pour VMware vSphere - Storage Replication adapter (SRA)</block>
   <block id="747389dd88507b473bef28a38f605585" category="paragraph">Le tableau suivant présente les chiffres pris en charge par instance SRM à l'aide des outils ONTAP pour VMware vSphere.</block>
   <block id="bff4a5ed353e2265f8bc7ee336bcb8a8" category="cell">*Taille du déploiement vCenter*</block>
@@ -1634,7 +1631,6 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="adbcecad06ff22a439836e6c9002cc82" category="section-title">Cluster de stockage vSphere Metro</block>
   <block id="fdaedd61903be1be2102df0b95fd62f8" category="inline-link">Cluster de stockage VMware vSphere Metro</block>
   <block id="ab214a77aca7f1a5595c69a10b7f0c9d" category="paragraph">VSphere Metro Storage Cluster (vMSC) est une technologie qui active et prend en charge vSphere dans un déploiement de clusters étendus. Les solutions VMSC sont prises en charge avec NetApp MetroCluster et SnapMirror Active Sync (anciennement SMBC). Ces solutions assurent une meilleure continuité de l'activité en cas de défaillance de domaine. Le modèle de résilience est basé sur vos choix de configuration spécifiques. En savoir plus sur<block ref="fae35a77d8fa39590c619f954aeac240" category="inline-link-rx"></block>.</block>
-  <block id="becce2ec351a7286510e90f70f5d4890" category="paragraph">Les outils ONTAP pour VMware vSphere sont un ensemble d'outils de gestion du cycle de vie des machines virtuelles. Il s'intègre à l'écosystème VMware pour faciliter le provisionnement des datastores et assurer une protection de base des machines virtuelles. Les outils ONTAP pour VMware vSphere sont un ensemble de microservices évolutifs horizontalement, pilotés par les événements et déployés en tant qu'appliance virtuelle ouverte (OVA). Cette version intègre l'API REST avec ONTAP.</block>
   <block id="743bb9eba37e39241a186d033a7c1e5d" category="list-text">Cliquez avec le bouton droit de la souris sur un hôte et sélectionnez *NetApp ONTAP Tools* &gt; *Update host data*.</block>
   <block id="7da745ff746553dfa65f8ae5fbe4b8ff" category="list-text">Vous ne pouvez créer que des datastores VMFS sur un cluster protégé. Lorsque vous ajoutez un datastore VMFS à un cluster protégé, le datastore est automatiquement protégé.</block>
   <block id="7f4eeeb7066fc64c51f02eba557a897f" category="list-text">Vous ne pouvez pas créer de datastore sur un data Center qui possède un ou plusieurs clusters hôtes protégés.</block>
@@ -1846,4 +1842,8 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">Modifier la protection du cluster hôte</block>
   <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10,2</block>
   <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">Documentation relative aux outils ONTAP pour VMware vSphere 10.2</block>
+  <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">Les outils ONTAP pour VMware vSphere sont un ensemble d'outils de gestion du cycle de vie des machines virtuelles. Il s'intègre à l'écosystème VMware pour faciliter le provisionnement des datastores et assurer une protection de base des machines virtuelles.</block>
+  <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">Les outils ONTAP pour VMware vSphere sont un ensemble de microservices évolutifs horizontalement, pilotés par les événements et déployés en tant qu'appliance virtuelle ouverte (OVA). Cette version intègre l'API REST avec ONTAP.</block>
+  <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">Dernière version de correctif de ONTAP 9.12.1, 9.13.1, 9.14.1 et 9.15.1.</block>
+  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">La migration est prise en charge à partir des outils ONTAP pour VMware vSphere 9.10D2, 9.11D4, 9.12 et 9.13 vers la version 10.2.</block>
 </blocks>

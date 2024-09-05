@@ -49,7 +49,7 @@ Voir link:../deploy/config-limits.html["Limites de configuration pour le déploi
 | Stockage, hôte et applications | Configuration minimale requise pour la version 
 
 
-| ONTAP | Dernière version de correctif de ONTAP 9.12.1, 9.13.1 ou 9.14.1 
+| ONTAP | Dernière version de correctif de ONTAP 9.12.1, 9.13.1, 9.14.1 et 9.15.1. 
 
 
 | Hôtes ESXi | ESXi 7.0.3 
