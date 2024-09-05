@@ -61,7 +61,7 @@ Voir link:../deploy/config-limits.html["Limites de configuration pour le déploi
 | Fournisseur VASA | 3.0 
 
 
-| Application OVA | 10,1 
+| Application OVA | 10,2 
 |===
 La matrice d'interopérabilité (IMT) contient les dernières informations sur les versions prises en charge de ONTAP, de vCenter Server, d'hôtes ESXi et d'applications de plug-in.
 
