@@ -17,7 +17,7 @@ Vous devez configurer les intervalles de délai d'expiration du stockage conform
 
 == Paramètres du fournisseur de stockage
 
-Vous devez définir les valeurs de délai suivantes sur SRM pour l'environnement mis à l'échelle :
+Vous devez définir les valeurs de temporisation suivantes sur VMware Live site Recovery pour un environnement évolutif :
 
 |===
 
@@ -56,7 +56,7 @@ Vous devez également activer le `StorageProvider.autoResignatureMode` option.
 
 Pour plus d'informations sur la modification des paramètres du fournisseur de stockage, reportez-vous à la documentation VMware.
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentation VMware vSphere : modifiez les paramètres du fournisseur de stockage"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentation VMware vSphere : modifiez les paramètres du fournisseur de stockage"]
 
 
 
@@ -69,4 +69,4 @@ NOTE: L'intervalle de temporisation spécifié est la valeur maximale. Il n'est 
 
 Pour plus d'informations, reportez-vous à la documentation VMware relative à la modification des paramètres du fournisseur SAN.
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentation de VMware site Recovery Manager : modifiez les paramètres de stockage"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentation de VMware site Recovery Manager : modifiez les paramètres de stockage"]

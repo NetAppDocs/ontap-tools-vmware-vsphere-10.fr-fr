@@ -39,7 +39,7 @@ Pour plus de détails sur les exigences de dimensionnement du système hôte par
 
 == Outils ONTAP pour VMware vSphere - Storage Replication adapter (SRA)
 
-Le tableau suivant présente les chiffres pris en charge par instance SRM à l'aide des outils ONTAP pour VMware vSphere.
+Le tableau suivant indique les chiffres pris en charge par instance VMware Live site Recovery à l'aide des outils ONTAP pour VMware vSphere.
 
 |===
 | *Taille du déploiement vCenter* | *Petit* | *Moyen* 
@@ -59,12 +59,12 @@ Le tableau suivant présente les chiffres pris en charge par instance SRM à l'a
 
 | Nombre de VM | 4000 | 7000 
 |===
-Le tableau suivant indique le nombre de SRM et les outils ONTAP correspondants pour la taille du déploiement de VMware vSphere.
+Le tableau suivant indique le nombre de VMware Live site Recovery et les outils ONTAP correspondants pour la taille du déploiement de VMware vSphere.
 
 |===
 
 
-| *Nombre d'instances SRM* | *Déploiement des outils ONTAP taille* 
+| *Nombre d'instances de VMware Live site Recovery* | *Déploiement des outils ONTAP taille* 
 
 
 | Jusqu'à 4 | Petit 

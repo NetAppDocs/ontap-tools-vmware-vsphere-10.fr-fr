@@ -17,7 +17,7 @@ Vous devez créer des groupes de protection pour protéger un groupe de machines
 
 Vous devez vous assurer que les sites source et cible sont configurés pour les sites suivants :
 
-* Même version de SRM installée
+* La même version de VMware Live site Recovery est installée
 * Ordinateurs virtuels
 * Sites protégés et de reprise par paires
 * Les datastores source et de destination doivent être montés sur les sites respectifs

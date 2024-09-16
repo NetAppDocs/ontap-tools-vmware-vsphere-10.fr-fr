@@ -18,7 +18,7 @@ Vous devez mapper vos ressources sur le site protégé et le site de reprise de 
 Vous devez avoir connecté les sites protégés et de reprise.
 
 
-NOTE: Dans site Recovery Manager (SRM), les ressources peuvent être des pools de ressources, des hôtes ESXi ou des clusters vSphere.
+NOTE: Dans VMware Live site Recovery, les ressources peuvent être des pools de ressources, des hôtes ESXi ou des clusters vSphere.
 
 *Étapes*
 

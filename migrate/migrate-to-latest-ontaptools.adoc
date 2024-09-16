@@ -49,9 +49,9 @@ Avant la migration, assurez-vous que l'un des sites est protégé et que l'autre
 NOTE: Ne migrez pas si le basculement vient d'être terminé et si la re-protection est en attente. Effectuez la re-protection, puis la migration.
 Il en va de même pour tester le plan de reprise d'activité. Une fois le test du plan de reprise terminé, nettoyez la restauration test, puis démarrez la migration.
 
-. Effectuez les étapes suivantes pour supprimer les outils ONTAP pour l'adaptateur SRA de VMware vSphere 9.xx dans l'interface utilisateur SRM :
+. Procédez comme suit pour supprimer les outils ONTAP pour VMware vSphere 9.xx version SRA adapter dans l'interface utilisateur de VMware Live site Recovery :
 +
-.. Accédez à la page gestion de la configuration SRM
+.. Accédez à la page de gestion de la configuration de VMware Live site Recovery
 .. Accédez à la section Storage Replication adapter
 .. Cliquez sur le menu Kebab et cliquez sur *Réinitialiser la configuration*
 .. Cliquez sur le menu Kebab et sélectionnez *Supprimer*
@@ -60,8 +60,8 @@ Effectuez ces étapes sur les sites de protection et de reprise d'activité.
 
 
 
-. Installez les outils ONTAP pour l'adaptateur VMware vSphere 10.1 SRA sur les sites de protection et de reprise en suivant la procédure décrite à la section link:../protect/configure-on-srm-appliance.html["Configurez SRA sur l'appliance SRM"]
-. Dans la page interface utilisateur SRM, exécutez les opérations *Discover Arrays* et *Discover Devices* et vérifiez que les périphériques s'affichent comme avant la migration.
+. Installez les outils ONTAP pour l'adaptateur VMware vSphere 10.1 SRA sur les sites de protection et de reprise en suivant la procédure décrite à la section link:../protect/configure-on-srm-appliance.html["Configurez SRA sur l'appliance VMware Live site Recovery"]
+. Sur la page de l'interface utilisateur de VMware Live site Recovery, effectuez les opérations *Discover Arrays* et *Discover Devices* et vérifiez que les périphériques s'affichent comme avant la migration.
 
 
 

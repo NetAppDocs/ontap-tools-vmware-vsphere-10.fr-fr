@@ -71,7 +71,7 @@ La synchronisation active SnapMirror assure la continuité des services, même e
 
 === Storage Replication adapter (SRA)
 
-SRA est le logiciel spécifique au fournisseur de stockage installé dans l'appliance SRM. L'adaptateur permet la communication entre site Recovery Manager et un contrôleur de stockage au niveau du SVM (Storage Virtual machine) et la configuration au niveau du cluster.
+SRA est le logiciel spécifique au fournisseur de stockage installé dans l'appliance VMware Live site Recovery. L'adaptateur permet la communication entre site Recovery Manager et un contrôleur de stockage au niveau du SVM (Storage Virtual machine) et la configuration au niveau du cluster.
 
 
 
@@ -111,9 +111,9 @@ Les stratégies de stockage VM sont créées dans vCenter Server sous stratégie
 
 
 
-=== VMware site Recovery Manager (SRM)
+=== Restauration de site en direct VMware
 
-SRM assure la continuité de l'activité, la reprise après incident, la migration de site et des fonctionnalités de test sans interruption pour les environnements virtuels VMware.
+VMware Live site Recovery assure la continuité de l'activité, la reprise après incident, la migration de site et des fonctionnalités de test sans interruption pour les environnements virtuels VMware.
 
 
 
