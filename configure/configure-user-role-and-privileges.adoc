@@ -143,7 +143,7 @@ Les privilèges minimaux requis pour l'utilisateur de cluster avec périmètre g
 |===
 
 
-=== Mise à niveau des outils ONTAP pour VMware vSphere 10.1 utilisateur vers 10.2 utilisateurs
+== Mise à niveau des outils ONTAP pour VMware vSphere 10.1 utilisateur vers 10.2 utilisateurs
 
 Si l'utilisateur des outils ONTAP pour VMware vSphere 10.1 est un utilisateur dont la portée est définie en cluster et créé à l'aide du fichier json, exécutez les commandes suivantes sur l'interface de ligne de commande ONTAP en utilisant l'utilisateur admin pour effectuer la mise à niveau vers la version 10.2.
 

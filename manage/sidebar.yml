@@ -24,9 +24,9 @@ entries:
     url: "/manage/virtual-machine-storage-view-datastore.html"
 - title: Gérer les seuils de stockage
   url: "/manage/manage-storage-threshold.html"
-- title: Gestion du back-end de stockage
+- title: Gestion des systèmes back-end
   url: "/manage/storage-backend.html"
-- title: Gestion de l'instance vCenter Server
+- title: Gestion des instances vCenter Server
   url: "/manage/manage-vcenter.html"
 - title: Gérer les certificats
   url: "/manage/certificate-manage.html"

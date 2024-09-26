@@ -11,19 +11,16 @@ summary: Les systèmes back-end de stockage sont des systèmes que les hôtes ES
 
 
 [role="lead"]
-Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilisent pour le stockage des données.
+Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilisent pour le stockage des données. Vous pouvez ajouter un système back-end de stockage en utilisant le gestionnaire d'outils ONTAP ou l'interface utilisateur du client vSphere.
 
 *À propos de cette tâche*
 
 Cette tâche permet d'intégrer un cluster ONTAP. Lorsque vous ajoutez le système back-end de stockage à l'aide du gestionnaire d'outils ONTAP, le système back-end de stockage est ajouté au cluster global. Associez le cluster global à une instance vCenter Server pour permettre à un utilisateur SVM de provisionner un datastore vVols.
 
-
-NOTE: Lorsque vous ajoutez un back-end de stockage à l'aide de l'interface client vSphere, le datastore vVols ne prend pas en charge l'ajout direct d'un utilisateur SVM.
-
-
-
-== Ajoutez le système back-end de stockage à l'aide du gestionnaire d'outils ONTAP
-
+[role="tabbed-block"]
+====
+.Utilisation du Gestionnaire d'outils ONTAP
+--
 
 NOTE: Un système back-end est global lorsqu'il est ajouté à partir du gestionnaire d'outils ONTAP ou des API des outils ONTAP. Un système back-end de stockage est local lorsqu'il est ajouté à partir des API vCenter Server. Par exemple, dans une configuration mutualisée, vous pouvez ajouter un système back-end de stockage (cluster) globalement et un SVM localement pour utiliser les identifiants d'utilisateur du SVM.
 
@@ -40,9 +37,11 @@ NOTE: Les LIF de gestion IPV4 et IPV6 sont prises en charge. Les informations d'
 
 
 
+--
+.À l'aide de l'interface utilisateur du client vSphere
+--
 
-
-== Ajoutez le système back-end de stockage à l'aide de l'interface client vSphere :
+NOTE: Lorsque vous ajoutez un back-end de stockage à l'aide de l'interface client vSphere, le datastore vVols ne prend pas en charge l'ajout direct d'un utilisateur SVM.
 
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Dans la page des raccourcis, cliquez sur *NetApp ONTAP Tools* dans la section des modules externes.
@@ -55,3 +54,6 @@ NOTE: Vous pouvez ajouter des identifiants basés sur le cluster et des LIF de g
 
 
 La liste est actualisée et le système back-end de stockage ajouté apparaît dans la liste.
+
+--
+====

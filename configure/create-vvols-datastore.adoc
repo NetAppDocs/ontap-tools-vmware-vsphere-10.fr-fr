@@ -21,10 +21,10 @@ L'assistant d'action CREATE datastore prend en charge la création de datastores
 * Vous pouvez créer un datastore VMFS sur un hôte, uniquement s'il possède une relation asynchrone.
 
 
-
-
-== Créer un datastore vVols
-
+[role="tabbed-block"]
+====
+.Créer un datastore vVols
+--
 Vous pouvez créer un datastore vVols avec de nouveaux volumes ou des volumes existants. Vous ne pouvez pas créer de datastore vVols avec la combinaison de volumes existants et nouveaux.
 
 
@@ -49,10 +49,9 @@ Assurez-vous que VASA Provider est enregistré avec le vCenter sélectionné.
 . Vérifiez votre sélection dans le volet *Résumé* et cliquez sur *Terminer*. Le datastore vVols est créé et monté sur tous les hôtes.
 
 
-
-
-== Créer un datastore NFS
-
+--
+.Créer un datastore NFS
+--
 Un datastore VMware Network File System (NFS) utilise le protocole NFS pour connecter les hôtes ESXi à un périphérique de stockage partagé via un réseau. Les datastores NFS sont généralement utilisés dans les environnements VMware vSphere et offrent plusieurs avantages, tels que la simplicité et la flexibilité.
 
 .Étapes
@@ -76,10 +75,9 @@ NOTE: L'authentification Kerberos est disponible uniquement lorsque le protocole
 
 Le datastore NFS est créé et monté sur tous les hôtes.
 
-
-
-== Créer un datastore VMFS
-
+--
+.Créer un datastore VMFS
+--
 VMFS (Virtual machine File System) est un système de fichiers en cluster spécialement conçu pour le stockage de fichiers de machines virtuelles dans des environnements VMware vSphere. Elle permet à plusieurs hôtes ESXi d'accéder simultanément aux mêmes fichiers de machine virtuelle, ce qui permet d'utiliser des fonctionnalités telles que vMotion et haute disponibilité.
 
 .Avant de commencer
@@ -129,11 +127,12 @@ Si vous choisissez l'option *any* dans la liste déroulante plate-forme, vous po
 
 NOTE: Pour la création de datastores VMFS avec le protocole NVMe/FC ou NVMe/TCP, vous ne pouvez pas utiliser le volume existant, vous devez créer un nouveau volume.
 
-
-
 . Consultez les détails du datastore dans le volet *Summary* et cliquez sur *Finish*.
 +
 
 NOTE: Si vous créez le datastore sur un cluster protégé, un message en lecture seule s'affiche : « le datastore est en cours de montage sur un cluster protégé ». Le datastore VMFS est créé et monté sur tous les hôtes.
 
 
+
+--
+====
