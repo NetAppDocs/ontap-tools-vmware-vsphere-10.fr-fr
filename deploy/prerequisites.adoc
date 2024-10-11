@@ -43,7 +43,7 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
 
 | Grand (L) | 16 | 32 
 |===
-Voir link:../deploy/config-limits.html["Limites de configuration pour le déploiement des outils ONTAP pour VMware vSphere"]pour plus de détails.
+Pour plus d'informations, reportez-vous à la section _limites de configuration pour déployer les outils ONTAP pour VMware vSphere_ ci-dessous.
 
 
 
