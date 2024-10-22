@@ -35,6 +35,10 @@ La configuration de SRA sur l'appliance VMware Live site Recovery stocke les inf
 
 NOTE: Vous devez fournir la valeur du mot de passe entre guillemets pour vous assurer que le script Perl ne lit pas les caractères spéciaux du mot de passe comme délimiteur de l'entrée.
 
++
+
+NOTE: Le nom d'utilisateur et le mot de passe de l'application sont définis lors du déploiement des outils ONTAP. Cette opération est nécessaire pour l'enregistrement du fournisseur VASA/SRA.
+
 . Relancez la recherche des adaptateurs pour vérifier que les détails sont mis à jour sur la page adaptateurs de réplication de stockage de VMware Live site Recovery.
 
 
