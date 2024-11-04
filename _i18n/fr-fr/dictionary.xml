@@ -308,9 +308,6 @@ Vous pouvez cliquer sur l'en-tête pour obtenir les 10 principaux datastores de 
   <block id="27e514c64c8a3970155422f887b4e4c9" category="cell">Carte de conformité de l'hôte ESXi</block>
   <block id="37a7aee5902e5e8b7d36af678ff3baf3" category="cell">Cette carte affiche l'état de conformité global de tous les paramètres des hôtes VMware ESXi (pour le vCenter sélectionné) en fonction des paramètres d'hôte NetApp recommandés par groupe/catégorie de paramètres.
 Vous pouvez cliquer sur le lien appliquer les paramètres recommandés pour appliquer les paramètres recommandés. Vous pouvez cliquer sur incidents/Unknown pour afficher la liste des hôtes.</block>
-  <block id="ea87c4ef97995827b2d23fec795f9cbd" category="summary">Vous pouvez exécuter une détection à la demande sur l'hôte ESXi pour obtenir les dernières mises à jour des données de stockage.</block>
-  <block id="de458ad6ecb99cfc8e4cc7fa762462c4" category="doc">Mettre à jour les données de l'hôte</block>
-  <block id="6099322beed408d39a0c31a402ba9f04" category="list-text">Dans la fenêtre contextuelle *mettre à jour les données de l'hôte*, sélectionnez *Oui* pour redémarrer la détection de tous les systèmes de stockage connectés.</block>
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion des systèmes back-end de stockage à l'aide du fichier JSON fourni par les outils ONTAP pour VMware vSphere et ONTAP System Manager.</block>
   <block id="fde3f7a850bbaaac2a3706bf8c7df54c" category="doc">Configurer les rôles et privilèges des utilisateurs ONTAP</block>
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">Vous pouvez configurer de nouveaux rôles et privilèges utilisateur pour la gestion des systèmes back-end de stockage à l'aide du fichier JSON fourni avec les outils ONTAP pour VMware vSphere et ONTAP System Manager.</block>
@@ -1301,9 +1298,7 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="721041095b64df665034c0b19c967475" category="sidebar">Haute disponibilité des outils ONTAP pour VMware vSphere</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">Automatisez à l'aide d'API REST</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">Protection des datastores et des machines virtuelles</block>
-  <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">Configuration du système de stockage pour la reprise après incident</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">Configurez SRA pour les environnements hautement évolutifs</block>
-  <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Configuration des sites protégés et de reprise après incident</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">Configuration des ressources protégées et du site de reprise</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">Vérifier les systèmes de stockage répliqués</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">Mettez à niveau les outils ONTAP</block>
@@ -1524,7 +1519,6 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">Ajout de NVMe over RDMA Software ou de NVMe over TCP Adapters</block>
   <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">Pour VMware vSphere 7, suivez les instructions du site VMware<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block> pour configurer les adaptateurs logiciels NVMe/TCP. Pour VMware vSphere 8, suivez la<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block> procédure ci-dessous pour configurer les adaptateurs logiciels NVMe/TCP.</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">Comment configurer NVMe/TCP avec vSphere 8.0 Update 1 et ONTAP 9.13.1 pour les datastores VMFS</block>
-  <block id="81dc7c047ef799c2030ebccbe36d3322" category="list-text">Exécutez <block ref="6c4ebf1ca886332539cd9c26d849d11e" category="inline-link-macro-rx"></block> l'action sur l'hôte ESXi. Pour plus d'informations, reportez-vous à la section<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">Si vous utilisez le protocole NVME/FC, effectuez les étapes suivantes pour configurer l'hôte ESXi :</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">Activez NVMe over Fabrics (NVMe-of) sur vos hôtes ESXi.</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">Segmentation SCSI complète.</block>
@@ -1839,7 +1833,6 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">Ajouter vCenter Server</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">Déployez les outils ONTAP</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">Restaurez les outils ONTAP</block>
-  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">Restaurez vos outils ONTAP</block>
   <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">La migration est prise en charge à partir des outils ONTAP pour VMware vSphere 9.10D2, 9.11D4, 9.12D1 et 9.13D2 vers la version 10.2.</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">Découvrez la comparaison des fonctionnalités des outils ONTAP pour VMware vSphere 9 et des outils ONTAP pour VMware vSphere 10</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">Comparaison des fonctionnalités des outils ONTAP pour VMware vSphere 9 et des outils ONTAP pour VMware vSphere 10</block>
@@ -1905,4 +1898,8 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">Dans la boîte de dialogue *pair site Recovery Manager Servers*, entrez l'adresse du contrôleur des services de plate-forme du site protégé, puis cliquez sur *Suivant*.</block>
   <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">Assurez-vous que vous disposez de trois adresses IP disponibles pour un déploiement non HA : une adresse IP libre pour l'équilibreur de charge, une adresse IP libre pour le plan de contrôle Kubernetes et une adresse IP pour le nœud. Pour un déploiement haute disponibilité, en plus de ces trois adresses IP, vous aurez besoin de deux adresses IP supplémentaires pour les deuxième et troisième nœuds. Les noms d'hôte doivent être mappés sur les adresses IP libres du DNS avant d'attribuer des déploiements HA et non HA. Les cinq adresses IP du déploiement HA et les trois adresses IP du déploiement non HA doivent se trouver sur le même VLAN que celui sélectionné pour le déploiement.</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">Le nom d'utilisateur et le mot de passe de l'application sont définis lors du déploiement des outils ONTAP. Cette opération est nécessaire pour l'enregistrement du fournisseur VASA/SRA.</block>
+  <block id="9fc56e301e08de92885a49e832294c9b" category="list-text">Exécutez <block ref="d7dfa373f3b590500a261c503f3d702f" category="inline-link-macro-rx"></block> l'action sur l'hôte ESXi. Pour plus d'informations, reportez-vous à la section<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
+  <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Protégez à l'aide de la protection de cluster hôte</block>
+  <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Protégez à l'aide de la protection SRA</block>
+  <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Restaurez la configuration de vos outils ONTAP</block>
 </blocks>

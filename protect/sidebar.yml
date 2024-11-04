@@ -2,20 +2,22 @@
 section: protect
 title: Protection des datastores et des machines virtuelles
 entries:
-- title: Activez SRA pour protéger les datastores
-  url: "/protect/enable-storage-replication-adapter.html"
-- title: Configuration du système de stockage pour la reprise après incident
+- title: Protégez à l'aide de la protection de cluster hôte
   entries:
+  - title: Création de la protection de cluster hôte
+    url: "/configure/protect-cluster.html"
+- title: Protégez à l'aide de la protection SRA
+  entries:
+  - title: Activez SRA pour protéger les datastores
+    url: "/protect/enable-storage-replication-adapter.html"
   - title: Configurez SRA pour les environnements SAN et NAS
     url: "/protect/configure-storage-replication-adapter-for-san-environment.html"
   - title: Configurez SRA pour les environnements hautement évolutifs
     url: "/protect/configure-storage-replication-adapter-for-highly-scaled-environment.html"
-- title: Configurez SRA sur l'appliance VMware Live site Recovery
-  url: "/protect/configure-on-srm-appliance.html"
-- title: Mettez à jour les informations d'identification SRA
-  url: "/protect/update-credentials.html"
-- title: Configuration des sites protégés et de reprise après incident
-  entries:
+  - title: Configurez SRA sur l'appliance VMware Live site Recovery
+    url: "/protect/configure-on-srm-appliance.html"
+  - title: Mettez à jour les informations d'identification SRA
+    url: "/protect/update-credentials.html"
   - title: Configuration des groupes de protection
     url: "/protect/configure-protection-groups.html"
   - title: Protection par paires et sites de reprise après incident

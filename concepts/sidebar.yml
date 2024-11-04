@@ -22,3 +22,5 @@ entries:
   url: "/concepts/high-availability.html"
 - title: AutoSupport
   url: "/concepts/autosupport.html"
+- title: Interface utilisateur du Gestionnaire d'outils ONTAP
+  url: "/configure/manager-user-interface.html"
