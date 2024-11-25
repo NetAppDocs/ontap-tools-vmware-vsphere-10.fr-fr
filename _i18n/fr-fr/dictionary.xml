@@ -243,8 +243,6 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">Lorsque vous supprimez des instances de vCenter Server dans les outils ONTAP, les actions suivantes sont effectuées automatiquement :</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">Le plug-in n'est pas enregistré.</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">Les privilèges de plug-in et les rôles de plug-in sont supprimés.</block>
-  <block id="d5fb672b62a493a68492dfcdac746c0b" category="summary">Vérifier que le SVM intégré est répertorié sous VASA Provider dans l'interface client vCenter.</block>
-  <block id="53d752e3cc33b6d74616d71f03425e0f" category="doc">Vérifiez le fournisseur VASA enregistré</block>
   <block id="b05db788b95e64cca7587ea1c9a8d4fe" category="paragraph">Vérifiez que le fournisseur VASA intégré est répertorié dans VASA Provider à partir de l'interface client vCenter et de l'interface utilisateur du plug-in distant.</block>
   <block id="12c4b643913312ffb0ca49cedfcedd35" category="list-text">Pour vérifier VASA Provider à partir de l'interface utilisateur du client vCenter, procédez comme suit :</block>
   <block id="45b4fd4eef700c8aca7d8e7d745b8cbd" category="list-text">Sous fournisseur de stockage/systèmes back-end, vérifiez que le fournisseur VASA intégré est correctement répertorié.</block>
@@ -1902,4 +1900,5 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Protégez à l'aide de la protection de cluster hôte</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Protégez à l'aide de la protection SRA</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Restaurez la configuration de vos outils ONTAP</block>
+  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Après la fin*</block>
 </blocks>
