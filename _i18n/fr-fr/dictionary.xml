@@ -1901,4 +1901,6 @@ Exécutez la commande suivante pour rechercher le premier nom de groupe initiate
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Protégez à l'aide de la protection SRA</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Restaurez la configuration de vos outils ONTAP</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Après la fin*</block>
+  <block id="7770bd163d7ff3ef18fb8fde03d271ba" category="list-text">En mode HA du déploiement, ne renommez pas les machines virtuelles après le déploiement.</block>
+  <block id="c1d3c828ba9f7365c33657c18574ce0d" category="admonition">Si vous utilisez les outils ONTAP pour la version VMware vSphere 9.13P1, vous devez effectuer une mise à niveau vers 9.13D2 avant la migration vers la version 10.2.</block>
 </blocks>

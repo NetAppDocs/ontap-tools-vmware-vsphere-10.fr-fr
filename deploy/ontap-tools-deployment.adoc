@@ -135,6 +135,7 @@ NOTE: Ne déployez pas les outils ONTAP pour la machine virtuelle VMware vSphere
 . Sélectionnez le réseau de destination pour chaque réseau source et cliquez sur *Suivant*.
 . Dans la fenêtre *Personnaliser le modèle*, remplissez les champs requis et cliquez sur *Suivant*.
 +
+** En mode HA du déploiement, ne renommez pas les machines virtuelles après le déploiement.
 ** Lorsque l'étendue de SVM est activée, vous devez avoir déjà activé la prise en charge des SVM avec l'adresse IP de gestion.
 ** Les informations fournies ici sont validées pour les modèles corrects lors du processus d'installation. En cas de divergence, un message d'erreur s'affiche sur la console Web et vous êtes invité à corriger toute information incorrecte fournie.
 ** Les noms d'hôte doivent être composés de lettres majuscules (A-Z), de lettres minuscules (a-z), de chiffres (0-9) ou de caractères spéciaux de tiret (-). Si vous souhaitez configurer la double pile, spécifiez le nom d'hôte mappé sur l'adresse IPv6.
