@@ -160,4 +160,5 @@ NOTE: Le mot de passe du serveur vCenter parent ne doit pas contenir ces caract�
 
 
 * Assurez-vous que le nom de domaine sur lequel le certificat est émis est mappé à l'adresse IP virtuelle dans un déploiement multi-vCenter où les certificats d'autorité de certification personnalisée sont obligatoires. _Nslookup_ vérifiez le nom de domaine pour vérifier si le domaine est résolu à l'adresse IP prévue. Les certificats doivent être créés avec le nom de domaine et l'adresse IP de l'adresse IP de l'équilibreur de charge.
+* Avant d'installer les outils ONTAP pour VMware vSphere 10.2 dans une configuration avancée non HA et haute disponibilité, consultez l'article de la base de connaissances : https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["Conditions requises pour la configuration avancée non HA et la configuration haute disponibilité"]
 
