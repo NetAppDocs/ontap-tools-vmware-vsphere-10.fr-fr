@@ -21,8 +21,8 @@ Vous pouvez utiliser les outils ONTAP pour VMware vSphere avec VMware vCenter Se
 
 * *Espace requis pour le package d'installation par nœud*
 +
-** 10 Go pour les installations à provisionnement fin
-** 248 Go pour les installations à provisionnement lourd
+** 15 Go pour les installations à provisionnement fin
+** 348 Go pour les installations à provisionnement lourd
 
 
 * *Exigences de dimensionnement du système hôte par nœud*
@@ -32,19 +32,23 @@ La mémoire recommandée par taille de déploiement et par nœud est indiquée d
 |===
 
 
-| *Type de déploiement* | *CPU* | *Mémoire (Go)* 
+| *Type de déploiement* | *CPU* | *Mémoire (Go)* | *Espace disque (Go) thick provisionné* 
 
 
-| Petit (S) | 8 | 16 
+| Non HA petit | 9 | 18 | 350 
 
 
-| Moyen (M) | 12 | 24 
+| Support non HA | 13 | 26 | 350 
 
 
-| Grand (L) | 16 | 32 
+| HA petit | 27 | 54 | 1050 
+
+
+| HA moyen | 39 | 78 | 1050 
+
+
+| HAUTE disponibilité | 51 | 102 | 1050 
 |===
-Pour plus d'informations, reportez-vous à la section _limites de configuration pour déployer les outils ONTAP pour VMware vSphere_ ci-dessous.
-
 
 
 == Exigences minimales en matière de stockage et d'applications
@@ -53,7 +57,7 @@ Pour plus d'informations, reportez-vous à la section _limites de configuration 
 | Stockage, hôte et applications | Configuration minimale requise pour la version 
 
 
-| ONTAP | Dernière version de correctif de ONTAP 9.12.1, 9.13.1, 9.14.1 et 9.15.1. 
+| ONTAP | 9.14.1, 9.15.1 et 9.16.0. FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series et ASA r2. 
 
 
 | Hôtes ESXi | ESXi 7.0.3 
@@ -62,10 +66,10 @@ Pour plus d'informations, reportez-vous à la section _limites de configuration 
 | Serveur vCenter | VCenter 7.0U3 
 
 
-| Fournisseur VASA | 3.0 
+| Vasa Provider | 3.0 
 
 
-| Application OVA | 10,2 
+| Application OVA | 10,3 
 |===
 La matrice d'interopérabilité (IMT) contient les dernières informations sur les versions prises en charge de ONTAP, de vCenter Server, d'hôtes ESXi et d'applications de plug-in.
 
@@ -80,22 +84,22 @@ Vous pouvez utiliser le tableau suivant comme guide pour configurer les outils O
 |===
 
 
-| *Déploiement* | *Type* | *Nombre de vVols* | *Nombre d'hôtes* | *Type de protocole* 
+| *Déploiement* | *Type* | *Nombre de vVols* | *Nombre d'hôtes* 
 
 
-| Déploiement facile | Petit (S) | ~12 KO | 32 | NFS et iSCSI 
+| Non HA | Petit (S) | ~12 KO | 32 
 
 
-| Déploiement facile | Moyen (M) | ~24 KO | 64 | NFS et iSCSI 
+| Non HA | Moyen (M) | ~24 KO | 64 
 
 
-| Haute-disponibilité | Petit (S) | ~24 KO | 64 | NFS et iSCSI 
+| Haute-disponibilité | Petit (S) | ~24 KO | 64 
 
 
-| Haute-disponibilité | Moyen (M) | environ 50 000 | 128 | NFS et iSCSI 
+| Haute-disponibilité | Moyen (M) | environ 50 000 | 128 
 
 
-| Haute-disponibilité | Grand (L) | environ 100 000 | 256 [REMARQUE] le nombre d'hôtes dans le tableau indique le nombre total d'hôtes provenant de plusieurs vCenters. | NFS et iSCSI 
+| Haute-disponibilité | Grand (L) | environ 100 000 | 256 [REMARQUE] le nombre d'hôtes dans le tableau indique le nombre total d'hôtes provenant de plusieurs vCenters. 
 |===
 Pour plus de détails sur les exigences de dimensionnement du système hôte par nœud, reportez-vous à link:../deploy/prerequisites.html["Conditions préalables au déploiement des outils ONTAP pour VMware vSphere"]la section .
 
@@ -143,22 +147,70 @@ Pour plus d'informations, reportez-vous https://docs.vmware.com/en/VMware-Live-R
 
 
 
+== Configuration requise pour les ports
+
+Le tableau suivant présente les ports réseau utilisés par NetApp ainsi que leurs fonctions. Assurez-vous que ces ports sont ouverts et accessibles pour faciliter le bon fonctionnement et la communication dans le système. Assurez-vous que les configurations réseau nécessaires sont en place pour permettre au trafic sur ces ports de fonctionner correctement pour les services associés. Selon vos politiques de sécurité, vous devrez peut-être configurer des pare-feu ou d'autres dispositifs de sécurité pour autoriser ce trafic au sein de votre réseau.
+
+|===
+
+
+| *Port* | *Description* 
+
+
+| 22 (TCP) | Ansible utilise ce port SSH pour la communication lors du provisionnement du cluster. Ce port est requis pour des fonctionnalités telles que la modification du mot de passe utilisateur de maintenance, les messages d'état et la mise à jour des valeurs sur les trois nœuds en cas de configuration haute disponibilité. 
+
+
+| 443 (TCP) | Il s'agit du port pass-through pour les communications entrantes du service de VASA Provider. Le certificat auto-signé du fournisseur VASA et le certificat CA personnalisé sont hébergés sur ce port. 
+
+
+| 8443 (TCP) | Ce port héberge la documentation de l'API via swagger et l'application de l'interface utilisateur Manager. 
+
+
+| 2379 (TCP) | Il s'agit du port par défaut pour les demandes client telles que obtenir, mettre, supprimer ou surveiller les clés dans le magasin de valeurs de clé etcd. 
+
+
+| 2380 (TCP) | Il s'agit du port par défaut pour la communication serveur à serveur pour le cluster ETCD utilisé pour l'algorithme de consensus raft sur lequel etcd s'appuie pour la réplication et la cohérence des données. 
+
+
+| 7472 (TCP+UDP) | Il s'agit du port de service de metrics prometheus. 
+
+
+| 7946 (TCP+UDP) | Ce port est utilisé pour la détection du réseau de conteneurs docker. 
+
+
+| 9083 (TCP) | Ce port est un port de service utilisé en interne pour le service du fournisseur VASA. 
+
+
+| 1162 (UDP) | Il s'agit du port SNMP trap Packets. 
+
+
+| 6443 (TCP) | Source : nœuds agents RKE2. Destination : nœuds de serveur REK2. Description : API Kubernetes 
+
+
+| 9345 (TCP) | Source : nœuds agents RKE2. Destination : nœuds de serveur REK2. Description : API superviseur REK2 
+
+
+| 8472 (TCP+UDP) | Tous les nœuds doivent pouvoir atteindre d'autres nœuds sur le port UDP 8472 lorsque Flannel VXLAN est utilisé. Source : tous les nœuds RKE2. Destination : tous les nœuds REK2. Description: Canal CNI avec VXLAN 
+
+
+| 10250 (TCP) | Source : tous les nœuds RKE2. Destination : tous les nœuds REK2. Description : mesures Kubelet 
+
+
+| 30000-32767 (TCP) | Source : tous les nœuds RKE2. Destination : tous les nœuds REK2. Description : plage de ports NodePort 
+
+
+| 123 (TCP) | Ntpd utilise ce port pour effectuer la validation du serveur ntp. 
+|===
+
+
 == Contrôles préalables au déploiement
 
 Assurez-vous que les éléments suivants sont en place avant de poursuivre le déploiement :
 
 * L'environnement vCenter Server est configuré et configuré.
-* (Facultatif) pour l'utilisateur d'automatisation - le fichier JSON de collections Postman fourni par NetApp est collecté.
 * Les informations d'identification du serveur vCenter parent pour déployer l'OVA sont en place.
-+
-
-NOTE: Le mot de passe du serveur vCenter parent ne doit pas contenir ces caractères spéciaux ($, ', ").
-
 * Vous disposez des informations de connexion de votre instance de serveur vCenter à laquelle les outils ONTAP pour VMware vSphere se connecteront au post-déploiement, pour inscription.
 * Le cache du navigateur est supprimé.
-* Assurez-vous que vous disposez de trois adresses IP disponibles pour un déploiement non HA : une adresse IP libre pour l'équilibreur de charge, une adresse IP libre pour le plan de contrôle Kubernetes et une adresse IP pour le nœud. Pour un déploiement haute disponibilité, en plus de ces trois adresses IP, vous aurez besoin de deux adresses IP supplémentaires pour les deuxième et troisième nœuds. Les noms d'hôte doivent être mappés sur les adresses IP libres du DNS avant d'attribuer des déploiements HA et non HA. Les cinq adresses IP du déploiement HA et les trois adresses IP du déploiement non HA doivent se trouver sur le même VLAN que celui sélectionné pour le déploiement.
-
-
+* Assurez-vous que vous disposez de trois adresses IP disponibles pour un déploiement non HA : une adresse IP libre pour l'équilibreur de charge, une adresse IP libre pour le plan de contrôle Kubernetes et une adresse IP pour le nœud. Pour un déploiement haute disponibilité, en plus de ces trois adresses IP, vous aurez besoin de deux adresses IP supplémentaires pour les deuxième et troisième nœuds. Les noms d'hôte doivent être mappés aux adresses IP libres sur le DNS avant l'attribution. Les cinq adresses IP doivent se trouver sur le même VLAN que celui sélectionné pour le déploiement.
 * Assurez-vous que le nom de domaine sur lequel le certificat est émis est mappé à l'adresse IP virtuelle dans un déploiement multi-vCenter où les certificats d'autorité de certification personnalisée sont obligatoires. _Nslookup_ vérifiez le nom de domaine pour vérifier si le domaine est résolu à l'adresse IP prévue. Les certificats doivent être créés avec le nom de domaine et l'adresse IP de l'adresse IP de l'équilibreur de charge.
-* Avant d'installer les outils ONTAP pour VMware vSphere 10.2 dans une configuration avancée non HA et haute disponibilité, consultez l'article de la base de connaissances : https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["Conditions requises pour la configuration avancée non HA et la configuration haute disponibilité"]
 

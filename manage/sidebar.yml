@@ -2,9 +2,12 @@
 section: manage
 title: Gérer les outils ONTAP
 entries:
-- title: Présentation du tableau de bord des outils NetApp ONTAP pour le plug-in VMware
-    vSphere
+- title: Présentation du tableau de bord des outils ONTAP pour VMware vSphere
   url: "/configure/dashboard-overview.html"
+- title: Interface utilisateur du Gestionnaire d'outils ONTAP
+  url: "/configure/manager-user-interface.html"
+- title: Modifier les paramètres de l'appareil
+  url: "/manage/edit-appliance-settings.html"
 - title: Gérer les datastores
   entries:
   - title: Créer un datastore
@@ -35,8 +38,6 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: Gérer les certificats
   url: "/manage/certificate-manage.html"
-- title: Gestion des igroups et des règles d'export
-  url: "/manage/igroup-management.html"
 - title: Accès aux outils ONTAP pour la console de maintenance VMware vSphere
   entries:
   - title: Présentation des outils ONTAP pour la console de maintenance VMware vSphere
@@ -48,7 +49,7 @@ entries:
   - title: Mettez à jour les informations d'identification du serveur vCenter et de
       ONTAP
     url: "/manage/update-vcenter-credentials.html"
-- title: Rapports sur l'outil ONTAP
+- title: Rapports sur les outils ONTAP
   url: "/manage/reports.html"
 - title: Collectez les fichiers journaux
   url: "/manage/collect-the-log-files.html"
@@ -83,3 +84,5 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: Retirez la protection du cluster hôte
     url: "/manage/delete-hostcluster-protection.html"
+- title: RPO proche de zéro
+  url: "/manage/enable-backup.html"

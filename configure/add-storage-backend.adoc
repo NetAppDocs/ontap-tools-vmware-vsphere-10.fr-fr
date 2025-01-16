@@ -15,7 +15,10 @@ Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilis
 
 *À propos de cette tâche*
 
-Cette tâche permet d'intégrer un cluster ONTAP. Lorsque vous ajoutez le système back-end de stockage à l'aide du gestionnaire d'outils ONTAP, le système back-end de stockage est ajouté au cluster global. Associez le cluster global à une instance vCenter Server pour permettre à un utilisateur SVM de provisionner un datastore vVols.
+Cette tâche permet d'intégrer un cluster ONTAP. Lorsque vous ajoutez le système back-end de stockage à l'aide du gestionnaire d'outils ONTAP, le système back-end de stockage est ajouté au cluster global. Associez le cluster global à une instance vCenter Server pour permettre à un utilisateur SVM de provisionner un datastore vVols. Vous pouvez uniquement ajouter du stockage dans vCenter à l'aide de la SVM.
+
+
+NOTE: Pour les workflows mutualisés, vous devez ajouter des clusters ONTAP globalement à l'aide du gestionnaire d'outils ONTAP et associer les clusters aux locataires vCenter souhaités. Le locataire vCenter doit ensuite intégrer les serveurs virtuels de stockage (SVM) souhaités. Si vous n'avez pas besoin de la colocation, vous devez ajouter vos systèmes ONTAP directement à l'aide de l'interface utilisateur vCenter.
 
 [role="tabbed-block"]
 ====
@@ -33,7 +36,7 @@ NOTE: Un système back-end est global lorsqu'il est ajouté à partir du gestion
 . Indiquez l'adresse IP du serveur ou le nom de domaine complet, le nom d'utilisateur et le mot de passe, puis sélectionnez *Ajouter*.
 +
 
-NOTE: Les LIF de gestion IPV4 et IPV6 sont prises en charge. Les informations d'identification utilisateur SVM avec les LIF de gestion sont également prises en charge.
+NOTE: Les LIF de gestion IPv4 et IPv6 sont prises en charge. Les informations d'identification utilisateur SVM avec les LIF de gestion sont également prises en charge.
 
 
 
@@ -49,7 +52,7 @@ NOTE: Lorsque vous ajoutez un back-end de stockage à l'aide de l'interface clie
 . Dans la fenêtre *Add Storage Backend*, indiquez l'adresse IP du serveur, le nom d'utilisateur, le mot de passe et les détails du port, puis cliquez sur *Add*.
 +
 
-NOTE: Vous pouvez ajouter des identifiants basés sur le cluster et des LIF de gestion IPV4 et IPV6 ou fournir des informations d'identification basées sur SVM avec la LIF de gestion du SVM afin d'ajouter directement un utilisateur du SVM.
+NOTE: Vous pouvez ajouter des identifiants basés sur le cluster et des LIF de gestion d'adresses IPv4 et IPv6 ou fournir des identifiants basés sur SVM avec la LIF de gestion du SVM afin d'ajouter directement un utilisateur du SVM.
 
 
 

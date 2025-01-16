@@ -43,6 +43,6 @@ Les outils ONTAP pour VMware vSphere affichent une boîte de dialogue *Confirm* 
 
 Une fois le processus de détection terminé, effectuez les actions suivantes :
 
-* Utilisez les outils ONTAP pour VMware vSphere pour configurer les paramètres d'hôte VMware ESXi pour les hôtes qui affichent l'icône alerte dans la colonne Paramètres de l'adaptateur, dans la colonne Paramètres MPIO ou dans la colonne Paramètres NFS.
+* Utilisez les outils ONTAP pour VMware vSphere pour configurer les paramètres de l'hôte VMware ESXi pour les hôtes qui affichent l'icône d'alerte dans la colonne des paramètres de l'adaptateur, dans la colonne des paramètres MPIO ou dans la colonne des paramètres NFS.
 * Indiquez les informations d'identification du système de stockage.
 

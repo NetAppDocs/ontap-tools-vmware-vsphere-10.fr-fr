@@ -32,6 +32,7 @@ Configuration de l'application
 . Afficher le récapitulatif de l'état du serveur
 . Modifier le niveau du JOURNAL pour les services VASA Provider et SRA
 . Désactivez AutoSupport
+. Mettre à jour l'URL du proxy AutoSupport
 
 
 
@@ -71,6 +72,8 @@ Support et diagnostics
  a| 
 . Accéder au shell de diagnostic
 . Activer l'accès aux diagnostics à distance
+. Fournir les informations d'identification vCenter pour la sauvegarde
+. Effectuer des sauvegardes
 
 
 |===

@@ -15,14 +15,14 @@ Les outils ONTAP pour VMware vSphere vérifient et définissent les paramètres 
 
 *À propos de cette tâche*
 
-Ce processus peut prendre un certain temps, selon votre configuration et la charge du système. La progression de la tâche s'affiche dans le panneau tâches récentes. Lorsque les tâches sont terminées, l'icône d'alerte d'état de l'hôte est remplacée par l'icône Normal ou l'icône redémarrage en attente.
+Ce processus peut prendre un certain temps, selon votre configuration et la charge du système. La progression de la tâche s'affiche dans le panneau *tâches récentes*. Une fois les tâches terminées, l'icône d'alerte d'état de l'hôte est remplacée par l'icône normale ou l'icône de redémarrage en attente.
 
 *Étapes*
 
 . Sur la page d'accueil du client Web VMware vSphere, cliquez sur *hosts and clusters*.
 . Cliquez avec le bouton droit de la souris sur un hôte et sélectionnez *NetApp ONTAP Tools* > *Update host data*.
 . Dans la page des raccourcis, cliquez sur *NetApp ONTAP Tools* dans la section des modules externes.
-. Accédez à la carte de conformité des hôtes VMware ESXi dans la Présentation (tableau de bord) du plug-in ONTAP Tools for VMware vSphere.
+. Accédez à la carte *ESXi Host Compliance* dans la présentation (tableau de bord) du plug-in ONTAP Tools for VMware vSphere.
 . Sélectionnez le lien *appliquer les paramètres recommandés*.
 . Dans la fenêtre *appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes que vous souhaitez respecter avec les paramètres d'hôte recommandés par NetApp et cliquez sur *Suivant*.
 +

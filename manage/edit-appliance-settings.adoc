@@ -1,0 +1,68 @@
+---
+permalink: manage/edit-appliance-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez modifier le mot de passe administrateur à l"aide du Gestionnaire d"outils ONTAP.' 
+---
+= Modifier les paramètres de l'appareil
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez le gestionnaire d'outils ONTAP pour faire évoluer verticalement la taille des nœuds, gérer les services et mettre à niveau les outils ONTAP pour configurer VMware vSphere en haute disponibilité.
+
+L'appliance d'outils ONTAP est initialement déployée dans une configuration non HA à un seul nœud. Vous pouvez modifier la configuration dans la fenêtre *Modifier les paramètres de l'appareil*.
+
+*Avant de commencer*
+
+Assurez-vous que le modèle OVA que vous fournissez possède la même version OVA que le premier nœud.
+
+*Étapes*
+
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalanceIP:8443/virtualization/ui/`
+. Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
+. Cliquez sur *Modifier les paramètres de l'appareil* dans la section Présentation.
+. Dans la section *Services*, vous pouvez activer des services facultatifs tels que VASA Provider, importer la configuration des vVols et SRA (Disaster Recovery) selon vos besoins.
++
+Lorsque vous activez ces services pour la première fois, vous devez créer les informations d'identification du fournisseur VASA/SRA. Permet d'enregistrer ou d'activer les services VASA Provider/SRA sur le serveur vCenter.
+
++
+
+NOTE: Pour désactiver l'un des services facultatifs, assurez-vous qu'aucun serveur vCenter géré par les outils ONTAP n'utilise ces services.
+
++
+*L'option Autoriser l'importation de la configuration vVols* s'affiche uniquement lorsque le service VASA Provider est activé. Cette option active la migration des données vVols des outils ONTAP 9.x vers les outils ONTAP 10.3.
+
+. Dans la section *Configuration*, vous pouvez augmenter la taille de chaque nœud d'outils ONTAP et activer la configuration haute disponibilité en fonction de vos besoins. Vous avez besoin des informations d'identification de vCenter Server pour effectuer des modifications.
++
+Lorsque les outils ONTAP sont en configuration haute disponibilité, vous pouvez modifier les détails de la bibliothèque de contenu. Vous devez fournir à nouveau le mot de passe pour la nouvelle soumission de modification.
+
++
+
+NOTE: Vous pouvez uniquement faire évoluer verticalement la taille du nœud des outils ONTAP. Vous ne pouvez pas réduire la taille du nœud de la taille actuelle à une taille inférieure. Dans le cas d'une configuration non HA, le nombre maximal de configurations prises en charge est moyen. La haute disponibilité est prise en charge pour les moyennes et grandes configurations.
+
+. Utilisez le bouton bascule HA pour activer la configuration HA. Lorsque vous choisissez la configuration haute disponibilité, une page *HA settings* supplémentaire s'affiche pour les entrées associées à la haute disponibilité.
++
+** La bibliothèque de contenu doit appartenir au même serveur vCenter sur lequel les machines virtuelles du nœud des outils ONTAP sont en cours d'exécution. Les informations d'identification du serveur vCenter sont utilisées pour valider et télécharger le modèle OVA pour les modifications de l'appliance.
+** Pour permettre le déploiement de la haute disponibilité, la machine virtuelle qui héberge les outils ONTAP ne doit pas être déployée directement sur un hôte ESXi. Il doit plutôt être déployé sur un cluster ou un pool de ressources.
+** Une fois activée, vous ne pouvez pas revenir d'une configuration haute disponibilité à une configuration à nœud unique non HA.
+
+
+. Dans la section *HA settings* de la fenêtre *Edit Appliance Settings*, vous pouvez entrer les détails du nœud 2 et du nœud 3. Le nœud 1 est le nœud par défaut des outils ONTAP déployé dans le cadre de l'OVA. Les outils ONTAP pour VMware vSphere prennent en charge trois nœuds lors de la configuration haute disponibilité.
++
+
+NOTE: La plupart des options d'entrée sont pré-remplies avec les détails réseau du nœud 1 pour faciliter le flux de travail. Toutefois, vous pouvez modifier les données d'entrée avant d'accéder à la dernière page de l'assistant. Uniquement lorsque l'adresse IPv6 est activée sur le premier nœud, vous pouvez entrer des détails IPv6 pour les deux autres nœuds.
+
++
+Assurez-vous qu'un hôte ESXi ne contient qu'une seule machine virtuelle d'outils ONTAP. Les entrées sont validées chaque fois que vous passez à la fenêtre suivante.
+
+. Dans la section *summary*, passez en revue les détails et cliquez sur *Save* pour appliquer les modifications.
+
+
+La page *vue d'ensemble* indique l'état du déploiement. Vous pouvez également suivre l'état du travail de modification des paramètres de l'appliance à partir de la vue travaux à l'aide de l'ID du travail.
+
+En cas d'échec du déploiement haute disponibilité et si l'état des nouveaux nœuds indique « Nouveau », supprimez la nouvelle machine virtuelle dans vCenter avant de réessayer l'opération d'activation de la haute disponibilité.
+
+L'onglet *alertes* du panneau de gauche répertorie les alertes des outils ONTAP pour VMware vSphere.

@@ -17,7 +17,7 @@ Les instances vCenter Server sont des plateformes de gestion centralisée qui vo
 
 == Associer ou dissocier les systèmes back-end de stockage avec l'instance vCenter Server
 
-La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut associer ou dissocier un système back-end de stockage. Cette tâche vous aide à créer un mappage global entre le système back-end de stockage et l'instance vCenter Server intégrée.
+La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut être associée ou dissociée à un système back-end de stockage. Cette tâche vous aide à créer un mappage global entre le système back-end de stockage et l'instance vCenter Server intégrée.
 
 *Étapes*
 

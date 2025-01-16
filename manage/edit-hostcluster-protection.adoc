@@ -8,12 +8,9 @@ summary: Vous pouvez modifier les relations SnapMirror du cluster hôte protég�
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 Vous pouvez effectuer les tâches suivantes dans le cadre de la modification de la protection. Vous pouvez effectuer toutes les modifications dans le même flux de travail.
 
 * Ajoutez de nouveaux datastores ou hôtes au cluster protégé.
@@ -47,12 +44,12 @@ Utilisez cette procédure pour protéger les datastores ou hôtes nouvellement a
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu kebab en regard du cluster et sélectionnez *Edit* or
+.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
 . Si vous avez créé un datastore dans l'interface utilisateur vCenter native, ce datastore s'affiche comme non protégé. L'interface utilisateur affiche tous les datastores du cluster et leur état de protection dans une boîte de dialogue. Sélectionnez le bouton *Protect* pour activer la protection complète.
-. Si vous avez ajouté un nouvel hôte ESXi, l'état de protection est partiellement protégé. Sélectionnez le menu kebab sous les paramètres SnapMirror et sélectionnez *Modifier* pour définir la proximité de l'hôte ESXi nouvellement ajouté.
+. Si vous avez ajouté un nouvel hôte ESXi, l'état de protection est partiellement protégé. Sélectionnez le menu points de suspension sous les paramètres SnapMirror et sélectionnez *Modifier* pour définir la proximité de l'hôte ESXi nouvellement ajouté.
 +
 
 NOTE: Dans le cas d'une relation de type asynchrone, l'action de modification n'est pas prise en charge, car vous ne pouvez pas ajouter le SVM cible pour le site tertiaire à la même instance d'outils ONTAP. Cependant, vous pouvez utiliser le system Manager ou l'interface de ligne de commandes du SVM cible pour modifier la configuration des relations.
@@ -71,7 +68,7 @@ Une tâche vCenter est créée et vous pouvez suivre la progression dans le pann
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu kebab en regard du cluster et sélectionnez *Edit* or
+.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
@@ -95,11 +92,11 @@ La suppression de la relation déclenche une nouvelle analyse sur le site second
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu kebab en regard du cluster et sélectionnez *Edit* or
+.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
-. Sélectionnez le menu kebab sous les paramètres SnapMirror et sélectionnez *Supprimer*.
+. Sélectionnez le menu points de suspension sous les paramètres SnapMirror et sélectionnez *Supprimer*.
 
 
 Une tâche vCenter est créée et vous pouvez suivre la progression dans le panneau *tâche récente*.
@@ -117,7 +114,7 @@ NOTE: Vous ne pouvez pas modifier une relation SnapMirror asynchrone existante.
 . Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu kebab en regard du cluster et sélectionnez *Edit* or
+.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 

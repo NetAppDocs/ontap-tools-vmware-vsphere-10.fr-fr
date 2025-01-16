@@ -30,14 +30,4 @@ _Kubectl décrire les volumes persistants | grep internalName | awk -F'=' '{prin
 . Supprimer des machines virtuelles de vCenter Server, voir https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html["Supprimez les machines virtuelles ou les modèles de machines virtuelles du serveur vCenter ou du datastore"]
 . Supprimez des volumes du gestionnaire système ONTAP. Reportez-vous à la section https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Supprime un volume FlexVol"]. Indiquez le nom exact de FlexVolume dans la commande cli pour supprimer le volume.
 . Dans le cas d'un déploiement iSCSI, supprimez les igroups SAN de ONTAP, voir https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Affichez et gérez les initiateurs SAN et igroups"].
-+
-Dans le cadre d'un déploiement haute disponibilité, quatre igroups sont créés et, dans un déploiement non HA, deux igroups sont créés.
-Exécutez la commande suivante pour rechercher le premier nom de groupe initiateur :
-
-+
-_Kubectl -n trident get tbc trident-backend -o yaml| grep igrouppName: | awk -F':' '{print $2}'_
-
-+
-Les autres noms de groupe initiateur commencent par le nom d'hôte de la machine virtuelle.
-
 

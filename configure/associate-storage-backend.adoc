@@ -11,7 +11,7 @@ summary: 'besoin d"informations.'
 
 
 [role="lead"]
-La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut associer un système back-end de stockage.
+La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut être associée à un système back-end de stockage.
 
 *À propos de cette tâche*
 
@@ -24,5 +24,5 @@ Cette tâche vous aide à créer un mappage global entre le système back-end de
 . Sélectionnez vCenter dans la barre latérale.
 . Cliquez sur les points de suspension verticaux en regard du vCenter que vous souhaitez associer aux systèmes back-end de stockage.
 . Sélectionnez Storage backend dans la liste déroulante.
-. Sélectionnez l'option *associer le stockage interne* pour associer l'instance vCenter Server au système back-end de stockage requis.
+. Sélectionnez l'option *associer le stockage back-end* pour associer l'instance vCenter Server au système back-end de stockage requis.
 

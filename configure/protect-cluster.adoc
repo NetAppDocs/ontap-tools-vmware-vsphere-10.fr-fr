@@ -8,12 +8,9 @@ summary: Les outils ONTAP pour VMware vSphere permettent de gérer la protection
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 Les outils ONTAP pour VMware vSphere permettent de gérer la protection des clusters hôtes. Tous les datastores appartenant au SVM sélectionné et montés sur un ou plusieurs hôtes du cluster sont protégés sous un cluster hôte.
 
 .Prérequis
@@ -21,7 +18,7 @@ Assurez-vous que les conditions préalables suivantes sont remplies :
 
 * Le cluster hôte ne dispose que de datastores d'un SVM.
 * Le datastore monté sur le cluster hôte ne doit pas être monté sur un hôte extérieur au cluster.
-* Tous les datastores montés sur le cluster hôte doivent être des datastores VMFS avec protocole iSCSI/FC. Les datastores VMFS avec protocoles NVMe/FC et NVMe/TCP ne sont pas pris en charge.
+* Tous les datastores montés sur le cluster hôte doivent être des datastores VMFS avec protocole iSCSI/FC. Les datastores vVols, NFS ou VMFS avec protocoles NVMe/FC et NVMe/TCP ne sont pas pris en charge.
 * Les FlexVol/LUN formant des datastores montés sur le cluster hôte ne doivent pas faire partie d'un groupe de cohérence existant.
 * Les FlexVol/LUN formant des datastores montés sur le cluster hôte ne doivent pas faire partie d'une relation SnapMirror existante.
 * Le cluster hôte doit comporter au moins un datastore.
@@ -45,7 +42,7 @@ Dans le type de stratégie AutomatedFailOverDuplex, il existe une configuration 
 
 . Si vous choisissez d'avoir une configuration hôte non uniforme, sélectionnez l'accès hôte (source/cible) pour chaque hôte à l'intérieur de ce cluster.
 . Sélectionnez *Ajouter*.
-. Dans la fenêtre *Protect cluster*, pendant l'opération de création, seule l'action de suppression est prise en charge. Vous pouvez supprimer et ajouter de nouveau la protection. Pendant l'opération de modification de la protection du cluster hôte, l'option de modification est disponible. Vous pouvez modifier ou supprimer les relations à l'aide des options du menu kebab.
+. Dans la fenêtre *Protect cluster*, pendant l'opération de création, seule l'action de suppression est prise en charge. Vous pouvez supprimer et ajouter de nouveau la protection. Pendant l'opération de modification de la protection du cluster hôte, l'option de modification est disponible. Vous pouvez modifier ou supprimer les relations à l'aide des options du menu points de suspension.
 . Sélectionnez le bouton *protéger*.
 +
 Une tâche vCenter est créée avec les détails de l'ID du travail et la progression est affichée dans le panneau tâches récentes. Il s'agit d'une tâche asynchrone, l'interface utilisateur affiche uniquement l'état de soumission de la demande et n'attend pas la fin de la tâche.

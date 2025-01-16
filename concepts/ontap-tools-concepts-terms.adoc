@@ -15,6 +15,12 @@ La section suivante décrit les principaux concepts et termes utilisés dans le 
 
 
 
+=== ASA r2
+
+Les nouveaux systèmes NetApp ASA r2 (ASA A1K, ASA A70 et ASA A90) proposent une solution matérielle et logicielle unifiée qui simplifie l'expérience en fonction des besoins des clients qui utilisent exclusivement SAN. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["En savoir plus sur les systèmes de stockage ASA r2"].
+
+
+
 === Autorité de certification (CA)
 
 CA est une entité de confiance qui émet des certificats SSL (Secure Sockets Layer).
@@ -60,6 +66,12 @@ ONTAP Tools Manager offre davantage de contrôle aux outils ONTAP pour l'adminis
 === Appliance virtuelle ouverte (OVA)
 
 OVA est une norme ouverte pour le packaging et la distribution d'appliances ou de logiciels virtuels devant être exécutés sur des machines virtuelles.
+
+
+
+=== Objectif de point de récupération
+
+Le RPO mesure la fréquence de sauvegarde ou de réplication des données. Elle représente le moment dans lequel les données doivent être restaurées après une panne afin de reprendre les activités de l'entreprise. Par exemple, si une entreprise a un objectif de point de récupération de 4 heures, elle peut tolérer la perte de 4 heures de données en cas d'incident.
 
 
 

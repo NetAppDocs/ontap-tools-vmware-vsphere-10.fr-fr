@@ -27,4 +27,4 @@ Le montage d'un datastore permet d'accéder au stockage d'hôtes supplémentaire
 . Sélectionnez les datastores à monter et cliquez sur *Mount*.
 
 
-Vous pouvez suivre la progression dans le panneau tâches récentes.
+Vous pouvez suivre la progression dans le panneau des tâches récentes.

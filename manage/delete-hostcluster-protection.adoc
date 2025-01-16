@@ -8,12 +8,9 @@ summary: Lorsque vous supprimez la protection du cluster hôte, les datastores d
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 Lorsque vous supprimez la protection du cluster hôte, les datastores deviennent non protégés.
 
 .Étapes
@@ -21,5 +18,5 @@ Lorsque vous supprimez la protection du cluster hôte, les datastores deviennent
 +
 Dans cette page, vous pouvez surveiller les clusters hôtes protégés ainsi que l'état de protection, la relation SnapMirror et l'état de SnapMirror correspondant.
 
-. Dans la fenêtre *protection du cluster hôte*, cliquez sur le menu kebab en regard du cluster, puis sélectionnez *Supprimer la protection*.
+. Dans la fenêtre *Host Cluster protection*, cliquez sur le menu des points de suspension en regard du cluster, puis sélectionnez *Remove protection*.
 
