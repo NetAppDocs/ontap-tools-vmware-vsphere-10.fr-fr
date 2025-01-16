@@ -59,5 +59,6 @@ Les outils ONTAP pour VMware vSphere 10.3 prennent en charge le provisionnement 
  a| 
 Observabilité améliorée
  a| 
- ONTAP tools for VMware vSphere 10.3 extends observability metrics support for VMFS and vVol datastores and their respective VMs.
+Les outils ONTAP pour VMware vSphere 10.3 étendent la prise en charge des metrics d'observabilité pour les datastores VMFS et vVol et leurs machines virtuelles respectives.
+
 |===

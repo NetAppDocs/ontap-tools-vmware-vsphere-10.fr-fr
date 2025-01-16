@@ -2008,4 +2008,5 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">Documentation relative aux outils ONTAP pour VMware vSphere 10.2</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">Outils ONTAP pour VMware vSphere 10.3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Configuration des sites protégés et de reprise après incident</block>
+  <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">Les outils ONTAP pour VMware vSphere 10.3 étendent la prise en charge des metrics d'observabilité pour les datastores VMFS et vVol et leurs machines virtuelles respectives.</block>
 </blocks>
