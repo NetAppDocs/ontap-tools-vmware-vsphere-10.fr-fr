@@ -244,3 +244,7 @@ Sous *conformité de la stratégie de stockage VM*, vous pouvez voir l'état de 
 L'état de conformité sous *conformité de la stratégie de stockage VM* est maintenant indiqué comme conforme.
 
 
+
+*Informations connexes*
+
+link:../upgrade/upgrade-ontap-tools.html["Mise à niveau des outils ONTAP pour VMware vSphere 10.x vers la version 10.3"]
