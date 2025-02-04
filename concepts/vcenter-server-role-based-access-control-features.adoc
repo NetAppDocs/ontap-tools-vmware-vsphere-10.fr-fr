@@ -55,7 +55,7 @@ Si vous modifiez les privilèges d'un rôle, l'utilisateur associé à ce rôle 
 
 Pour simplifier l'utilisation des privilèges vCenter Server et du contrôle d'accès basé sur des rôles, les outils ONTAP pour VMware vSphere fournissent des outils ONTAP standard pour les rôles VMware vSphere, qui vous permettent d'exécuter les principaux outils ONTAP pour les tâches VMware vSphere. Il existe également un rôle en lecture seule qui vous permet d'afficher les informations, mais pas d'effectuer des tâches.
 
-Vous pouvez afficher les outils ONTAP pour les rôles standard VMware vSphere en cliquant sur *Roles* sur la page d'accueil de vSphere client. Les rôles fournis par les outils ONTAP pour VMware vSphere vous permettent d'effectuer les tâches suivantes :
+Vous pouvez afficher les outils ONTAP pour les rôles standard VMware vSphere en sélectionnant *Roles* sur la page d'accueil de vSphere client. Les rôles fournis par les outils ONTAP pour VMware vSphere vous permettent d'effectuer les tâches suivantes :
 
 |===
 

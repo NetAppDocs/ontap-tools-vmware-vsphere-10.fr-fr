@@ -26,7 +26,7 @@ L'onglet Outils ONTAP affiche des détails tels que le type de certificat (auto-
 
 *Étapes*
 
-. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalanceIP:8443/virtualization/ui/`
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *certificats* > *ONTAP Tools* > *Renew* option pour renouveler les certificats.
 +
@@ -56,7 +56,7 @@ Les outils ONTAP pour VMware vSphere sont déployés avec un certificat auto-sig
 
 *Étapes*
 
-. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalanceIP:8443/virtualization/ui/`
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *certificats* > *VASA Provider* ou *ONTAP Tools* > *Renew* option pour renouveler les certificats.
 . Pour mettre à niveau le certificat auto-signé vers un certificat CA personnalisé, sélectionnez *certificats* > *VASA Provider* ou *ONTAP Tools* > *mettre à niveau vers CA* option.

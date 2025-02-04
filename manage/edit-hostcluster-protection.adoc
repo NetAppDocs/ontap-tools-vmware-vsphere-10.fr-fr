@@ -26,7 +26,7 @@ Vous pouvez effectuer les tâches suivantes dans le cadre de la modification de 
 Utilisez cette procédure pour surveiller l'état de la protection du cluster hôte. Vous pouvez contrôler chaque cluster hôte protégé ainsi que son état de protection, ses relations SnapMirror, ses datastores et l'état de SnapMirror correspondant.
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*.
 +
 L'icône située sous la colonne protection indique l'état de la protection
@@ -41,10 +41,10 @@ L'icône située sous la colonne protection indique l'état de la protection
 Utilisez cette procédure pour protéger les datastores ou hôtes nouvellement ajoutés. Vous pouvez ajouter de nouveaux hôtes au cluster protégé ou créer de nouveaux datastores sur le cluster hôte à l'aide de l'interface utilisateur vCenter native.
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
+.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, sélectionnez le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
@@ -65,10 +65,10 @@ Une tâche vCenter est créée et vous pouvez suivre la progression dans le pann
 == Ajouter une nouvelle relation SnapMirror
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
+.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, sélectionnez le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
@@ -89,10 +89,10 @@ Pour supprimer une relation SnapMirror asynchrone, un serveur SVM ou un cluster 
 La suppression de la relation déclenche une nouvelle analyse sur le site secondaire pour supprimer la LUN non mappée en tant que chemin actif des hôtes.
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
+.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, sélectionnez le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
@@ -111,10 +111,10 @@ Pour modifier une relation SnapMirror asynchrone, un serveur SVM ou un cluster d
 NOTE: Vous ne pouvez pas modifier une relation SnapMirror asynchrone existante.
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Pour modifier les propriétés d'un cluster protégé, vous pouvez l'un ou l'autre
 +
-.. Naviguez jusqu'à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, cliquez sur le menu points de suspension en regard du cluster et sélectionnez *Edit* or
+.. Accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster Relationships*, sélectionnez le menu points de suspension en regard du cluster et sélectionnez *Edit* or
 .. Cliquez avec le bouton droit de la souris sur un cluster hôte et sélectionnez *NetApp ONTAP Tools* > *Protect Cluster*.
 
 

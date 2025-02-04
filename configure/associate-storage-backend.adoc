@@ -19,10 +19,10 @@ Cette tâche vous aide à créer un mappage global entre le système back-end de
 
 *Étapes*
 
-. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalanceIP:8443/virtualization/ui/`
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez vCenter dans la barre latérale.
-. Cliquez sur les points de suspension verticaux en regard du vCenter que vous souhaitez associer aux systèmes back-end de stockage.
+. Sélectionnez les ellipses verticales par rapport au vCenter que vous souhaitez associer aux systèmes back-end de stockage.
 . Sélectionnez Storage backend dans la liste déroulante.
 . Sélectionnez l'option *associer le stockage back-end* pour associer l'instance vCenter Server au système back-end de stockage requis.
 

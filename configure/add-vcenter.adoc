@@ -2,7 +2,7 @@
 permalink: configure/add-vcenter.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Les instances vCenter Server sont les plateformes de gestion centrale qui vous permettent de contrôler les hôtes, les machines virtuelles (VM) et les systèmes back-end de stockage.' 
+summary: Ajoutez des instances de vCenter Server aux outils ONTAP pour VMware vSphere pour configurer, gérer et protéger vos datastores virtuels dans votre environnement vCenter Server. 
 ---
 = Ajouter des instances vCenter Server
 :allow-uri-read: 
@@ -11,27 +11,23 @@ summary: 'Les instances vCenter Server sont les plateformes de gestion centrale 
 
 
 [role="lead"]
-VCenter Server fournit la plateforme de gestion centralisée qui vous permet de contrôler les hôtes, les machines virtuelles (VM) et les systèmes back-end de stockage.
+Ajoutez des instances de vCenter Server aux outils ONTAP pour VMware vSphere pour configurer, gérer et protéger vos datastores virtuels dans votre environnement vCenter Server.
 
 *À propos de cette tâche*
 
-Vous pouvez ajouter et gérer plusieurs instances de serveur vCenter à l'aide d'une seule instance des outils ONTAP pour VMware vSphere.
+Grâce à l'intégration à vCenter, les outils ONTAP vous permettent d'effectuer des tâches de stockage telles que le provisionnement, les copies Snapshot et la protection des données directement depuis le client vSphere. Vous n'avez plus besoin de passer à des consoles de gestion du stockage distinctes.
 
 *Étapes*
 
-. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalanceIP:8443/virtualization/ui/`
+. Ouvrez un navigateur Web et accédez à l'URL : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
-. Sélectionnez *vCenters* dans la barre latérale.
-. Sélectionnez *Ajouter* pour intégrer les instances de vCenter Server et fournissez votre adresse IP/nom d'hôte vCenter, votre nom d'utilisateur, votre mot de passe et vos détails de port.
+. Sélectionnez *vCenters* > *Add* pour intégrer les instances de vCenter Server. Indiquez l'adresse IP ou le nom d'hôte, le nom d'utilisateur, le mot de passe et les informations de port de vCenter.
 
 
-Lorsque vous ajoutez une instance de serveur vCenter aux outils ONTAP, les actions suivantes sont automatiquement exécutées :
+L'ajout d'une instance de serveur vCenter aux outils ONTAP déclenche automatiquement les actions suivantes :
 
-* Le plug-in client vCenter est enregistré
-* Les privilèges personnalisés des plug-ins et API sont transmis à l'instance vCenter Server
+* Le plug-in client vCenter est enregistré en tant que plug-in distant.
+* Les Privileges personnalisés pour les plug-ins et les API sont appliqués à l'instance de vCenter Server.
 * Des rôles personnalisés sont créés pour gérer les utilisateurs.
+* Le plug-in apparaît sous la forme d'un raccourci dans l'interface utilisateur vSphere.
 
-
-Lorsque vous ajoutez une instance vCenter Server, les outils ONTAP pour le plug-in VMware vSphere sont automatiquement enregistrés sur vCenter Server en tant que plug-in distant. Le plug-in est visible dans les raccourcis de l'interface utilisateur vSphere.
-
-Le plug-in est enregistré avec une clé _com.netapp.otv_ pour l'instance de vCenter Server et peut être consulté dans ExtensionManager de l'instance de vCenter Server.

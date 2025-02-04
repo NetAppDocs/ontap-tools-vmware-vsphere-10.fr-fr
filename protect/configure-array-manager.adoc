@@ -25,7 +25,7 @@ SRA prend en charge la gestion au niveau du cluster et de la SVM. Si vous ajoute
 
 *Étapes*
 
-. Dans VMware Live site Recovery, cliquez sur *Array Managers* et cliquez sur *Add Array Manager*.
+. Dans VMware Live site Recovery, sélectionnez *Array Managers* > *Add Array Manager*.
 . Entrez les informations suivantes pour décrire la baie dans VMware Live site Recovery :
 +
 .. Entrez un nom pour identifier le gestionnaire de matrice dans le champ *Nom d'affichage*.
@@ -62,7 +62,7 @@ Par exemple, si vous voulez exclure le volume _src_vol1_ qui se trouve dans une 
 
 
 . Cliquez sur *Suivant*.
-. Vérifiez que la matrice est découverte et affichée en bas de la fenêtre Ajouter un gestionnaire de matrice, puis cliquez sur *Terminer*.
+. Vérifiez que la matrice est découverte et affichée en bas de la fenêtre Ajouter un gestionnaire de matrice et sélectionnez *Terminer*.
 
 
 Vous pouvez suivre les mêmes étapes pour le site de reprise à l'aide des adresses IP et des identifiants de gestion des SVM appropriés. Dans l'écran Activer les paires de matrices de l'assistant Ajouter un gestionnaire de matrice, vérifiez que la paire de matrices correcte est sélectionnée et qu'elle indique prête à être activée.

@@ -147,7 +147,7 @@ L'authentification d'un client sur l'API REST s'effectue à l'aide d'un jeton d'
 * Les requêtes API d'un client doivent inclure le token dans l' `x-auth`en-tête de la requête.
 
 
-Voir link:../automation/first-call.html["Votre premier appel de l'API REST"] pour un exemple de demande et d'utilisation d'un jeton d'accès.
+Reportez-vous à la link:../automation/first-call.html["Votre premier appel de l'API REST"] pour un exemple de demande et d'utilisation d'un jeton d'accès.
 
 
 

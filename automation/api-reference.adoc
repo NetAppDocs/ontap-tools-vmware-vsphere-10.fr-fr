@@ -29,5 +29,5 @@ Vous pouvez accéder à la documentation en ligne des outils ONTAP pour l'API RE
 +
 `\https://10.61.25.33:8443/`
 
-. Comme exemple d'appel d'API individuel, faites défiler jusqu'à la catégorie *vCenters* et cliquez sur *OBTENIR* en regard du noeud final `/virtualization/api/v1/vcenters`
+. Comme exemple d'appel d'API individuel, faites défiler jusqu'à la catégorie *vCenters* et sélectionnez *OBTENIR* en regard du noeud final `/virtualization/api/v1/vcenters`
 

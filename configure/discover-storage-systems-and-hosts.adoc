@@ -36,7 +36,7 @@ Les outils ONTAP pour VMware vSphere affichent une boîte de dialogue *Confirm* 
 « Cette action va redémarrer la détection de tous les systèmes de stockage connectés et peut prendre quelques minutes. Voulez-vous continuer ? »
 
 . Cliquez sur *Oui*.
-. Sélectionnez les contrôleurs de stockage détectés qui ont l'état `Authentication Failure` et cliquez sur *actions* > *Modifier*.
+. Sélectionnez les contrôleurs de stockage détectés qui ont l'état `Authentication Failure` et sélectionnez *actions* > *Modifier*.
 . Renseignez les informations requises dans la boîte de dialogue *Modifier le système de stockage*.
 . Répétez les étapes 4 et 5 pour tous les contrôleurs de stockage avec `Authentication Failure` état.
 

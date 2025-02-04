@@ -18,9 +18,9 @@ NOTE: L'opération étendre le datastore vVols ne s'applique pas au datastore vV
 
 *Étapes*
 
-. Dans la page d'accueil de vSphere client, cliquez sur *hôtes et clusters*.
+. Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.
 . Dans le volet de navigation, sélectionnez le centre de données qui contient le datastore.
 . Cliquez avec le bouton droit de la souris sur le datastore et sélectionnez *NetApp ONTAP Tools* > *Add Storage to datastore*.
 . Dans la fenêtre *create ou Select volumes*, vous pouvez créer de nouveaux volumes ou choisir parmi les volumes existants. L'interface utilisateur est explicite. Suivez les instructions de votre choix.
-. Dans la fenêtre *Résumé*, examinez les sélections et cliquez sur *développer*. Vous pouvez suivre la progression dans le panneau tâches récentes.
+. Dans la fenêtre *Résumé*, examinez les sélections et sélectionnez *développer*. Vous pouvez suivre la progression dans le panneau tâches récentes.
 

@@ -43,7 +43,7 @@ Le champ produit est renseigné automatiquement.
 Le champ *role* est renseigné automatiquement en fonction de la fonctionnalité de produit sélectionnée.
 
 .. Saisissez le nom d'utilisateur et le mot de passe requis.
-.. Sélectionnez les privilèges (découverte, création de stockage, modification de stockage, destruction de stockage, rôle NAS/SAN) requis pour l'utilisateur, puis cliquez sur *Ajouter*.
+.. Sélectionnez le rôle Privileges (découverte, création de stockage, modification du stockage, destruction du stockage, NAS/SAN) requis pour l'utilisateur, puis sélectionnez *Ajouter*.
 
 
 

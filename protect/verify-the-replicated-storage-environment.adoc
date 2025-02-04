@@ -13,11 +13,12 @@ summary: 'Vous devez vérifier que le site protégé et le site de reprise sont 
 [role="lead"]
 Vous devez vérifier que le site protégé et le site de reprise sont correctement couplés après avoir configuré Storage Replication adapter (SRA). Le système de stockage répliqué doit être détectable par le site protégé et le site de reprise.
 
-*Ce dont vous aurez besoin*
+*Avant de commencer*
 
 * Vous devez avoir configuré votre système de stockage.
 * Vous devez avoir couplé le site protégé et le site de reprise à l'aide du gestionnaire de baie VMware Live site Recovery.
 * Vous devez avoir activé la licence FlexClone et la licence SnapMirror avant d'effectuer l'opération de basculement et l'opération de basculement pour SRA.
+* Vous devez disposer des mêmes stratégies et plannings SnapMirror sur les sites source et de destination.
 
 
 *Étapes*

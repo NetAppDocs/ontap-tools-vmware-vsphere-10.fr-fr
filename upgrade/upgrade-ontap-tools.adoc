@@ -101,7 +101,7 @@ Exécutez les commandes suivantes pour effectuer une sauvegarde de MongoDB :
 * Prenez des snapshots de tous les volumes une par une à l'aide de l'une des méthodes suivantes :
 +
 ** Depuis l'interface de ligne de commande, lancer la commande _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
-** Dans l'interface utilisateur du gestionnaire système ONTAP, recherchez le volume par son nom dans la barre de recherche, puis ouvrez ce volume en cliquant sur son nom. Accédez à l'instantané et ajoutez l'instantané de ce volume.
+** Dans l'interface utilisateur du gestionnaire système ONTAP, recherchez le volume par son nom dans la barre de recherche, puis ouvrez ce volume en sélectionnant son nom. Accédez à l'instantané et ajoutez l'instantané de ce volume.
 
 
 
@@ -109,7 +109,7 @@ Exécutez les commandes suivantes pour effectuer une sauvegarde de MongoDB :
 *Prendre le snapshot des outils ONTAP pour les machines virtuelles VMware vSphere dans vCenter (3 machines virtuelles en cas de déploiement HA, 1 machine virtuelle en cas de déploiement non HA)*
 
 * Dans l'interface utilisateur du client vSphere, sélectionnez la machine virtuelle.
-* Accédez à l'onglet instantanés et cliquez sur le bouton *prendre instantané*. Prendre un snapshot suspendu de la machine virtuelle. Voir https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Prendre un instantané d'une machine virtuelle"^] pour plus de détails.
+* Accédez à l'onglet instantanés et sélectionnez le bouton *prendre instantané*. Prendre un snapshot suspendu de la machine virtuelle. Voir https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Prendre un instantané d'une machine virtuelle"^] pour plus de détails.
 
 
 Avant d'effectuer la mise à niveau, supprimez les pods terminés du bundle de journaux avec le préfixe « generate-support-bundle-job ». Si la génération du bundle de support est en cours, attendez qu'il soit terminé, puis supprimez le pod.
@@ -117,7 +117,7 @@ Avant d'effectuer la mise à niveau, supprimez les pods terminés du bundle de j
 Pour tout type de mise à niveau, vous devez ajouter un disque dur supplémentaire de 100 Go. Pour ajouter un disque dur, effectuez la tâche suivante.
 
 . Sélectionnez la VM en configuration à un seul nœud ou les trois VM en configuration haute disponibilité.
-. Cliquez avec le bouton droit de la souris sur le(s) VM et sélectionnez *Ajouter un nouveau périphérique* > *disque dur*
+. Cliquez avec le bouton droit de la souris sur la ou les machines virtuelles et sélectionnez *Ajouter un nouveau périphérique* > *disque dur*
 . Ajoutez un disque dur de 100 Go dans le champ *Nouveau disque dur*.
 . Cliquez sur *appliquer*
 
@@ -131,8 +131,7 @@ Un nouveau disque dur sera créé. Le mécanisme de provisionnement du stockage 
 . Télécharger les outils ONTAP pour VMware vSphere, mettez à niveau ISO vers la bibliothèque de contenu.
 . Sur la page VM principale, sélectionnez *actions* > *Modifier les paramètres*
 . Sélectionnez le fichier ISO de la bibliothèque de contenu dans la fenêtre de modification des paramètres sous le champ *lecteur de CD/DVD*.
-. Sélectionnez le fichier ISO et cliquez sur *OK*. Cochez la case connecté dans le champ *lecteur de CD/DVD*.
-image:../media/primaryvm-edit-settings.png["Modifier les paramètres"]
+. Sélectionnez le fichier ISO et sélectionnez *OK*. Cochez la case connecté dans le champ *lecteur de CD/DVD*. image:../media/primaryvm-edit-settings.png["Modifier les paramètres"]
 . À partir du serveur vCenter, ouvrez une console pour accéder aux outils ONTAP.
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez *3* pour sélectionner le menu Configuration du système.

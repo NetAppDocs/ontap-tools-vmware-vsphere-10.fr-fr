@@ -25,15 +25,15 @@ Vous devez vous assurer que les sites source et cible sont configurés pour les 
 
 *Étapes*
 
-. Connectez-vous à vCenter Server, puis cliquez sur *site Recovery* > *protection Groups*.
-. Dans le volet *protection Groups*, cliquez sur *Nouveau*.
-. Spécifiez un nom et une description pour le groupe de protection, la direction et cliquez sur *Suivant*.
+. Connectez-vous à vCenter Server, puis sélectionnez *site Recovery* > *protection Groups*.
+. Dans le volet *groupes de protection*, sélectionnez *Nouveau*.
+. Spécifiez un nom et une description pour le groupe de protection, Direction et sélectionnez *Suivant*.
 . Dans le champ *Type*, sélectionnez l'option de champ *Type...* en tant que groupes de datastores (réplication basée sur la baie) pour les datastores NFS et VMFS.
 Le domaine de panne n'est rien d'autre que les SVM avec la réplication activée. Les SVM qui ont uniquement mis en œuvre le peering et qui ne présentent aucun problème sont affichés.
-. Dans l'onglet Replication Groups, sélectionnez la paire de matrices activée ou les groupes de réplication sur lesquels la machine virtuelle est configurée, puis cliquez sur *Next*.
+. Dans l'onglet Replication Groups, sélectionnez la paire de matrices activée ou les groupes de réplication sur lesquels la machine virtuelle est configurée, puis sélectionnez *Next*.
 +
 Toutes les machines virtuelles du groupe de réplication sont ajoutées au groupe de protection.
 
-. Sélectionnez le plan de reprise existant ou créez un nouveau plan en cliquant sur *Ajouter au nouveau plan de reprise*.
-. Dans l'onglet prêt à terminer, vérifiez les détails du groupe de protection que vous avez créé, puis cliquez sur *Terminer*.
+. Sélectionnez le plan de reprise existant ou créez un nouveau plan en sélectionnant *Ajouter au nouveau plan de reprise*.
+. Dans l'onglet prêt à terminer, vérifiez les détails du groupe de protection que vous avez créé, puis sélectionnez *Terminer*.
 

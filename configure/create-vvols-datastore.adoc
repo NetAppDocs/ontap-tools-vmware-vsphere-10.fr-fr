@@ -38,7 +38,7 @@ Depuis les outils ONTAP pour VMware vSphere 10.3, vous pouvez créer un datastor
 
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un centre de données et sélectionnez *NetApp ONTAP Tools* > *Create datastore*.
 . Dans le volet *Type*, sélectionnez vVols dans *Type de datastore*.
 . Dans le volet *Nom et Protocole*, indiquez *nom du datastore* et *Protocole*.
@@ -52,7 +52,7 @@ NOTE: Le type de stockage ASA r2 prend uniquement en charge les protocoles iSCSI
 NOTE: Dans le SVM de type de stockage ASA r2, les unités de stockage (LUN/namespace) ne sont pas créées, car le datastore n'est qu'un conteneur logique.
 
 . Dans le volet *attributs de stockage*, vous pouvez créer de nouveaux volumes ou utiliser les volumes existants. Lors de la création d'un volume, vous pouvez activer la QoS sur le datastore. Cette étape ne s'applique pas aux datastores vVols utilisant un stockage ONTAP de type ASA r2 car le datastore vVol ne possède pas de volumes de sauvegarde. Par défaut, un volume est créé sur chaque demande de création de LUN.
-. Vérifiez votre sélection dans le volet *Résumé* et cliquez sur *Terminer*. Le datastore vVols est créé et monté sur tous les hôtes.
+. Vérifiez votre sélection dans le volet *Résumé* et sélectionnez *Terminer*. Le datastore vVols est créé et monté sur tous les hôtes.
 
 
 --
@@ -61,7 +61,7 @@ NOTE: Dans le SVM de type de stockage ASA r2, les unités de stockage (LUN/names
 Un datastore VMware Network File System (NFS) utilise le protocole NFS pour connecter les hôtes ESXi à un périphérique de stockage partagé via un réseau. Les datastores NFS sont généralement utilisés dans les environnements VMware vSphere et offrent plusieurs avantages, tels que la simplicité et la flexibilité.
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un centre de données et sélectionnez *NetApp ONTAP Tools* > *Create datastore*.
 . Dans le volet *Type*, sélectionnez NFS dans *Type de datastore*.
 . Dans le volet *Nom et protocole*, entrez le nom, la taille et les informations de protocole du datastore. Dans les options avancées, sélectionnez *datastore cluster* et *Kerberos Authentication*.
@@ -76,7 +76,7 @@ NOTE: L'authentification Kerberos est disponible uniquement lorsque le protocole
 
 
 . Dans le volet *attributs de stockage*, sélectionnez l'agrégat pour la création du volume. Dans les options avancées, choisissez *Réserve d'espace* et *Activer QoS* selon les besoins.
-. Vérifiez les sélections dans le volet *Résumé* et cliquez sur *Terminer*.
+. Vérifiez les sélections dans le volet *Résumé* et sélectionnez *Terminer*.
 
 
 Le datastore NFS est créé et monté sur tous les hôtes.
@@ -121,7 +121,7 @@ Pour plus d'informations sur l'utilisation du protocole NVMe/FC avec VMware vSph
 Pour plus d'informations sur l'utilisation de NVMe/FC avec VMware vSphere 7.0, reportez-vous aux sections https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["Guide de configuration d'hôte NVMe/FC de ONTAP"] et http://www.netapp.com/us/media/tr-4684.pdf["TR-4684"].
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un datastore et sélectionnez *NetApp ONTAP Tools* > *Create datastore*.
 . Dans le volet *Type*, sélectionnez VMFS dans *Type de datastore*.
 . Dans le volet *Nom et Protocole*, entrez le nom, la taille et les informations de protocole du datastore. Si vous choisissez d'ajouter le nouveau datastore à un cluster de datastore VMFS existant, sélectionnez le sélecteur de cluster datastore sous *Advanced Options*.
@@ -148,7 +148,7 @@ NOTE: Pour la création de datastores VMFS avec le protocole NVMe/FC ou NVMe/TCP
 
 
 
-. Consultez les détails du datastore dans le volet *Summary* et cliquez sur *Finish*.
+. Vérifiez les détails du datastore dans le volet *Summary* et sélectionnez *Finish*.
 
 
 

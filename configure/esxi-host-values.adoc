@@ -21,24 +21,21 @@ Vous pouvez définir les valeurs suivantes sur un hôte ESXi :
 
 Définit les paramètres de délai d'expiration de HBA recommandés pour les systèmes de stockage NetApp.
 
-* *Disk.QFullSampleSize*
-+
-Définissez cette valeur sur 32 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.
-
-* *Disk.QFullThreshold*
-+
-Définissez cette valeur sur 8 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.
-
-* *Délais de connexion HBA FC Emulex*
-+
-Utilisez la valeur par défaut.
-
-* *Délais de connexion HBA FC QLogic*
-+
-Utilisez la valeur par défaut.
+|===
+| Paramètres | Définir cette valeur sur... 
 
 
+| Disk.QFullSampleSize | 32 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S. 
 
+
+| Disk.QFullThreshold | 8 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S. 
+
+
+| Délais d'expiration de la carte HBA FC Emulex | Valeur par défaut. 
+
+
+| Délais de connexion HBA FC QLogic | Valeur par défaut. 
+|===
 
 
 == Paramètres MPIO
@@ -51,36 +48,32 @@ Dans les environnements hautes performances, ou lorsque vous testez les performa
 
 == Paramètres NFS
 
-* *Net.TcpipeHeapSize*
-+
-Définissez cette valeur sur 32.
-
-* *Net.TcpipeHeapMax*
-+
-Définissez cette valeur sur 1024 Mo.
-
-* *NFS.Maxvolumes*
-+
-Définissez cette valeur sur 256.
-
-* *NFS41.Maxvolumes*
-+
-Définissez cette valeur sur 256.
-
-* *NFS.MaxQueueDepth*
-+
-Définissez cette valeur sur 128 ou plus pour éviter les goulots d'étranglement dans la file d'attente.
-
-* *NFS.HeartbeatMaxFailures*
-+
-Définissez cette valeur sur 10 pour toutes les configurations NFS.
-
-* *NFS.HeartbeatFrequency*
-+
-Définissez cette valeur sur 12 pour toutes les configurations NFS.
-
-* *NFS.HeartbeatTimeout*
-+
-Définissez cette valeur sur 5 pour toutes les configurations NFS.
+|===
 
 
+| Paramètre | Définir cette valeur sur... 
+
+
+| Net.TcpipeHeapSize | 32 
+
+
+| Net.TcpipeHeapMax | 1024 MO 
+
+
+| NFS.MaxVolumes | 256 
+
+
+| NFS41.MaxVolumes | 256 
+
+
+| NFS.MaxQueueDepth | 128 ou plus 
+
+
+| NFS.HeartbeatMaxFailures | 10 
+
+
+| NFS.HeartbeatFrequency | 12 
+
+
+| NFS.HeartbeatTimeout | 5 
+|===

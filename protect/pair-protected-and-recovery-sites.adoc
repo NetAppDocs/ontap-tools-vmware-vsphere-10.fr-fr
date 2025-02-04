@@ -21,16 +21,16 @@ Vous devez coupler les sites protégés et de reprise créés à l'aide de votre
 
 *Étapes*
 
-. Double-cliquez sur *site Recovery* sur la page d'accueil du client vSphere et cliquez sur *sites*.
+. Double-cliquez sur *site Recovery* sur la page d'accueil du client vSphere et sélectionnez *sites*.
 . Cliquez sur *objets* > *actions* > *paire de sites*.
-. Dans la boîte de dialogue *pair site Recovery Manager Servers*, entrez l'adresse du contrôleur des services de plate-forme du site protégé, puis cliquez sur *Suivant*.
+. Dans la boîte de dialogue *pair site Recovery Manager Servers*, entrez l'adresse du Platform Services Controller du site protégé, puis sélectionnez *Next*.
 . Dans la section Select vCenter Server, procédez comme suit :
 +
 .. Vérifiez que le serveur vCenter du site protégé apparaît comme candidat correspondant au couplage.
-.. Entrez les informations d'identification administrateur SSO, puis cliquez sur *Terminer*.
+.. Entrez les informations d'identification d'administration SSO, puis sélectionnez *Terminer*.
 
 
-. Si vous y êtes invité, cliquez sur *Oui* pour accepter les certificats de sécurité.
+. Si vous y êtes invité, sélectionnez *Oui* pour accepter les certificats de sécurité.
 
 
 *Résultat*

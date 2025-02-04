@@ -51,8 +51,8 @@ NOTE: Ne migrez pas si le basculement vient d'être terminé et si la protection
 +
 .. Accédez à la page de gestion de la configuration de VMware Live site Recovery
 .. Accédez à la section *Storage Replication adapter*
-.. Cliquez sur le menu points de suspension et sélectionnez *Réinitialiser la configuration*
-.. Cliquez sur le menu points de suspension et sélectionnez *Supprimer*
+.. Sélectionnez le menu points de suspension et sélectionnez *Réinitialiser la configuration*
+.. Sélectionnez le menu points de suspension et sélectionnez *Supprimer*
 +
 Effectuez ces étapes sur les sites de protection et de reprise d'activité.
 
@@ -231,8 +231,6 @@ Une fois la migration réussie et après avoir enregistré les outils ONTAP 10.3
 
 
 *Après la fin*
-
-Après la migration des anciennes versions des outils ONTAP pour VMware vSphere vers la version 10.3, relancez l'analyse des adaptateurs SRA pour vérifier que les informations sont mises à jour sur la page adaptateurs de réplication du stockage de VMware Live site Recovery.
 
 Après la mise à niveau, si l'état de conformité de la machine virtuelle est obsolète, réappliquez la stratégie de stockage de la machine virtuelle en procédant comme suit :
 

@@ -29,7 +29,7 @@ Si vous ne disposez pas encore d'une bibliothèque de contenu appropriée, crée
 NOTE: Si vous avez l'intention d'utiliser uniquement un déploiement à un seul nœud de petite taille, vous n'avez pas besoin de créer une bibliothèque de contenu.
 
 . Téléchargez le `.zip` fichier contenant les binaires (_.ova_) et les certificats signés pour les outils ONTAP pour VMware vSphere à partir du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^].
-. Connectez-vous au client vSphere à l'aide de `\https://vcenterip/ui`
+. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Sélectionnez les ellipses horizontales en regard de client vSphere et sélectionnez *Bibliothèque de contenu*.
 . Sélectionnez *Créer* à droite de la page.
 . Indiquez un nom pour la bibliothèque et créez la bibliothèque de contenu.
@@ -55,20 +55,20 @@ NOTE: Avant de procéder au déploiement, définissez le gestionnaire de ressour
 
 NOTE: Ne stockez jamais d'outils ONTAP pour les machines virtuelles VMware vSphere sur des datastores vVols qu'ils gèrent.
 
-. Sélectionnez le fichier OVA via l'URL du fichier _.ova_ ou naviguez jusqu'au dossier dans lequel le fichier _.ova_ est enregistré, puis cliquez sur *Suivant*.
+. Sélectionnez le fichier OVA via l'URL du fichier _.ova_ ou naviguez jusqu'au dossier dans lequel le fichier _.ova_ est enregistré, puis sélectionnez *Suivant*.
 . Pour déployer les outils ONTAP pour VMware vSphere à partir de la bibliothèque de contenu :
 +
-.. Accédez à votre bibliothèque de contenu et cliquez sur l'élément de bibliothèque que vous souhaitez déployer.
-.. Cliquez sur *actions* > *Nouveau VM à partir de ce modèle*
+.. Accédez à votre bibliothèque de contenu et sélectionnez l'élément de bibliothèque que vous souhaitez déployer.
+.. Sélectionnez *actions* > *Nouveau VM à partir de ce modèle*
 
 
 . Dans la fenêtre *sélectionnez un nom et un dossier* pour la machine virtuelle, entrez le nom de la machine virtuelle et sélectionnez l'emplacement de la machine virtuelle. Si vous cochez la case *Personnaliser le matériel de cette machine virtuelle*, une étape appelée *Personnaliser le matériel* est activée avant d'atteindre la fenêtre *prêt à terminer*.
-. Sélectionnez une ressource ordinateur et cliquez sur *Suivant*. Vous pouvez cocher la case *mettre automatiquement sous tension la machine virtuelle déployée*.
-. Passez en revue les détails du modèle et cliquez sur *Suivant*.
-. Lisez et acceptez le contrat de licence et cliquez sur *Suivant*.
-. Sélectionnez le stockage pour la configuration et les fichiers disque, puis cliquez sur *Suivant*.
-. Sélectionnez le réseau de destination pour chaque réseau source et cliquez sur *Suivant*.
-. Dans la fenêtre *Personnaliser le modèle*, remplissez les champs requis et cliquez sur *Suivant*.
+. Sélectionnez une ressource d'ordinateur et sélectionnez *Suivant*. Vous pouvez cocher la case *mettre automatiquement sous tension la machine virtuelle déployée*.
+. Passez en revue les détails du modèle et sélectionnez *Suivant*.
+. Lisez et acceptez le contrat de licence et sélectionnez *Suivant*.
+. Sélectionnez le stockage pour la configuration et les fichiers disque, puis sélectionnez *Suivant*.
+. Sélectionnez le réseau de destination pour chaque réseau source et sélectionnez *Suivant*.
+. Dans la fenêtre *Personnaliser le modèle*, remplissez les champs requis et sélectionnez *Suivant*.
 +
 ** Les informations fournies ici sont validées pour les modèles corrects lors du processus d'installation. En cas de divergence, un message d'erreur s'affiche sur la console Web et vous êtes invité à corriger toute information incorrecte fournie.
 ** Les noms d'hôte doivent être composés de lettres majuscules (A-Z), de lettres minuscules (a-z), de chiffres (0-9) ou de caractères spéciaux de tiret (-). Si vous souhaitez configurer la double pile, spécifiez le nom d'hôte mappé sur l'adresse IPv6.

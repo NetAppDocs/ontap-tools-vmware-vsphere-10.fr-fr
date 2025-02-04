@@ -18,7 +18,7 @@ Découvrez si la migration à partir des outils ONTAP pour VMware vSphere 9 vers
 | Fonction | Outils ONTAP 9.13 | Outils ONTAP 10.1 | Outils ONTAP à partir de 10.2 
 
 
-| Proposition de valeur clé | Rationalisez et simplifiez les opérations du premier au deuxième jour grâce à des fonctionnalités améliorées de sécurité, de conformité et d'automatisation | Évolution des outils ONTAP 10.x vers la parité 9.x tout en augmentant les limites de haute disponibilité, de performances et d'évolutivité | Prise en charge étendue pour inclure FC pour VMFS et vVols et NVMe-of/FC, NVMe-of/TCP pour VMFS uniquement. La simplicité d'utilisation pour NetApp SnapMirror, la configuration simple pour les clusters de stockage vSphere Metro et la prise en charge de trois sites SRM 
+| Proposition de valeur clé | Rationalisez et simplifiez les opérations du premier au deuxième jour grâce à des fonctionnalités améliorées de sécurité, de conformité et d'automatisation | Évolution des outils ONTAP 10.x vers la parité 9.x tout en augmentant les limites de haute disponibilité, de performances et d'évolutivité | Prise en charge étendue pour inclure FC pour VMFS et vVols et NVMe-of/FC, NVMe-of/TCP pour VMFS uniquement. La facilité d'utilisation de NetApp SnapMirror, la configuration simple des clusters de stockage vSphere Metro et la prise en charge de VMware Live site Recovery sur trois sites 
 
 
 | Qualification de la version ONTAP | ONTAP 9.9.1 à ONTAP 9.15.1 | ONTAP 9.12.1 à ONTAP 9.14.1 | ONTAP 9.12.1 à ONTAP 9.15.1 pour les outils ONTAP 10.2 ONTAP 9.14.1, 9.15.1 et 9.16.0 pour les outils ONTAP 10.3. 
@@ -36,7 +36,7 @@ Découvrez si la migration à partir des outils ONTAP pour VMware vSphere 9 vers
 | Observabilité | Tableaux de bord sur les performances, la capacité et la conformité des hôtes Rapports dynamiques sur les machines virtuelles et les datastores | Mise à jour des tableaux de bord sur les performances, la capacité et la conformité des hôtes Rapports sur les VM et datastores dynamiques | Mise à jour des tableaux de bord sur les performances, la capacité et la conformité des hôtes Rapports sur les VM et datastores dynamiques 
 
 
-| Protection des données | Réplication SRA pour VMFS et NFS FlexVols pour l'intégration de vVols SCV et interopérable pour la sauvegarde | SRA pour la réplication des datastores iSCSI VMFS et NFS v3 | Réplication SRA pour datastores iSCSI VMFS et NFS v3 protection trois sites combinant SMAS et SRM. 
+| Protection des données | Réplication SRA pour VMFS et NFS FlexVols pour l'intégration de vVols SCV et interopérable pour la sauvegarde | SRA pour la réplication des datastores iSCSI VMFS et NFS v3 | Réplication SRA pour les datastores iSCSI VMFS et NFS v3 protection trois sites combinant SMAS et VMware Live site Recovery. 
 
 
 | Prise en charge de VASA Provider | VASA 4,0 | VASA 3,0 | VASA 3,0 
