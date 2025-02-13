@@ -54,7 +54,7 @@ Utilisez cette procédure pour protéger les datastores ou hôtes nouvellement a
 
 NOTE: Dans le cas d'une relation de type asynchrone, l'action de modification n'est pas prise en charge, car vous ne pouvez pas ajouter le SVM cible pour le site tertiaire à la même instance d'outils ONTAP. Cependant, vous pouvez utiliser le system Manager ou l'interface de ligne de commandes du SVM cible pour modifier la configuration des relations.
 
-. Cliquez sur *Enregistrer* après avoir effectué les modifications nécessaires.
+. Sélectionnez *Enregistrer* après avoir effectué les modifications nécessaires.
 . Vous pouvez voir les modifications dans la fenêtre *Protect Cluster*.
 
 
@@ -74,8 +74,10 @@ Une tâche vCenter est créée et vous pouvez suivre la progression dans le pann
 
 . Sélectionnez *Ajouter une relation*.
 . Ajoutez une nouvelle relation en tant que type de stratégie *Asynchronous* ou *AutomatedFailOverDuplex*.
-. Cliquez sur *protéger*.
-. Vous pouvez voir les modifications dans la fenêtre *Protect Cluster*.
+. Sélectionnez *protéger*.
++
+Vous pouvez voir les modifications dans la fenêtre *Protect Cluster*.
+
 
 
 Une tâche vCenter est créée et vous pouvez suivre la progression dans le panneau *tâche récente*.

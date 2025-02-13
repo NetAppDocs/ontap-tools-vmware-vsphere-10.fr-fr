@@ -13,8 +13,7 @@ summary: 'Vous pouvez configurer de nouveaux rôles utilisateur pour la gestion 
 [role="lead"]
 Vous pouvez configurer de nouveaux rôles et privilèges utilisateur pour la gestion des systèmes back-end de stockage à l'aide du fichier JSON fourni avec les outils ONTAP pour VMware vSphere et ONTAP System Manager.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir téléchargé le fichier de privilèges ONTAP depuis les outils ONTAP pour VMware vSphere à l'aide de _\https://<loadbalancerIP>:8443/Virtualization/user-Privileges/Users_roles.zip_.
 * Vous devez avoir téléchargé le fichier privilèges ONTAP à partir des outils ONTAP à l'aide de `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
@@ -24,8 +23,7 @@ NOTE: La création d'utilisateurs s'effectue au niveau du cluster ou directement
 * Vous devez vous être connecté avec des privilèges d'administrateur pour le back-end de stockage.
 
 
-*Étapes*
-
+.Étapes
 . Extrayez le fichier téléchargé _\https://<loadbalancerIP>:8443/Virtualization/user-Privileges/Users_roles.zip_.
 . Accédez à ONTAP System Manager à l'aide de l'adresse IP de gestion du cluster.
 . Connectez-vous au cluster avec admin Privileges. Pour configurer un utilisateur, effectuez les opérations suivantes :

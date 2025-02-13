@@ -27,7 +27,7 @@ S'il s'agit d'un déploiement iSCSI, vous devez également supprimer les igroups
 +
 _Kubectl décrire les volumes persistants | grep internalName | awk -F'=' '{print $2}'_
 
-. Supprimer des machines virtuelles de vCenter Server, reportez-vous à la section https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Supprimer et réenregistrer des machines virtuelles et des modèles de machines virtuelles"]
+. Supprimez des machines virtuelles de vCenter Server, reportez-vous à la https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Supprimer et réenregistrer des machines virtuelles et des modèles de machines virtuelles"]section .
 . Supprimez des volumes du gestionnaire système ONTAP, reportez-vous à la section https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Supprime un volume FlexVol"]. Indiquez le nom exact de FlexVolume dans la commande cli pour supprimer le volume.
 . Dans le cas d'un déploiement iSCSI, supprimez les igroups SAN de ONTAP, reportez-vous à la section https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Affichez et gérez les initiateurs SAN et igroups"] .
 

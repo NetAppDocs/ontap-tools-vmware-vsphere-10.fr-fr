@@ -19,8 +19,7 @@ L'appliance d'outils ONTAP est initialement déployée dans une configuration no
 
 Assurez-vous que le modèle OVA que vous fournissez possède la même version OVA que le premier nœud.
 
-*Étapes*
-
+.Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *Modifier les paramètres de l'appareil* dans la section Présentation.

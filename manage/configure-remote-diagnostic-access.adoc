@@ -13,8 +13,7 @@ summary: 'Vous pouvez configurer les outils ONTAP pour VMware vSphere afin d"act
 [role="lead"]
 Vous pouvez configurer les outils ONTAP pour VMware vSphere afin d'activer l'accès SSH pour l'utilisateur diag.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 L'extension VASA Provider doit être activée pour votre instance vCenter Server.
 
 *À propos de cette tâche*
@@ -26,15 +25,14 @@ L'utilisation de SSH pour accéder au compte utilisateur diag présente les limi
 +
 ** Le délai expire.
 +
-La session de connexion n'est valable que jusqu'à minuit le jour suivant.
+La session de connexion reste valide jusqu'à minuit le lendemain.
 
 ** Vous vous connectez à nouveau en tant qu'utilisateur diag à l'aide de SSH.
 
 
 
 
-*Étapes*
-
+.Étapes
 . Depuis vCenter Server, ouvrez une console dans VASA Provider.
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez `4` Pour sélectionner support et Diagnostics.

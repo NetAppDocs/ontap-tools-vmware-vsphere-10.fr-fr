@@ -19,8 +19,7 @@ Les instances vCenter Server sont des plateformes de gestion centralisée qui vo
 
 La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut être associée ou dissociée à un système back-end de stockage. Cette tâche vous aide à créer un mappage global entre le système back-end de stockage et l'instance vCenter Server intégrée.
 
-*Étapes*
-
+.Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez l'instance vCenter Server requise dans la barre latérale.

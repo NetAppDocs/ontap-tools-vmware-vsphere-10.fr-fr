@@ -19,8 +19,7 @@ Les outils ONTAP pour VMware vSphere vérifient et définissent les paramètres 
 
 Selon votre configuration et la charge du système, ce processus peut prendre un certain temps. La progression de la tâche s'affiche dans le panneau tâches récentes.
 
-*Étapes*
-
+.Étapes
 . Sur la page d'accueil du client Web VMware vSphere, sélectionnez *hosts and clusters*.
 . Cliquez avec le bouton droit de la souris sur un hôte et sélectionnez *NetApp ONTAP Tools* > *Update host data*.
 . Sur la page des raccourcis du client Web VMware vSphere, sélectionnez *NetApp ONTAP Tools* dans la section des plug-ins.

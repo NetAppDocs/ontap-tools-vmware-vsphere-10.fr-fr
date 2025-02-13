@@ -13,16 +13,14 @@ summary: 'Vous devez coupler les sites protégés et de reprise créés à l"aid
 [role="lead"]
 Vous devez coupler les sites protégés et de reprise créés à l'aide de votre client vSphere pour permettre à Storage Replication adapter (SRA) de détecter les systèmes de stockage.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * VMware Live site Recovery doit être installé sur les sites protégés et de reprise.
 * SRA doit être installée sur les sites protégés et de reprise.
 
 
-*Étapes*
-
+.Étapes
 . Double-cliquez sur *site Recovery* sur la page d'accueil du client vSphere et sélectionnez *sites*.
-. Cliquez sur *objets* > *actions* > *paire de sites*.
+. Sélectionnez *objets* > *actions* > *associer sites*.
 . Dans la boîte de dialogue *pair site Recovery Manager Servers*, entrez l'adresse du Platform Services Controller du site protégé, puis sélectionnez *Next*.
 . Dans la section Select vCenter Server, procédez comme suit :
 +
@@ -33,6 +31,5 @@ Vous devez coupler les sites protégés et de reprise créés à l'aide de votre
 . Si vous y êtes invité, sélectionnez *Oui* pour accepter les certificats de sécurité.
 
 
-*Résultat*
-
+.Résultat
 Les sites protégés et de restauration s'affichent dans la boîte de dialogue objets.

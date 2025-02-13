@@ -27,7 +27,7 @@ Pour supprimer un datastore NFS, VMFS ou vvol des outils ONTAP du serveur vCente
 
 .Étapes
 . Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
-. Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un datastore et sélectionnez *NetApp ONTAP Tools* > *Delete datastore*.
+. Cliquez avec le bouton droit de la souris sur un système hôte, un cluster hôte ou un datacenter et sélectionnez *NetApp ONTAP Tools* > *Delete datastore*.
 +
 
 NOTE: Vous ne pouvez pas supprimer les datastores si des machines virtuelles utilisent ce datastore. Vous devez déplacer les machines virtuelles vers un autre datastore avant de supprimer le datastore. Vous ne pouvez pas cocher la case de suppression de volume si le datastore appartient à un cluster hôte protégé.

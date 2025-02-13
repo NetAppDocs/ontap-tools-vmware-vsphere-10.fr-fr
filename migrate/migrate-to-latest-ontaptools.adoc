@@ -31,7 +31,7 @@ NOTE: Vous devez effectuer la sauvegarde OVA de votre version actuelle avant de 
 == Étapes de migration courantes
 
 . Déploiement des outils OVA pour ONTAP pour VMware vSphere 10.3.
-. Ajoutez l'instance vCenter Server que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.3. Voir link:../configure/add-vcenter.html["Ajouter des instances vCenter Server"]
+. Ajoutez l'instance vCenter Server que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.3. Voir link:../configure/add-vcenter.html["Ajouter des instances vCenter Server"].
 . Intégration locale du système back-end de stockage à partir des outils ONTAP pour les API de serveur vCenter du plug-in VMware vSphere. Ajoutez du stockage en tant que stockage local délimité pour la migration.
 . Les datastores NFS et VMFS migrés depuis les outils ONTAP pour VMware vSphere 9.xx ne sont visibles dans les outils ONTAP pour VMware vSphere 10.3 qu'après le déclenchement de la procédure de détection des datastores, qui peut prendre jusqu'à 30 minutes. Vérifiez si les datastores sont visibles sur la page Présentation des outils ONTAP de la page de l'interface utilisateur du plug-in VMware vSphere.
 

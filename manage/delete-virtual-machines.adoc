@@ -16,8 +16,7 @@ Suivez les étapes de cette section pour effectuer un nettoyage VASA.
 
 NOTE: Il est recommandé de supprimer tous les datastores vVols avant d'effectuer le nettoyage de VASA.
 
-*Étapes*
-
+.Étapes
 . Annulez l'enregistrement du plug-in en accédant à \https://OTV_IP:8143/Register.html
 . Vérifiez que le plug-in n'est plus disponible sur vCenter Server.
 . Fermez les outils ONTAP pour VMware vSphere VM.

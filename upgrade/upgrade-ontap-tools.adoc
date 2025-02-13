@@ -109,7 +109,7 @@ Exécutez les commandes suivantes pour effectuer une sauvegarde de MongoDB :
 *Prendre le snapshot des outils ONTAP pour les machines virtuelles VMware vSphere dans vCenter (3 machines virtuelles en cas de déploiement HA, 1 machine virtuelle en cas de déploiement non HA)*
 
 * Dans l'interface utilisateur du client vSphere, sélectionnez la machine virtuelle.
-* Accédez à l'onglet instantanés et sélectionnez le bouton *prendre instantané*. Prendre un snapshot suspendu de la machine virtuelle. Voir https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Prendre un instantané d'une machine virtuelle"^] pour plus de détails.
+* Accédez à l'onglet instantanés et sélectionnez le bouton *prendre instantané*. Prendre un snapshot suspendu de la machine virtuelle. Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["Prendre un instantané d'une machine virtuelle"^] pour plus de détails.
 
 
 Avant d'effectuer la mise à niveau, supprimez les pods terminés du bundle de journaux avec le préfixe « generate-support-bundle-job ». Si la génération du bundle de support est en cours, attendez qu'il soit terminé, puis supprimez le pod.
@@ -119,15 +119,14 @@ Pour tout type de mise à niveau, vous devez ajouter un disque dur supplémentai
 . Sélectionnez la VM en configuration à un seul nœud ou les trois VM en configuration haute disponibilité.
 . Cliquez avec le bouton droit de la souris sur la ou les machines virtuelles et sélectionnez *Ajouter un nouveau périphérique* > *disque dur*
 . Ajoutez un disque dur de 100 Go dans le champ *Nouveau disque dur*.
-. Cliquez sur *appliquer*
+. Sélectionnez *appliquer*
 
 
 Après avoir ajouté le disque dur, mettez à jour les ressources de la machine virtuelle pour les configurations respectives et redémarrez la machine virtuelle principale.
 
 Un nouveau disque dur sera créé. Le mécanisme de provisionnement du stockage dynamique utilise ce disque dur pour générer ou répliquer les volumes.
 
-*Étapes*
-
+.Étapes
 . Télécharger les outils ONTAP pour VMware vSphere, mettez à niveau ISO vers la bibliothèque de contenu.
 . Sur la page VM principale, sélectionnez *actions* > *Modifier les paramètres*
 . Sélectionnez le fichier ISO de la bibliothèque de contenu dans la fenêtre de modification des paramètres sous le champ *lecteur de CD/DVD*.

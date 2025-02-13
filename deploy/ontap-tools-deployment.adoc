@@ -45,8 +45,7 @@ Assurez-vous d'avoir importé l'OVA dans votre bibliothèque de contenu.
 
 NOTE: Avant de procéder au déploiement, définissez le gestionnaire de ressources distribuées (DRS) du cluster sur l'inventaire sur « conservateur » lors de l'installation des outils ONTAP. Cela permet de s'assurer que les machines virtuelles ne migrent pas pendant l'installation.
 
-*Étapes*
-
+.Étapes
 . Téléchargez le `.zip` fichier contenant les binaires (_.ova_) et les certificats signés pour les outils ONTAP pour VMware vSphere à partir du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^]. Si vous avez importé l'OVA dans la bibliothèque de contenu, vous pouvez ignorer cette étape et passer à l'étape suivante car vous pouvez déployer directement depuis la bibliothèque de contenu.
 . Connectez-vous au serveur vSphere.
 . Accédez au pool de ressources que vous avez créé ou au cluster ou à l'hôte sur lequel vous souhaitez déployer l'OVA.

@@ -21,29 +21,22 @@ Vous devez effectuer les configurations de ressources suivantes :
 * Datastores à espace réservé
 
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 Vous devez avoir connecté les sites protégés et de reprise.
 
-*Étapes*
-
+.Étapes
 . Connectez-vous à vCenter Server et sélectionnez *site Recovery* > *sites*.
 . Sélectionnez votre site protégé et sélectionnez *gérer*.
-. Dans l'onglet gérer, sélectionnez *mappages réseau*.
-. Cliquez sur *Nouveau* pour créer un mappage réseau.
-+
-L'assistant de création de mappage réseau s'affiche.
-
-. Dans l'assistant de création de mappage réseau, effectuez les opérations suivantes :
+. Sélectionnez *mappages réseau* > *Nouveau* dans l'onglet gérer pour créer un nouveau mappage réseau.
+. Dans l'assistant Créer un mappage réseau, procédez comme suit :
 +
 .. Sélectionnez *préparer automatiquement les mappages pour les réseaux avec des noms correspondants* et sélectionnez *Suivant*.
 .. Sélectionnez les objets de centre de données requis pour les sites protégés et de récupération, puis sélectionnez *Ajouter des mappages*.
-.. Cliquez sur *Suivant* une fois les mappages créés.
+.. Sélectionnez *Suivant* une fois les mappages créés.
 .. Sélectionnez l'objet utilisé précédemment pour créer le mappage inverse, puis sélectionnez *Terminer*.
 
 
 
 
-*Résultat*
-
+.Résultat
 La page Network mappings affiche les ressources du site protégé et les ressources du site de reprise. Vous pouvez suivre les mêmes étapes pour les autres réseaux de votre environnement.

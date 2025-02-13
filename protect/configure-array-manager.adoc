@@ -13,8 +13,7 @@ summary: 'Vous pouvez configurer Storage Replication adapter \(SRA\) à l"aide d
 [role="lead"]
 Vous pouvez configurer Storage Replication adapter (SRA) à l'aide de l'assistant Array Manager de VMware Live site Recovery pour activer les interactions entre VMware Live site Recovery et les machines virtuelles de stockage (SVM).
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 * Vous devez avoir couplé les sites protégés et les sites de reprise dans VMware Live site Recovery.
 * Vous devez avoir configuré votre stockage intégré avant de configurer le gestionnaire de baie.
 * Vous devez avoir configuré et répliqué les relations SnapMirror entre les sites protégés et les sites de reprise.
@@ -23,8 +22,7 @@ Vous pouvez configurer Storage Replication adapter (SRA) à l'aide de l'assistan
 
 SRA prend en charge la gestion au niveau du cluster et de la SVM. Si vous ajoutez du stockage au niveau du cluster, vous pouvez détecter et exécuter des opérations sur tous les SVM du cluster. Si vous ajoutez du stockage au niveau d'un SVM, vous ne pouvez gérer que ce SVM spécifique.
 
-*Étapes*
-
+.Étapes
 . Dans VMware Live site Recovery, sélectionnez *Array Managers* > *Add Array Manager*.
 . Entrez les informations suivantes pour décrire la baie dans VMware Live site Recovery :
 +
@@ -61,7 +59,7 @@ Par exemple, si vous voulez exclure le volume _src_vol1_ qui se trouve dans une 
 
 
 
-. Cliquez sur *Suivant*.
+. Sélectionnez *Suivant*.
 . Vérifiez que la matrice est découverte et affichée en bas de la fenêtre Ajouter un gestionnaire de matrice et sélectionnez *Terminer*.
 
 

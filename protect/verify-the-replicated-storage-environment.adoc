@@ -21,8 +21,7 @@ Vous devez vérifier que le site protégé et le site de reprise sont correcteme
 * Vous devez disposer des mêmes stratégies et plannings SnapMirror sur les sites source et de destination.
 
 
-*Étapes*
-
+.Étapes
 . Connectez-vous à votre serveur vCenter.
 . Accédez à *site Recovery* > *Array Based Replication*.
 . Sélectionnez la paire de matrices requise et vérifiez les détails correspondants.

@@ -13,7 +13,7 @@ summary: Les outils ONTAP pour VMware vSphere permettent de gérer la protection
 [role="lead"]
 Les outils ONTAP pour VMware vSphere gèrent la protection des clusters hôtes. Tous les datastores appartenant au SVM sélectionné et montés sur un ou plusieurs hôtes du cluster sont protégés sous un cluster hôte.
 
-.Prérequis
+.Avant de commencer
 Assurez-vous que les conditions préalables suivantes sont remplies :
 
 * Le cluster hôte ne dispose que de datastores d'un SVM.
@@ -38,7 +38,7 @@ Le type de règle peut être asynchrone ou automatique FailOverDuplex.
 Lorsque vous ajoutez la relation SnapMirror en tant que stratégie de type AutomatedFailOverDuplex, vous devez ajouter la machine virtuelle de stockage cible en tant que back-end de stockage au serveur vCenter sur lequel les outils ONTAP pour VMware vSphere sont déployés.
 
 +
-Dans le type de stratégie AutomatedFailOverDuplex, il existe des configurations hôte uniformes et non uniformes. Lorsque vous sélectionnez le bouton à bascule *uniforme host configuration*, la configuration du groupe initiateur hôte est implicitement répliquée sur le site cible. Pour plus de détails, reportez-vous à la section link:../concepts/ontap-tools-concepts-terms.html["Concepts et termes clés"]
+Dans le type de stratégie AutomatedFailOverDuplex, il existe des configurations hôte uniformes et non uniformes. Lorsque vous sélectionnez le bouton à bascule *uniforme host configuration*, la configuration du groupe initiateur hôte est implicitement répliquée sur le site cible. Pour plus de détails, reportez-vous à link:../concepts/ontap-tools-concepts-terms.html["Concepts et termes clés"].
 
 . Si vous choisissez d'avoir une configuration hôte non uniforme, sélectionnez l'accès hôte (source/cible) pour chaque hôte à l'intérieur de ce cluster.
 . Sélectionnez *Ajouter*.

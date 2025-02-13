@@ -13,8 +13,7 @@ summary: 'Vous pouvez monter un datastore VMware Virtual volumes \(vVvols\) sur 
 [role="lead"]
 Vous pouvez monter un datastore VMware Virtual volumes (vVols) sur un ou plusieurs hôtes supplémentaires pour fournir un accès au stockage à des hôtes supplémentaires. Vous pouvez démonter le datastore vVols uniquement à l'aide des API.
 
-*Étapes*
-
+.Étapes
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.
 . Dans le volet de navigation, sélectionnez le centre de données qui contient le datastore.
 . Cliquez avec le bouton droit de la souris sur le datastore et sélectionnez *NetApp ONTAP Tools* > *Mount datastore*.

@@ -17,7 +17,7 @@ Suivez les instructions de cette section pour mettre fin aux outils ONTAP pour u
 NOTE: L'arrêt des outils ONTAP pour VMware vSphere supprimera toutes les données des outils.
 
 .Étapes
-. Supprimez toutes les machines virtuelles créées sur les outils ONTAP pour VMware vSphere. Reportez-vous à la https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Supprimer et réenregistrer des machines virtuelles et des modèles de machines virtuelles"].
+. Supprimez toutes les machines virtuelles des datastores gérés par les outils ONTAP pour VMware vSphere. Vous pouvez les supprimer (voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Supprimer et réenregistrer des machines virtuelles et des modèles de machines virtuelles"]) ou les utiliser https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html["Stockage vMotion"] pour les déplacer vers un datastore non géré.
 . link:../manage/delete-ds.html["Supprimer les datastores"] Créé sur les outils ONTAP pour VMware vSphere.
 . Procédez comme suit pour désenregistrer les fournisseurs VASA de tous les serveurs vCenter :
 +

@@ -13,16 +13,14 @@ summary: Vous devez démarrer SSH sur les autres nœuds avant la mise à niveau.
 [role="lead"]
 Vous devez démarrer SSH sur les autres nœuds avant la mise à niveau.
 
-*Ce dont vous aurez besoin*
-
+.Avant de commencer
 L'extension VASA Provider doit être activée pour votre instance vCenter Server.
 
 *À propos de cette tâche*
 
 Effectuez cette procédure sur chacun des nœuds avant de procéder à la mise à niveau.
 
-*Étapes*
-
+.Étapes
 . Depuis vCenter Server, ouvrez une console dans VASA Provider.
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez `4` Pour sélectionner support et Diagnostics.

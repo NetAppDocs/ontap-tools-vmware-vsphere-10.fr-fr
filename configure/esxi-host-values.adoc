@@ -11,7 +11,7 @@ summary: 'Vous pouvez définir des délais d"expiration et d"autres valeurs sur 
 
 
 [role="lead"]
-Vous pouvez définir des délais d'expiration et d'autres valeurs sur les hôtes ESXi à l'aide des outils ONTAP pour VMware vSphere afin de garantir des performances optimales et un basculement réussi. Les outils ONTAP pour les ensembles VMware vSphere sont basés sur des tests NetApp internes.
+À l'aide des outils ONTAP pour VMware vSphere, vous pouvez définir des délais d'expiration et d'autres valeurs sur les hôtes VMware ESXi afin de garantir des performances optimales et un basculement réussi. Les outils ONTAP pour les ensembles VMware vSphere sont basés sur des tests NetApp internes.
 
 Vous pouvez définir les valeurs suivantes sur un hôte ESXi :
 
@@ -40,7 +40,7 @@ Définit les paramètres de délai d'expiration de HBA recommandés pour les sys
 
 == Paramètres MPIO
 
-Les paramètres MPIO définissent les chemins préférés des systèmes de stockage NetApp. Les paramètres MPIO déterminent quels chemins disponibles sont optimisés (par opposition aux chemins non optimisés qui traversent le câble d'interconnexion) et définissent le chemin préféré sur l'un de ces chemins.
+Les paramètres MPIO définissent les chemins de prédilection pour les systèmes de stockage NetApp. Ils déterminent quels chemins disponibles sont optimisés (par opposition aux chemins non optimisés qui traversent le câble d'interconnexion) et définissent le chemin préféré sur l'un de ces chemins.
 
 Dans les environnements hautes performances, ou lorsque vous testez les performances avec un seul datastore LUN, pensez à modifier le paramètre d'équilibrage de charge de la règle de sélection de chemin (PSP) de Round Robin (VMW_PSP_RR) du paramètre d'IOPS par défaut de 1000 à une valeur de 1.
 

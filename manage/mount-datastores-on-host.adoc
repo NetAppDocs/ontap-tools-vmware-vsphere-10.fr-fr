@@ -18,8 +18,7 @@ Le montage d'un datastore permet d'accéder au stockage d'hôtes supplémentaire
 * Le datastore de montage est désactivé lorsque le cluster hôte est protégé avec des configurations uniformes.
 
 
-*Étapes*
-
+.Étapes
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.
 . Dans le volet de navigation, sélectionnez le centre de données qui contient l'hôte.
 . Répétez l'étape 2 pour tout hôte supplémentaire.

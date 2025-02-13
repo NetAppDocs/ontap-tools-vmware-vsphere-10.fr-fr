@@ -16,8 +16,7 @@ Vous pouvez collecter les fichiers journaux des outils ONTAP pour VMware vSphere
 
 NOTE: La génération de journaux à partir du Gestionnaire d'outils ONTAP inclut tous les journaux de toutes les instances de vCenter Server. La génération des journaux à partir de l'interface utilisateur du client vCenter est étendue pour le serveur vCenter sélectionné.
 
-*Étapes*
-
+.Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *Log Bundles* dans la barre latérale.

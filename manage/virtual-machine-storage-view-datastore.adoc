@@ -18,7 +18,7 @@ NOTE: Cette vue s'applique à la machine virtuelle sur laquelle au moins un disq
 
 .Étapes
 . À partir du client vSphere, accédez à la machine virtuelle.
-. Cliquez sur l'onglet *Monitor* dans le volet de droite.
+. Sélectionnez l'onglet *Monitor* dans le volet de droite.
 . Sélectionnez *NetApp ONTAP Tools* > *Storage*. Les détails *Storage* apparaissent dans le volet de droite. Vous pouvez voir la liste des vVols présents sur la machine virtuelle.
 +
 Vous pouvez utiliser l'option « gérer les colonnes » pour masquer ou afficher différentes colonnes.
