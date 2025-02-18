@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: Il est important de tenir compte de certains éléments à prendre en compte lors de la migration des machines virtuelles existantes dans votre data Center. 
+summary: Vous devez prendre en compte certaines considérations lors de la migration des machines virtuelles existantes dans votre data Center. 
 ---
 = Considérations relatives à la migration ou au clonage de machines virtuelles
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Il est important de tenir compte de certains éléments à prendre en c
 
 
 [role="lead"]
-Il est important de connaître certaines considérations relatives à la migration des machines virtuelles existantes dans votre datacenter.
+Lors de la migration de machines virtuelles existantes dans votre data Center, vous devez prendre en compte certaines considérations.
 
 
 

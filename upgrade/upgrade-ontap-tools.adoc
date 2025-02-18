@@ -145,7 +145,7 @@ Un nouveau disque dur sera créé. Le mécanisme de provisionnement du stockage 
 
 Après avoir effectué la mise à niveau vers les outils ONTAP pour VMware vSphere 10.3, vous pouvez :
 
-* Désactivez les services à partir de l'interface utilisateur du gestionnaire
+* Désactivez les services à partir de l'interface utilisateur Manager
 * Passez d'une configuration non HA à une configuration haute disponibilité
 * Évolution verticale petite configuration non HA de moyen ou de grand format non HA.
 * En cas de mise à niveau non HA, redémarrez la machine virtuelle d'outils ONTAP pour refléter les modifications. Dans le cas d'une mise à niveau HA, redémarrez le premier nœud pour refléter les modifications sur le nœud.

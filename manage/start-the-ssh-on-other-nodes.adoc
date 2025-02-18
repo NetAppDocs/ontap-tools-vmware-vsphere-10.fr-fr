@@ -21,7 +21,7 @@ L'extension VASA Provider doit être activée pour votre instance vCenter Server
 Effectuez cette procédure sur chacun des nœuds avant de procéder à la mise à niveau.
 
 .Étapes
-. Depuis vCenter Server, ouvrez une console dans VASA Provider.
+. Depuis vCenter Server, ouvrez une console vers VASA Provider.
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez `4` Pour sélectionner support et Diagnostics.
 . Entrez `1` Pour sélectionner accès au shell de diagnostic.

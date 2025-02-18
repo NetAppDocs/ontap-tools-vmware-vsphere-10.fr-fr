@@ -41,7 +41,7 @@ NOTE: Les LIF de gestion d'adresses IPv4 et IPv6 sont prises en charge.
 .À l'aide de l'interface utilisateur du client vSphere
 --
 
-NOTE: Lorsque vous ajoutez un back-end de stockage via l'interface client vSphere, le datastore vVols ne prend pas en charge l'ajout direct d'un utilisateur SVM.
+NOTE: Lorsque vous ajoutez un back-end de stockage via l'interface utilisateur client vSphere, le datastore vVols ne prend pas en charge l'ajout direct d'un utilisateur SVM.
 
 . Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.

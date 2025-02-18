@@ -35,9 +35,9 @@ indexpage:
     - title: Documentation pour les versions antérieures des outils ONTAP pour VMware
         vSphere 9
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
-    - title: Base de connaissances NetApp - outils ONTAP
+    - title: 'Base de connaissances NetApp : outils ONTAP pour VMware vSphere'
       url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
-    - title: Communauté NetApp - Outils ONTAP
+    - title: 'Communauté NetApp : outils ONTAP pour VMware vSphere'
       url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions
     - title: Découvrez VMware vSphere avec ONTAP
       url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html#why-ontap-for-vsphere

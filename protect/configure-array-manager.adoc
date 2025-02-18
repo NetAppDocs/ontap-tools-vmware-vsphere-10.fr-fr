@@ -34,8 +34,7 @@ SRA prend en charge la gestion au niveau du cluster et de la SVM. Si vous ajoute
 *** Si vous vous connectez directement à un SVM, vous devez saisir l'adresse IP de la LIF de management du SVM.
 +
 
-NOTE: Lors de la configuration du gestionnaire de baies, vous devez utiliser la même connexion (adresse IP) pour le système de stockage utilisé pour intégrer le système de stockage dans les outils ONTAP.
-Par exemple, si la configuration de Array Manager est étendue au SVM, le stockage sous ONTAP Tools for VMware vSphere doit être ajouté au niveau du SVM.
+NOTE: Lors de la configuration du gestionnaire de baies, vous devez utiliser la même connexion (adresse IP) pour le système de stockage utilisé pour intégrer le système de stockage dans les outils ONTAP pour VMware vSphere. Par exemple, si la configuration de Array Manager est étendue au SVM, le stockage sous ONTAP Tools for VMware vSphere doit être ajouté au niveau du SVM.
 
 
 

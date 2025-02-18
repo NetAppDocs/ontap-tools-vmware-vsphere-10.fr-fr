@@ -61,7 +61,7 @@ Si vous modifiez les privilèges dans une autorisation, l'utilisateur associé �
 
 == Objets vSphere
 
-Les autorisations sont associées aux objets vSphere, tels que vCenter Server, les hôtes ESXi, les machines virtuelles, les datastores, les data centers, et les dossiers. Vous pouvez attribuer des autorisations à n'importe quel objet vSphere. En fonction de l'autorisation attribuée à un objet vSphere, vCenter Server détermine qui peut effectuer les tâches sur cet objet. Pour les tâches spécifiques aux outils ONTAP pour VMware vSphere, les autorisations sont attribuées et validées uniquement au niveau du dossier racine (serveur vCenter) et non sur une autre entité. À l'exception de l'opération de plug-in VAAI, où les autorisations sont validées par rapport à l'hôte ESXi concerné.
+Les autorisations sont associées aux objets vSphere, tels que vCenter Server, les hôtes ESXi, les machines virtuelles, les datastores, les data centers et les dossiers. Vous pouvez attribuer des autorisations à n'importe quel objet vSphere. En fonction de l'autorisation attribuée à un objet vSphere, vCenter Server détermine qui peut effectuer les tâches sur cet objet. Pour les tâches spécifiques aux outils ONTAP pour VMware vSphere, les autorisations sont attribuées et validées uniquement au niveau du dossier racine (serveur vCenter) et non sur une autre entité. À l'exception de l'opération de plug-in VAAI, où les autorisations sont validées par rapport à l'hôte ESXi concerné.
 
 
 

@@ -47,7 +47,7 @@ Avant la migration, assurez-vous que l'un des sites est protégé et que l'autre
 
 NOTE: Ne migrez pas si le basculement vient d'être terminé et si la protection est en attente. Terminez la re-protection, puis effectuez la migration. Une fois le test du plan de reprise terminé, nettoyez le test de restauration et démarrez la migration.
 
-. Procédez comme suit pour supprimer les outils ONTAP pour VMware vSphere 9.xx version SRA adapter dans l'interface utilisateur de VMware Live site Recovery :
+. Effectuez les étapes suivantes pour supprimer les outils ONTAP pour VMware vSphere 9.xx version SRA adapter dans l'interface utilisateur de VMware Live site Recovery :
 +
 .. Accédez à la page de gestion de la configuration de VMware Live site Recovery
 .. Accédez à la section *Storage Replication adapter*

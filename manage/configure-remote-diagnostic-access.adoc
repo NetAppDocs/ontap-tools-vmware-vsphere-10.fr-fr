@@ -33,7 +33,7 @@ La session de connexion reste valide jusqu'à minuit le lendemain.
 
 
 .Étapes
-. Depuis vCenter Server, ouvrez une console dans VASA Provider.
+. Depuis vCenter Server, ouvrez une console vers VASA Provider.
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez `4` Pour sélectionner support et Diagnostics.
 . Entrez `2` pour sélectionner Activer l'accès aux diagnostics à distance.

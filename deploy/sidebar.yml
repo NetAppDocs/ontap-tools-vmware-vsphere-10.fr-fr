@@ -4,7 +4,7 @@ title: Déployez les outils ONTAP pour VMware vSphere
 entries:
 - title: Prérequis
   url: "/deploy/prerequisites.html"
-- title: Déployez les outils ONTAP
+- title: Déployez les outils ONTAP pour VMware vSphere
   url: "/deploy/ontap-tools-deployment.html"
 - title: Codes d'erreur de déploiement
   url: "/deploy/deployment-error-codes.html"
