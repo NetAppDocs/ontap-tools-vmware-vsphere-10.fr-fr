@@ -9,12 +9,7 @@ entries:
 - title: Installez le plug-in NFS VAAI
   url: "/configure/install-nfs-vaai-plug-in.html"
 - title: Configurer les paramètres de l'hôte ESXi
-  entries:
-  - title: Configurer les paramètres de chemins d'accès multiples et de délai d'attente
-      du serveur ESXi
-    url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
-  - title: Définissez les valeurs de l'hôte ESXi
-    url: "/configure/esxi-host-values.html"
+  url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
 - title: Configurer les rôles et privilèges des utilisateurs ONTAP
   url: "/configure/configure-user-role-and-privileges.html"
 - title: Ajout d'un système back-end
