@@ -598,7 +598,6 @@ Systèmes back-end de stockage et exécution des outils ONTAP pour les tâches V
   <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">Supprime une instance de ressource existante.</block>
   <block id="3e75383a5992a6d15fb81e872e46e256" category="cell">EN</block>
   <block id="c4408d335012a56ff58937d78050efad" category="section-title">Accepter</block>
-  <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">Vous devez coupler les sites protégés et de reprise créés à l'aide de votre client vSphere pour permettre à Storage Replication adapter \(SRA\) de détecter les systèmes de stockage.</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">Protection par paires et sites de reprise après incident</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">Vous devez coupler les sites protégés et de reprise créés à l'aide de votre client vSphere pour permettre à Storage Replication adapter (SRA) de détecter les systèmes de stockage.</block>
   <block id="153de28c544cedf1d0476c82a497c1d4" category="list-text">SRA doit être installée sur les sites protégés et de reprise.</block>
@@ -975,7 +974,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="81ef6507a13da5635951bc5b533deb59" category="inline-link">TR-4684</block>
   <block id="bcfcba3d84c95eb110df0649ab05c280" category="paragraph">Pour plus d'informations sur l'utilisation de NVMe/FC avec VMware vSphere 7.0, reportez-vous aux sections<block ref="27816f9f9cf7e278691c8ea8c1dd01dc" category="inline-link-rx"></block> et<block ref="a23d4cc1b9464bb497e26d387d612153" category="inline-link-rx"></block>.</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">Les outils ONTAP pour VMware vSphere permettent de gérer la protection des clusters hôtes.</block>
-  <block id="46bf98dea599db077d28c3e2f58a655a" category="doc">Création de la protection de cluster hôte</block>
   <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">Assurez-vous que les conditions préalables suivantes sont remplies :</block>
   <block id="7c923b6532ecd9637deac92eebf7333a" category="list-text">Le cluster hôte ne dispose que de datastores d'un SVM.</block>
   <block id="abd2c79ea68f2d7802d6d7a46312971e" category="list-text">Le datastore monté sur le cluster hôte ne doit pas être monté sur un hôte extérieur au cluster.</block>
@@ -1845,9 +1843,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="eed7fc96f746813cb6dc7931e0b308b0" category="list-text">Sélectionnez le menu ellipses verticales et sélectionnez *Supprimer*.</block>
   <block id="1b46a38e17199ae5d2201aa53d2f0fe9" category="paragraph">Lorsque vous sélectionnez le cluster parent ou l'enfant sous le système back-end de stockage, vous pouvez afficher le récapitulatif global du composant. Lorsque vous sélectionnez le cluster parent, vous disposez de la liste déroulante actions à partir de laquelle vous pouvez effectuer les opérations de découverte de stockage, de modification et de suppression.</block>
   <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">Suivez les instructions de cette section pour mettre fin à vos outils ONTAP en vue d'un déploiement VMware vSphere.</block>
-  <block id="d1a23a03023137fd38165cea715f27d9" category="doc">Mettez fin au déploiement des outils ONTAP</block>
-  <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">Suivez les instructions de cette section pour mettre fin aux outils ONTAP pour un déploiement VMware vSphere en toute simplicité.</block>
-  <block id="5a542b803059205c8fd2335844a87295" category="admonition">L'arrêt des outils ONTAP pour VMware vSphere supprimera toutes les données des outils.</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block> Créé sur les outils ONTAP pour VMware vSphere.</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">Dans les outils ONTAP, sélectionnez *Paramètres* &gt; *VASA Provider settings* &gt; *Unregister* en bas de l'écran.</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">Dissociez tous les systèmes back-end de l'instance vCenter Server. Reportez-vous à la <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>.</block>
@@ -2054,4 +2049,7 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="27668debe2a46165745d80fe01711790" category="list-text">Procédez comme suit pour désenregistrer les fournisseurs VASA de tous les serveurs vCenter :</block>
   <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">Sur la page *désinscrire VASA Provider*, indiquez les informations d'identification de l'utilisateur de l'application et sélectionnez *désinscrire*.</block>
   <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">Le nom d'utilisateur et le mot de passe de l'application sont définis lors du déploiement des outils ONTAP. Cette opération est nécessaire pour l'enregistrement du fournisseur VASA/SRA.</block>
+  <block id="cd8867ea57955f19f3087c7262d1186d" category="doc">Désinstallez le déploiement des outils ONTAP</block>
+  <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">La désinstallation des outils ONTAP pour VMware vSphere supprime toutes les données contenues dans les outils.</block>
+  <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">Migrez les outils ONTAP pour VMware vSphere 9.x vers la version 10.3</block>
 </blocks>
