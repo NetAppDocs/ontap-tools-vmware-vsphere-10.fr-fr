@@ -21,12 +21,6 @@ Les nouveaux systèmes NetApp ASA r2 (ASA A1K, ASA A70 et ASA A90) proposent une
 
 
 
-=== AutoSupport
-
-AutoSupport est un mécanisme qui surveille de manière proactive l'état de votre système et envoie automatiquement des messages au support technique NetApp, à votre organisation de support interne et à un partenaire de support.
-
-
-
 === Autorité de certification (CA)
 
 CA est une entité de confiance qui émet des certificats SSL (Secure Sockets Layer).

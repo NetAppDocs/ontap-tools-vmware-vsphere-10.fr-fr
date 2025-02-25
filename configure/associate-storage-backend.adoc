@@ -2,7 +2,7 @@
 permalink: configure/associate-storage-backend.html 
 sidebar: sidebar 
 keywords:  
-summary: 'besoin d"informations.' 
+summary: 'Associez un système back-end de stockage à vCenter Server pour créer un mappage global entre le système back-end de stockage et l"instance vCenter Server intégrée.' 
 ---
 = Associer un back-end de stockage à une instance vCenter Server
 :allow-uri-read: 
@@ -11,17 +11,13 @@ summary: 'besoin d"informations.'
 
 
 [role="lead"]
-La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut être associée à un système back-end de stockage.
-
-*À propos de cette tâche*
-
-Cette tâche vous aide à créer un mappage global entre le système back-end de stockage et l'instance vCenter Server intégrée.
+Associez un système back-end de stockage à vCenter Server pour créer un mappage global entre le système back-end de stockage et l'instance vCenter Server intégrée.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez vCenter dans la barre latérale.
-. Sélectionnez les ellipses verticales par rapport au vCenter que vous souhaitez associer aux systèmes back-end de stockage.
+. Sélectionnez les ellipses verticales par rapport à l'instance vCenter Server que vous souhaitez associer aux systèmes back-end de stockage.
 . Sélectionnez Storage backend dans la liste déroulante.
-. Sélectionnez l'option *associer le stockage back-end* pour associer l'instance vCenter Server au système back-end de stockage requis.
+. Sélectionnez le back-end de stockage dans la liste déroulante et associez l'instance vCenter Server au back-end de stockage requis.
 
