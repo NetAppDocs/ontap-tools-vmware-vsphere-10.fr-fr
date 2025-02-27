@@ -25,8 +25,7 @@ NOTE: Pour activer le déploiement de la haute disponibilité ultérieurement, l
 
 Si vous ne disposez pas encore d'une bibliothèque de contenu appropriée, créez-en une en procédant comme suit :
 
-
-NOTE: Si vous avez l'intention d'utiliser uniquement un déploiement à un seul nœud de petite taille, vous n'avez pas besoin de créer une bibliothèque de contenu.
+*Créer une bibliothèque de contenu* si vous avez seulement l'intention d'utiliser un déploiement à un seul nœud, vous n'avez pas besoin de créer une bibliothèque de contenu.
 
 . Téléchargez le `.zip` fichier contenant les binaires (_.ova_) et les certificats signés pour les outils ONTAP pour VMware vSphere à partir du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^].
 . Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`

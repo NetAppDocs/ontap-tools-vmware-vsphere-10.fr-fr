@@ -199,35 +199,14 @@ NOTE: uuid est l'uuid de migration renvoyé en réponse à l'API post-migration.
 Une fois l'API de migration des correctifs exécutée, toutes les machines virtuelles sont conformes à la stratégie de stockage.
 
 ====
-. L'API de suppression pour la migration est :
 +
-[]
-====
-|===
-
-
-| *Méthode HTTP* | *Chemin* 
-
-
-| SUPPRIMER | /api/v1 
-|===
-*Type de traitement*
-
-Asynchrone
-
-*Exemple Curl*
-
-/api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
-
-Cette API supprime la migration par ID de migration et supprime la migration sur le serveur vCenter donné.
-
-====
-
-
 Une fois la migration réussie et après avoir enregistré les outils ONTAP 10.3 sur le serveur vCenter, procédez comme suit :
 
-* Actualisez le certificat sur tous les hôtes.
-* Attendez un certain temps avant d'effectuer des opérations de datastore (DS) et de machine virtuelle (VM). Le temps d'attente dépend du nombre d'hôtes, de DS et de VM dans la configuration. Si vous n'attendez pas, les opérations peuvent échouer par intermittence.
++
+** Actualisez le certificat sur tous les hôtes.
+** Attendez un certain temps avant d'effectuer des opérations de datastore (DS) et de machine virtuelle (VM). Le temps d'attente dépend du nombre d'hôtes, de DS et de VM dans la configuration. Si vous n'attendez pas, les opérations peuvent échouer par intermittence.
+
+
 
 
 *Après la fin*
