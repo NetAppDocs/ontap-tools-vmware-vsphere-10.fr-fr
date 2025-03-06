@@ -16,7 +16,7 @@ Les outils ONTAP pour VMware vSphere permettent d'activer la fonctionnalité SRA
 .Avant de commencer
 * Vous devez avoir configuré votre instance vCenter Server et votre hôte ESXi.
 * Vous devez avoir déployé des outils ONTAP pour VMware vSphere.
-* Vous devez avoir téléchargé l'adaptateur SRA `.tar.gz` fichier du https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de support NetApp"^].
+* Vous devez avoir téléchargé le `.tar.gz` fichier de l'adaptateur SRA à partir du https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de support NetApp"^].
 * Les clusters ONTAP source et destination doivent avoir la même planification SnapMirror personnalisée que celle créée avant d'exécuter les workflows SRA.
 
 
