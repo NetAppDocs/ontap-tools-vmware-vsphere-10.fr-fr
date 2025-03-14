@@ -49,9 +49,6 @@ Le champ *role* est renseigné automatiquement en fonction de la fonctionnalité
 Le nouveau rôle et l'utilisateur sont ajoutés et vous pouvez voir les privilèges détaillés sous le rôle que vous avez configuré.
 
 
-NOTE: L'opération de désinstallation ne supprime pas les rôles d'outils ONTAP, mais supprime les noms localisés pour le Privileges spécifique aux outils ONTAP et leur ajoute le préfixe `XXX missing privilege`. Lorsque vous réinstallez les outils ONTAP pour VMware vSphere ou que vous effectuez une mise à niveau vers une version plus récente, tous les outils ONTAP standard pour les rôles VMware vSphere et les privilèges spécifiques aux outils ONTAP sont restaurés.
-
-
 
 == Exigences de mappage des agrégats du SVM
 
