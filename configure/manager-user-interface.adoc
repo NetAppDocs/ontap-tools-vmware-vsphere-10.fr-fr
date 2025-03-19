@@ -22,7 +22,7 @@ ONTAP Tools Manager vous aide à :
 * Gestion des mots de passe : permet de réinitialiser le mot de passe de l'application OVA de l'utilisateur.
 
 
-Pour accéder au gestionnaire d'outils ONTAP, lancez `\https://loadBalancerIP:8443/virtualization/ui/`-le à partir du navigateur et connectez-vous à l'aide des informations d'identification d'administrateur ONTAP Tools for VMware vSphere que vous avez fournies lors du déploiement.
+Pour accéder au gestionnaire d'outils ONTAP, lancez `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`-le à partir du navigateur et connectez-vous à l'aide des informations d'identification d'administrateur ONTAP Tools for VMware vSphere que vous avez fournies lors du déploiement.
 
 La section Présentation du gestionnaire d'outils ONTAP vous aide à gérer la configuration des appliances, notamment la gestion des services, la montée en charge de la taille des nœuds et l'activation de la haute disponibilité. Vous pouvez également surveiller les informations globales des outils ONTAP liés au(x) nœud(s), telles que l'état, les détails du réseau et les alertes.
 

@@ -18,7 +18,7 @@ summary: 'Vous pouvez modifier le mot de passe administrateur à l"aide du Gesti
 Assurez-vous que le modèle OVA que vous fournissez possède la même version OVA que le nœud 1. Le nœud 1 est le nœud par défaut sur lequel les outils ONTAP pour VMware vSphere OVA sont initialement déployés.
 
 .Étapes
-. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *Modifier les paramètres de l'appareil* dans la section Présentation.
 . Dans la section *Configuration*, vous pouvez augmenter la capacité de nœud et activer la configuration haute disponibilité en fonction de vos besoins. Vous avez besoin des informations d'identification de vCenter Server pour effectuer des modifications.

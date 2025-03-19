@@ -27,7 +27,7 @@ Pour ajouter un système back-end de stockage à un cluster dont le périmètre 
 NOTE: Dans une configuration mutualisée, vous pouvez ajouter un cluster back-end de stockage globalement et un SVM localement pour utiliser les identifiants utilisateur de SVM.
 
 .Étapes
-. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://loadBalancerIP:8443/virtualization/ui/`
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *systèmes back-end de stockage* dans la barre latérale.
 . Ajoutez le back-end de stockage et fournissez l'adresse IP ou le nom de domaine complet du serveur, le nom d'utilisateur et le mot de passe.
