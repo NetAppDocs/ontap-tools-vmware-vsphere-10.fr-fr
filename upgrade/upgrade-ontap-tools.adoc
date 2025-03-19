@@ -101,7 +101,7 @@ Exécutez les commandes suivantes pour effectuer une sauvegarde de MongoDB :
 * Prenez des snapshots de tous les volumes une par une à l'aide de l'une des méthodes suivantes :
 +
 ** Depuis l'interface de ligne de commande, lancer la commande _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
-** Dans l'interface utilisateur du gestionnaire système ONTAP, recherchez le volume par son nom dans la barre de recherche, puis ouvrez ce volume en sélectionnant son nom. Accédez à l'instantané et ajoutez l'instantané de ce volume.
+** Dans l'interface utilisateur du Gestionnaire système ONTAP, recherchez le volume par son nom dans la barre de recherche, puis ouvrez ce volume en sélectionnant son nom. Accédez à l'instantané et ajoutez l'instantané de ce volume.
 
 
 

@@ -18,7 +18,7 @@ La solution haute disponibilité permet une reprise rapide en cas de panne provo
 * Défaillance d'hôte
 +
 
-NOTE: Seule la défaillance d'un nœud est prise en charge.
+NOTE: Seule la défaillance d'un seul nœud est prise en charge.
 
 * Défaillance du réseau
 * Défaillance de machine virtuelle (défaillance du système d'exploitation invité)

@@ -100,8 +100,6 @@ Vous pouvez utiliser le tableau suivant comme guide pour configurer les outils O
 
 | Haute-disponibilité | Grand (L) | environ 100 000 | 256 [REMARQUE] le nombre d'hôtes dans le tableau indique le nombre total d'hôtes provenant de plusieurs vCenters. 
 |===
-Pour plus de détails sur les exigences de dimensionnement du système hôte par nœud, reportez-vous à link:../deploy/prerequisites.html["Conditions préalables au déploiement des outils ONTAP pour VMware vSphere"]la section .
-
 
 
 == Outils ONTAP pour VMware vSphere - Storage Replication adapter (SRA)
@@ -200,16 +198,3 @@ Le tableau suivant présente les ports réseau utilisés par NetApp ainsi que le
 
 | 123 (TCP) | Ntpd utilise ce port pour effectuer la validation du serveur ntp. 
 |===
-
-
-== Contrôles préalables au déploiement
-
-Assurez-vous que les éléments suivants sont en place avant de poursuivre le déploiement :
-
-* L'environnement vCenter Server est configuré et configuré.
-* Les informations d'identification du serveur vCenter parent pour déployer l'OVA sont en place.
-* Vous disposez des informations de connexion de votre instance de serveur vCenter à laquelle les outils ONTAP pour VMware vSphere se connecteront au post-déploiement, pour inscription.
-* Le cache du navigateur est supprimé.
-* Assurez-vous que vous disposez de trois adresses IP disponibles pour un déploiement non HA : une adresse IP libre pour l'équilibreur de charge, une adresse IP libre pour le plan de contrôle Kubernetes et une adresse IP pour le nœud. Pour un déploiement haute disponibilité, en plus de ces trois adresses IP, vous aurez besoin de deux adresses IP supplémentaires pour les deuxième et troisième nœuds. Les noms d'hôte doivent être mappés aux adresses IP libres sur le DNS avant l'attribution. Les cinq adresses IP doivent se trouver sur le même VLAN que celui sélectionné pour le déploiement.
-* Assurez-vous que le nom de domaine sur lequel le certificat est émis est mappé à l'adresse IP virtuelle dans un déploiement multi-vCenter où les certificats d'autorité de certification personnalisée sont obligatoires. _Nslookup_ vérifiez le nom de domaine pour vérifier si le domaine est résolu à l'adresse IP prévue. Les certificats doivent être créés avec le nom de domaine et l'adresse IP de l'adresse IP de l'équilibreur de charge.
-

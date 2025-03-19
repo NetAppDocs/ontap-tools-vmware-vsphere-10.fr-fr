@@ -4,30 +4,28 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Après avoir supprimé les outils ONTAP pour le déploiement de VMware vSphere, nettoyez les volumes Flexvolumes créés lors du déploiement. Si vous avez utilisé un cluster ONTAP dédié pour les déploiements, nettoyez les volumes Flexvolumes car le déploiement crée une grande quantité de volumes Flexvolumes qui ne sont pas utilisés, ce qui entraîne une baisse des performances. 
 ---
-= Nettoyer les volumes
+= Supprimez les volumes FlexVol
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Après avoir supprimé les outils ONTAP pour le déploiement de VMware vSphere, nettoyez les volumes Flexvolumes créés lors du déploiement. Si vous avez utilisé un cluster ONTAP dédié pour les déploiements, nettoyez les volumes Flexvolumes car le déploiement crée une grande quantité de volumes Flexvolumes qui ne sont pas utilisés, ce qui entraîne une baisse des performances.
-
-Suivez les instructions suivantes pour nettoyer Flexvolumes après la suppression des outils ONTAP pour le déploiement de VMware vSphere.
+L'utilisation d'un cluster ONTAP dédié aux outils ONTAP pour le déploiement VMware crée de nombreux volumes FlexVol inutilisés. Après avoir supprimé les outils ONTAP pour VMware vSphere, vous devez supprimer les volumes FlexVol afin d'éviter tout impact sur les performances.
 
 .Étapes
-. Depuis la machine virtuelle du nœud principal des outils ONTAP pour VMware vSphere, exécutez la commande suivante pour identifier le type de déploiement.
+. Déterminer le type de déploiement des outils ONTAP pour VMware vSphere à partir de la machine virtuelle du nœud principal.
 +
 _cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocole_
 
 +
 S'il s'agit d'un déploiement iSCSI, vous devez également supprimer les igroups.
 
-. Récupérez la liste des volumes Flexvolumes créés dans ONTAP pendant le déploiement à l'aide de la commande suivante.
+. Obtenez la liste des volumes FlexVol.
 +
 _Kubectl décrire les volumes persistants | grep internalName | awk -F'=' '{print $2}'_
 
-. Supprimez des machines virtuelles du serveur vCenter, reportez-vous à la https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Supprimer et réenregistrer des machines virtuelles et des modèles de machines virtuelles"]section .
-. Supprimez des volumes du gestionnaire système ONTAP, reportez-vous à la section https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Supprime un volume FlexVol"]. Indiquez le nom exact de FlexVolume dans la commande cli pour supprimer le volume.
-. Dans le cas d'un déploiement iSCSI, supprimez les igroups SAN de ONTAP, reportez-vous à la section https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Affichez et gérez les initiateurs SAN et igroups"] .
+. Supprimez les machines virtuelles du serveur vCenter. Reportez-vous à la https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Supprimez et réenregistrez les machines virtuelles et les modèles de machines virtuelles"].
+. Supprimez des volumes FlexVol du Gestionnaire système ONTAP. Reportez-vous à la https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Supprime un volume FlexVol"]. Dans la commande CLI permettant de supprimer un volume, donnez le nom exact des volumes FlexVol.
+. Supprimez les igroups SAN du système de stockage ONTAP en cas de déploiement iSCSI. Reportez-vous à la https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Affichez et gérez les initiateurs SAN et igroups"].
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Étant donné que les outils ONTAP pour VMware vSphere 10.3 utilisent le provisionnement de stockage dynamique, vous ne pouvez pas atteindre un RPO nul. Toutefois, vous pouvez atteindre un RPO proche de zéro. 
 ---
-= RPO proche de zéro
+= Créez une sauvegarde et restaurez la configuration
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
