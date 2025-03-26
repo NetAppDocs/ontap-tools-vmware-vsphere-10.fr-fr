@@ -15,7 +15,15 @@ summary: 'Vous pouvez modifier le mot de passe administrateur à l"aide du Gesti
 
 *Avant de commencer*
 
-Assurez-vous que le modèle OVA que vous fournissez possède la même version OVA que le nœud 1. Le nœud 1 est le nœud par défaut sur lequel les outils ONTAP pour VMware vSphere OVA sont initialement déployés.
+* Assurez-vous que votre modèle OVA possède la même version OVA que le nœud 1. Le nœud 1 est le nœud par défaut sur lequel les outils ONTAP pour VMware vSphere OVA sont initialement déployés.
+* Assurez-vous que l'ajout à chaud du processeur et la connexion à chaud de la mémoire sont activés pendant le déploiement. Vous pouvez les activer dans le menu du client vCenter s'ils n'ont pas été activés pendant le déploiement. Pour les activer à partir du client vCenter, procédez comme suit :
++
+** Accédez aux outils ONTAP pour la machine virtuelle VMware vSphere sous *inventaires* et sélectionnez *Modifier les paramètres*.
+** Sous les options *CPU*, cochez la case *Activer l'ajout à chaud de CPU*
+** Sous les options *Memory*, cochez la case *Enable* par rapport à *Memory hot plug*.
+
+
+
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
