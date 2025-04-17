@@ -13,8 +13,10 @@ summary: 'Vous pouvez modifier le mot de passe administrateur à l"aide du Gesti
 [role="lead"]
 À l'aide du gestionnaire d'outils ONTAP faites évoluer verticalement les outils ONTAP de la configuration VMware vSphere pour augmenter le nombre de nœuds dans le déploiement ou modifier la configuration en configuration haute disponibilité (HA). Les outils ONTAP pour l'appliance VMware vSphere sont initialement déployés dans une configuration non HA à nœud unique.
 
-*Avant de commencer*
 
+NOTE: Pour migrer vers HA lorsque la sauvegarde non HA est activée, désactivez d'abord la sauvegarde et réactivez-la après la migration.
+
+.Avant de commencer
 * Assurez-vous que votre modèle OVA possède la même version OVA que le nœud 1. Le nœud 1 est le nœud par défaut sur lequel les outils ONTAP pour VMware vSphere OVA sont initialement déployés.
 * Assurez-vous que l'ajout à chaud du processeur et la connexion à chaud de la mémoire sont activés.
 

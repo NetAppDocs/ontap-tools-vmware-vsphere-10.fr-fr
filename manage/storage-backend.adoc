@@ -22,7 +22,7 @@ Vous pouvez exécuter la détection d'un système back-end de stockage à la dem
 Suivez les étapes ci-dessous pour découvrir les systèmes back-end.
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
+. Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP, accédez à *systèmes back-end de stockage* et sélectionnez un système back-end de stockage.
 . Sélectionnez le menu des ellipses verticales et sélectionnez *découvrir le stockage*
@@ -36,7 +36,7 @@ Vous pouvez suivre la progression dans le panneau tâches récentes.
 
 Suivez les étapes de cette section pour modifier un système back-end de stockage.
 
-. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
+. Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP, accédez à *systèmes back-end de stockage* et sélectionnez un système back-end de stockage.
 . Sélectionnez le menu des ellipses verticales et sélectionnez *Modifier* pour modifier les informations d'identification ou le nom du port. Vous pouvez suivre la progression dans le panneau tâches récentes.
@@ -58,7 +58,7 @@ Vous pouvez effectuer l'opération Modifier pour les clusters ONTAP globaux à l
 
 Vous devez supprimer tous les datastores connectés au système back-end de stockage avant de supprimer le système back-end. Suivez les étapes ci-dessous pour supprimer un système back-end de stockage.
 
-. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
+. Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP, accédez à *systèmes back-end de stockage* et sélectionnez un système back-end de stockage.
 . Sélectionnez le menu ellipses verticales et sélectionnez *Supprimer*. Assurez-vous que le système back-end de stockage ne contient aucun datastore. Vous pouvez suivre la progression dans le panneau tâches récentes.
@@ -88,7 +88,7 @@ La page de résumé fournit les détails suivants :
 * Informations de base sur la machine virtuelle
 * Informations réseau telles que l'adresse IP et le port du réseau. Pour la SVM enfant, les informations seront les mêmes que le back-end de stockage parent.
 * Privilèges autorisés et limités pour le système back-end de stockage. Pour la SVM enfant, les informations seront les mêmes que le back-end de stockage parent. Les privilèges ne s'affichent que sur les systèmes back-end de stockage basés sur le cluster. Si vous ajoutez SVM en tant que système back-end de stockage, les informations relatives aux privilèges ne seront pas affichées.
-* La vue détaillée du cluster ASA r2 n'inclut pas l'onglet niveaux locaux lorsque la propriété désagrégée est définie sur « true » pour le SVM ou le cluster.
+* La vue détaillée du cluster du système ASA r2 n'inclut pas l'onglet niveaux locaux lorsque la propriété désagrégée est définie sur « true » pour le SVM ou le cluster.
 * Pour les systèmes SVM ASA r2, le portlet capacité n'est pas affiché. Le portail de capacité n'est requis que lorsque la propriété désagrégée est définie comme « true » pour le SVM ou le cluster.
 * Pour les systèmes ASA r2 SVM, la section informations de base présente le type de plateforme.
 

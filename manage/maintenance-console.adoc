@@ -31,8 +31,6 @@ Configuration de l'application
  a| 
 . Afficher le récapitulatif de l'état du serveur
 . Modifier le niveau du JOURNAL pour les services VASA Provider et SRA
-. Désactivez AutoSupport
-. Mettre à jour l'URL du proxy AutoSupport
 
 
 
@@ -44,7 +42,6 @@ Configuration du système
 . Arrêter la machine virtuelle
 . Modifier le mot de passe utilisateur « familiariser »
 . Modifier le fuseau horaire
-. Ajouter un nouveau serveur NTP
 . Augmentation de la taille des disques de prison (/prison)
 . Mise à niveau
 . Installez VMware Tools

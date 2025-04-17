@@ -15,6 +15,36 @@ Vous devez créer des groupes de protection pour protéger un groupe de machines
 
 
 
+== Protection par paires et sites de reprise après incident
+
+Vous devez coupler les sites protégés et de reprise créés à l'aide de votre client vSphere pour permettre à Storage Replication adapter (SRA) de détecter les systèmes de stockage.
+
+
+NOTE: Storage Replication adapter (SRA) prend en charge le « Fan-Out » avec une relation de synchronisation de type Automated Failover Duplex et Async Relationship SnapMirror sur le groupe de cohérence. Toutefois, la réplication « Fan-Out » avec deux SnapMirror asynchrones sur le groupe de cohérence ou sur le volume n'est pas prise en charge.
+
+.Avant de commencer
+* VMware Live site Recovery doit être installé sur les sites protégés et de reprise.
+* SRA doit être installée sur les sites protégés et de reprise.
+
+
+.Étapes
+. Double-cliquez sur *site Recovery* sur la page d'accueil du client vSphere et sélectionnez *sites*.
+. Sélectionnez *objets* > *actions* > *associer sites*.
+. Dans la boîte de dialogue *pair site Recovery Manager Servers*, entrez l'adresse du Platform Services Controller du site protégé, puis sélectionnez *Next*.
+. Dans la section Select vCenter Server, procédez comme suit :
++
+.. Vérifiez que le serveur vCenter du site protégé apparaît comme candidat correspondant au couplage.
+.. Entrez les informations d'identification d'administration SSO, puis sélectionnez *Terminer*.
+
+
+. Si vous y êtes invité, sélectionnez *Oui* pour accepter les certificats de sécurité.
+
+
+.Résultat
+Les sites protégés et de restauration s'affichent dans la boîte de dialogue objets.
+
+
+
 == Configuration des groupes de protection
 
 .Avant de commencer
@@ -39,30 +69,3 @@ Toutes les machines virtuelles du groupe de réplication sont ajoutées au group
 . Sélectionnez le plan de reprise existant ou créez un nouveau plan en sélectionnant *Ajouter au nouveau plan de reprise*.
 . Dans l'onglet prêt à terminer, vérifiez les détails du groupe de protection que vous avez créé, puis sélectionnez *Terminer*.
 
-
-
-
-== Protection par paires et sites de reprise après incident
-
-Vous devez coupler les sites protégés et de reprise créés à l'aide de votre client vSphere pour permettre à Storage Replication adapter (SRA) de détecter les systèmes de stockage.
-
-.Avant de commencer
-* VMware Live site Recovery doit être installé sur les sites protégés et de reprise.
-* SRA doit être installée sur les sites protégés et de reprise.
-
-
-.Étapes
-. Double-cliquez sur *site Recovery* sur la page d'accueil du client vSphere et sélectionnez *sites*.
-. Sélectionnez *objets* > *actions* > *associer sites*.
-. Dans la boîte de dialogue *pair site Recovery Manager Servers*, entrez l'adresse du Platform Services Controller du site protégé, puis sélectionnez *Next*.
-. Dans la section Select vCenter Server, procédez comme suit :
-+
-.. Vérifiez que le serveur vCenter du site protégé apparaît comme candidat correspondant au couplage.
-.. Entrez les informations d'identification d'administration SSO, puis sélectionnez *Terminer*.
-
-
-. Si vous y êtes invité, sélectionnez *Oui* pour accepter les certificats de sécurité.
-
-
-.Résultat
-Les sites protégés et de restauration s'affichent dans la boîte de dialogue objets.

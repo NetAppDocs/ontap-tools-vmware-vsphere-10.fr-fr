@@ -14,7 +14,7 @@ summary: 'L"action Supprimer le datastore supprime le datastore lorsqu"il n"y a 
 L'action Supprimer le datastore supprime le datastore lorsqu'il n'y a pas de vVols sur le datastore sélectionné.
 
 
-NOTE: L'opération de réduction du datastore vVols n'est pas prise en charge pour le datastore vVols basé sur ASA r2.
+NOTE: L'opération de réduction du datastore vVols n'est pas prise en charge pour le datastore vVols système ASA r2.
 
 .Étapes
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.

@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez modifier le mot de passe administrateur à l"aide du Gestionnaire d"outils ONTAP.' 
+summary: 'Vous pouvez modifier le mot de passe de l"administrateur à l"aide du gestionnaire d"outils ONTAP pour activer des services tels que le fournisseur VASA, l"importation de la configuration vVols et la reprise après incident (SRA) à l"aide du gestionnaire d"outils ONTAP.' 
 ---
 = Activez les outils ONTAP pour les services VMware vSphere
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Vous pouvez modifier le mot de passe administrateur à l"aide du Gesti
 
 
 [role="lead"]
-Gestionnaire pour activer des services tels que VASA Provider, importation de la configuration vVols et reprise après incident (SRA) à l'aide du gestionnaire d'outils ONTAP.
+Vous pouvez modifier le mot de passe de l'administrateur à l'aide du gestionnaire d'outils ONTAP pour activer des services tels que le fournisseur VASA, l'importation de la configuration vVols et la reprise après incident (SRA) à l'aide du gestionnaire d'outils ONTAP.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -26,6 +26,6 @@ Lors de la première activation des services, vous devez créer les informations
 NOTE: Avant de désactiver les services optionnels, assurez-vous que les serveurs vCenter gérés par les outils ONTAP ne les utilisent pas.
 
 +
-L'option *Autoriser l'importation de la configuration vVols* s'affiche uniquement lorsque le service VASA Provider est activé. Cette option active la migration des données vVols des outils ONTAP 9.x vers les outils ONTAP 10.3.
+L'option *Autoriser l'importation de la configuration vVols* s'affiche uniquement lorsque le service VASA Provider est activé. Cette option active la migration des données vVols des outils ONTAP 9.x vers les outils ONTAP 10.4.
 
 

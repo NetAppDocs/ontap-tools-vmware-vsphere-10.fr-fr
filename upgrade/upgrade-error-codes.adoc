@@ -59,9 +59,10 @@ Le tableau suivant répertorie les codes d'erreur et les noms de fichier corresp
 Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de travail spécifique dans le script :
 
 |===
-
-
 | *Mettre à niveau le code d'erreur* | *Workflow* | *Résolution* 
+
+
+| 052 | L'ISO peut être la même que la version actuelle ou deux versions supérieures à la version actuelle. | Utilisez une version ISO compatible pour effectuer une mise à niveau à partir de votre version actuelle. 
 
 
 | 068 | Échec de la restauration des paquets Debian | Utilisez une restauration basée sur des snapshots ou un RPO nul et réessayez la mise à niveau. 
@@ -118,12 +119,6 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 089 | La modification de la propriété du fichier de configuration de rotation du journal de synthèse a échoué | Réessayez la mise à niveau. 
 
 
-| 093 | La mise à niveau du provisionnement de stockage dynamique a échoué | Réessayez la mise à niveau. 
-
-
-| 094 | Échec de la restauration du mécanisme de provisionnement du stockage dynamique | Réessayez la mise à niveau. 
-
-
 | 095 | Échec de la mise à niveau du se | Aucune récupération pour la mise à niveau du système d'exploitation. Les services d'outils ONTAP sont mis à niveau et de nouveaux pods seront en cours d'exécution. 
 
 
@@ -155,8 +150,20 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 
 
 | 113 | L'actualisation des ressources sur les nœuds secondaires a échoué | Consultez les journaux de mise à niveau et réessayez la mise à niveau. 
+
+
+| 104 | Le redémarrage du nœud secondaire a échoué | Redémarrez les nœuds manuellement un par un 
+
+
+| 100 | échec de la restauration du noyau | - 
+
+
+| 051 | la mise à niveau du provisionnement de stockage dynamique a échoué | Consultez les journaux de mise à niveau et réessayez la mise à niveau. 
+
+
+| 056 | échec de la suppression de la sauvegarde de migration | NA 
 |===
 
-NOTE: Les outils ONTAP pour VMware vSphere 10.3 prennent en charge un RPO nul.
+NOTE: À partir des outils ONTAP pour VMware vSphere 10.3, le RPO nul n'est pas pris en charge.
 
 En savoir plus sur https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["Restauration des outils ONTAP pour VMware vSphere en cas d'échec de la mise à niveau de la version 10.0 vers la version 10.1"]

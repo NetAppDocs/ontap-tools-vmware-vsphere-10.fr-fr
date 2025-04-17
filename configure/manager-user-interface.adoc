@@ -38,5 +38,11 @@ image:../media/ontap-tools-manager-overview.png["Présentation du tableau de bor
 | Carte d'alertes | La carte alertes répertorie les alertes des outils ONTAP par type, y compris les alertes de haute disponibilité au niveau du nœud. Vous pouvez afficher la liste des alertes en sélectionnant dans le texte de comptage (hyperlien). Le lien vous dirige vers la page d'affichage des alertes filtrée en fonction du type sélectionné. 
 
 
+| Instances vCenter | La carte vCenter affiche l'état de santé des vCenters du système. 
+
+
+| Systèmes back-end | La carte Storage backend indique l'état de santé des systèmes de stockage back-end dans le système. 
+
+
 | Carte des nœuds des outils ONTAP | La carte des nœuds des outils ONTAP affiche la liste des nœuds avec le nom du nœud, le nom de la machine virtuelle du nœud, l'état et toutes les données relatives au réseau. Vous pouvez sélectionner sur *Afficher les détails* pour afficher les détails supplémentaires liés au nœud sélectionné. [REMARQUE] dans une configuration non HA, un seul nœud est affiché. En configuration haute disponibilité, trois nœuds sont illustrés. 
 |===

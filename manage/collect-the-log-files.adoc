@@ -33,7 +33,7 @@ Téléchargez le fichier tar.gz et envoyez-le au support technique.
 Pour générer un bundle de journaux à l'aide de l'interface utilisateur du client vCenter, procédez comme suit :
 
 .Étapes
-. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
+. Connectez-vous au client vSphere.
 . Depuis la page d'accueil de vSphere client, accédez à *support* > *Log bundle* > *Generate*.
 . Indiquez l'étiquette de l'ensemble de journaux et générez l'ensemble de journaux.
 Vous pouvez voir l'option de téléchargement lorsque les fichiers sont générés. Le téléchargement peut prendre un certain temps.

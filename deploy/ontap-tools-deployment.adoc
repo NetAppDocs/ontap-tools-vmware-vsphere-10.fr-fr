@@ -11,10 +11,9 @@ summary: 'Les outils ONTAP pour l"appliance VMware vSphere sont déployés sous 
 
 
 [role="lead"]
-Les outils ONTAP pour l'appliance VMware vSphere sont déployés sous forme de nœud unique de petite taille avec des services de base pour prendre en charge les datastores NFS et VMFS.
+Les outils ONTAP pour l'appliance VMware vSphere sont déployés sous forme de nœud unique de petite taille avec des services de base pour prendre en charge les datastores NFS et VMFS. Le processus de déploiement des outils ONTAP peut prendre jusqu'à 45 minutes.
 
-*Avant de commencer*
-
+.Avant de commencer
 Une bibliothèque de contenu dans VMware est un objet conteneur qui stocke les modèles de machine virtuelle, les modèles vApp et d'autres types de fichiers. Le déploiement avec la bibliothèque de contenu vous offre une expérience transparente car il ne dépend pas de la connectivité réseau.
 
 
@@ -28,7 +27,7 @@ Si vous ne disposez pas d'une bibliothèque de contenu, procédez comme suit pou
 *Créer une bibliothèque de contenu* dans vous prévoyez d'utiliser uniquement un déploiement à un seul nœud, la création d'une bibliothèque de contenu n'est pas nécessaire.
 
 . Téléchargez le `.zip` fichier contenant les binaires (_.ova_) et les certificats signés pour les outils ONTAP pour VMware vSphere à partir du https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de support NetApp"^].
-. Connectez-vous au client vSphere à l'aide de `\https://<vcenterip>/<ui>`
+. Connectez-vous au client vSphere
 . Sélectionnez le menu du client vSphere et sélectionnez *bibliothèques de contenu*.
 . Sélectionnez *Créer* à droite de la page.
 . Indiquez un nom pour la bibliothèque et créez la bibliothèque de contenu.
@@ -88,7 +87,7 @@ NOTE: Le PROTOCOLE IPv6 pur n'est pas pris en charge. Le mode mixte est pris en 
 +
 Au fur et à mesure de la création de la tâche de déploiement, la progression s'affiche dans la barre des tâches vSphere.
 
-. Mettez le serveur virtuel sous tension une fois la tâche terminée.
+. Mettez la machine virtuelle sous tension après avoir terminé la tâche si l'option de mise sous tension automatique de la machine virtuelle n'a pas été sélectionnée.
 
 
 Vous pouvez suivre la progression de l'installation au sein de la console Web de la machine virtuelle.
@@ -99,6 +98,7 @@ Si le formulaire OVF contient des incohérences, une boîte de dialogue vous inv
 Si vous avez déployé des outils ONTAP pour VMware vSphere avec vCenter Server 7.0.3, suivez ces étapes après le déploiement.
 
 . Connectez-vous au client vCenter
+. Mettez le nœud ONTAP Tools hors tension.
 . Accédez aux outils ONTAP pour la machine virtuelle VMware vSphere sous *inventaires* et sélectionnez l'option *Modifier les paramètres*.
 . Sous les options *CPU*, cochez la case *Activer l'ajout à chaud de CPU*
 . Sous les options *Memory*, cochez la case *Enable* par rapport à *Memory hot plug*.

@@ -21,7 +21,7 @@ Découvrez si la migration à partir des outils ONTAP pour VMware vSphere 9 vers
 | Proposition de valeur clé | Rationalisez et simplifiez les opérations du premier au deuxième jour grâce à des fonctionnalités améliorées de sécurité, de conformité et d'automatisation | Évolution des outils ONTAP 10.x vers la parité 9.x tout en augmentant les limites de haute disponibilité, de performances et d'évolutivité | Prise en charge étendue pour inclure FC pour VMFS et vVols et NVMe-of/FC, NVMe-of/TCP pour VMFS uniquement. La facilité d'utilisation de NetApp SnapMirror, la configuration simple des clusters de stockage vSphere Metro et la prise en charge de VMware Live site Recovery sur trois sites 
 
 
-| Qualification de la version ONTAP | ONTAP 9.9.1 à ONTAP 9.15.1 | ONTAP 9.12.1 à ONTAP 9.14.1 | ONTAP 9.12.1 à ONTAP 9.15.1 pour les outils ONTAP 10.2 ONTAP 9.14.1, 9.15.1 et 9.16.0 pour les outils ONTAP 10.3. 
+| Qualification de la version ONTAP | ONTAP 9.9.1 à ONTAP 9.15.1 | ONTAP 9.12.1 à ONTAP 9.14.1 | ONTAP 9.12.1 à ONTAP 9.15.1 pour les outils ONTAP 10.2 ONTAP 9.14.1, 9.15.1 et 9.16.0 pour les outils ONTAP 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 et 9.16.1 pour les outils ONTAP 10.4 
 
 
 | Prise en charge de la version de VMware | VSphere 7.x-8.x VMware site Recovery Manager (SRM) 8.5 vers VMware Live site Recovery 9.0 | VSphere 7.x-8.x VMware site Recovery Manager (SRM) 8.7 vers VMware Live site Recovery 9.0 | VSphere 7.x-8.x VMware site Recovery Manager (SRM) 8.7 vers VMware Live site Recovery 9.0 

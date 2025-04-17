@@ -64,6 +64,9 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | *Code d'erreur de déploiement* | *Workflow* | *Résolution* 
 
 
+| 049 | Pour le réseau et la validation, le script perl les attribuera également sous peu | - 
+
+
 | 050 | Échec de la génération de la clé SSH | Redémarrez la machine virtuelle (VM) principale. 
 
 
@@ -78,7 +81,7 @@ Sudo rke2-uninstall.sh (toutes les VM).
 | 055 | Échec du déploiement du registre | Si le pod de registre est présent, attendez que le pod soit prêt, puis redémarrez la machine virtuelle principale ou redéployez-la. 
 
 
-| 059 | Échec du déploiement KubeVip | Assurez-vous que l'adresse IP virtuelle du plan de contrôle Kubernetes et l'adresse IP de l'équilibreur de charge fournies lors du déploiement appartiennent au même VLAN et sont des adresses IP libres. Redémarrez si tous les points précédents sont corrects. Sinon, redéployer. 
+| 059 | Échec du déploiement KubeVip | Vérifiez que l'adresse IP virtuelle du plan de contrôle Kubernetes et l'adresse IP des outils ONTAP fournies lors du déploiement appartiennent au même VLAN et sont des adresses IP libres. Redémarrez si tous les points précédents sont corrects. Sinon, redéployer. 
 
 
 | 060 | Le déploiement de l'opérateur a échoué | Redémarrer 

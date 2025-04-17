@@ -2,16 +2,19 @@
 permalink: manage/enable-backup.html 
 sidebar: sidebar 
 keywords:  
-summary: Étant donné que les outils ONTAP pour VMware vSphere 10.3 utilisent le provisionnement de stockage dynamique, vous ne pouvez pas atteindre un RPO nul. Toutefois, vous pouvez atteindre un RPO proche de zéro. 
+summary: 'À partir des outils ONTAP pour VMware vSphere 10.3, l"appliance utilise un mécanisme de provisionnement du stockage dynamique. Vous ne pouvez pas atteindre un RPO nul. Toutefois, vous pouvez atteindre un RPO proche de zéro.' 
 ---
-= Créez une sauvegarde et restaurez la configuration
+= Créer une sauvegarde et restaurer l'installation des outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Étant donné que les outils ONTAP pour VMware vSphere 10.3 utilisent le provisionnement de stockage dynamique, vous ne pouvez pas atteindre un RPO nul. Toutefois, vous pouvez atteindre un RPO proche de zéro. Pour atteindre un RPO proche de zéro, vous devez créer une sauvegarde de la configuration et la restaurer sur une nouvelle machine virtuelle.
+À partir des outils ONTAP pour VMware vSphere 10.3, l'appliance utilise un mécanisme de provisionnement du stockage dynamique. Vous ne pouvez pas atteindre un RPO nul. Toutefois, vous pouvez atteindre un RPO proche de zéro. Pour atteindre un RPO proche de zéro, vous devez créer une sauvegarde de la configuration et la restaurer sur une nouvelle machine virtuelle.
+
+
+NOTE: Pour migrer vers HA lorsque la sauvegarde non HA est activée, désactivez d'abord la sauvegarde et réactivez-la après la migration.
 
 
 
@@ -42,7 +45,7 @@ Dans la section fichier, vous pouvez voir le répertoire. Le nom du répertoire 
 
 Pour restaurer la configuration, mettez la machine virtuelle existante hors tension et déployez une nouvelle machine virtuelle à l'aide de l'OVA qui a été utilisée lors du déploiement initial.
 
-Vous devez utiliser la même adresse IP d'outil ONTAP (IP d'équilibreur de charge) pour la nouvelle machine virtuelle, et la configuration système telle que les services activés, la taille du nœud et le mode haute disponibilité doit être identique au déploiement initial.
+Vous devez utiliser la même adresse IP d'outils ONTAP pour la nouvelle machine virtuelle, et la configuration système telle que services activés, taille du nœud et mode haute disponibilité doit être identique au déploiement initial.
 
 Procédez comme suit pour restaurer la configuration à partir du fichier de sauvegarde.
 

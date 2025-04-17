@@ -16,11 +16,11 @@ Par défaut, lors du déploiement, un certificat auto-signé est généré pour 
 .Avant de commencer
 * Le nom de domaine sur lequel le certificat est émis doit être mappé sur l'adresse IP virtuelle.
 * Exécutez la vérification nslookup sur le nom de domaine pour vérifier si le domaine est résolu à l'adresse IP prévue.
-* Les certificats doivent être créés avec le nom de domaine et l'adresse IP de l'équilibreur de charge.
+* Les certificats doivent être créés avec le nom de domaine et l'adresse IP des outils ONTAP.
 
 
 
-NOTE: Une adresse IP de l'équilibreur de charge doit être mappée sur un nom de domaine complet (FQDN). Les certificats doivent contenir le même nom de domaine complet mappé à l'adresse IP de l'équilibreur de charge dans les autres noms d'objet ou d'objet.
+NOTE: Une adresse IP des outils ONTAP doit correspondre à un nom de domaine complet (FQDN). Les certificats doivent contenir le même nom de domaine complet mappé à l'adresse IP des outils ONTAP dans les autres noms d'objet ou d'objet.
 
 
 NOTE: Vous ne pouvez pas passer d'un certificat signé par une autorité de certification à un certificat auto-signé.

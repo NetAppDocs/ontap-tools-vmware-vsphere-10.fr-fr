@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Lors de la migration des données de stockage, les systèmes back-end sont intégrés manuellement via des API REST. Lors de la migration des données VASA Provider, les données sont exportées à partir de la base de données Derby existante et importées dans la base de données MongoDB. 
 ---
-= Migrez des outils ONTAP pour VMware vSphere 9.x vers la version 10.3
+= Migrez des outils ONTAP pour VMware vSphere 9.x vers la version 10.4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,11 +17,11 @@ Lors de la migration des données de stockage, les systèmes back-end sont inté
 NOTE: Vous ne devez migrer les outils ONTAP pour la configuration de VMware vSphere 9.xx que si la configuration gère uniquement la fonctionnalité VASA Provider.
 
 
-NOTE: Après la migration des outils ONTAP pour VMware vSphere 9.x vers 10.3, les datastores vVols avec le protocole NVMe/FC ne fonctionnent pas, car les outils ONTAP 10.3 prennent uniquement en charge NVMe-of avec les datastores VMFS.
+NOTE: Après la migration des outils ONTAP pour VMware vSphere 9.x vers 10.4, les datastores vVols avec le protocole NVMe/FC ne fonctionnent pas, car les outils ONTAP 10.4 prennent uniquement en charge NVMe-of avec les datastores VMFS.
 
 *À propos de cette tâche*
 
-Vous pouvez effectuer la migration à partir des outils ONTAP pour VMware vSphere 9.12D1 et 9.13D2 vers la version 10.3.
+Vous pouvez effectuer la migration à partir des outils ONTAP pour VMware vSphere 9.12D1 et 9.13D2 vers la version 10.4.
 
 
 NOTE: Vous devez effectuer la sauvegarde OVA de votre version actuelle avant de procéder à la mise à niveau vers les versions de correctifs.
@@ -30,18 +30,17 @@ NOTE: Vous devez effectuer la sauvegarde OVA de votre version actuelle avant de 
 
 == Étapes de migration courantes
 
-. Déploiement des outils OVA pour ONTAP pour VMware vSphere 10.3.
-. Ajoutez l'instance vCenter Server que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.3. Voir link:../configure/add-vcenter.html["Ajouter des instances vCenter Server"].
+. Déploiement d'OVA pour les outils ONTAP pour VMware vSphere 10.4.
+. Ajoutez l'instance vCenter Server que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.4. Voir link:../configure/add-vcenter.html["Ajouter des instances vCenter Server"].
 . Intégration locale du système back-end de stockage à partir des outils ONTAP pour les API de serveur vCenter du plug-in VMware vSphere. Ajoutez du stockage en tant que stockage local délimité pour la migration.
-. Les datastores NFS et VMFS migrés depuis les outils ONTAP pour VMware vSphere 9.xx ne sont visibles dans les outils ONTAP pour VMware vSphere 10.3 qu'après le déclenchement de la procédure de détection des datastores, qui peut prendre jusqu'à 30 minutes. Vérifiez si les datastores sont visibles sur la page Présentation des outils ONTAP de la page de l'interface utilisateur du plug-in VMware vSphere.
+. Les datastores NFS et VMFS migrés depuis les outils ONTAP pour VMware vSphere 9.xx ne sont visibles dans les outils ONTAP pour VMware vSphere 10.4 qu'après le déclenchement de la procédure de détection des datastores, qui peut prendre jusqu'à 30 minutes. Vérifiez si les datastores sont visibles sur la page Présentation des outils ONTAP de la page de l'interface utilisateur du plug-in VMware vSphere.
 
 
 
 
 == Étapes de migration SRA
 
-*Avant de commencer*
-
+.Avant de commencer
 Avant la migration, assurez-vous que l'un des sites est protégé et que l'autre est en état de récupération.
 
 
@@ -72,8 +71,8 @@ Effectuez ces étapes sur les sites de protection et de reprise d'activité.
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Déploiement d'OVA pour les outils ONTAP pour VMware vSphere 10.3.
-. Ajoutez l'instance vCenter Server que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.3. Voir link:../configure/add-vcenter.html["Ajoutez une instance de vCenter Server"].
+. Déploiement d'OVA pour les outils ONTAP pour VMware vSphere 10.4.
+. Ajoutez l'instance vCenter Server que vous souhaitez migrer vers les outils ONTAP pour VMware vSphere 10.4. Voir link:../configure/add-vcenter.html["Ajoutez une instance de vCenter Server"].
 . Intégration locale du système back-end de stockage à partir des API de serveur vCenter du plug-in distant. Ajoutez le stockage en tant que périmètre local pour la migration.
 . Émettez l'appel d'API suivant pour migrer :
 +
@@ -199,17 +198,14 @@ NOTE: uuid est l'uuid de migration renvoyé en réponse à l'API post-migration.
 Une fois l'API de migration des correctifs exécutée, toutes les machines virtuelles sont conformes à la stratégie de stockage.
 
 ====
-+
-Une fois la migration réussie et après avoir enregistré les outils ONTAP 10.3 sur le serveur vCenter, procédez comme suit :
-
-+
-** Actualisez le certificat sur tous les hôtes.
-** Attendez un certain temps avant d'effectuer des opérations de datastore (DS) et de machine virtuelle (VM). Le temps d'attente dépend du nombre d'hôtes, de DS et de VM dans la configuration. Si vous n'attendez pas, les opérations peuvent échouer par intermittence.
 
 
+.Et la suite
+Une fois la migration réussie et après avoir enregistré les outils ONTAP 10.4 sur le serveur vCenter, procédez comme suit :
 
+* Actualisez le certificat sur tous les hôtes.
+* Attendez un certain temps avant d'effectuer des opérations de datastore (DS) et de machine virtuelle (VM). Le temps d'attente dépend du nombre d'hôtes, de DS et de VM dans la configuration. Si vous n'attendez pas, les opérations peuvent échouer par intermittence.
 
-*Après la fin*
 
 Après la mise à niveau, si l'état de conformité de la machine virtuelle est obsolète, réappliquez la stratégie de stockage de la machine virtuelle en procédant comme suit :
 
@@ -224,6 +220,5 @@ L'état de conformité sous *conformité de la stratégie de stockage VM* est ma
 
 
 
-*Informations connexes*
-
-link:../upgrade/upgrade-ontap-tools.html["Mise à niveau des outils ONTAP pour VMware vSphere 10.x vers la version 10.3"]
+.Informations associées
+link:../upgrade/upgrade-ontap-tools.html["Mise à niveau des outils ONTAP pour VMware vSphere 10.x vers la version 10.4"]
