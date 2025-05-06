@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volume datastores 
 summary: 'Lorsque vous cliquez avec le bouton droit de la souris sur l"objet datastore dans la vue d"objet vCenter, les actions prises en charge par les outils ONTAP pour VMware vSphere s"affichent sous la section du plug-in.' 
 ---
-= Développez le datastore vVols
+= Développez les datastores vVols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 'Lorsque vous cliquez avec le bouton droit de la souris sur l"objet dat
 Lorsque vous cliquez avec le bouton droit de la souris sur l'objet datastore dans la vue d'objet vCenter, les actions prises en charge par les outils ONTAP pour VMware vSphere s'affichent sous la section du plug-in. Les actions spécifiques sont activées en fonction du type de datastore et des privilèges utilisateur actuels.
 
 
-NOTE: L'opération étendre le datastore vVols ne s'applique pas au datastore vVols système ASA r2.
+NOTE: L'opération étendre le datastore vVols ne s'applique pas aux datastores vVols système ASA r2.
 
 .Étapes
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.

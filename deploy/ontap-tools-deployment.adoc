@@ -80,7 +80,7 @@ NOTE: Ne stockez jamais d'outils ONTAP pour la machine virtuelle VMware vSphere 
 
 NOTE: Le PROTOCOLE IPv6 pur n'est pas pris en charge. Le mode mixte est pris en charge avec un VLAN contenant à la fois des adresses IPv6 et IPv4.
 
-** L'adresse IP des outils ONTAP est l'interface principale de communication avec les outils ONTAP
+** L'adresse IP des outils ONTAP est l'interface principale de communication avec les outils ONTAP.
 ** IPv4 est le composant d'adresse IP de la configuration du nœud, qui peut être utilisé pour activer le shell de diagnostic et l'accès SSH sur le nœud à des fins de débogage et de maintenance.
 
 

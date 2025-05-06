@@ -13,7 +13,7 @@ summary: La mise en route des outils ONTAP pour VMware vSphere comprend quelques
 [role="lead"]
 La mise en route des outils ONTAP pour VMware vSphere comprend quelques étapes. Ce démarrage rapide vous guide tout au long de la configuration initiale des outils ONTAP pour VMware vSphere.
 
-Dans un premier temps, vous déploierez les outils ONTAP pour VMware vSphere sous forme de configuration à un seul nœud de petite taille qui fournit des services de base pour la prise en charge des datastores NFS et VMFS. Si vous devez étendre votre configuration pour utiliser le datastore vVols et la haute disponibilité (HA), vous le ferez une fois ce workflow terminé. Pour plus d'informations, reportez-vous au link:../deploy/ha-workflow.html["Workflow de déploiement de la HAUTE DISPONIBILITÉ"].
+Dans un premier temps, vous déploierez les outils ONTAP pour VMware vSphere sous forme de configuration à un seul nœud de petite taille qui fournit des services de base pour la prise en charge des datastores NFS et VMFS. Si vous devez étendre votre configuration pour utiliser les datastores vVols et la haute disponibilité (HA), vous le ferez une fois ce workflow terminé. Pour plus d'informations, reportez-vous au link:../deploy/ha-workflow.html["Workflow de déploiement de la HAUTE DISPONIBILITÉ"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Planification du déploiement
 [role="quick-margin-para"]
