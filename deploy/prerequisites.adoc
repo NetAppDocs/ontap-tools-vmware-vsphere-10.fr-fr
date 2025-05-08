@@ -25,28 +25,22 @@ Vous pouvez utiliser les outils ONTAP pour VMware vSphere avec VMware vCenter Se
 ** 348 Go pour les installations à provisionnement lourd
 
 
-* *Exigences de dimensionnement du système hôte* la mémoire recommandée selon la taille du déploiement est comme indiqué dans le tableau ci-dessous :
+* *Exigences de dimensionnement du système hôte* la mémoire recommandée selon la taille du déploiement est indiquée dans le tableau ci-dessous. Pour déployer la haute disponibilité (HA), vous avez besoin de trois fois la taille d'appliance spécifiée dans le tableau.
 
 
 |===
 
 
-| *Type de déploiement* | *CPU* | *Mémoire (Go)* | *Espace disque (Go) thick provisionné* 
+| *Type de déploiement* | *CPU par nœud* | *Mémoire (Go) par nœud* | *Espace disque (Go) thick provisionné par nœud* 
 
 
-| Non HA petit | 9 | 18 | 350 
+| Petit | 9 | 18 | 350 
 
 
-| Support non HA | 13 | 26 | 350 
+| Moyen | 13 | 26 | 350 
 
 
-| HAUTE DISPONIBILITÉ faible (trois nœuds au total) | 27 | 54 | 1050 
-
-
-| Support HAUTE DISPONIBILITÉ (trois nœuds au total) | 39 | 78 | 1050 
-
-
-| HAUTE DISPONIBILITÉ ÉLEVÉE (trois nœuds au total) | 51 | 102 | 1050 
+| REMARQUE importante : le déploiement de grande envergure concerne uniquement la configuration haute disponibilité. | 17 | 34 | 350 
 |===
 
 NOTE: Lorsque la sauvegarde est activée, chaque cluster d'outils ONTAP a besoin d'un espace supplémentaire de 50 Go sur le datastore où les machines virtuelles sont déployées. Par conséquent, une configuration non HA requiert 400 Go et la haute disponibilité requiert au total 1100 Go d'espace.

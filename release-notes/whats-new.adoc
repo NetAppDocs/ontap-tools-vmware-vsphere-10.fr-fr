@@ -18,14 +18,14 @@ Découvrez les nouvelles fonctionnalités disponibles dans les outils ONTAP pour
 | Mise à jour | Description 
 
 
-| Prise en charge du système ASA r2 avec 12 nœuds par cluster | Les outils ONTAP pour VMware vSphere 10.4 prennent en charge les flux de production des systèmes de stockage ASA r2 avec un maximum de 12 nœuds par cluster, améliorant ainsi l'efficacité et l'évolutivité de la gestion des données. Il prend en charge les datastores vVols avec le protocole iSCSI et FC, et les datastores VMFS avec le protocole iSCSI, FC et NVMe, offrant ainsi des options de stockage flexibles et améliorées. 
+| link:../configure/create-datastore.html["Prise en charge du système ASA r2 avec 12 nœuds par cluster"] | Les outils ONTAP pour VMware vSphere 10.4 prennent en charge les flux de production des systèmes de stockage ASA r2 avec un maximum de 12 nœuds par cluster, améliorant ainsi l'efficacité et l'évolutivité de la gestion des données. Il prend en charge les datastores vVols avec le protocole iSCSI et FC, et les datastores VMFS avec le protocole iSCSI, FC et NVMe, offrant ainsi des options de stockage flexibles et améliorées. 
 
 
-| Améliorations de l'interface utilisateur du Gestionnaire d'outils ONTAP | Vous pouvez maintenant activer le serveur NTP pour une synchronisation temporelle précise dans l'ensemble de l'environnement et configurer les paramètres de télémétrie pour surveiller et analyser les performances du système à partir de l'interface du gestionnaire d'outils ONTAP. Ces paramètres ne sont plus disponibles dans la console de maintenance. 
+| link:../manage/add-ntpserver.html["Améliorations de l'interface utilisateur du Gestionnaire d'outils ONTAP"] | Vous pouvez maintenant activer le serveur NTP pour une synchronisation temporelle précise dans l'ensemble de l'environnement et configurer les paramètres de télémétrie pour surveiller et analyser les performances du système à partir de l'interface du gestionnaire d'outils ONTAP. Ces paramètres ne sont plus disponibles dans la console de maintenance. 
 
 
 | Fonctions de sécurité améliorées | Les fonctions de sécurité offrent désormais une protection et une conformité améliorées aux normes du secteur, offrant ainsi une expérience robuste et conviviale pour aider les administrateurs à gérer les environnements VMware plus efficacement. 
 
 
-| Fonctionnalités de reprise après incident SRA améliorées | Les outils ONTAP pour VMware vSphere 10.4 prennent désormais en charge les opérations de reprise après incident à l'aide de l'appliance de reprise sur site (SRA) avec des snapshots de nom personnalisé en plus des copies Snapshot planifiées SnapMirror. 
+| link:../protect/enable-storage-replication-adapter.html["Fonctionnalités de reprise après incident SRA améliorées"] | Les outils ONTAP pour VMware vSphere 10.4 prennent désormais en charge les opérations de reprise après incident à l'aide de l'appliance de reprise sur site (SRA) avec des snapshots de nom personnalisé en plus des copies Snapshot planifiées SnapMirror. 
 |===
