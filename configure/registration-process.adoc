@@ -18,7 +18,8 @@ Vous pouvez enregistrer le fournisseur VASA dans une instance de serveur vCenter
 . Sélectionnez *raccourcis* > *Outils NetApp ONTAP* dans la section modules externes.
 . Sélectionnez *Paramètres* > *VASA Paramètres fournisseur*. L'état d'enregistrement du fournisseur VASA s'affiche comme non enregistré.
 . Sélectionnez le bouton *Register* pour enregistrer le fournisseur VASA.
-. Entrez un nom pour le fournisseur VASA et fournissez les informations d'identification de l'utilisateur de l'application VMware vSphere pour les outils ONTAP, puis sélectionnez *Register*.
+. Entrez un nom et des informations d'identification pour le fournisseur VASA. Le nom d'utilisateur ne peut contenir que des lettres, des chiffres et des traits de soulignement. La longueur du mot de passe doit être comprise entre 8 et 256 caractères.
+. Sélectionnez *Enregistrer*.
 . Une fois l'enregistrement et l'actualisation de la page réussis, l'état, le nom et la version du fournisseur VASA enregistré s'affichent. Après l'enregistrement, l'action de désinscription est activée.
 
 

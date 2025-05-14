@@ -35,7 +35,7 @@ Lorsque vous créez un datastore au niveau du cluster hôte, le datastore est cr
 NOTE: Le système ASA r2 prend en charge les protocoles iSCSI et FC pour les vVols.
 
 . Sélectionnez la VM de stockage où vous souhaitez créer le datastore.
-. Sélectionnez une export policy personnalisée pour le protocole NFS ou un nom de groupe initiateur personnalisé pour les protocoles iSCSI et FC dans les *Options avancées*.
+. Sous Options avancées, vous pouvez sélectionner *règle d'export personnalisée* pour le protocole NFS ou un nom de groupe initiateur personnalisé pour les protocoles iSCSI et FC, mais ce n'est pas recommandé. Si vous utilisez cette option, assurez-vous d'exécuter la découverte dans vCenter pour tous les objets.
 +
 
 NOTE: Dans le SVM de type système de stockage ASA r2, les unités de stockage (LUN/namespace) ne sont pas créées, car le datastore n'est qu'un conteneur logique.
@@ -62,7 +62,7 @@ Un datastore VMware Network File System (NFS) utilise le protocole NFS pour conn
 NOTE: L'authentification Kerberos n'est disponible que lorsque le protocole NFS 4.1 est sélectionné.
 
 . Sélectionnez *Platform* et *Storage VM* dans le volet *Storage*.
-. Choisissez *règle d'export personnalisée* sous les options avancées si nécessaire, mais elle n'est pas recommandée. S'il est utilisé, assurez-vous d'exécuter la découverte dans vCenter pour tous les objets.
+. Vous pouvez sélectionner une règle d'export personnalisée sous des options avancées, mais elle n'est pas recommandée. S'il est utilisé, assurez-vous d'exécuter la découverte dans vCenter pour tous les objets.
 +
 
 NOTE: Il est impossible de créer un datastore NFS en utilisant la règle de volume par défaut/root du SVM.
