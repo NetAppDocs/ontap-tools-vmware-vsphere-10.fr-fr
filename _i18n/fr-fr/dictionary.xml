@@ -211,14 +211,12 @@ La sélection du serveur vCenter effectuée sur une page est conservée dans les
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">Définissez les valeurs de l'hôte ESXi</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">Vous pouvez définir les valeurs suivantes sur un hôte ESXi :</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">Paramètres de l'adaptateur HBA/CNA</block>
-  <block id="d3c41b5a4cf556f3a598cc1221e08ee4" category="paragraph">Définit les paramètres de délai d'expiration de HBA recommandés pour les systèmes de stockage NetApp.</block>
   <block id="c803cf4eb4cbf3a6b12b1e1cc3443970" category="section-title">Paramètres MPIO</block>
   <block id="5fc0e54193f8c3ad7e67febc376fc805" category="section-title">Paramètres NFS</block>
   <block id="5f115b5221541c527e67a2b71da5fb5d" category="list-text">Sélectionnez vCenter dans la barre latérale.</block>
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">Vous pouvez installer le plug-in NetApp NFS pour VMware vStorage APIs for Array Integration \(VAAI\) à l'aide des outils ONTAP pour VMware vSphere.</block>
   <block id="e1f59101bee140f72feebf78fe15f214" category="doc">Installez le plug-in NFS VAAI</block>
   <block id="bf25ac3fc5bee2b3ec36e32661767682" category="inline-link">Plug-in NetApp NFS pour VMware VAAI</block>
-  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">VSphere 8.x est pris en charge par le plug-in NetApp NFS VAAI 2.0.1 (build 16).</block>
   <block id="42e4695fefd280ddc3a6f11124586510" category="list-text">Lorsque le plug-in VAAI est téléchargé sur vCenter Server, sélectionnez *Modifier* dans la section *version existante*. Si un plug-in VAAI n'est pas téléchargé sur le serveur vCenter, cliquez sur le bouton *Upload*.</block>
   <block id="062e7967273cea76dff9c3579a0c44db" category="doc">Enregistrez le fournisseur VASA avec une instance vCenter Server</block>
   <block id="3f95368adb4475e89e1f4206049b54ad" category="summary">Vous pouvez monter un datastore VMware Virtual volumes \(vVvols\) sur un ou plusieurs hôtes supplémentaires en utilisant la boîte de dialogue Mount vvols datastore. Le montage du datastore permet d'accéder au stockage à des hôtes supplémentaires. Vous pouvez démonter le datastore vVols uniquement à l'aide des API.</block>
@@ -1373,14 +1371,10 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="34708a7ee3c666f413240fedba4b042a" category="cell">Cette carte présente les 10 principaux datastores classés par mesure de performance. Vous pouvez sélectionner l'en-tête pour obtenir les 10 principaux datastores de la mesure sélectionnée triés par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la carte persistent jusqu'à ce que vous changiez ou effacez le cache du navigateur. Une liste déroulante Type de datastore permet de sélectionner le type de datastores : NFS, VMFS ou vVols.</block>
   <block id="4c2183bca6b89d1820fb11f5a1d938c8" category="cell">Cette carte affiche l'état de conformité global de tous les paramètres des hôtes VMware ESXi (pour le vCenter sélectionné) en fonction des paramètres d'hôte NetApp recommandés par groupe/catégorie de paramètres. Vous pouvez sélectionner le lien *appliquer les paramètres recommandés* pour appliquer les paramètres recommandés. Vous pouvez sélectionner l'état conforme des hôtes pour afficher la liste des hôtes.</block>
   <block id="62938ab037901a948099ef101beec571" category="list-text">Sélectionnez les contrôleurs de stockage détectés qui ont l'état<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> et sélectionnez *actions* &gt; *Modifier*.</block>
-  <block id="3225a10b07f1580f10dee4abc3779e6c" category="cell">Paramètres</block>
   <block id="c77eb099ccd3a59aa3a56c3c98c84669" category="cell">Définir cette valeur sur...</block>
   <block id="117704664d6cada78ac3107380f63d23" category="cell">Disk.QFullSampleSize</block>
-  <block id="07b21acb18ec7b34bd91453e33448369" category="cell">32 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.</block>
   <block id="f66a3c183f0e736240b77f8b755c880e" category="cell">Disk.QFullThreshold</block>
-  <block id="ed6604a4485d16e1285db04ae3d4279f" category="cell">8 pour toutes les configurations. La définition de cette valeur permet d'éviter les erreurs d'E/S.</block>
   <block id="19c08de7404551288e1274186e039ef4" category="cell">Délais d'expiration de la carte HBA FC Emulex</block>
-  <block id="6ea7e3b1d2b04c77c55309b1aaa41f8c" category="cell">Valeur par défaut.</block>
   <block id="d46cddda4da7ec11f17472d11df95b68" category="cell">Délais de connexion HBA FC QLogic</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">Paramètre</block>
   <block id="c3b49a515dd0046685e06092642aa139" category="cell">Net.TcpipeHeapSize</block>
@@ -2263,8 +2257,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
-  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">Sous Options avancées, vous pouvez sélectionner *règle d'export personnalisée* pour le protocole NFS ou un nom de groupe initiateur personnalisé pour les protocoles iSCSI et FC, mais ce n'est pas recommandé. Si vous utilisez cette option, assurez-vous d'exécuter la découverte dans vCenter pour tous les objets.</block>
-  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">Vous pouvez sélectionner une règle d'export personnalisée sous des options avancées, mais elle n'est pas recommandée. S'il est utilisé, assurez-vous d'exécuter la découverte dans vCenter pour tous les objets.</block>
   <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">Assurez-vous que vous disposez de l'hôte VMware ESXi et du dernier correctif ou des versions ultérieures de vSphere 7.0U3 et de ONTAP 9.14.1 ou versions ultérieures.</block>
   <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">Redémarrez l'hôte ESXi manuellement après l'installation.</block>
   <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">Entrez un nom et des informations d'identification pour le fournisseur VASA. Le nom d'utilisateur ne peut contenir que des lettres, des chiffres et des traits de soulignement. La longueur du mot de passe doit être comprise entre 8 et 256 caractères.</block>
@@ -2274,4 +2266,9 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">Accédez à la page de gestion de la configuration de VMware Live site Recovery</block>
   <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">Dans le menu points de suspension, sélectionnez *Réinitialiser la configuration*.</block>
   <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">La migration à partir des outils ONTAP pour VMware vSphere 9 n'est nécessaire que si vous utilisez VASA Provider et vVols. Les datastores NFS et VMFS sont découverts lors du processus de détection du stockage.</block>
+  <block id="395ddb6ca1b9948e32145f8fa1a9201e" category="paragraph">Définit les paramètres suivants sur les valeurs par défaut :</block>
+  <block id="be34be4d53796d7420ca7e08ae84df3e" category="list-text">Sous Options avancées :</block>
+  <block id="bb18d56459266886917f70dbe8e01ef4" category="list-text">Si vous sélectionnez *Custom export policy*, assurez-vous d'exécuter la découverte dans vCenter pour tous les objets. Il est recommandé de ne pas utiliser cette option.</block>
+  <block id="0b3b86369c55c3299fc4f945d3cc9a8c" category="list-text">Vous pouvez sélectionner *Nom du groupe initiateur* personnalisé pour les protocoles iSCSI et FC.</block>
+  <block id="91756c37ce937828e162f58ca53f85a0" category="list-text">Si vous sélectionnez *Custom export policy* sous les options avancées, exécutez la découverte dans vCenter pour tous les objets. Il est recommandé de ne pas utiliser cette option.</block>
 </blocks>
