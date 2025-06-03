@@ -19,6 +19,8 @@ NOTE: Pour migrer vers HA lorsque la sauvegarde non HA est activée, désactivez
 .Avant de commencer
 * Assurez-vous que votre modèle OVA possède la même version OVA que le nœud 1. Le nœud 1 est le nœud par défaut sur lequel les outils ONTAP pour VMware vSphere OVA sont initialement déployés.
 * Assurez-vous que l'ajout à chaud du processeur et la connexion à chaud de la mémoire sont activés.
+* Dans vCenter Server, définissez le niveau d'automatisation du service de reprise après sinistre (DRS) sur partiellement automatisé. Après le déploiement de la haute disponibilité, rétablissez le niveau d'automatisation complet.
+* Les noms d’hôtes des nœuds dans la configuration HA doivent être en minuscules.
 
 
 .Étapes

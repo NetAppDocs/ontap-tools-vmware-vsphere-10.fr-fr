@@ -156,7 +156,7 @@ Ne supprimez pas VASA Provider.
 +
 Une fois l'ancien fournisseur VASA arrêté, le serveur vCenter bascule vers les outils ONTAP pour VMware vSphere. Tous les datastores et machines virtuelles sont accessibles et servis à partir des outils ONTAP pour VMware vSphere.
 
-. Les datastores NFS et VMFS migrés depuis les outils ONTAP pour VMware vSphere 9.xx ne sont visibles dans les outils ONTAP pour VMware vSphere 10.4 qu'après le déclenchement de la procédure de détection des datastores, ce qui peut prendre jusqu'à 30 minutes. Vérifiez si les datastores sont visibles sur la page de présentation des outils ONTAP pour la page de l'interface utilisateur du plug-in VMware vSphere.
+. Les datastores NFS et VMFS migrés depuis les outils ONTAP pour VMware vSphere 9.xx ne sont visibles dans les outils ONTAP pour VMware vSphere 10.4 qu'après le déclenchement de la procédure de détection des datastores, ce qui peut prendre jusqu'à 30 minutes. Vérifiez que les banques de données sont visibles sur la page de présentation de la page d’interface utilisateur des outils ONTAP pour le plug-in VMware vSphere.
 . Effectuez la migration des correctifs à l'aide de l'API suivante dans swagger ou dans Postman :
 +
 []
