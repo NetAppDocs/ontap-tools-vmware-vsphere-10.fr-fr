@@ -2,7 +2,7 @@
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: 'Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître l"espace requis pour le package de déploiement ainsi que certaines exigences de base en matière de système hôte.' 
+summary: Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître les besoins en espace requis pour le package de déploiement et la configuration système hôte de base requise. 
 ---
 = Conditions préalables au déploiement des outils ONTAP pour VMware vSphere
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Avant de déployer les outils ONTAP pour VMware vSphere, vous devez co
 
 
 [role="lead"]
-Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître l'espace requis pour le package de déploiement ainsi que certaines exigences de base en matière de système hôte.
+Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître les besoins en espace requis pour le package de déploiement et la configuration système hôte de base requise.
 
 Vous pouvez utiliser les outils ONTAP pour VMware vSphere avec VMware vCenter Server Virtual Appliance (vCSA). Vous devez déployer les outils ONTAP pour VMware vSphere sur un client vSphere pris en charge qui inclut le système ESXi.
 
@@ -68,7 +68,7 @@ NOTE: Lorsque la sauvegarde est activée, chaque cluster d'outils ONTAP a besoin
 | Application OVA | 10,4 
 
 
-| Hôte VMware ESXi pour déployer la machine virtuelle des outils ONTAP | 7.0, 7.0U1, 7.0U2, 7.0U3, 8.0, 8.0U1 ET 8.0U3 
+| Hôte VMware ESXi pour déployer la machine virtuelle des outils ONTAP | 7.0U3 et 8.0U3 
 
 
 | VCenter Server pour déployer la machine virtuelle des outils ONTAP | 7.0 et 8.0 

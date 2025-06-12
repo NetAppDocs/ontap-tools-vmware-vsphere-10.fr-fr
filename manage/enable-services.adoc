@@ -26,6 +26,6 @@ Lors de la première activation des services, vous devez créer les informations
 NOTE: Avant de désactiver les services optionnels, assurez-vous que les serveurs vCenter gérés par les outils ONTAP ne les utilisent pas.
 
 +
-L'option *Autoriser l'importation de la configuration vVols* s'affiche uniquement lorsque le service VASA Provider est activé. Cette option active la migration des données vVols des outils ONTAP 9.x vers les outils ONTAP 10.4.
+L'option *Autoriser l'importation de la configuration vVols* s'affiche uniquement lorsque le service VASA Provider est activé. Cette option active la migration des données vVols des outils ONTAP 9.xx vers les outils ONTAP 10.4.
 
 

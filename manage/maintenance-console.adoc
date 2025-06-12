@@ -2,7 +2,7 @@
 permalink: manage/maintenance-console.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez gérer les configurations de votre application, de votre système et de votre réseau à l"aide de la console de maintenance des outils ONTAP. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.' 
+summary: 'La console de maintenance des outils ONTAP vous permet de gérer vos configurations d"applications, système et réseau. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.' 
 ---
 = Présentation des outils ONTAP pour la console de maintenance VMware vSphere
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: 'Vous pouvez gérer les configurations de votre application, de votre s
 
 
 [role="lead"]
-Vous pouvez gérer les configurations de votre application, de votre système et de votre réseau à l'aide de la console de maintenance des outils ONTAP. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.
+La console de maintenance des outils ONTAP vous permet de gérer vos configurations d'applications, système et réseau. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.
 
-Vous devez avoir installé les outils VMware après avoir déployé les outils ONTAP pour VMware vSphere pour accéder à la console de maintenance. Vous devez utiliser `maint` En tant que nom d'utilisateur et mot de passe que vous avez configurés pendant le déploiement pour vous connecter à la console de maintenance des outils ONTAP. Vous devez utiliser *nano* pour modifier les fichiers dans la console de maintenance ou de connexion racine.
+Après le déploiement des outils ONTAP pour VMware vSphere, vous devez installer les outils VMware pour accéder à la console de maintenance. Vous devez utiliser  `maint` comme le nom d'utilisateur et le mot de passe que vous avez configurés lors du déploiement pour vous connecter à la console de maintenance des outils ONTAP. Vous devez utiliser *nano* pour modifier les fichiers dans la console de maintenance ou de connexion racine.
 
 
 NOTE: Vous devez définir un mot de passe pour le `diag` utilisateur lors de l'activation des diagnostics à distance.
