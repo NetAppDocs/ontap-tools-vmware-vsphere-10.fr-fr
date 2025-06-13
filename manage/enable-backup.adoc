@@ -26,7 +26,7 @@ NOTE: Pour migrer vers HA lorsque la sauvegarde non HA est activée, désactivez
 . Entrez `4` pour sélectionner *support et diagnostic*.
 . Entrez `3` pour sélectionner l'option *Activer la sauvegarde du système*.
 . Dans le cas d'une configuration non HA, entrez les informations d'identification vCenter sur lesquelles la machine virtuelle ONTAP Tools est déployée.
-. Entrez la valeur de fréquence de sauvegarde entre 10-60 min.
+. Entrez la valeur de fréquence de sauvegarde entre 5 et 60 minutes.
 . Appuyez sur *entrée*
 +
 Cela crée la sauvegarde et la transmet au datastore de la machine virtuelle à intervalles réguliers.

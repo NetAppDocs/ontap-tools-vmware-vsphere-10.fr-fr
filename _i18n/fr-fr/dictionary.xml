@@ -2236,7 +2236,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="15f0aef685a07d8a64ee213328fd4abf" category="list-text">Déterminez les outils ONTAP pour le type de déploiement VMware vSphere à partir du premier nœud de machine virtuelle.</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">Dans vCenter Server, définissez le niveau d'automatisation du service de reprise après sinistre (DRS) sur partiellement automatisé. Après le déploiement de la haute disponibilité, rétablissez le niveau d'automatisation complet.</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">Les noms d’hôtes des nœuds dans la configuration HA doivent être en minuscules.</block>
-  <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">Entrez la valeur de fréquence de sauvegarde entre 10-60 min.</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">Pour les outils ONTAP pour le déploiement de VMware vSphere HA, vous devez modifier le mot de passe de l’utilisateur de la console de maintenance sur le premier nœud, qui est node1.</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">Les paramètres MPIO ne s'appliquent pas aux protocoles NVMe, NVMe/FC et NVMe/TCP.</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">Vous pouvez enregistrer le fournisseur VASA dans une instance de serveur vCenter à l'aide des outils ONTAP pour VMware vSphere. La section Paramètres du fournisseur VASA affiche l'état d'enregistrement du fournisseur VASA pour le serveur vCenter sélectionné. Dans un déploiement multi-vCenter, assurez-vous de disposer de certificats d’autorité de certification personnalisés pour chaque instance de vCenter Server.</block>
@@ -2277,4 +2276,5 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">Migrez les outils ONTAP pour VMware vSphere 9.xx vers la version 10.4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migrer vers les derniers outils ONTAP pour VMware vSphere</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrer le fournisseur VASA et SRA</block>
+  <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">Entrez la valeur de fréquence de sauvegarde entre 5 et 60 minutes.</block>
 </blocks>
