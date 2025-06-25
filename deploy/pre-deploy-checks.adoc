@@ -54,7 +54,7 @@ Assurez-vous que les conditions suivantes sont remplies avant de poursuivre le d
 
 === Pour le déploiement d'un seul nœud
 
-Utilisez la fiche suivante pour rassembler les informations requises pour le déploiement initial des outils ONTAP pour VMware vSphere : pour le déploiement initial des outils ONTAP pour VMware vSphere :
+Utilisez la feuille de calcul suivante pour rassembler les informations requises pour les outils ONTAP pour le déploiement initial de VMware vSphere :
 
 |===
 | Conditions requises | Votre valeur 
@@ -133,4 +133,14 @@ Outre les exigences de déploiement d'un seul nœud, vous aurez besoin des infor
 
 == Configuration du pare-feu réseau
 
-Ouvrez les ports requis pour les adresses IP de votre pare-feu réseau. Les outils ONTAP doivent pouvoir atteindre cette LIF sur le port 443. Reportez-vous link:../deploy/prerequisites.html["Configuration requise pour les ports"]à pour connaître les dernières mises à jour.
+Ouvrez les ports requis pour les adresses IP de votre pare-feu réseau. Les outils ONTAP doivent pouvoir atteindre ce LIF via le port 443. Reportez-vous link:../deploy/prerequisites.html["Configuration requise pour les ports"]à pour connaître les dernières mises à jour.
+
+
+
+== Paramètres de stockage ONTAP
+
+Pour assurer une intégration transparente du stockage ONTAP avec les outils ONTAP pour VMware vSphere, tenez compte des paramètres suivants :
+
+* Si vous utilisez Fibre Channel (FC) pour la connectivité du stockage, configurez la segmentation sur vos commutateurs FC afin de connecter les hôtes ESXi aux LIF FC du SVM. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["En savoir plus sur le zoning FC et FCoE avec les systèmes ONTAP"]
+* Pour utiliser la réplication SnapMirror gérée par les outils ONTAP, l'administrateur du stockage ONTAP doit créer https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Relations entre clusters ONTAP"] et https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Relations entre les pairs du SVM intercluster ONTAP"] dans ONTAP avant d'utiliser SnapMirror.
+

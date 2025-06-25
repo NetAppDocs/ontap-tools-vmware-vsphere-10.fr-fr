@@ -24,7 +24,7 @@ Assurez-vous que vCenter Server est installé et accessible.
 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome["Matrice d'interopérabilité"]
-* link:../deploy/prerequisites.html["Conditions préalables au déploiement des outils ONTAP pour VMware vSphere"]
+* link:../deploy/prerequisites.html["Exigences et limites de configuration des outils ONTAP pour VMware vSphere"]
 * link:../deploy/pre-deploy-checks.html["Avant de commencer"]
 
 

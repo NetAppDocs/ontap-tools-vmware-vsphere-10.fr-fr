@@ -71,7 +71,7 @@ OVA est une norme ouverte pour le packaging et la distribution d'appliances ou d
 
 === Objectif de point de récupération
 
-Le RPO mesure la fréquence de sauvegarde ou de réplication des données. Elle représente le moment dans lequel les données doivent être restaurées après une panne afin de reprendre les activités de l'entreprise. Par exemple, si une entreprise a un objectif de point de récupération de 4 heures, elle peut tolérer la perte de 4 heures de données en cas d'incident.
+Le RPO mesure la fréquence de sauvegarde ou de réplication des données. Il précise le moment exact où vous devez restaurer les données après une panne pour reprendre l'activité. Par exemple, si une entreprise a un objectif de point de récupération de 4 heures, elle peut tolérer la perte de 4 heures de données en cas d'incident.
 
 
 
