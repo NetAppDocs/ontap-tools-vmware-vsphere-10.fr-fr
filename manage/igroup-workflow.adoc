@@ -94,7 +94,11 @@ Démonter une banque de données d'un hôte
 
 
 
-Le groupe host1Igroup est supprimé de la hiérarchie. Les groupes enfants ne sont pas explicitement supprimés. La suppression se produit dans les deux cas suivants : • Si aucun LUN n'est mappé, le système ONTAP supprime le groupe enfant ; • Une tâche de nettoyage planifiée supprime les groupes enfants non mappés sans LUN. Ces scénarios s'appliquent uniquement aux groupes gérés par les outils ONTAP, et non à ceux créés sur mesure.
+Le groupe host1Igroup est supprimé de la hiérarchie. Les groupes enfants ne sont pas explicitement supprimés. La suppression se produit dans ces deux conditions :
+
+* Si aucun LUN n'est mappé, le système ONTAP supprime le groupe i enfant.
+* Une tâche de nettoyage planifiée supprime les groupes enfants suspendus sans mappages LUN. Ces scénarios s'appliquent uniquement aux groupes gérés par les outils ONTAP, et non à ceux créés sur mesure.
+
 
 .Exemple 4 :
 Supprimer le magasin de données
