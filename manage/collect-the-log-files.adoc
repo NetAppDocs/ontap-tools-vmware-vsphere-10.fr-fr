@@ -35,8 +35,7 @@ Pour générer un bundle de journaux à l'aide de l'interface utilisateur du cli
 .Étapes
 . Connectez-vous au client vSphere.
 . Depuis la page d'accueil de vSphere client, accédez à *support* > *Log bundle* > *Generate*.
-. Indiquez l'étiquette de l'ensemble de journaux et générez l'ensemble de journaux.
-Vous pouvez voir l'option de téléchargement lorsque les fichiers sont générés. Le téléchargement peut prendre un certain temps.
+. Indiquez l'étiquette du fichier journal et générez-le. L'option de téléchargement s'affiche une fois les fichiers générés. Le téléchargement peut prendre un certain temps.
 
 
 

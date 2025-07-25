@@ -56,4 +56,4 @@ Il s'agit d'une solution Privileges personnalisée propre aux outils ONTAP pour 
 
 === Utilisateurs et groupes
 
-Vous pouvez définir des utilisateurs et des groupes à l'aide d'Active Directory ou de l'instance vCenter Server locale. Associé à un rôle, vous pouvez créer une autorisation sur un objet dans la hiérarchie d'objets vSphere. L'autorisation accorde l'accès en fonction du Privileges dans le rôle associé. Notez que les rôles ne sont pas attribués directement aux utilisateurs isolés. Les utilisateurs et les groupes peuvent accéder à un objet via le rôle Privileges, dans le cadre de l'autorisation serveur vCenter plus importante.
+Vous pouvez définir des utilisateurs et des groupes via Active Directory ou l'instance locale de vCenter Server. En combinant un rôle, vous pouvez créer une autorisation sur un objet de la hiérarchie d'objets vSphere. L'autorisation accorde l'accès en fonction des privilèges du rôle associé. Notez que les rôles ne sont pas attribués directement aux utilisateurs. Les utilisateurs et les groupes accèdent à un objet via les privilèges de rôle, dans le cadre de l'autorisation globale de vCenter Server.

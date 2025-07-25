@@ -38,10 +38,7 @@ NOTE: Lors de la configuration du gestionnaire de baies, vous devez utiliser la 
 
 
 
-.. Si vous vous connectez à un cluster, entrez le nom du SVM dans le champ *SVM name*.
-+
-Vous pouvez également laisser ce champ vide.
-
+.. Si vous vous connectez à un cluster, spécifiez le nom de la SVM dans le champ *Nom de la SVM* ou laissez-le vide pour gérer toutes les SVM du cluster.
 .. Entrez les volumes à découvrir dans le champ *liste d'inclure le volume*.
 +
 Vous pouvez saisir le volume source sur le site protégé et le volume de destination répliqué sur le site de reprise.

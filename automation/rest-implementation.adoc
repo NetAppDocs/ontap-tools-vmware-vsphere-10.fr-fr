@@ -30,7 +30,7 @@ Vous pouvez accéder aux outils ONTAP pour l'API REST VMware vSphere 10 via l'ad
 * Ressource spécifique
 
 
-Vous devez configurer l'adresse IP lors de la configuration initiale et le port est toujours 8443. Par ailleurs, pour une instance spécifique d'outils ONTAP pour VMware vSphere 10, la première partie de l'URL est constante. Seule la catégorie de ressource et la ressource spécifique varient sur les noeuds finaux.
+Vous devez configurer l'adresse IP lors de la configuration initiale, tandis que le port reste fixe à 8443. La première partie de l'URL est cohérente pour chaque instance des ONTAP tools for VMware vSphere 10 ; seules la catégorie de ressource et la ressource spécifique changent entre les points de terminaison.
 
 
 CAUTION: Les valeurs d'adresse IP et de port indiquées dans les exemples ci-dessous sont fournies à titre d'illustration uniquement. Vous devez modifier ces valeurs pour votre environnement.
@@ -68,7 +68,7 @@ Les méthodes HTTP ou verbes pris en charge par l'API REST sont présentées dan
 | POST | Créer | Crée une nouvelle instance de ressource basée sur les paramètres d'entrée. 
 
 
-| EN | Mise à jour | Met à jour une instance de ressource entière avec le corps de demande JSON fourni. Les valeurs clés qui ne peuvent pas être modifiées par l'utilisateur sont conservées. 
+| EN | Mise à jour | Met à jour une instance de ressource entière avec le corps de requête JSON fourni. Les valeurs clés non modifiables par l'utilisateur sont conservées. 
 
 
 | CORRECTIF | Mise à jour | Demande l'application d'un ensemble de modifications sélectionnées dans la demande à l'instance de ressource. 

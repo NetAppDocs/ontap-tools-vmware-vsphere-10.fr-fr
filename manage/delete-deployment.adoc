@@ -2,7 +2,7 @@
 permalink: manage/delete-deployment.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: Après avoir supprimé les outils ONTAP pour le déploiement de VMware vSphere, nettoyez les volumes Flexvolumes créés lors du déploiement. Si vous avez utilisé un cluster ONTAP dédié pour les déploiements, nettoyez les volumes Flexvolumes car le déploiement crée une grande quantité de volumes Flexvolumes qui ne sont pas utilisés, ce qui entraîne une baisse des performances. 
+summary: Après avoir supprimé les ONTAP tools for VMware vSphere , vous devez nettoyer les FlexVolumes créés lors du déploiement. Si vous avez utilisé un cluster ONTAP dédié pour les déploiements, vous devez nettoyer les FlexVolumes, car le déploiement crée de nombreux FlexVolumes inutilisés, ce qui entraîne une baisse des performances. 
 ---
 = Supprimez les volumes FlexVol
 :allow-uri-read: 

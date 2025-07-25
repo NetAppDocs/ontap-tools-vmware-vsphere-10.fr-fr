@@ -26,7 +26,7 @@ Lorsque le stockage est intégré aux outils ONTAP et que la découverte du data
 À partir des outils ONTAP pour VMware vSphere 10.3, vous pouvez créer un datastore vVols sur des systèmes ASA r2 avec un gain d'espace de type thin.vVol. En créant le datastore vVol, le fournisseur VASA crée un conteneur et les terminaux de protocole souhaités. Ce conteneur n'aura pas de volumes de sauvegarde.
 
 .Avant de commencer
-* Vérifier que les agrégats racine ne sont pas mappés sur un SVM.
+* Assurez-vous que les agrégats racines ne sont pas mappés à SVM.
 * Assurez-vous que le fournisseur VASA est enregistré avec le vCenter sélectionné.
 * Dans le système de stockage ASA r2, le SVM doit être mappé sur l'agrégat pour l'utilisateur du SVM.
 
@@ -47,7 +47,7 @@ NOTE: Le système ASA r2 prend en charge les protocoles iSCSI et FC pour les vVo
 ** Vous pouvez sélectionner *Nom du groupe initiateur* personnalisé pour les protocoles iSCSI et FC.
 +
 
-NOTE: Dans le SVM de type système de stockage ASA r2, les unités de stockage (LUN/namespace) ne sont pas créées, car le datastore n'est qu'un conteneur logique.
+NOTE: Dans le type de système de stockage ASA r2 SVM, les unités de stockage (LUN/espace de noms) ne sont pas créées car la banque de données n'est qu'un conteneur logique.
 
 
 
@@ -148,7 +148,7 @@ Lorsque le protocole NVMe/FC ou NVMe/TCP est sélectionné, un nouveau sous-syst
 .. Sélectionnez *aggregate* dans les options de la liste déroulante.
 +
 
-NOTE: Pour les systèmes de stockage ASA r2, l'option *aggregate* n'est pas présentée, car le stockage ASA r2 est désagrégée. Lorsque vous choisissez un SVM de type de système de stockage ASA r2, la page des attributs de stockage affiche les options d'activation de la QoS.
+NOTE: Pour les systèmes de stockage ASA r2, l'option *Agrégation* n'est pas affichée, car le stockage ASA r2 est désagrégé. Lorsque vous choisissez un système de stockage ASA r2 de type SVM, la page des attributs de stockage affiche les options d'activation de la qualité de service.
 
 .. Conformément au protocole sélectionné, une unité de stockage (LUN/namespace) est créée avec une réserve d'espace de type thin.
 +

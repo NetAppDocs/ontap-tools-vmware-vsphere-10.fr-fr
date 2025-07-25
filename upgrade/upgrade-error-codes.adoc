@@ -62,7 +62,7 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | *Mettre à niveau le code d'erreur* | *Workflow* | *Résolution* 
 
 
-| 052 | L'ISO peut être la même que la version actuelle ou deux versions supérieures à la version actuelle. | Utilisez une version ISO compatible pour effectuer une mise à niveau à partir de votre version actuelle. 
+| 052 | L'ISO peut être la même que la version actuelle ou deux versions au-dessus de la version actuelle. | Utilisez une version ISO compatible pour effectuer une mise à niveau à partir de votre version actuelle. 
 
 
 | 068 | Échec de la restauration des paquets Debian | Utilisez une restauration basée sur des snapshots ou un RPO nul et réessayez la mise à niveau. 

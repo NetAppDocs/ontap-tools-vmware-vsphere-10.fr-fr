@@ -66,6 +66,6 @@ L'adaptateur est installé sur VMware Live site Recovery et sur le serveur SRA.
 .Étapes
 . Vérifiez que les datastores du site protégé contiennent des machines virtuelles enregistrées auprès de vCenter Server.
 . Vérifier que les hôtes ESXi du site protégé ont monté les volumes NFS exportés depuis la machine virtuelle de stockage (SVM).
-. Vérifiez que les adresses valides telles que l'adresse IP, le nom d'hôte ou le nom de domaine complet sur lequel les exportations NFS sont présentes sont spécifiées dans le champ *adresses NFS* lorsque vous utilisez l'assistant Array Manager pour ajouter des baies à VMware Live site Recovery.
+. Vérifiez que des adresses valides, telles que l'adresse IP ou le nom de domaine complet (FQDN) sur lesquels les exportations NFS sont présentes, sont spécifiées dans le champ « Adresses NFS » lorsque vous utilisez l'assistant Gestionnaire de baies pour ajouter des baies à VMware Live Site Recovery. N'utilisez pas le nom d'hôte NFS dans le champ « Adresses NFS ».
 . Utilisez le `ping` Commande sur chaque hôte ESXi du site de reprise pour vérifier que l'hôte dispose d'un port VMkernel qui peut accéder aux adresses IP utilisées pour servir les exportations NFS à partir du SVM.
 

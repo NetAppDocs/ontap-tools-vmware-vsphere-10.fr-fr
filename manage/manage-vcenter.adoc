@@ -52,7 +52,7 @@ Vous devez supprimer tous les systèmes back-end associés au serveur vCenter av
 . Sélectionnez les ellipses verticales par rapport au serveur vCenter que vous souhaitez supprimer et sélectionnez *Supprimer*.
 +
 
-NOTE: Une fois que vous avez supprimé des instances vCenter Server, elles ne seront plus gérées par l'application.
+NOTE: Une fois les instances de vCenter Server supprimées, elles ne seront plus gérées par l’application.
 
 
 

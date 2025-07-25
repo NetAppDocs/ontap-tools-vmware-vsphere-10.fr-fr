@@ -52,7 +52,7 @@ Utilisez cette procédure pour protéger les datastores ou hôtes nouvellement a
 . Si vous avez ajouté un nouvel hôte ESXi, l'état de protection est partiellement protégé. Sélectionnez le menu points de suspension sous les paramètres SnapMirror et sélectionnez *Modifier* pour définir la proximité de l'hôte ESXi nouvellement ajouté.
 +
 
-NOTE: Dans le cas d'une relation de type asynchrone, l'action de modification n'est pas prise en charge, car vous ne pouvez pas ajouter le SVM cible pour le site tertiaire à la même instance d'outils ONTAP. Cependant, vous pouvez utiliser le system Manager ou l'interface de ligne de commandes du SVM cible pour modifier la configuration des relations.
+NOTE: Dans le cas d'une relation de type asynchrone, la modification n'est pas prise en charge, car il est impossible d'ajouter la SVM cible du site tertiaire à la même instance des outils ONTAP . Cependant, vous pouvez utiliser le gestionnaire système ou l'interface de ligne de commande de la SVM cible pour modifier la configuration de la relation.
 
 . Sélectionnez *Enregistrer* après avoir effectué les modifications nécessaires.
 . Vous pouvez voir les modifications dans la fenêtre *Protect Cluster*.

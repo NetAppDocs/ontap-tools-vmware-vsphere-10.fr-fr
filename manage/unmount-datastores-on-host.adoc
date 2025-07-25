@@ -30,7 +30,7 @@ Si le datastore fait partie d'un cluster hôte protégé, un message d'avertisse
 
 
 
-NOTE: Si le datastore protégé est démonté, le paramètre de protection de sortie peut entraîner une protection partielle. Reportez-vous link:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"]à pour activer une protection complète.
+NOTE: Si la banque de données protégée est démontée, le paramètre de protection existant peut entraîner une protection partielle. Consultez link:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"] pour permettre une protection complète.
 
 .Et la suite ?
 Vous pouvez suivre la progression dans le panneau tâches récentes.

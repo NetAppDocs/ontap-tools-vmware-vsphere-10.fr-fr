@@ -13,6 +13,8 @@ summary: Vous devez créer des groupes de protection pour protéger un groupe de
 [role="lead"]
 Vous devez créer des groupes de protection pour protéger un groupe de machines virtuelles sur le site protégé.
 
+Lorsque vous ajoutez une nouvelle banque de données, vous pouvez l'inclure dans le groupe de banques de données existant ou en ajouter une nouvelle et créer un volume ou un groupe de cohérence à protéger. Après avoir ajouté une nouvelle banque de données à un groupe de cohérence ou à un volume protégé, mettez à jour SnapMirror et effectuez la découverte du stockage sur les sites protégé et de récupération. Vous pouvez exécuter la découverte manuellement ou selon un calendrier pour garantir la détection et la protection de la nouvelle banque de données.
+
 
 
 == Protection par paires et sites de reprise après incident
@@ -57,15 +59,14 @@ Vous devez vous assurer que les sites source et cible sont configurés pour les 
 
 
 .Étapes
-. Connectez-vous à vCenter Server, puis sélectionnez *site Recovery* > *protection Groups*.
+. Connectez-vous à vCenter Server et sélectionnez *Site Recovery* > *Groupes de protection*.
 . Dans le volet *groupes de protection*, sélectionnez *Nouveau*.
 . Spécifiez un nom et une description pour le groupe de protection, Direction et sélectionnez *Suivant*.
-. Dans le champ *Type*, sélectionnez l'option de champ *Type...* en tant que groupes de datastores (réplication basée sur la baie) pour les datastores NFS et VMFS.
-Le domaine de panne n'est rien d'autre que les SVM avec la réplication activée. Les SVM qui ont uniquement mis en œuvre le peering et qui ne présentent aucun problème sont affichés.
+. Dans le champ *Type*, sélectionnez l'option *Type* comme groupes de banques de données (réplication basée sur une baie) pour les banques de données NFS et VMFS. Le domaine d'erreur ne comprend que les SVM avec réplication activée. Les SVM pour lesquelles seul le peering est implémenté et qui ne présentent aucun problème sont affichées.
 . Dans l'onglet Replication Groups, sélectionnez la paire de matrices activée ou les groupes de réplication sur lesquels la machine virtuelle est configurée, puis sélectionnez *Next*.
 +
 Toutes les machines virtuelles du groupe de réplication sont ajoutées au groupe de protection.
 
-. Sélectionnez le plan de reprise existant ou créez un nouveau plan en sélectionnant *Ajouter au nouveau plan de reprise*.
+. Vous pouvez sélectionner le plan de récupération existant ou en créer un nouveau en sélectionnant *Ajouter au nouveau plan de récupération*.
 . Dans l'onglet prêt à terminer, vérifiez les détails du groupe de protection que vous avez créé, puis sélectionnez *Terminer*.
 

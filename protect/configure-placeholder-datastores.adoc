@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous devez configurer un datastore de marque de réservation pour qu"il garde un emplacement dans l"inventaire vCenter sur le site de reprise pour la machine virtuelle protégée \(VM\). Le datastore réservé n"a pas besoin d"être volumineux car les machines virtuelles de substitution sont petites et n"utilisent que quelques centaines de kilo-octets ou moins.' 
+summary: 'Vous devez configurer un magasin de données d"espace réservé pour réserver un emplacement dans l"inventaire vCenter du site de récupération pour la machine virtuelle protégée (VM). Ce magasin de données n"a pas besoin d"être volumineux, car les VM d"espace réservé sont petites et n"utilisent que quelques centaines de kilo-octets, voire moins.' 
 ---
 = Configurez les datastores à espace réservé
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Vous devez configurer un datastore de marque de réservation pour qu"i
 
 
 [role="lead"]
-Vous devez configurer un datastore de marque de réservation pour qu'il garde un emplacement dans l'inventaire vCenter sur le site de reprise pour la machine virtuelle protégée (VM). Le datastore réservé n'a pas besoin d'être volumineux car les machines virtuelles de substitution sont petites et n'utilisent que quelques centaines de kilo-octets ou moins.
+Vous devez configurer un magasin de données d'espace réservé pour réserver un emplacement dans l'inventaire vCenter du site de récupération pour la machine virtuelle protégée (VM). Ce magasin de données n'a pas besoin d'être volumineux, car les VM d'espace réservé sont petites et n'utilisent que quelques centaines de kilo-octets, voire moins.
 
 .Avant de commencer
 * Vous devez avoir connecté les sites protégés et de reprise.

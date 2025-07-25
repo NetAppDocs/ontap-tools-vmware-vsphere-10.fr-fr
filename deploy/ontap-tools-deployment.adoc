@@ -11,10 +11,10 @@ summary: 'Les outils ONTAP pour l"appliance VMware vSphere sont déployés sous 
 
 
 [role="lead"]
-Les outils ONTAP pour l'appliance VMware vSphere sont déployés sous forme de nœud unique de petite taille avec des services de base pour prendre en charge les datastores NFS et VMFS. Le processus de déploiement des outils ONTAP peut prendre jusqu'à 45 minutes.
+Les ONTAP tools for VMware vSphere sont déployés sous forme de nœud unique de petite taille, avec des services de base pour la prise en charge des banques de données NFS et VMFS. Le déploiement des outils ONTAP peut prendre jusqu'à 45 minutes.
 
 .Avant de commencer
-Une bibliothèque de contenu dans VMware est un objet conteneur qui stocke les modèles de machine virtuelle, les modèles vApp et d'autres types de fichiers. Le déploiement avec la bibliothèque de contenu vous offre une expérience transparente car il ne dépend pas de la connectivité réseau.
+Dans VMware, une bibliothèque de contenu est un objet conteneur qui stocke des modèles de VM, des modèles d'application virtuelle et d'autres types de fichiers. Le déploiement avec une bibliothèque de contenu offre une expérience fluide, car elle ne dépend pas de la connectivité réseau.
 
 
 NOTE: Vous devez stocker la bibliothèque de contenu sur un datastore partagé afin que tous les hôtes d'un cluster puissent y accéder. Créez une bibliothèque de contenu pour stocker l'OVA avant de configurer l'appliance en configuration haute disponibilité. Ne supprimez pas le modèle de bibliothèque de contenu après le déploiement.

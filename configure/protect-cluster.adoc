@@ -18,7 +18,7 @@ Assurez-vous que les conditions préalables suivantes sont remplies :
 
 * Le cluster hôte ne dispose que de datastores d'un SVM.
 * Le datastore monté sur le cluster hôte ne doit pas être monté sur un hôte extérieur au cluster.
-* Tous les datastores montés sur le cluster hôte doivent être des datastores VMFS avec protocole iSCSI/FC. Les datastores vVols, NFS ou VMFS avec protocoles NVMe/FC et NVMe/TCP ne sont pas pris en charge.
+* Tous les magasins de données montés sur le cluster hôte doivent être des magasins de données VMFS avec le protocole iSCSI/FC. Les magasins de données vVols, NFS ou VMFS avec les protocoles NVMe/FC et NVMe/TCP ne sont pas pris en charge.
 * Les FlexVol/LUN formant des datastores montés sur le cluster hôte ne doivent pas faire partie d'un groupe de cohérence existant.
 * Les FlexVol/LUN formant des datastores montés sur le cluster hôte ne doivent pas faire partie d'une relation SnapMirror existante.
 * Le cluster hôte doit comporter au moins un datastore.

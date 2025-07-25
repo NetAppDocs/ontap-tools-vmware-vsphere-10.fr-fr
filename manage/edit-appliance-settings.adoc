@@ -41,7 +41,7 @@ NOTE: Dans les outils ONTAP pour VMware vSphere, vous êtes uniquement autorisé
 ** La machine virtuelle hébergeant les outils ONTAP n'est pas directement déployée sur un hôte VMware ESXi. La machine virtuelle doit être déployée sur un cluster ou un pool de ressources.
 +
 
-NOTE: Une fois la configuration haute disponibilité activée, vous ne pouvez plus revenir à une configuration à nœud unique non HA.
+NOTE: Une fois la configuration HA activée, vous ne pouvez pas revenir à une configuration à nœud unique non HA.
 
 
 

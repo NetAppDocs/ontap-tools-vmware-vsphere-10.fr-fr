@@ -84,7 +84,7 @@ Une fois le travail terminé, consultez le rapport de migration. Ce rapport est 
 Ne supprimez pas VASA Provider.
 
 +
-Une fois l'ancien fournisseur VASA arrêté, le serveur vCenter bascule vers les outils ONTAP pour VMware vSphere. Tous les datastores et machines virtuelles sont accessibles et servis à partir des outils ONTAP pour VMware vSphere.
+Après l'arrêt de l'ancien fournisseur VASA, vCenter Server bascule vers les ONTAP tools for VMware vSphere. Tous les datastores et machines virtuelles deviennent accessibles et sont gérés par les ONTAP tools for VMware vSphere.
 
 . Les datastores NFS et VMFS migrés depuis les outils ONTAP pour VMware vSphere 9.xxx ne sont visibles dans les outils ONTAP pour VMware vSphere 10.4 qu'après le déclenchement de la procédure de détection des datastores, ce qui peut prendre jusqu'à 30 minutes. Vérifiez que les banques de données sont visibles sur la page de présentation de la page d’interface utilisateur des outils ONTAP pour le plug-in VMware vSphere.
 . Effectuez la migration des correctifs à l'aide de l'API suivante dans swagger ou dans Postman :
@@ -135,7 +135,7 @@ Après avoir exécuté l'API de migration des correctifs, toutes les machines vi
 Après avoir terminé la migration et enregistré les outils ONTAP 10.4 sur le serveur vCenter, procédez comme suit :
 
 * Attendez la fin de *Discovery*, les certificats seront automatiquement mis à jour sur tous les hôtes.
-* Prévoyez suffisamment de temps avant de lancer les opérations relatives au datastore et à la machine virtuelle. La période d'attente requise varie en fonction du nombre d'hôtes, de datastores et de machines virtuelles dans la configuration. Le non-respect de cette attente peut entraîner des défaillances de fonctionnement intermittentes.
+* Prévoyez un délai suffisant avant de lancer les opérations sur la banque de données et les machines virtuelles. Le délai d'attente requis varie en fonction du nombre d'hôtes, de banques de données et de machines virtuelles dans la configuration. Un manque d'attente peut entraîner des pannes opérationnelles intermittentes.
 
 
 Après la mise à niveau, si l'état de conformité de la machine virtuelle est obsolète, réappliquez la stratégie de stockage en procédant comme suit :
@@ -161,7 +161,7 @@ L'état de conformité sous *conformité de la stratégie de stockage VM* est ma
 == Étapes pour mettre à jour l'adaptateur de réplication de stockage (SRA)
 
 .Avant de commencer
-Dans le plan de récupération, le site protégé désigne l'emplacement où les machines virtuelles sont actuellement exécutées, tandis que le site de récupération désigne l'emplacement où elles seront restaurées. L'interface SRM affiche l'état du plan de récupération, avec des détails sur les sites protégé et de récupération. Dans le plan de récupération, les boutons NETTOYER et REPROTÉGER sont désactivés, tandis que les boutons TESTER et EXÉCUTER restent activés. Cela indique que le site est prêt pour la récupération des données. Avant de migrer le SRA, vérifiez qu'un site est en état protégé et l'autre en état de récupération.
+Dans le plan de récupération, le site protégé désigne l'emplacement où les machines virtuelles sont actuellement exécutées, tandis que le site de récupération désigne l'emplacement où elles seront restaurées. L'interface SRM affiche l'état du plan de récupération, avec des détails sur les sites protégé et de récupération. Dans le plan de récupération, les boutons *CleanupP* et *Reprotect* sont désactivés, tandis que les boutons TEST et EXÉCUTER restent activés. Cela indique que le site est prêt pour la récupération des données. Avant de migrer le SRA, vérifiez qu'un site est en état protégé et l'autre en état de récupération.
 
 
 NOTE: Ne commencez pas la migration si le basculement est terminé mais que la protection est en attente. Assurez-vous que le processus de re-protection est terminé avant de procéder à la migration. Si un basculement de test est en cours, nettoyez le basculement de test et démarrez la migration.
@@ -176,6 +176,7 @@ NOTE: Ne commencez pas la migration si le basculement est terminé mais que la p
 
 . Effectuez ces étapes sur les sites de protection et de reprise d'activité.
 +
+.. link:../manage/enable-services.adoc["Activez les outils ONTAP pour les services VMware vSphere"]
 .. Installez les outils ONTAP pour l'adaptateur VMware vSphere 10.4 SRA en suivant les étapes de la section link:../protect/configure-on-srm-appliance.html["Configurez SRA sur l'appliance VMware Live site Recovery"].
 .. Sur la page de l'interface utilisateur de VMware Live site Recovery, effectuez les opérations *Discover Arrays* et *Discover Devices* et confirmez que les périphériques sont affichés comme avant la migration.
 

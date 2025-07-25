@@ -84,7 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Configuration requise pour les ports
 
-Le tableau suivant présente les ports réseau utilisés par NetApp ainsi que leurs fonctions. Assurez-vous que ces ports sont ouverts et accessibles pour faciliter le bon fonctionnement et la communication dans le système. Assurez-vous que les configurations réseau nécessaires sont en place pour permettre au trafic sur ces ports de fonctionner correctement pour les services associés. Selon vos politiques de sécurité, vous devrez peut-être configurer des pare-feu ou d'autres dispositifs de sécurité pour autoriser ce trafic au sein de votre réseau.
+Le tableau suivant présente les ports réseau utilisés par NetApp et leurs fonctions. Assurez-vous que ces ports sont ouverts et accessibles pour faciliter le bon fonctionnement et la communication au sein du système. Assurez-vous que les configurations réseau nécessaires sont en place pour autoriser le trafic sur ces ports et le bon fonctionnement des services associés. Selon vos politiques de sécurité, vous devrez peut-être configurer des pare-feu ou d'autres dispositifs de sécurité pour autoriser ce trafic au sein de votre réseau.
 
 |===
 

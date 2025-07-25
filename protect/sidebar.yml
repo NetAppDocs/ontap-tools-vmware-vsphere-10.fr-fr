@@ -6,7 +6,7 @@ entries:
   url: "/configure/protect-cluster.html"
 - title: Protégez à l'aide de la protection SRA
   entries:
-  - title: Activez SRA pour protéger les datastores
+  - title: Configurer SRA pour protéger les banques de données
     url: "/protect/enable-storage-replication-adapter.html"
   - title: Configurez SRA pour les environnements SAN et NAS
     url: "/protect/configure-storage-replication-adapter-for-san-environment.html"

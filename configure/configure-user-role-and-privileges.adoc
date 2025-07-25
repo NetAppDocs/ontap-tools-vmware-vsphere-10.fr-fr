@@ -36,7 +36,7 @@ NOTE: La création d'utilisateurs s'effectue au niveau du cluster ou directement
 +
 Le champ produit est renseigné automatiquement.
 
-.. Sélectionnez les fonctionnalités du produit comme VSC, VASA Provider ou SRA dans la liste déroulante.
+.. Sélectionnez la capacité du produit comme *VSC, VASA Provider et SRA* dans la liste déroulante.
 +
 Le champ *role* est renseigné automatiquement en fonction de la fonctionnalité de produit sélectionnée.
 
@@ -105,7 +105,7 @@ Ajoutez le *REST API Path* et l'accès correspondant dans le menu déroulant.
 
 === Liste des privilèges minimaux requis pour les utilisateurs du cluster dont le périmètre global n'est pas défini sur admin
 
-Les privilèges minimaux requis pour l'utilisateur de cluster avec périmètre global non-admin créé sans utiliser le fichier JSON d'utilisateurs sont répertoriés dans cette section. Si un cluster est ajouté au périmètre local, il est recommandé d'utiliser le fichier JSON pour créer les utilisateurs, car les outils ONTAP pour VMware vSphere requièrent bien plus que les privilèges de lecture pour le provisionnement sur ONTAP.
+Les privilèges minimaux requis pour un utilisateur de cluster global non administrateur créé sans utiliser le fichier JSON des utilisateurs sont répertoriés dans cette section. Si un cluster est ajouté localement, il est recommandé d'utiliser le fichier JSON pour créer les utilisateurs, car les ONTAP tools for VMware vSphere nécessitent plus que de simples privilèges de lecture pour le provisionnement sur ONTAP.
 
 À l'aide d'API :
 
