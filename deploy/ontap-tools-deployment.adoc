@@ -44,7 +44,7 @@ NOTE: Avant de procéder au déploiement, définissez le DRS (Distributed Resour
 Les outils ONTAP pour VMware vSphere sont initialement déployés en tant que configuration non HA. Pour évoluer vers le déploiement haute disponibilité, vous devez activer le plug-in CPU hot plug et mémoire hot plug. Vous pouvez effectuer cette étape dans le cadre du processus de déploiement ou modifier les paramètres de la machine virtuelle après le déploiement.
 
 .Étapes
-. Téléchargez le  `.zip` fichier contenant les binaires (_.ova_) et les certificats signés pour les outils ONTAP pour VMware vSphere à partir du  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de support NetApp"^] . Si vous avez importé l'OVA dans la bibliothèque de contenu, vous pouvez ignorer cette étape et passer à l'étape suivante.
+. Téléchargez le fichier contenant les binaires (_.ova_) et les certificats signés pour les ONTAP tools for VMware vSphere à partir du  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de support NetApp"^] . Si vous avez importé l'OVA dans la bibliothèque de contenu, vous pouvez ignorer cette étape et passer à l'étape suivante.
 . Connectez-vous au serveur vSphere.
 . Accédez au pool de ressources, au cluster ou à l'hôte où vous avez l'intention de déployer l'OVA.
 +
