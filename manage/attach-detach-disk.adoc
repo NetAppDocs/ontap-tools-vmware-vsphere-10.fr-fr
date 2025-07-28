@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
 keywords:  
-summary: - 
+summary: Reliez un disque de données à une machine virtuelle pour augmenter la capacité de stockage. 
 ---
 = Attacher ou détacher un disque de données d'une machine virtuelle
 :allow-uri-read: 

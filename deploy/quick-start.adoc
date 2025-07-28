@@ -94,5 +94,5 @@ Configurez les outils ONTAP pour VMware vSphere afin de gérer la protection des
 Planifiez des sauvegardes de vos outils ONTAP pour la configuration de VMware vSphere que vous pouvez utiliser pour restaurer la configuration en cas de défaillance.
 
 [role="quick-margin-list"]
-* link:../manage/manage/enable-backup.html["Créer une sauvegarde et restaurer l'installation des outils ONTAP"]
+* link:../manage/enable-backup.html["Créer une sauvegarde et restaurer l'installation des outils ONTAP"]
 
