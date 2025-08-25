@@ -53,7 +53,7 @@ NOTE: Lorsque la sauvegarde est activée, chaque cluster d'outils ONTAP a besoin
 | Stockage, hôte et applications | Exigences de version 
 
 
-| ONTAP | 9.14.1, 9.15.1 et 9.16.0. FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series et ASA r2. 
+| ONTAP | 9.14.1, 9.15.1, 9.16.0, 9.16.1 et 9.16.1P3 FAS, ASA série A, ASA série C, AFF série A, AFF série C et ASA r2. 
 
 
 | Les outils ONTAP prennent en charge les hôtes ESXi | à partir de 7.0.3 

@@ -95,7 +95,8 @@ Utilisez la feuille de calcul suivante pour rassembler les informations requises
 
 | Passerelle pour l'adresse IPv6 (facultatif) |  
 |===
-Créez des enregistrements DNS pour toutes les adresses IP ci-dessus. Avant d'attribuer des noms d'hôte, mappez-les aux adresses IP libres sur le DNS. Toutes les adresses IP doivent se trouver sur le même VLAN sélectionné pour le déploiement.
+
+NOTE: Créez des enregistrements DNS pour toutes les adresses IP ci-dessus. Avant d'attribuer des noms d'hôte, mappez-les aux adresses IP libres sur le DNS. Toutes les adresses IP doivent se trouver sur le même VLAN sélectionné pour le déploiement.
 
 
 
