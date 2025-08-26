@@ -1351,7 +1351,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">Passez en revue les détails du modèle et sélectionnez *Suivant*.</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">Lisez et acceptez le contrat de licence et sélectionnez *Suivant*.</block>
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">Sélectionnez le réseau de destination pour chaque réseau source et sélectionnez *Suivant*.</block>
-  <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">Dans la fenêtre *Personnaliser le modèle*, remplissez les champs requis et sélectionnez *Suivant*.</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">Sélectionnez l'icône *Administrator* dans le coin supérieur droit de l'écran et sélectionnez *Modifier le mot de passe*.</block>
   <block id="ccd07bc5ed1ed05e8e27350cb1a41b7f" category="list-text">Dans la fenêtre *Host Cluster protection*, sélectionnez le menu points de suspension correspondant au cluster, puis sélectionnez *Remove protection*.</block>
   <block id="27385d25f49e4eeebab01eda70b36576" category="list-text">Sélectionnez *Modifier les paramètres de l'appareil* dans la section Présentation.</block>
@@ -1763,8 +1762,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
   <block id="955e2530b35bd36732551d894e503a00" category="list-text">Dans le champ *Sélectionner un nom et un dossier*, entrez le nom de la machine virtuelle et choisissez son emplacement.</block>
   <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">Si vous utilisez la version de vCenter Server 8.0.3, sélectionnez l'option *Personnaliser le matériel de cette machine virtuelle*, qui activera une étape supplémentaire appelée *Personnaliser le matériel* avant de passer à la fenêtre *prêt à terminer*.</block>
-  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">Si vous utilisez la version de vCenter Server 7.0.3, suivez les étapes de la section *Qu'est-ce qui suit ?* à la fin du déploiement.</block>
-  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">Lorsque vous utilisez la version de vCenter Server 8.0.3, dans la fenêtre *Personnaliser le matériel*, activez les options *CPU hot add* et *Memory hot plug* pour permettre la fonctionnalité HA.</block>
   <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">Si vous avez déployé des outils ONTAP pour VMware vSphere avec vCenter Server 7.0.3, suivez ces étapes après le déploiement.</block>
   <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">Connectez-vous au client vCenter</block>
   <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">Accédez aux outils ONTAP pour la machine virtuelle VMware vSphere sous *inventaires* et sélectionnez l'option *Modifier les paramètres*.</block>
@@ -1981,7 +1978,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="66497dafb11e4eb14a710aba82842f2a" category="section-title">Paramètres de stockage ONTAP</block>
   <block id="b1f65147a07338ddacacf797fa8f8068" category="paragraph">Pour assurer une intégration transparente du stockage ONTAP avec les outils ONTAP pour VMware vSphere, tenez compte des paramètres suivants :</block>
   <block id="89dcc1d78edaf637785c6ecfca413588" category="inline-link">En savoir plus sur le zoning FC et FCoE avec les systèmes ONTAP</block>
-  <block id="70b4e2df1c2bfeb98be224b551dbb572" category="list-text">Si vous utilisez Fibre Channel (FC) pour la connectivité du stockage, configurez la segmentation sur vos commutateurs FC afin de connecter les hôtes ESXi aux LIF FC du SVM.<block ref="b7794521bd71e03bf277ba88ec7edd58" category="inline-link-rx"></block></block>
   <block id="172a02306231a2a4f49511d5b78568bd" category="inline-link">Relations entre clusters ONTAP</block>
   <block id="01409d70514dee021d7a19fe33614d67" category="inline-link">Relations entre les pairs du SVM intercluster ONTAP</block>
   <block id="896541ee85adff34fb9f5a9c75ef9d3d" category="list-text">Pour utiliser la réplication SnapMirror gérée par les outils ONTAP, l'administrateur du stockage ONTAP doit créer<block ref="c6246851dd06c6faec212d662b844298" category="inline-link-rx"></block> et<block ref="8c2edb06b2585f1e066ba3419010ff37" category="inline-link-rx"></block> dans ONTAP avant d'utiliser SnapMirror.</block>
@@ -2385,4 +2381,11 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="ec08a84e1743fa84ea31f88ca3a008ea" category="admonition">Pour obtenir les informations de compatibilité les plus récentes, reportez-vous à<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> .</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 à ONTAP 9.16.1</block>
   <block id="18adf16502c1eb6879520f01503df225" category="cell">ONTAP 9.12.1 à ONTAP 9.15.1 pour les outils ONTAP 10.2.  ONTAP 9.14.1, 9.15.1, 9.16.0 et 9.16.1 pour les outils ONTAP 10.3.  ONTAP 9.14.1, 9.15.1, 9.16.0 et 9.16.1 pour les outils ONTAP 10.4.  ONTAP 9.16.1P3 et versions ultérieures sont requis pour les outils ONTAP 10.4 lors de l'utilisation des systèmes ASA r2.</block>
+  <block id="2de89f426cb40a40a73e0dc57ba1d0b0" category="inline-image-macro">Sélectionnez un nom et un dossier</block>
+  <block id="797b9d658e154cdf3e14cfdbdb0fc337" category="list-text">Si vous utilisez la version vCenter Server 7.0.3, suivez les étapes de la section *Quelle est la prochaine étape ?* à la fin du déploiement.<block ref="10901421e1b49cc7648423e4186ee13b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47d44ed4727a9bed10ad17773b1b922e" category="inline-image-macro">Personnaliser le modèle</block>
+  <block id="603b3c719f65dafb1976e068ef1f8d45" category="list-text">Dans la fenêtre *Personnaliser le modèle*, remplissez les champs obligatoires et sélectionnez *Suivant*.<block ref="bfa0729b2fed6181848e39628c495247" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">Personnaliser le matériel</block>
+  <block id="2a2d465455150512141b1402a600df32" category="list-text">Lorsque vous utilisez la version vCenter Server 8.0.3, dans la fenêtre *Personnaliser le matériel*, activez les options *Ajout à chaud du processeur* et *Prise à chaud de la mémoire* pour autoriser la fonctionnalité HA.<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="936fb178b14835844700bc06aa5ab952" category="list-text">Si vous utilisez Fibre Channel (FC) pour la connectivité de stockage, configurez le zonage sur vos commutateurs FC pour connecter les hôtes ESXi aux LIF FC du SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
 </blocks>

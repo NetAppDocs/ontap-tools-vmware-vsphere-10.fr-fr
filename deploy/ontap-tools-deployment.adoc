@@ -64,7 +64,7 @@ NOTE: Ne stockez jamais d'outils ONTAP pour la machine virtuelle VMware vSphere 
 . Dans le champ *Sélectionner un nom et un dossier*, entrez le nom de la machine virtuelle et choisissez son emplacement.
 +
 ** Si vous utilisez la version de vCenter Server 8.0.3, sélectionnez l'option *Personnaliser le matériel de cette machine virtuelle*, qui activera une étape supplémentaire appelée *Personnaliser le matériel* avant de passer à la fenêtre *prêt à terminer*.
-** Si vous utilisez la version de vCenter Server 7.0.3, suivez les étapes de la section *Qu'est-ce qui suit ?* à la fin du déploiement.
+** Si vous utilisez la version vCenter Server 7.0.3, suivez les étapes de la section *Quelle est la prochaine étape ?* à la fin du déploiement.image:../media/select-name.png["Sélectionnez un nom et un dossier"]
 
 
 . Sélectionnez une ressource d'ordinateur et sélectionnez *Suivant*. Si vous le souhaitez, cochez la case *mettre automatiquement sous tension la machine virtuelle déployée*.
@@ -72,7 +72,7 @@ NOTE: Ne stockez jamais d'outils ONTAP pour la machine virtuelle VMware vSphere 
 . Lisez et acceptez le contrat de licence et sélectionnez *Suivant*.
 . Sélectionnez le stockage pour la configuration et le format du disque, puis sélectionnez *Suivant*.
 . Sélectionnez le réseau de destination pour chaque réseau source et sélectionnez *Suivant*.
-. Dans la fenêtre *Personnaliser le modèle*, remplissez les champs requis et sélectionnez *Suivant*.
+. Dans la fenêtre *Personnaliser le modèle*, remplissez les champs obligatoires et sélectionnez *Suivant*.image:../media/customize-temp.png["Personnaliser le modèle"]
 +
 ** Les informations sont validées lors de l'installation. En cas de divergence, un message d'erreur s'affiche sur la console Web et vous êtes invité à le corriger.
 ** Les noms d'hôte doivent comporter des lettres (A-Z, a-z), des chiffres (0-9) et des tirets (-). Pour configurer la double pile, spécifiez le nom d'hôte mappé sur l'adresse IPv6.
@@ -84,7 +84,7 @@ NOTE: Le PROTOCOLE IPv6 pur n'est pas pris en charge. Le mode mixte est pris en 
 ** IPv4 est le composant d'adresse IP de la configuration du nœud, qui peut être utilisé pour activer le shell de diagnostic et l'accès SSH sur le nœud à des fins de débogage et de maintenance.
 
 
-. Lorsque vous utilisez la version de vCenter Server 8.0.3, dans la fenêtre *Personnaliser le matériel*, activez les options *CPU hot add* et *Memory hot plug* pour permettre la fonctionnalité HA.
+. Lorsque vous utilisez la version vCenter Server 8.0.3, dans la fenêtre *Personnaliser le matériel*, activez les options *Ajout à chaud du processeur* et *Prise à chaud de la mémoire* pour autoriser la fonctionnalité HA.image:../media/customize-hw.png["Personnaliser le matériel"]
 . Consultez les détails dans la fenêtre *prêt à terminer*, sélectionnez *Terminer*.
 +
 Au fur et à mesure de la création de la tâche de déploiement, la progression s'affiche dans la barre des tâches vSphere.
