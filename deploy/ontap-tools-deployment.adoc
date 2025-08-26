@@ -94,7 +94,7 @@ Au fur et à mesure de la création de la tâche de déploiement, la progression
 
 Vous pouvez suivre la progression de l'installation au sein de la console Web de la machine virtuelle.
 
-Si le formulaire OVF contient des incohérences, une boîte de dialogue vous invite à prendre des mesures correctives. Utilisez le bouton Tab pour naviguer, apporter les modifications nécessaires et sélectionner « OK. Vous avez trois tentatives pour résoudre les problèmes. Si les problèmes persistent après trois tentatives, le processus d'installation s'arrête et il est conseillé de réessayer l'installation sur une nouvelle machine virtuelle.
+S'il y a des divergences dans le formulaire OVF, une boîte de dialogue demandera une action corrective.  Utilisez le bouton Tab pour naviguer, effectuez les modifications nécessaires et sélectionnez *OK*.  Vous disposez de trois tentatives pour résoudre les problèmes.  Si les problèmes persistent après trois tentatives, le processus d'installation s'arrêtera et il est conseillé de réessayer l'installation sur une nouvelle machine virtuelle.
 
 .Et la suite ?
 Si vous avez déployé des outils ONTAP pour VMware vSphere avec vCenter Server 7.0.3, suivez ces étapes après le déploiement.
