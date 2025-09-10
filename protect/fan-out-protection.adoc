@@ -42,6 +42,6 @@ Le schéma suivant présente la configuration de la protection en cas de sortie 
 
 *Étapes*
 
-. Créez un nouveau datastore de porte-lieu. Reportez-vous à https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Sélectionnez un datastore de placeholder"]
+. Créez un nouveau magasin de données d'espace réservé. Référer https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Sélectionnez un datastore de placeholder"]
 . Ajoutez un datastore à la protection de cluster hôte link:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"]. Vous devez ajouter des types de règles asynchrones et synchrones.
 
