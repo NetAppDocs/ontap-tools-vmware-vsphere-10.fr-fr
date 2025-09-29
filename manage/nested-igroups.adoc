@@ -13,9 +13,9 @@ summary:
 [role="lead"]
 Lors de la gestion des machines virtuelles des outils ONTAP et des systèmes de stockage ONTAP , la compréhension du comportement des groupes d'applications est essentielle, en particulier lors de la migration de banques de données depuis des environnements d'outils non ONTAP vers la gestion des outils ONTAP .  Cette section décrit comment les igroups sont mis à jour pendant cette transition.
 
-Les ONTAP tools for VMware vSphere 10.4 simplifient la gestion des banques de données en automatisant la création et la maintenance des objets ONTAP et vCenter dans les environnements de centre de données VMware.
+À partir des ONTAP tools for VMware vSphere 10.4, la gestion des banques de données est rationalisée en créant et en gérant automatiquement les objets ONTAP et vCenter dans les environnements de centre de données VMware.
 
-Les ONTAP tools for VMware vSphere 10.4 interprètent les igroups dans deux contextes différents :
+Les ONTAP tools for VMware vSphere interprètent les igroups dans deux contextes différents :
 
 .igroups gérés par des outils non ONTAP
 En tant qu'administrateur de stockage, vous pouvez créer des igroups sur le système ONTAP sous forme de structures plates ou imbriquées.  L'illustration montre un igroup plat créé dans le système ONTAP .
@@ -23,7 +23,7 @@ En tant qu'administrateur de stockage, vous pouvez créer des igroups sur le sys
 image:../media/non-otv-managed.png["Outils non gérés par ONTAP igroup"]
 
 .igroups gérés par les outils ONTAP
-Lorsque vous créez des banques de données, les ONTAP tools for VMware vSphere 10.4 créent automatiquement des igroups à l'aide d'une structure imbriquée pour un mappage LUN plus facile.
+Lorsque vous créez des banques de données, les ONTAP tools for VMware vSphere créent automatiquement des igroups à l'aide d'une structure imbriquée pour faciliter le mappage LUN.
 
 Par exemple, lorsque datastore1 est créé et monté sur les hôtes 1, 2 et 3, et qu'un nouveau datastore (datastore2) est créé et monté sur les hôtes 3, 4 et 5, les outils ONTAP réutilisent le groupe i au niveau de l'hôte pour une gestion efficace.
 

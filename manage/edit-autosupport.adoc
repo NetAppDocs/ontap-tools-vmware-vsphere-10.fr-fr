@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: Lors de la première configuration des ONTAP tools for VMware vSphere , AutoSupport est activé par défaut.  Il envoie des messages au support technique 24 heures après son activation. 
+---
+= Modifier les paramètres AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors de la première configuration des ONTAP tools for VMware vSphere , AutoSupport est activé par défaut.  Il envoie des messages au support technique 24 heures après son activation.
+
+
+
+== Désactivez AutoSupport
+
+Lorsque vous désactivez AutoSupport, vous ne recevez plus d’assistance ni de surveillance proactives.
+
+
+NOTE: Il est recommandé de garder AutoSupport activé, car cela permet d'accélérer la détection et la résolution des problèmes.  Même lorsque AutoSupport est désactivé, le système continue de collecter et de stocker des informations localement, mais il n'envoie pas de rapports sur le réseau.
+
+.Étapes
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
+. Sélectionnez l'option *Paramètres* > *télémétrie* > *Modifier*.
+. Désélectionnez l'option *AutoSupport* et enregistrez les modifications.
+
+
+
+
+== Mettre à jour l'URL du proxy AutoSupport
+
+Mettez à jour l’URL du proxy AutoSupport afin que la fonction AutoSupport achemine les données via le serveur proxy pour une transmission sécurisée.
+
+.Étapes
+. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
+. Sélectionnez *Paramètres* dans la barre latérale.
+. Sélectionnez l'option *Paramètres* > *télémétrie* > *Modifier*.
+. Entrez une *URL proxy* valide et enregistrez les modifications.
++
+Si vous désactivez AutoSupport, l'URL du proxy est également désactivée.
+
+

@@ -23,6 +23,6 @@ Lorsque vous migrez d'un datastore NFS et VMFS vers un datastore vVols, vCenter 
 .Étapes
 . Cliquez avec le bouton droit de la souris sur la machine virtuelle à migrer et sélectionnez *migrer*.
 . Sélectionnez *changer stockage uniquement*, puis *Suivant*.
-. Sélectionnez un format de disque virtuel, une stratégie de stockage VM et un datastore vVol correspondant aux fonctionnalités du datastore que vous migrez.
+. Sélectionnez un format de disque virtuel, une stratégie de stockage de machine virtuelle et une banque de données vVol qui correspondent aux fonctionnalités de la banque de données que vous migrez.
 . Vérifiez les paramètres et sélectionnez *Terminer*.
 

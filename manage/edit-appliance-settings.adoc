@@ -11,10 +11,7 @@ summary: 'Vous pouvez modifier le mot de passe administrateur à l"aide du Gesti
 
 
 [role="lead"]
-À l'aide du gestionnaire d'outils ONTAP faites évoluer verticalement les outils ONTAP de la configuration VMware vSphere pour augmenter le nombre de nœuds dans le déploiement ou modifier la configuration en configuration haute disponibilité (HA). Les outils ONTAP pour l'appliance VMware vSphere sont initialement déployés dans une configuration non HA à nœud unique.
-
-
-NOTE: Pour migrer vers HA lorsque la sauvegarde non HA est activée, désactivez d'abord la sauvegarde et réactivez-la après la migration.
+Utilisez ONTAP Tools Manager pour faire évoluer les ONTAP tools for VMware vSphere , soit en augmentant le nombre de nœuds, soit en activant la haute disponibilité (HA).  Par défaut, les ONTAP tools for VMware vSphere sont déployés en tant que configuration à nœud unique, non HA.
 
 .Avant de commencer
 * Assurez-vous que votre modèle OVA possède la même version OVA que le nœud 1. Le nœud 1 est le nœud par défaut sur lequel les outils ONTAP pour VMware vSphere OVA sont initialement déployés.
@@ -33,7 +30,7 @@ Lorsque les outils ONTAP sont en configuration haute disponibilité, vous pouvez
 
 +
 
-NOTE: Dans les outils ONTAP pour VMware vSphere, vous êtes uniquement autorisé à augmenter la taille des nœuds ; vous ne pouvez pas réduire la taille des nœuds. Dans une configuration non HA, seule une configuration de taille moyenne est prise en charge. Dans une configuration haute disponibilité, les moyennes et grandes configurations sont prises en charge.
+NOTE: Dans les ONTAP tools for VMware vSphere, vous êtes uniquement autorisé à augmenter la taille du nœud ; vous ne pouvez pas la réduire.  Dans une configuration non HA, seule une configuration de taille moyenne est prise en charge.  Dans une configuration HA, les configurations moyennes et grandes sont prises en charge.
 
 . Utilisez le bouton bascule HA pour activer la configuration HA. Sur la page *HA settings*, assurez-vous que :
 +
@@ -48,7 +45,7 @@ NOTE: Une fois la configuration HA activée, vous ne pouvez pas revenir à une c
 . Dans la section *HA settings* de la fenêtre *Edit Appliance Settings*, vous pouvez entrer les détails des nœuds 2 et 3. Les outils ONTAP pour VMware vSphere prennent en charge trois nœuds lors de la configuration haute disponibilité.
 +
 
-NOTE: La plupart des options d'entrée sont pré-remplies avec les détails réseau du nœud 1 pour faciliter le flux de travail. Toutefois, vous pouvez modifier les données d'entrée avant d'accéder à la page finale de l'assistant. Vous pouvez entrer les détails de l'adresse IPv6 pour les deux autres nœuds uniquement lorsque l'adresse IPv6 est activée sur le premier nœud.
+NOTE: La plupart des options de saisie sont pré-remplies avec les détails du réseau du nœud 1 pour faciliter le flux de travail.  Cependant, vous pouvez modifier les données d'entrée avant d'accéder à la page finale de l'assistant.  Vous pouvez saisir les détails de l'adresse IPv6 pour les deux autres nœuds uniquement lorsque l'adresse IPv6 est activée sur le nœud de gestion des outils ONTAP .
 
 +
 Assurez-vous qu'un hôte ESXi ne contient qu'une seule machine virtuelle d'outils ONTAP. Les entrées sont validées chaque fois que vous passez à la fenêtre suivante.

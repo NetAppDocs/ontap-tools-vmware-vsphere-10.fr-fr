@@ -14,9 +14,15 @@ summary: Lorsque vous supprimez la protection du cluster hôte, les datastores d
 Lorsque vous supprimez la protection du cluster hôte, les datastores deviennent non protégés.
 
 .Étapes
-. Pour afficher les clusters d'hôtes protégés, accédez à *NetApp ONTAP Tools* > *protection* > *Host cluster relations*.
+. Pour afficher la liste des clusters d'hôtes protégés, accédez à * Outils NetApp ONTAP * > *Protection* > *Relations entre les clusters d'hôtes*.
 +
-Dans cette page, vous pouvez surveiller les clusters hôtes protégés ainsi que l'état de protection, la relation SnapMirror et l'état de SnapMirror correspondant.
+Sur cette page, surveillez les clusters d'hôtes protégés, l'état de protection, la relation SnapMirror et le statut.  Sélectionnez des groupes de cohérence pour afficher la capacité, les banques de données associées et les groupes enfants.
 
-. Dans la fenêtre *Host Cluster protection*, sélectionnez le menu points de suspension correspondant au cluster, puis sélectionnez *Remove protection*.
+. Dans la fenêtre *Protection du cluster hôte*, sélectionnez le menu à points de suspension à côté du cluster et sélectionnez *Supprimer la protection*.
++
+** Si vous supprimez la protection d'un cluster hôte avec uniquement une relation asynchrone SnapMirror , vous devez supprimer manuellement les éléments de stockage.  Les éléments de stockage incluent des groupes de cohérence, des volumes (pour le système ONTAP ), des unités de stockage (LUN) et des instantanés.
+** Si vous supprimez la protection d'un cluster hôte avec uniquement une relation de stratégie SnapMirror basée sur un duplex de basculement automatisé et un groupe de cohérence non hiérarchique, vous pouvez supprimer les éléments de stockage associés sur le stockage secondaire directement à partir du même écran.
+** Si vous supprimez la protection d'un cluster hôte avec à la fois des stratégies SnapMirror et un groupe de cohérence hiérarchique pour les sauvegardes, un avertissement s'affiche concernant les impacts de la sauvegarde.  Confirmez pour continuer.  Après confirmation, supprimez les éléments de stockage associés sur le stockage secondaire.  Si vous ne nettoyez pas, les éléments de stockage restent sur le site secondaire.
+
+
 

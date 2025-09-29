@@ -30,8 +30,8 @@ SRA prend en charge la gestion au niveau du cluster et de la SVM. Si vous ajoute
 .. Dans le champ *SRA Type*, sélectionnez *NetApp Storage Replication adapter pour ONTAP*.
 .. Entrer les informations pour se connecter au cluster ou au SVM :
 +
-*** Si vous vous connectez à un cluster, vous devez saisir la LIF de gestion du cluster.
-*** Si vous vous connectez directement à un SVM, vous devez saisir l'adresse IP de la LIF de management du SVM.
+*** Si vous vous connectez à un cluster, vous devez saisir le LIF de gestion du cluster.
+*** Si vous vous connectez directement à un SVM, vous devez saisir l'adresse IP du LIF de gestion du SVM.
 +
 
 NOTE: Lors de la configuration du gestionnaire de baies, vous devez utiliser la même connexion (adresse IP) pour le système de stockage utilisé pour intégrer le système de stockage dans les outils ONTAP pour VMware vSphere. Par exemple, si la configuration de Array Manager est étendue au SVM, le stockage sous ONTAP Tools for VMware vSphere doit être ajouté au niveau du SVM.

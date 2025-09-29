@@ -134,9 +134,6 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 099 | Impossible de valider l'ajout de nouveau disque dur | Ajout du nouveau disque dur à tous les nœuds en cas de haute disponibilité et à un nœud en cas de déploiement non HA 
 
 
-| 108 | Echec du script d'amorçage | - 
-
-
 | 109 | la sauvegarde des données du volume persistant a échoué | Consultez les journaux de mise à niveau et réessayez la mise à niveau. 
 
 
@@ -162,6 +159,9 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 
 
 | 056 | échec de la suppression de la sauvegarde de migration | NA 
+
+
+| 090 | la validation du certificat pour les backends de stockage et vCenter a échoué | Vérifiez les journaux de mise à niveau et le fichier journal dans /var/log/cert_validation_error.log et réessayez la mise à niveau. 
 |===
 
 NOTE: À partir des outils ONTAP pour VMware vSphere 10.3, le RPO nul n'est pas pris en charge.

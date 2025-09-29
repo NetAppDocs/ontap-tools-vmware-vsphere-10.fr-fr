@@ -20,23 +20,17 @@ Vous devez configurer les systèmes de stockage avant d'exécuter Storage Replic
 .Avant de commencer
 Les programmes suivants doivent être installés sur le site protégé et le site de reprise :
 
-* Restauration de site en direct VMware
-+
-La documentation relative à l'installation de VMware Live site Recovery se trouve sur le site VMware.
-
+* VMware Live Site Recovery : le site VMware fournit une documentation d’installation pour VMware Live Site Recovery.
 +
 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["À propos de VMware Live site Recovery"]
 
-* SRA
-+
-L'adaptateur est installé sur VMware Live site Recovery.
-
+* SRA : installez l’adaptateur sur VMware Live Site Recovery.
 
 
 .Étapes
 . Vérifiez que les hôtes ESXi principaux sont connectés aux LUN du système de stockage principal du site protégé.
 . Vérifiez que LES LUN sont dans des igroups qui ont `ostype` Option définie sur _VMware_ sur le système de stockage principal.
-. Vérifier que les hôtes ESXi sur le site de reprise disposent d'une connectivité iSCSI appropriée à la machine virtuelle de stockage (SVM). Les hôtes ESXi du site secondaire doivent avoir accès au stockage du site secondaire et les hôtes ESXi du site principal doivent avoir accès au stockage du site principal.
+. Vérifiez que les hôtes ESXi sur le site de récupération disposent d’une connectivité iSCSI et Fibre Channel appropriée à la machine virtuelle de stockage (SVM).  Les hôtes ESXi du site secondaire doivent avoir accès au stockage du site secondaire et les hôtes ESXi du site principal doivent avoir accès au stockage du site principal.
 +
 Vous pouvez le faire en vérifiant que les hôtes ESXi disposent de LUN locales connectées au SVM ou au `iscsi show initiators` Commande sur les SVM.
 Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectivité iSCSI.
@@ -50,17 +44,8 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
 .Avant de commencer
 Les programmes suivants doivent être installés sur le site protégé et le site de reprise :
 
-* Restauration de site en direct VMware
-+
-La documentation relative à l'installation de VMware Live site Recovery est disponible sur le site VMware.
-
-+
-https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["À propos de VMware Live site Recovery"]
-
-* SRA
-+
-L'adaptateur est installé sur VMware Live site Recovery et sur le serveur SRA.
-
+* VMware Live Site Recovery : vous pouvez trouver la documentation d'installation de VMware Live Site Recovery sur le site VMware - https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["À propos de VMware Live site Recovery"]
+* SRA : installez l’adaptateur sur VMware Live Site Recovery et le serveur SRA.
 
 
 .Étapes

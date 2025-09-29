@@ -106,7 +106,7 @@ Les codes d'état HTTP utilisés par l'API REST sont décrits ci-dessous.
 | Code | Signification | Description 
 
 
-| 200 | OK | Indique la réussite des appels qui ne créent pas une nouvelle instance de ressource. 
+| 200 | OK | Indique le succès des appels qui ne créent pas de nouvelle instance de ressource. 
 
 
 | 201 | Créé | Un objet a été créé avec succès avec un identifiant unique pour l'instance de ressource. 
@@ -127,7 +127,7 @@ Les codes d'état HTTP utilisés par l'API REST sont décrits ci-dessous.
 | 403 | Interdit | L'accès est refusé en raison d'une erreur d'autorisation. 
 
 
-| 404 | Introuvable | La ressource mentionnée dans la demande n'existe pas. 
+| 404 | Introuvable | La ressource référencée dans la demande n'existe pas. 
 
 
 | 409 | Conflit | La tentative de création d'un objet a échoué car celui-ci existe déjà. 

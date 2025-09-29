@@ -11,7 +11,7 @@ summary: La mise en route des outils ONTAP pour VMware vSphere comprend quelques
 
 
 [role="lead"]
-Si vous utilisez des datastores vVols, vous devez étendre le déploiement initial des outils ONTAP à une configuration haute disponibilité et activer les services VASA Provider.
+Pour augmenter la résilience et prendre en charge davantage de conteneurs par service, étendez votre déploiement initial d’outils ONTAP à une configuration haute disponibilité (HA).  L'activation du service VASA Provider est requise pour les banques de données vVols dans une configuration HA.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Scale-up du déploiement
 [role="quick-margin-para"]
@@ -23,7 +23,7 @@ Vous pouvez faire évoluer verticalement les outils ONTAP de la configuration VM
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Activation des services
 [role="quick-margin-para"]
-Pour configurer les datastores vVols, vous devez activer le service VASA Provider. Enregistrez le fournisseur VASA dans vCenter et vérifiez que vos règles de stockage répondent aux exigences de haute disponibilité, y compris les configurations réseau et de stockage appropriées.
+Pour configurer les magasins de données vVols , vous devez activer le service VASA Provider.  Enregistrez le fournisseur VASA auprès de vCenter et assurez-vous que vos politiques de stockage répondent aux exigences HA, y compris les configurations de réseau et de stockage appropriées.
 
 [role="quick-margin-para"]
 Utilisez les services SRA (ONTAP Tools Storage Replication adapter) pour VMware site Recovery Manager (SRM) ou VMware Live site Recovery (VLSR).

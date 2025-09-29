@@ -50,7 +50,7 @@ Les outils ONTAP pour l'API REST VMware vSphere 10 effectuent la plupart des req
 L'environnement ONTAP Tools Manager comporte plusieurs aspects à prendre en compte.
 
 .Ordinateur virtuel
-Les outils ONTAP pour VMware vSphere 10 sont déployés à l'aide de l'architecture du plug-in à distance vSphere. Le logiciel, y compris la prise en charge de l'API REST, s'exécute sur une machine virtuelle distincte.
+Les ONTAP tools for VMware vSphere 10 sont déployés à l’aide de l’architecture de plug-in distant vSphere.  Le logiciel, y compris la prise en charge de l'API REST, s'exécute sur une machine virtuelle distincte.
 
 .Adresse IP des outils ONTAP
 Les outils ONTAP pour VMware vSphere 10 exposent une adresse IP unique qui fournit une passerelle vers les fonctionnalités de la machine virtuelle. Vous devez fournir cette adresse lors de la configuration initiale et l'attribuer à un composant d'équilibrage de charge interne. L'adresse est utilisée par l'interface utilisateur du Gestionnaire d'outils ONTAP ainsi que pour accéder directement à la page de documentation swagger et à l'API REST.

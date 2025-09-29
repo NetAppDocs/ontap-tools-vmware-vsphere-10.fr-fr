@@ -30,7 +30,8 @@ Vous devez utiliser l'onglet *Summary* de vos outils ONTAP déployés pour VMwar
 Configuration de l'application
  a| 
 . Afficher le récapitulatif de l'état du serveur
-. Modifier le niveau du JOURNAL pour les services VASA Provider et SRA
+. Modifier le niveau LOG ​​pour les services des outils ONTAP
+. Modifier l'indicateur de validation du certificat
 
 
 

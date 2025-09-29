@@ -11,12 +11,12 @@ summary: 'Associez un système back-end de stockage à vCenter Server pour crée
 
 
 [role="lead"]
-Associez un système back-end de stockage à vCenter Server pour créer un mappage global entre le système back-end de stockage et l'instance vCenter Server intégrée.
+Associez un backend de stockage à une instance de vCenter Server pour activer l’accès à toutes les instances de vCenter Server.  Pour la configuration de MetroCluster , lorsque vous associez un cluster backend de stockage, assurez-vous d'associer également son cluster homologue au vCenter Server.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez vCenter dans la barre latérale.
-. Sélectionnez les ellipses verticales par rapport à l'instance vCenter Server que vous souhaitez associer aux systèmes back-end de stockage.
-. Sélectionnez le back-end de stockage dans la liste déroulante pour associer l'instance vCenter Server au back-end de stockage requis.
+. Sélectionnez les points de suspension verticaux en regard de l’instance vCenter Server à laquelle vous souhaitez connecter les backends de stockage.
+. Dans le menu déroulant, choisissez le backend de stockage que vous souhaitez associer à l’instance vCenter Server sélectionnée.
 

@@ -11,16 +11,14 @@ summary: 'Lorsque vous sélectionnez l"icône du plug-in ONTAP Tools for VMware 
 
 
 [role="lead"]
-Lorsque vous sélectionnez l'icône du plug-in ONTAP Tools for VMware vSphere dans la section des raccourcis du client vCenter, l'interface utilisateur accède à la page de présentation. Cette page fonctionne comme le tableau de bord qui fournit le résumé du plug-in ONTAP Tools for VMware vSphere.
+La sélection de l’icône du plug-in ONTAP tools for VMware vSphere dans la section Raccourcis du client vCenter ouvre la page de présentation.  Ce tableau de bord fournit un résumé des ONTAP tools for VMware vSphere .
 
-Dans le cas de la configuration ELM (Enhanced Linked mode Setup), le menu déroulant de sélection de vCenter Server apparaît et vous pouvez sélectionner un serveur vCenter pour afficher les données qui lui sont pertinentes. Cette liste déroulante est disponible pour toutes les autres vues de liste du plug-in.
-La sélection du serveur vCenter effectuée sur une page est conservée dans les onglets du plug-in.
-image:../media/remote-plugin-dashboard.png["Présentation du tableau de bord"]
+Dans le cas d'une configuration Enhanced Linked Mode (ELM), la liste déroulante de sélection de vCenter Server apparaît et vous pouvez sélectionner un vCenter Server souhaité pour voir les données qui le concernent.  Cette liste déroulante est disponible pour toutes les autres vues de liste du plug-in. La sélection de vCenter Server effectuée sur une page persiste dans les onglets du plug-in.image:../media/remote-plugin-dashboard.png["Présentation du tableau de bord"]
 
 À partir de la page de présentation, vous pouvez exécuter l'action *Discovery*. L'action de détection exécute la détection au niveau de vCenter pour détecter les éventuels systèmes back-end de stockage, hôtes, datastores, état/relations de protection récemment ajoutés ou mis à jour. Vous pouvez exécuter une découverte à la demande des entités sans avoir à attendre la découverte planifiée.
 
 
-NOTE: Le bouton action ne sera activé que si vous disposez du privilège d'effectuer l'action de découverte.
+NOTE: Le bouton d’action *Découverte* est activé uniquement si vous disposez du privilège requis pour effectuer l’action de découverte.
 
 Une fois la demande de découverte soumise, vous pouvez suivre la progression de l'action dans le panneau des tâches récentes.
 

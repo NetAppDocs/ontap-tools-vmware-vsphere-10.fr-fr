@@ -13,10 +13,10 @@ summary:
 [role="lead"]
 Les groupes d'initiateurs (igroups) sont des tables de noms de port mondiaux (WWPN) d'hôte de protocole FC ou de noms de nœuds qualifiés d'hôte iSCSI. Vous pouvez définir des groupes initiateurs et les mapper sur des LUN pour contrôler l'accès des initiateurs aux LUN.
 
-Dans les outils ONTAP pour VMware vSphere 9.x, les igroups étaient créés et gérés selon une structure horizontale, où chaque banque de données de vCenter était associée à un seul igroup. Ce modèle limitait la flexibilité et la réutilisation des igroups sur plusieurs banques de données. Les outils ONTAP pour VMware vSphere 10.x introduisent des igroups imbriqués, où chaque banque de données de vCenter est associée à un igroup parent, tandis que chaque hôte est lié à un igroup enfant sous ce parent. Vous pouvez définir des igroups parents personnalisés avec des noms définis par l'utilisateur pour les réutiliser sur plusieurs banques de données, ce qui permet une gestion plus flexible et interconnectée des igroups. Comprendre le workflow des igroups est essentiel pour gérer efficacement les LUN et les banques de données dans les outils ONTAP pour VMware vSphere. Différents workflows génèrent des configurations d'igroups variées, comme illustré dans les exemples suivants :
+Dans les ONTAP tools for VMware vSphere 9.x, les igroups étaient créés et gérés dans une structure plate, où chaque banque de données dans vCenter était associée à un seul igroup.  Ce modèle limitait la flexibilité et la réutilisation des igroups sur plusieurs banques de données.  Les ONTAP tools for VMware vSphere introduisent des igroups imbriqués, où chaque banque de données de vCenter est associée à un igroup parent, tandis que chaque hôte est lié à un igroup enfant sous ce parent.  Vous pouvez définir des groupes parents personnalisés avec des noms définis par l'utilisateur pour les réutiliser dans plusieurs banques de données, permettant une gestion plus flexible et interconnectée des groupes.  La compréhension du flux de travail igroup est essentielle pour gérer efficacement les LUN et les banques de données dans les ONTAP tools for VMware vSphere.  Différents flux de travail génèrent des configurations igroup variables, comme illustré dans les exemples suivants :
 
 
-NOTE: Les noms mentionnés sont donnés à titre d'illustration uniquement et ne correspondent pas aux noms réels des igroups. Les igroups gérés par les outils ONTAP utilisent le préfixe « otv_ ». Les igroups personnalisés peuvent recevoir n'importe quel nom.
+NOTE: Les noms mentionnés sont uniquement à des fins d'illustration et ne font pas référence aux vrais noms de groupes i.  Les groupes gérés par les outils ONTAP utilisent le préfixe « otv_ ».  Les groupes i personnalisés peuvent recevoir n'importe quel nom.
 
 |===
 
@@ -94,7 +94,7 @@ Démonter une banque de données d'un hôte
 
 
 
-Le groupe host1Igroup est supprimé de la hiérarchie. Les groupes enfants ne sont pas explicitement supprimés. La suppression se produit dans ces deux conditions :
+Le groupe host1Igroup est supprimé de la hiérarchie.  Les groupes enfants ne sont pas explicitement supprimés.  La suppression se produit dans ces deux conditions :
 
 * Si aucun LUN n'est mappé, le système ONTAP supprime le groupe i enfant.
 * Une tâche de nettoyage planifiée supprime les groupes enfants suspendus sans mappages LUN. Ces scénarios s'appliquent uniquement aux groupes gérés par les outils ONTAP, et non à ceux créés sur mesure.
@@ -114,7 +114,7 @@ Supprimer le magasin de données
 
 
 
-Les groupes d'applications parents et enfants sont supprimés si une autre banque de données ne réutilise pas le groupe d'applications parent. Les groupes d'applications enfants ne sont jamais explicitement supprimés.
+Les groupes i parents et enfants sont supprimés si une autre banque de données ne réutilise pas le groupe i parent.  Les groupes enfants ne sont jamais explicitement supprimés
 
 .Exemple 5 :
 Créer plusieurs banques de données sous un groupe parent personnalisé
@@ -203,7 +203,7 @@ Migration des outils ONTAP 9 vers 10 (normalisation igroup)
 
 *Workflow*
 
-Les outils ONTAP pour VMware vSPhere 9.x ne prennent pas en charge les groupes d'interface hiérarchiques. Lors de la migration vers les versions 10.3 ou supérieures, les groupes d'interface doivent être normalisés dans la structure hiérarchique.
+Les outils ONTAP pour les versions VMware vSPhere 9.x ne prennent pas en charge les groupes hiérarchiques.  Lors de la migration vers les versions 10.3 ou supérieures, les igroups doivent être normalisés dans la structure hiérarchique.
 
 Avant la migration :
 

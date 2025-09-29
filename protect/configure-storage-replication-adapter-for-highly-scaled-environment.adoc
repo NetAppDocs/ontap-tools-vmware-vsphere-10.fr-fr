@@ -63,6 +63,6 @@ Pour plus d'informations sur la modification des paramètres du fournisseur de s
 Lorsque vous appuyez sur une temporisation, augmentez les valeurs de `storage.commandTimeout` et `storage.maxConcurrentCommandCnt` à une valeur supérieure.
 
 
-NOTE: L'intervalle de temporisation spécifié est la valeur maximale. Il n'est pas nécessaire d'attendre que le délai maximum soit atteint. La plupart des commandes se terminent dans l'intervalle maximal défini de temps d'attente.
+NOTE: L'intervalle de délai d'expiration spécifié est la valeur maximale.  Vous n’avez pas besoin d’attendre que le délai d’expiration maximal soit atteint.  La plupart des commandes se terminent dans l'intervalle de délai d'expiration maximal défini.
 
 Pour modifier les paramètres du fournisseur SAN, reportez-vous à la section https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Modifier les paramètres de stockage"].

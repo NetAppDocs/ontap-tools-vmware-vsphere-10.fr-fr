@@ -1,0 +1,30 @@
+---
+permalink: manage/change-valid-flag.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez modifier l’indicateur de validation du certificat à l’aide de la console de maintenance. 
+---
+= Modifier l'indicateur de validation du certificat
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, l'indicateur de validation du certificat est activé (défini sur vrai).  Vous pouvez définir l'indicateur de validation du certificat backend de stockage ONTAP sur false si vous devez contourner les vérifications de certificat SAN.  Ce paramètre ne s’applique pas aux certificats vCenter Server.
+
+.Avant de commencer
+Vous devez disposer des informations d'identification de l'utilisateur de maintenance.
+
+.Étapes
+. À partir du serveur vCenter, ouvrez une console pour accéder aux outils ONTAP.
+. Connectez-vous en tant qu'utilisateur de maintenance.
+. Entrer `1` pour sélectionner le menu de configuration de l'application.
+. Entrer `3` pour modifier l'indicateur de validation du certificat.
++
+La console de maintenance affiche l’état de l’indicateur de validation du certificat et vous invite à le modifier.
+
+. Entrez « y » pour basculer le drapeau ou « n » pour annuler.
+
+
+Si vous rebasculez l'indicateur de validation du certificat sur vrai, le système effectue une pré-vérification.  Si un backend de stockage ajouté utilise un certificat sans SAN, vous ne pouvez pas activer la validation du certificat.  Assurez-vous que tous les backends de stockage utilisent des certificats basés sur SAN avant d'activer cet indicateur.  Si vous définissez l'indicateur de validation du certificat sur faux, le système ignore la validation du certificat pour tous les backends de stockage ajoutés.

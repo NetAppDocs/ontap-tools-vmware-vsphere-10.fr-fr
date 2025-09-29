@@ -20,7 +20,7 @@ L'extension VASA Provider doit être activée pour votre instance vCenter Server
 
 L'utilisation de SSH pour accéder au compte utilisateur diag présente les limites suivantes :
 
-* Vous n'avez droit qu'à un seul compte de connexion par activation de SSH.
+* vous n'êtes autorisé qu'à un seul compte de connexion par activation de SSH.
 * L'accès SSH au compte utilisateur diag est désactivé lorsque l'une des conditions suivantes se produit :
 +
 ** Le délai expire.
@@ -35,8 +35,8 @@ La session de connexion reste valide jusqu'à minuit le lendemain.
 .Étapes
 . Depuis vCenter Server, ouvrez une console vers VASA Provider.
 . Connectez-vous en tant qu'utilisateur de maintenance.
-. Entrez `4` Pour sélectionner support et Diagnostics.
-. Entrez `2` pour sélectionner Activer l'accès aux diagnostics à distance.
+. Entrez `4` pour sélectionner *support et diagnostic*.
+. Entrer `2` pour sélectionner *Activer l'accès au diagnostic à distance*.
 . Entrez `y` Dans la boîte de dialogue Confirmation pour activer l'accès au diagnostic à distance.
 . Saisissez un mot de passe pour l'accès au diagnostic à distance.
 

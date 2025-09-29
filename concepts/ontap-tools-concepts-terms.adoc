@@ -15,21 +15,15 @@ La section suivante décrit les principaux concepts et termes utilisés dans le 
 
 
 
-=== Systèmes ASA r2
-
-Les nouveaux systèmes NetApp ASA r2 apportent une solution matérielle et logicielle unifiée qui simplifie l'expérience et répond parfaitement aux besoins des clients SAN. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["En savoir plus sur les systèmes de stockage ASA r2"].
-
-
-
 === Autorité de certification (CA)
 
 CA est une entité de confiance qui émet des certificats SSL (Secure Sockets Layer).
 
 
 
-=== Groupe de cohérence (CG)
+=== Groupe de cohérence
 
-Un groupe de cohérence est un ensemble de volumes gérés comme une unité unique. Les groupes de cohérence sont synchronisés pour assurer la cohérence des données entre les unités de stockage et les volumes. ONTAP simplifie la gestion et garantit la protection d'une charge de travail applicative couvrant plusieurs volumes. En savoir plus sur https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["groupes de cohérence"].
+Un groupe de cohérence est un ensemble de volumes gérés comme une seule unité. Les groupes de cohérence sont synchronisés pour assurer la cohérence des données entre les unités de stockage et les volumes. Dans ONTAP, ils offrent une gestion facile et une garantie de protection pour une charge de travail applicative couvrant plusieurs volumes.  En savoir plus sur https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["groupes de cohérence"] .
 
 
 
@@ -125,7 +119,7 @@ VMFS est un système de fichiers en cluster conçu pour stocker des fichiers de 
 
 === Volumes virtuels (vvols)
 
-Les vVols fournissent une abstraction au niveau du volume pour le stockage utilisé par une machine virtuelle. Elle présente plusieurs avantages et offre une alternative à l'utilisation d'un LUN classique. Un datastore vVol est généralement associé à une seule LUN qui agit comme un conteneur pour les vVols.
+Les vVols fournissent une abstraction au niveau du volume pour le stockage utilisé par une machine virtuelle.  Il comprend plusieurs avantages et offre une alternative à l’utilisation d’un LUN traditionnel.  Une banque de données vVol est généralement associée à un seul LUN qui agit comme conteneur pour les vVols.
 
 
 

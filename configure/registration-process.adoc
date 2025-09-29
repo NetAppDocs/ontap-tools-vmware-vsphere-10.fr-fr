@@ -2,32 +2,34 @@
 permalink: configure/registration-process.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez enregistrer le fournisseur VASA auprès d"une instance vCenter Server à l"aide des outils ONTAP pour l"interface de plug-in à distance VMware vSphere.' 
+summary: 'Vous pouvez enregistrer le fournisseur VASA auprès d"une instance vCenter Server à l"aide des ONTAP tools for VMware vSphere .' 
 ---
-= Enregistrez le fournisseur VASA avec une instance vCenter Server
+= Enregistrer le fournisseur VASA auprès d'une instance vCenter Server à l'aide des outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez enregistrer le fournisseur VASA dans une instance de serveur vCenter à l'aide des outils ONTAP pour VMware vSphere. La section Paramètres du fournisseur VASA affiche l'état d'enregistrement du fournisseur VASA pour le serveur vCenter sélectionné. Dans un déploiement multi-vCenter, assurez-vous de disposer de certificats d’autorité de certification personnalisés pour chaque instance de vCenter Server.
+Utilisez les ONTAP tools for VMware vSphere pour enregistrer le fournisseur VASA auprès d’une instance de vCenter Server.  Cela permet une gestion basée sur des politiques de stockage, la prise en charge de vVols et l'intégration avec les appliances VMware Live Site Recovery sur les systèmes ONTAP .
+
+Les paramètres du fournisseur VASA affichent l’état d’enregistrement du serveur vCenter sélectionné.
 
 .Étapes
 . Connectez-vous au client vSphere.
 . Sélectionnez *raccourcis* > *Outils NetApp ONTAP* dans la section modules externes.
-. Sélectionnez *Paramètres* > *VASA Paramètres fournisseur*. L'état d'enregistrement du fournisseur VASA s'affiche comme non enregistré.
+. Sélectionnez *Paramètres* > *Paramètres du fournisseur VASA*.  Les outils ONTAP affichent le statut d’enregistrement du fournisseur VASA comme non enregistré.
 . Sélectionnez le bouton *Register* pour enregistrer le fournisseur VASA.
-. Entrez un nom et des informations d'identification pour le fournisseur VASA. Le nom d'utilisateur ne peut contenir que des lettres, des chiffres et des traits de soulignement. La longueur du mot de passe doit être comprise entre 8 et 256 caractères.
+. Saisissez un nom et des informations d’identification pour le fournisseur VASA.  Le nom d'utilisateur ne peut contenir que des lettres, des chiffres et des traits de soulignement.  Définissez la longueur du mot de passe entre 8 et 256 caractères.
 . Sélectionnez *Enregistrer*.
-. Une fois l'enregistrement et l'actualisation de la page réussis, l'état, le nom et la version du fournisseur VASA enregistré s'affichent. Après l'enregistrement, l'action de désinscription est activée.
+. Après une inscription et une actualisation de la page réussies, les outils ONTAP affichent le statut, le nom et la version du fournisseur VASA enregistré.
 
 
 .Et la suite
 Vérifiez que le fournisseur VASA intégré est répertorié sous VASA Provider du client vCenter :
 
 .Étapes
-. Accédez à l'instance vCenter Server.
+. Accédez à l’instance vCenter Server.
 . Connectez-vous avec les informations d'identification de l'administrateur.
 . Sélectionnez *fournisseurs de stockage* > *configurer*. Vérifiez que le fournisseur VASA intégré est correctement répertorié.
 

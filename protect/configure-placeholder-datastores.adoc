@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous devez configurer un magasin de données d"espace réservé pour réserver un emplacement dans l"inventaire vCenter du site de récupération pour la machine virtuelle protégée (VM). Ce magasin de données n"a pas besoin d"être volumineux, car les VM d"espace réservé sont petites et n"utilisent que quelques centaines de kilo-octets, voire moins.' 
+summary: 'Configurez une banque de données d’espace réservé pour réserver de l’espace dans l’inventaire vCenter sur le site de récupération pour les machines virtuelles (VM) protégées.  Les magasins de données d"espace réservé nécessitent une capacité minimale, car les machines virtuelles d"espace réservé sont petites et n"utilisent généralement que quelques centaines de kilo-octets.' 
 ---
 = Configurez les datastores à espace réservé
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 'Vous devez configurer un magasin de données d"espace réservé pour r
 
 
 [role="lead"]
-Vous devez configurer un magasin de données d'espace réservé pour réserver un emplacement dans l'inventaire vCenter du site de récupération pour la machine virtuelle protégée (VM). Ce magasin de données n'a pas besoin d'être volumineux, car les VM d'espace réservé sont petites et n'utilisent que quelques centaines de kilo-octets, voire moins.
+Configurez une banque de données d’espace réservé pour réserver de l’espace dans l’inventaire vCenter sur le site de récupération pour les machines virtuelles (VM) protégées.  Les magasins de données d'espace réservé nécessitent une capacité minimale, car les machines virtuelles d'espace réservé sont petites et n'utilisent généralement que quelques centaines de kilo-octets.
 
 .Avant de commencer
-* Vous devez avoir connecté les sites protégés et de reprise.
-* Vous devez avoir configuré vos mappages de ressources.
+* Assurez-vous que les sites protégés et de récupération sont connectés.
+* Vérifiez que les mappages de ressources ont été configurés.
 
 
 .Étapes
@@ -25,7 +25,7 @@ Vous devez configurer un magasin de données d'espace réservé pour réserver u
 . Sélectionnez le datastore approprié et sélectionnez *OK*.
 +
 
-NOTE: Les datastores à espace réservé peuvent être locaux ou distants et ne doivent pas être répliqués.
+NOTE: Les magasins de données d'espace réservé peuvent résider sur un stockage local ou distant, mais ils ne nécessitent pas de réplication.
 
 . Répétez les étapes 3 à 5 pour configurer un datastore de marque de réservation pour le site de reprise.
 

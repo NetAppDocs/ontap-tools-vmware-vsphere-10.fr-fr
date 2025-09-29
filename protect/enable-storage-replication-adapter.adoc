@@ -17,7 +17,7 @@ Les outils ONTAP pour VMware vSphere permettent d'activer la fonctionnalité SRA
 * Vous devez avoir configuré votre instance vCenter Server et votre hôte ESXi.
 * Vous devez avoir déployé des outils ONTAP pour VMware vSphere.
 * Vous devez avoir téléchargé le `.tar.gz` fichier de l'adaptateur SRA à partir du https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de support NetApp"^].
-* Les clusters ONTAP source et destination doivent avoir la même planification SnapMirror personnalisée que celle créée avant d'exécuter les workflows SRA.
+* Vous devez disposer des mêmes planifications SnapMirror personnalisées sur les clusters ONTAP source et de destination avant d'exécuter les workflows SRA.
 * link:../manage/enable-services.html["Activez les outils ONTAP pour les services VMware vSphere"] pour activer la capacité SRA.
 
 
@@ -27,3 +27,16 @@ Les outils ONTAP pour VMware vSphere permettent d'activer la fonctionnalité SRA
 . Téléchargez le programme d'installation _.tar.gz_ du plug-in SRA vers VMware Live site Recovery.
 . Relancez la recherche des adaptateurs pour vérifier que les détails sont mis à jour sur la page adaptateurs de réplication de stockage de VMware Live site Recovery.
 
+
+
+NOTE: Après un basculement, des actions telles que l’extension, le montage et la suppression peuvent ne pas être disponibles pour les banques de données.  Effectuez la découverte du magasin de données pour actualiser et afficher les actions du menu contextuel appropriées.
+
+
+NOTE: Après chaque opération de reprotection, vous devez effectuer une découverte de stockage sur les deux sites.
+
+Dans une nouvelle configuration avec protection SRA, exécutez toujours un test de basculement.  L’omission du test de basculement peut entraîner l’échec de l’opération de reprotection.
+
+Dans une configuration de distribution, après un basculement de SnapMirror Active Sync où la source SnapMirror passe au site B pour le basculement automatique duplex et SnapMirror asynchrone, exécutez un basculement de test entre les sites B et C. L'omission de cette étape peut entraîner l'échec d'une opération de reprotection.
+
+.Informations associées
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview["Configurer la reprise après sinistre pour les banques de données NFS à l'aide de VMware Site Recovery Manager"]

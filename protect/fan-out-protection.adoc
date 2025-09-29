@@ -2,18 +2,21 @@
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Dans le cas d"une protection « Fan-Out », le groupe de cohérence est double-protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le second cluster ONTAP de destination.' 
+summary: Dans un scénario de protection en éventail, le groupe de cohérence est doublement protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le deuxième cluster ONTAP de destination. 
 ---
-= Protection de sortie de ventilateur
+= Protection contre les ventilateurs
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Dans le cas d'une protection « Fan-Out », le groupe de cohérence est double-protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le second cluster ONTAP de destination. Les workflows de protection active de la synchronisation SnapMirror permettent de créer, de modifier et de supprimer la protection synchrone. Les flux de travail de basculement et de reprotection SRM maintiennent la protection asynchrone.
+Dans un scénario de protection en éventail, le groupe de cohérence est doublement protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le deuxième cluster ONTAP de destination.  Les flux de travail de création, de modification et de suppression de la protection de synchronisation active SnapMirror maintiennent la protection synchrone.  Les flux de travail de basculement et de reprotection des appliances VMware Live Site Recovery maintiennent la protection asynchrone.
 
-Pour établir la protection « Fan Out », vous devez Peer trois clusters site et SVM.
+
+NOTE: Le déploiement n'est pas pris en charge pour l'utilisateur SVM.
+
+Pour configurer la protection en éventail, associez les trois clusters de sites et les SVM.
 
 Exemple :
 
@@ -38,10 +41,17 @@ Exemple :
 
 
 |===
-Le schéma suivant présente la configuration de la protection en cas de sortie de ventilateur : image:../media/fan-out-protection.png["Configuration de la protection de sortie"] image:../media/fan-out-protection-relationship.png["Relation de protection « Fan Out »"]
+Le schéma suivant montre la configuration de la protection en éventail :image:../media/fan-out-protection.png["Configuration de la protection en éventail"] image:../media/fan-out-protection-relationship.png["Relation de protection en éventail"]
 
-*Étapes*
+.Étapes
+. Sélectionnez un nouveau magasin de données d'espace réservé.  Les critères de sélection du magasin de données d'espace réservé pour la protection par phases sont :
++
+** Ne placez pas le magasin de données d’espace réservé dans le cluster hôte que vous protégez.
+** Si vous devez inclure la banque de données d'espace réservé dans le cluster hôte, ajoutez-la à l'appliance VMware Live Site Recovery avant de configurer la protection de synchronisation active SnapMirror .  Avec cette configuration, vous pouvez laisser le magasin de données d'espace réservé hors de protection.
++
+Pour plus d'informations, reportez-vous à https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Sélectionnez un datastore de placeholder"]
 
-. Créez un nouveau magasin de données d'espace réservé. Référer https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Sélectionnez un datastore de placeholder"]
-. Ajoutez un datastore à la protection de cluster hôte link:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"]. Vous devez ajouter des types de règles asynchrones et synchrones.
+
+
+. Ajoutez une banque de données à la protection du cluster hôte en suivantlink:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"] .  Ajoutez des types de politiques asynchrones et synchrones.
 

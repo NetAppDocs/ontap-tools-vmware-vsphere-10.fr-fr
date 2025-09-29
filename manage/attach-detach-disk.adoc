@@ -18,7 +18,7 @@ Reliez un disque de données à une machine virtuelle pour augmenter la capacit�
 
 .Étapes
 . Connectez-vous au client vSphere.
-. Cliquez avec le bouton droit de la souris sur une machine virtuelle dans l'inventaire et sélectionnez *Modifier les paramètres*.
+. Cliquez avec le bouton droit sur une machine virtuelle dans l’inventaire et sélectionnez *Modifier les paramètres*.
 . Dans l'onglet *matériel virtuel*, sélectionnez *disque dur existant*.
 . Sélectionnez la machine virtuelle sur laquelle le disque existe.
 . Sélectionnez le disque que vous souhaitez connecter et sélectionnez *OK*
@@ -35,7 +35,7 @@ Vous pouvez détacher un disque de données connecté à une machine virtuelle l
 
 .Étapes
 . Connectez-vous au client vSphere.
-. Cliquez avec le bouton droit de la souris sur une machine virtuelle dans l'inventaire et sélectionnez *Modifier les paramètres*.
+. Cliquez avec le bouton droit sur une machine virtuelle dans l’inventaire et sélectionnez *Modifier les paramètres*.
 . Déplacez votre pointeur sur le disque et sélectionnez *Supprimer*.
 +
 

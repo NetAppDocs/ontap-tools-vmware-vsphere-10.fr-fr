@@ -2,7 +2,7 @@
 permalink: deploy/ontap-tools-deployment.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Les outils ONTAP pour l"appliance VMware vSphere sont déployés sous forme de nœud unique de petite taille avec des services de base pour prendre en charge les datastores NFS et VMFS.' 
+summary: Les ONTAP tools for VMware vSphere sont déployés sous la forme d’un nœud unique de petite taille avec des services principaux pour prendre en charge les banques de données NFS et VMFS. 
 ---
 = Déployez les outils ONTAP pour VMware vSphere
 :allow-uri-read: 
@@ -11,20 +11,26 @@ summary: 'Les outils ONTAP pour l"appliance VMware vSphere sont déployés sous 
 
 
 [role="lead"]
-Les ONTAP tools for VMware vSphere sont déployés sous forme de nœud unique de petite taille, avec des services de base pour la prise en charge des banques de données NFS et VMFS. Le déploiement des outils ONTAP peut prendre jusqu'à 45 minutes.
+Les ONTAP tools for VMware vSphere sont déployés sous la forme d’un nœud unique de petite taille avec des services principaux pour prendre en charge les banques de données NFS et VMFS. Le déploiement des outils ONTAP peut prendre jusqu'à 45 minutes.
 
 .Avant de commencer
-Dans VMware, une bibliothèque de contenu est un objet conteneur qui stocke des modèles de VM, des modèles d'application virtuelle et d'autres types de fichiers. Le déploiement avec une bibliothèque de contenu offre une expérience fluide, car elle ne dépend pas de la connectivité réseau.
+Si vous déployez un petit nœud unique, une bibliothèque de contenu est facultative.  Pour les déploiements multi-nœuds ou HA, une bibliothèque de contenu est requise.  Dans VMware, une bibliothèque de contenu stocke des modèles de machine virtuelle, des modèles vApp et d’autres fichiers.  Le déploiement avec une bibliothèque de contenu offre une expérience transparente car elle ne dépend pas de la connectivité réseau.
+
+Tenez compte des éléments suivants avant de créer une bibliothèque de contenu :
+
+* Créez la bibliothèque de contenu sur une banque de données partagée afin que tous les hôtes du cluster puissent y accéder.
+* Configurez la bibliothèque de contenu avant de déployer les ONTAP tools for VMware vSphere OVA.
+* Assurez-vous que la bibliothèque de contenu est créée avant de configurer l’appliance pour HA.
++
+
+NOTE: ne supprimez pas le modèle OVA dans la bibliothèque de contenu après le déploiement.
 
 
-NOTE: Vous devez stocker la bibliothèque de contenu sur un datastore partagé afin que tous les hôtes d'un cluster puissent y accéder. Créez une bibliothèque de contenu pour stocker l'OVA avant de configurer l'appliance en configuration haute disponibilité. Ne supprimez pas le modèle de bibliothèque de contenu après le déploiement.
 
 
-NOTE: Pour activer le déploiement de la haute disponibilité ultérieurement, ne déployez pas la machine virtuelle hébergeant les outils ONTAP directement sur un hôte VMware ESXi. Déployez-la plutôt sur un cluster ou un pool de ressources.
+NOTE: Pour activer le déploiement HA à l’avenir, évitez de déployer la machine virtuelle des outils ONTAP directement sur un hôte ESXi.  Déployez-le plutôt dans un cluster hôte ou un pool de ressources ESXi.
 
-Si vous ne disposez pas d'une bibliothèque de contenu, procédez comme suit pour en créer une :
-
-*Créer une bibliothèque de contenu* dans vous prévoyez d'utiliser uniquement un déploiement à un seul nœud, la création d'une bibliothèque de contenu n'est pas nécessaire.
+Suivez ces étapes pour créer une bibliothèque de contenu :
 
 . Téléchargez le fichier contenant les binaires (_.ova_) et les certificats signés pour les ONTAP tools for VMware vSphere à partir du  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de support NetApp"^] .
 . Connectez-vous au client vSphere
@@ -39,14 +45,14 @@ Si vous ne disposez pas d'une bibliothèque de contenu, procédez comme suit pou
 NOTE: Pour plus d'informations, consultez https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["Création et utilisation de la bibliothèque de contenu"] le blog.
 
 
-NOTE: Avant de procéder au déploiement, définissez le DRS (Distributed Resource Scheduler) du cluster sur l'inventaire sur « conservateur ». Cela permet de s'assurer que les machines virtuelles ne sont pas migrées lors de l'installation.
+NOTE: Avant de procéder au déploiement, définissez le planificateur de ressources distribuées (DRS) du cluster sur l'inventaire sur « Conservateur ».  Cela garantit que les machines virtuelles ne sont pas migrées pendant l'installation.
 
-Les outils ONTAP pour VMware vSphere sont initialement déployés en tant que configuration non HA. Pour évoluer vers le déploiement haute disponibilité, vous devez activer le plug-in CPU hot plug et mémoire hot plug. Vous pouvez effectuer cette étape dans le cadre du processus de déploiement ou modifier les paramètres de la machine virtuelle après le déploiement.
+Les ONTAP tools for VMware vSphere sont initialement déployés en tant que configuration non HA.  Pour un déploiement haute disponibilité, vous devrez activer le branchement à chaud du processeur et de la mémoire. Vous pouvez effectuer cette étape lors du déploiement ou modifier les paramètres de la machine virtuelle après le déploiement.
 
 .Étapes
 . Téléchargez le fichier contenant les binaires (_.ova_) et les certificats signés pour les ONTAP tools for VMware vSphere à partir du  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de support NetApp"^] . Si vous avez importé l'OVA dans la bibliothèque de contenu, vous pouvez ignorer cette étape et passer à l'étape suivante.
 . Connectez-vous au serveur vSphere.
-. Accédez au pool de ressources, au cluster ou à l'hôte où vous avez l'intention de déployer l'OVA.
+. Accédez au pool de ressources, au cluster ou à l’hôte sur lequel vous souhaitez déployer l’OVA.
 +
 
 NOTE: Ne stockez jamais d'outils ONTAP pour la machine virtuelle VMware vSphere sur les datastores vVols qu'il gère.
@@ -72,9 +78,9 @@ NOTE: Ne stockez jamais d'outils ONTAP pour la machine virtuelle VMware vSphere 
 . Lisez et acceptez le contrat de licence et sélectionnez *Suivant*.
 . Sélectionnez le stockage pour la configuration et le format du disque, puis sélectionnez *Suivant*.
 . Sélectionnez le réseau de destination pour chaque réseau source et sélectionnez *Suivant*.
-. Dans la fenêtre *Personnaliser le modèle*, remplissez les champs obligatoires et sélectionnez *Suivant*.image:../media/customize-temp.png["Personnaliser le modèle"]
+. Dans la fenêtre *Personnaliser le modèle*, remplissez les champs obligatoires et sélectionnez *Suivant*.image:../media/sys-conf.png["Personnaliser le modèle"]
 +
-** Les informations sont validées lors de l'installation. En cas de divergence, un message d'erreur s'affiche sur la console Web et vous êtes invité à le corriger.
+** Les informations sont validées lors de l'installation.  S'il y a une divergence, un message d'erreur s'affiche sur la console Web et vous êtes invité à la corriger.
 ** Les noms d'hôte doivent comporter des lettres (A-Z, a-z), des chiffres (0-9) et des tirets (-). Pour configurer la double pile, spécifiez le nom d'hôte mappé sur l'adresse IPv6.
 +
 
@@ -84,7 +90,7 @@ NOTE: Le PROTOCOLE IPv6 pur n'est pas pris en charge. Le mode mixte est pris en 
 ** IPv4 est le composant d'adresse IP de la configuration du nœud, qui peut être utilisé pour activer le shell de diagnostic et l'accès SSH sur le nœud à des fins de débogage et de maintenance.
 
 
-. Lorsque vous utilisez la version vCenter Server 8.0.3, dans la fenêtre *Personnaliser le matériel*, activez les options *Ajout à chaud du processeur* et *Prise à chaud de la mémoire* pour autoriser la fonctionnalité HA.image:../media/customize-hw.png["Personnaliser le matériel"]
+. Lorsque vous utilisez la version vCenter Server 8.0.3, dans la fenêtre *Personnaliser le matériel*, activez les options *Ajout à chaud du processeur* et *Prise à chaud de la mémoire* pour autoriser la fonctionnalité HA.image:../media/customize-hw105.png["Personnaliser le matériel"] image:../media/customize-hw.png["Personnaliser le matériel"]
 . Consultez les détails dans la fenêtre *prêt à terminer*, sélectionnez *Terminer*.
 +
 Au fur et à mesure de la création de la tâche de déploiement, la progression s'affiche dans la barre des tâches vSphere.
@@ -101,7 +107,7 @@ Si vous avez déployé des outils ONTAP pour VMware vSphere avec vCenter Server 
 
 . Connectez-vous au client vCenter
 . Mettez le nœud ONTAP Tools hors tension.
-. Accédez aux outils ONTAP pour la machine virtuelle VMware vSphere sous *inventaires* et sélectionnez l'option *Modifier les paramètres*.
+. Accédez aux ONTAP tools for VMware vSphere sous *Inventaires* et sélectionnez l'option *Modifier les paramètres*.
 . Sous les options *CPU*, cochez la case *Activer l'ajout à chaud de CPU*
 . Sous les options *Memory*, cochez la case *Enable* par rapport à *Memory hot plug*.
 

@@ -17,7 +17,7 @@ Il existe plusieurs aspects des outils ONTAP pour l'implémentation de VMware vS
 
 == Présentation du processus de configuration
 
-Les outils ONTAP pour VMware vSphere 10 incluent la prise en charge de la création d'un utilisateur ONTAP avec un rôle personnalisé. Ces définitions sont fournies dans un fichier JSON que vous pouvez télécharger vers le cluster ONTAP. Vous pouvez créer l'utilisateur et adapter le rôle à vos besoins en matière d'environnement et de sécurité.
+Les ONTAP tools for VMware vSphere incluent la prise en charge de la création d’un utilisateur ONTAP avec un rôle personnalisé.  Les définitions sont regroupées dans un fichier JSON que vous pouvez télécharger sur le cluster ONTAP .  Vous pouvez créer l'utilisateur et personnaliser le rôle en fonction de votre environnement et de vos besoins de sécurité.
 
 Les principales étapes de configuration sont décrites ci-dessous à un niveau élevé. Voir link:../configure/configure-user-role-and-privileges.html["Configurer les rôles et privilèges des utilisateurs ONTAP"]pour plus de détails.
 

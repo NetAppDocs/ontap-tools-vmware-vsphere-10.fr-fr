@@ -14,7 +14,7 @@ summary: 'La vue du stockage ONTAP sous l"onglet Configure d"un outil ONTAP pour
 Les outils ONTAP pour VMware vSphere affichent la vue côté stockage ONTAP des datastores et de leurs volumes dans l'onglet configurer.
 
 .Étapes
-. Depuis le client vSphere, accédez au datastore.
+. Depuis le client vSphere, accédez au magasin de données.
 . Sélectionnez l'onglet *configurer* dans le volet de droite.
 . Sélectionnez *Outils NetApp ONTAP* > *stockage ONTAP*. Selon le type de datastore, la vue change. Reportez-vous au tableau ci-dessous pour plus d'informations :
 

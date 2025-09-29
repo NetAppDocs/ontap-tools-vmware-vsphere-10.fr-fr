@@ -15,7 +15,7 @@ L'action de démontage du datastore démonte un datastore NFS ou VMFS des hôtes
 
 .Étapes
 . Connectez-vous au client vSphere.
-. Cliquez avec le bouton droit de la souris sur un objet datastore NFS ou VMFS et sélectionnez *Unmount datastore*.
+. Cliquez avec le bouton droit sur un objet de banque de données NFS ou VMFS et sélectionnez *Démonter la banque de données*.
 +
 Une boîte de dialogue s'ouvre et répertorie les hôtes ESXi sur lesquels le datastore est monté. Lorsque l'opération est effectuée sur un datastore protégé, un message d'avertissement s'affiche à l'écran.
 

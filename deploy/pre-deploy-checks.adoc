@@ -60,13 +60,13 @@ Utilisez la feuille de calcul suivante pour rassembler les informations requises
 | Conditions requises | Votre valeur 
 
 
-| Adresse IP de l'application ONTAP. Il s'agit de l'adresse IP permettant d'accéder à l'interface web des outils ONTAP. |  
+| Adresse IP pour l'application des outils ONTAP .  Il s'agit de l'adresse IP permettant d'accéder à l'interface Web des outils ONTAP (équilibreur de charge) |  
 
 
-| Adresse IP virtuelle des outils ONTAP pour la communication interne. Cette adresse IP est utilisée pour la communication interne dans une configuration comportant plusieurs instances des outils ONTAP. Cette adresse IP ne doit pas être identique à celle de l'application des outils ONTAP. |  
+| Adresse IP virtuelle des outils ONTAP pour la communication interne.  Cette adresse IP est utilisée pour la communication interne dans une configuration avec plusieurs instances d'outils ONTAP .  Cette adresse IP ne doit pas être la même que l'adresse IP de l'application des outils ONTAP . (Le plan de contrôle Kubernetes) |  
 
 
-| Nom d'hôte DNS du premier nœud |  
+| Nom d'hôte DNS pour le nœud de gestion des outils ONTAP |  
 
 
 | Serveur DNS principal |  
@@ -78,7 +78,7 @@ Utilisez la feuille de calcul suivante pour rassembler les informations requises
 | Domaine de recherche DNS |  
 
 
-| Adresse IPv4 du premier nœud. Il s'agit d'une adresse IPv4 unique pour l'interface de gestion des nœuds sur le réseau de gestion. |  
+| Adresse IPv4 pour le nœud de gestion des outils ONTAP .  Il s'agit d'une adresse IPv4 unique pour l'interface de gestion des nœuds sur le réseau de gestion. |  
 
 
 | Masque de sous-réseau de l'adresse IPv4 |  
@@ -134,7 +134,7 @@ Outre les exigences de déploiement d'un seul nœud, vous aurez besoin des infor
 
 == Configuration du pare-feu réseau
 
-Ouvrez les ports requis pour les adresses IP de votre pare-feu réseau. Les outils ONTAP doivent pouvoir atteindre ce LIF via le port 443. Reportez-vous link:../deploy/prerequisites.html["Configuration requise pour les ports"]à pour connaître les dernières mises à jour.
+Assurez-vous que les ports de pare-feu nécessaires sont ouverts pour toutes les adresses IP concernées.  Les outils ONTAP nécessitent un accès au LIF via le port 443.  Pour une liste complète des ports requis, consultez la section relative aux exigences de port à l'adresselink:../deploy/prerequisites.html["Exigences et limites de configuration des outils ONTAP pour VMware vSphere"] .
 
 
 
