@@ -22,6 +22,9 @@ La configuration de SRA sur l'appliance VMware Live Site Recovery enregistre les
 * Ajoutez des backends de stockage aux ONTAP tools for VMware vSphere. Pour plus d'informations, consultez le link:../configure/add-storage-backend.html["Ajouter des backends de stockage"] section.
 
 
+
+NOTE: Si vous avez appliqué le correctif de certificat vCenter à partir des outils ONTAP , mettez à jour la configuration vCenter dans le dispositif VMware Live Site Recovery à l'aide du port (:5480).  Pour les instructions, reportez-vous à https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-installation-and-configuration-8-8/reconfiguring-the-site-recovery-manager-virtual-appliance/reconfigure-the-site-recovery-manager-appliance.html["Reconfigurer l'appliance Site Recovery Manager"] .
+
 .Étapes
 . Sur l'écran de l'appliance VMware Live site Recovery, sélectionnez *Storage Replication adapter* > *New adapter*.
 . Chargez le fichier _.tar.gz_ dans VMware Live site Recovery.

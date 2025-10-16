@@ -44,3 +44,5 @@ NOTE: Vous ne pouvez pas supprimer une banque de données utilisée par des mach
 NOTE: Pour les banques de données VMFS sur un stockage ONTAP unifié qui font partie d'un cluster hôte protégé, vous ne pouvez pas supprimer le volume du cluster ONTAP .
 
 
+
+Lorsque vous supprimez une banque de données NFS, VMFS ou vVols , les groupes parents restent sur le système ONTAP .  Les groupes enfants qui ne sont mappés à aucun LUN sont supprimés automatiquement.  Les outils ONTAP effectuent un nettoyage quotidien pour supprimer les groupes parents par défaut non mappés.  Les groupes parents personnalisés doivent être supprimés manuellement dans ONTAP.  Tous les groupes parents restants deviennent obsolètes et ne peuvent pas être réutilisés par les outils ONTAP .

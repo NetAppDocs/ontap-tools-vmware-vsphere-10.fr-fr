@@ -11,9 +11,9 @@ summary:
 
 
 [role="lead"]
-Lors de la gestion des machines virtuelles des outils ONTAP et des systèmes de stockage ONTAP , la compréhension du comportement des groupes d'applications est essentielle, en particulier lors de la migration de banques de données depuis des environnements d'outils non ONTAP vers la gestion des outils ONTAP .  Cette section décrit comment les igroups sont mis à jour pendant cette transition.
+Si vous gérez à la fois des machines virtuelles ONTAP et des systèmes de stockage ONTAP , il est important de comprendre le comportement des igroups, en particulier lors du déplacement de banques de données d'environnements non gérés par les outils ONTAP vers ceux qui le sont.  Cette section explique comment les igroups sont mis à jour au cours de ce processus.
 
-À partir des ONTAP tools for VMware vSphere 10.4, la gestion des banques de données est rationalisée en créant et en gérant automatiquement les objets ONTAP et vCenter dans les environnements de centre de données VMware.
+Les ONTAP tools for VMware vSphere 10.4 et versions ultérieures créent et maintiennent automatiquement les objets ONTAP et vCenter pour simplifier la gestion des banques de données dans les environnements de centre de données VMware.
 
 Les ONTAP tools for VMware vSphere interprètent les igroups dans deux contextes différents :
 
@@ -41,7 +41,7 @@ Avec l’approche igroup imbriquée, les LUN sont mappés uniquement aux igroups
 
 *Lorsque vous créez une banque de données avec un nom de groupe i personnalisé*
 
-Lors de la création d'une banque de données dans les outils ONTAP , vous pouvez saisir un nom de groupe d'applications personnalisé au lieu de le sélectionner dans la liste déroulante.  Les outils ONTAP créent ensuite un groupe parent au niveau du magasin de données en utilisant le nom que vous avez spécifié.  Si le même hôte est utilisé pour plusieurs banques de données, le groupe i existant au niveau de l'hôte (enfant) est réutilisé.  Par conséquent, le LUN du nouveau magasin de données est mappé à ce groupe i enfant existant, qui peut désormais être associé à plusieurs groupes i parents (un pour chaque magasin de données).  La liste des banques de données de l'interface utilisateur de vCenter Server confirme la création réussie de la nouvelle banque de données avec le nom igroup personnalisé.
+Lors de la création d'une banque de données dans les outils ONTAP , vous pouvez saisir un nom de groupe d'applications personnalisé au lieu de le sélectionner dans la liste déroulante. Les outils ONTAP créent ensuite un groupe parent au niveau du magasin de données en utilisant le nom que vous avez spécifié. Si le même hôte est utilisé pour plusieurs banques de données, le groupe i existant au niveau de l'hôte (enfant) est réutilisé. Par conséquent, le LUN du nouveau magasin de données est mappé à ce groupe i enfant existant, qui peut désormais être associé à plusieurs groupes i parents (un pour chaque magasin de données). Vous pouvez voir le nouveau magasin de données avec le nom igroup personnalisé dans l’interface vCenter Server.
 
 *Lorsque vous réutilisez le nom du groupe i lors de la création du magasin de données*
 
@@ -59,10 +59,10 @@ Pour gérer une banque de données et un groupe d'applications existants avec le
 
 image:../media/otv-ds.png["Banque de données et igroup gérés par les outils ONTAP"]
 
-Vous pouvez créer une banque de données directement dans vCenter Server et la placer ultérieurement sous la gestion des outils ONTAP .  Tout d’abord, créez un igroup plat dans les systèmes ONTAP et mappez-y un LUN.  Après avoir exécuté la découverte de banque de données dans les outils ONTAP , le groupe i plat est converti en une structure imbriquée.  Les outils ONTAP gèrent ensuite l'igroup, en le renommant avec le préfixe « otv_ ».  Le LUN reste mappé au même igroup tout au long de ce processus.
+Une fois la découverte de banque de données exécutée dans les outils ONTAP , ONTAP derniers convertissent le groupe d'extension plat en une structure imbriquée. Les outils ONTAP gèrent ensuite l'igroup, en le renommant avec le préfixe « otv_ ». Le LUN reste mappé au même igroup tout au long de ce processus.
 
 *Comment les outils ONTAP réutilisent les igroups créés nativement*
 
-Vous pouvez provisionner une banque de données dans les outils ONTAP à l'aide d'un igroup créé à l'origine dans les systèmes ONTAP , après sa gestion par les outils ONTAP .  Ces groupes i apparaissent dans la liste déroulante des noms de groupe d'initiateurs personnalisés.  Le nouveau LUN pour le magasin de données est ensuite mappé au groupe enfant normalisé correspondant, tel que « otv_NativeIgroup1 ».
+Vous pouvez créer une banque de données dans les outils ONTAP à l'aide d'un igroup qui a d'abord été créé dans les systèmes ONTAP , une fois que les outils ONTAP l'ont géré. Ces groupes i apparaissent dans la liste déroulante des noms de groupe d'initiateurs personnalisés. Le nouveau LUN pour le magasin de données est ensuite mappé au groupe enfant normalisé correspondant, tel que « otv_NativeIgroup1 ».
 
 Les ONTAP tools for VMware vSphere ne détectent ni n'utilisent les igroups créés dans le système ONTAP qui ne sont pas gérés par les outils ONTAP ou liés à une banque de données.

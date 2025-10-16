@@ -13,9 +13,9 @@ summary: 'Lorsque vous sélectionnez l"icône du plug-in ONTAP Tools for VMware 
 [role="lead"]
 La sélection de l’icône du plug-in ONTAP tools for VMware vSphere dans la section Raccourcis du client vCenter ouvre la page de présentation.  Ce tableau de bord fournit un résumé des ONTAP tools for VMware vSphere .
 
-Dans le cas d'une configuration Enhanced Linked Mode (ELM), la liste déroulante de sélection de vCenter Server apparaît et vous pouvez sélectionner un vCenter Server souhaité pour voir les données qui le concernent.  Cette liste déroulante est disponible pour toutes les autres vues de liste du plug-in. La sélection de vCenter Server effectuée sur une page persiste dans les onglets du plug-in.image:../media/remote-plugin-dashboard.png["Présentation du tableau de bord"]
+En mode lié amélioré (ELM), la liste déroulante vCenter Server apparaît.  Choisissez un serveur vCenter pour afficher ses données.  La liste déroulante est disponible dans toutes les vues de liste du plug-in. Lorsque vous sélectionnez un serveur vCenter sur une page, il reste identique lorsque vous changez d'onglet dans le plug-in.image:../media/remote-plugin-dashboard.png["Présentation du tableau de bord"]
 
-À partir de la page de présentation, vous pouvez exécuter l'action *Discovery*. L'action de détection exécute la détection au niveau de vCenter pour détecter les éventuels systèmes back-end de stockage, hôtes, datastores, état/relations de protection récemment ajoutés ou mis à jour. Vous pouvez exécuter une découverte à la demande des entités sans avoir à attendre la découverte planifiée.
+Depuis la page d'aperçu, vous pouvez exécuter l'action *Découverte*. L'action de découverte détecte les backends de stockage, les hôtes, les banques de données et l'état ou les relations de protection nouvellement ajoutés ou mis à jour au niveau de vCenter.  Exécutez la découverte à la demande sans attendre la découverte planifiée.
 
 
 NOTE: Le bouton d’action *Découverte* est activé uniquement si vous disposez du privilège requis pour effectuer l’action de découverte.
@@ -42,5 +42,5 @@ Le tableau de bord comporte plusieurs cartes montrant différents éléments du 
 | Datastore | Cette carte présente les 10 principaux datastores classés par mesure de performance. Vous pouvez sélectionner l'en-tête pour obtenir les 10 principaux datastores de la mesure sélectionnée triés par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la carte persistent jusqu'à ce que vous changiez ou effacez le cache du navigateur. Une liste déroulante Type de datastore permet de sélectionner le type de datastores : NFS, VMFS ou vVols. 
 
 
-| Carte de conformité de l'hôte ESXi | Cette carte affiche l'état de conformité global de tous les paramètres des hôtes VMware ESXi (pour le vCenter sélectionné) en fonction des paramètres d'hôte NetApp recommandés par groupe/catégorie de paramètres. Vous pouvez sélectionner le lien *appliquer les paramètres recommandés* pour appliquer les paramètres recommandés. Vous pouvez sélectionner l'état conforme des hôtes pour afficher la liste des hôtes. 
+| Carte de conformité de l'hôte ESXi | Cette carte indique si tous les hôtes ESXi (pour le vCenter sélectionné) suivent les paramètres d'hôte NetApp recommandés par groupe ou catégorie. Vous pouvez sélectionner le lien *Appliquer les paramètres recommandés* pour appliquer les paramètres recommandés. Vous pouvez sélectionner l’état de conformité des hôtes pour voir la liste des hôtes. 
 |===

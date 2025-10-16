@@ -22,7 +22,7 @@ Lorsque vous ajoutez une nouvelle banque de données, vous pouvez l'inclure dans
 Vous devez coupler les sites protégés et de reprise créés à l'aide de votre client vSphere pour permettre à Storage Replication adapter (SRA) de détecter les systèmes de stockage.
 
 
-NOTE: L'adaptateur de réplication de stockage (SRA) prend en charge la distribution avec une relation de synchronisation de type Duplex de basculement automatisé et une relation asynchrone SnapMirror sur le groupe de cohérence. Toutefois, la réplication « Fan-Out » avec deux SnapMirror asynchrones sur le groupe de cohérence ou sur le volume n'est pas prise en charge.
+NOTE: L'adaptateur de réplication de stockage (SRA) prend en charge la distribution avec une relation de synchronisation de type Duplex de basculement automatisé et une relation asynchrone SnapMirror sur le groupe de cohérence. Cependant, la distribution en éventail avec deux SnapMirror asynchrones sur un groupe de cohérence ou la distribution en éventail avec deux SnapMirrors sur un volume n'est pas prise en charge. Les relations SnapMirror de type Vault ne sont pas prises en compte dans ces restrictions de diffusion.
 
 .Avant de commencer
 * VMware Live site Recovery doit être installé sur les sites protégés et de reprise.

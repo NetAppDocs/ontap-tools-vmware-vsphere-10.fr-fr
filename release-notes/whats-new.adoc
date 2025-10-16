@@ -26,7 +26,7 @@ Les ONTAP tools for VMware vSphere 10.5 sont conformes aux normes de certificati
 * * Prise en charge de MetroCluster *
 
 
-Cette version introduit la prise en charge des configurations MetroCluster (MCC), améliorant ainsi les capacités de haute disponibilité et de reprise après sinistre.
+Cette version introduit la prise en charge des configurations MetroCluster , améliorant ainsi les capacités de haute disponibilité et de reprise après sinistre.
 
 * *Gestion de la sécurité et des certificats*
 

@@ -13,15 +13,16 @@ summary: La mise à niveau est prise en charge pour les déploiements haute disp
 [role="lead"]
 Vous pouvez effectuer une mise à niveau des ONTAP tools for VMware vSphere 10.3 ou 10.4 vers 10.5.  Cependant, pour effectuer une mise à niveau des outils ONTAP 10.0, 10.1 ou 10.2 vers 10.5, vous devez d'abord effectuer une mise à niveau vers 10.3 ou 10.4 avant de passer à 10.5.
 
-REMARQUE :
-
+[NOTE]
+====
 * Pour les systèmes ASA r2, assurez-vous de mettre à niveau les ONTAP tools for VMware vSphere vers 10.5 et ONTAP vers 9.16.1, avant de configurer davantage de zones de disponibilité de stockage (SAZ).
-* Si la mise à niveau des ONTAP tools for VMware vSphere 10.3 ou 10.4 vers 10.5 échoue, vous ne pouvez pas revenir en arrière.  Utilisez un RPO faible ou une récupération de snapshot pour restaurer la configuration.  Pour les ONTAP tools for VMware vSphere 10.2 et versions antérieures, utilisez le RPO zéro pour restaurer la configuration.
+* Si la mise à niveau des ONTAP tools for VMware vSphere 10.3 ou 10.4 vers 10.5 échoue, vous ne pouvez pas revenir en arrière. Utilisez un RPO faible ou une récupération de snapshot pour restaurer la configuration. Pour les ONTAP tools for VMware vSphere 10.2 et versions antérieures, utilisez le RPO zéro pour restaurer la configuration.
 
 
+====
 .Avant de commencer
-* Assurez-vous que le certificat système ONTAP et les certificats vCenter intégrés sont valides pendant au moins 5 jours.  Si elle expire plus tôt, la mise à niveau échoue.
-* Pour garantir une mise à niveau sécurisée, vérifiez que vos certificats incluent des entrées de nom alternatif du sujet (SAN).  Si vos certificats manquent d'entrées SAN et que vous devez procéder à la mise à niveau, vous pouvez définir l'indicateur de validation du certificat sur faux pour contourner les vérifications SAN dans l'invite pendant la mise à niveau.
+* Assurez-vous que le certificat système ONTAP et les certificats vCenter intégrés sont valides pendant au moins 5 jours. Si les certificats expirent plus tôt, la mise à niveau échoue.
+* Pour garantir une mise à niveau sécurisée, vérifiez que vos certificats incluent des entrées de nom alternatif du sujet (SAN). Si les certificats manquent d’entrées SAN, définissez l’indicateur de validation du certificat sur faux pour contourner les vérifications SAN pendant la mise à niveau.
 * Assurez-vous d’avoir un cinquième disque d’une capacité de 100 Go sur tous les nœuds.
 * Vérifiez que la configuration du nœud correspond aux spécifications du tableau ci-dessous.
 
