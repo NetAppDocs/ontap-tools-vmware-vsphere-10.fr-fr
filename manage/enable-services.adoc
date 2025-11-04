@@ -17,7 +17,7 @@ Vous pouvez modifier le mot de passe de l'administrateur à l'aide du gestionnai
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *Modifier les paramètres de l'appareil* dans la section Présentation.
-. Dans la section *Services*, vous pouvez activer des services facultatifs tels que VASA Provider, importer la configuration vVols et SRA (Disaster Recovery) selon vos besoins.
+. Dans la section *Services*, vous pouvez activer, selon vos besoins, des services optionnels tels que VASA Provider, l'importation de la configuration vVols et la reprise après sinistre (SRA).
 +
 Lors de la première activation des services, vous devez créer les informations d'identification du fournisseur VASA et SRA. Ils permettent d'enregistrer ou d'activer les services VASA Provider et SRA sur le serveur vCenter. Le nom d'utilisateur ne peut contenir que des lettres, des chiffres et des traits de soulignement. La longueur du mot de passe doit être comprise entre 8 et 256 caractères.
 

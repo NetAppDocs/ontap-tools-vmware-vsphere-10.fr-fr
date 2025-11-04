@@ -11,10 +11,10 @@ summary: La vue stockage affiche la liste des vVols créés par la machine virtu
 
 
 [role="lead"]
-La vue stockage affiche la liste des vVols créés par la machine virtuelle.
+La vue de stockage affiche la liste des vVols créés par la machine virtuelle.
 
 
-NOTE: Cette vue s'applique à la machine virtuelle sur laquelle au moins un disque associé aux outils ONTAP pour le datastore VMware vSphere Managed vVols est monté.
+NOTE: Cette vue s'applique aux machines virtuelles disposant d'au moins un disque provenant d'un datastore vVols géré par les ONTAP tools for VMware vSphere .
 
 .Étapes
 . Depuis le client vSphere, accédez à la machine virtuelle.

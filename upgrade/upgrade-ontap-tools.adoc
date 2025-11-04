@@ -57,7 +57,7 @@ Vous pouvez effectuer une mise à niveau des ONTAP tools for VMware vSphere 10.3
 . Sélectionnez le fichier ISO, cochez la case *Connecté* pour le champ *lecteur CD/DVD* et cliquez sur *OK*.
 . À partir du serveur vCenter, ouvrez une console pour accéder aux outils ONTAP.
 . Connectez-vous en tant qu'utilisateur de maintenance.
-. Entrez *3* pour sélectionner le menu *Configuration système*.
+. Entrez *2* pour sélectionner le menu *Configuration système*.
 . Entrez *7* pour sélectionner l’option *Mise à niveau*.
 +
 Pendant la mise à niveau, si des certificats backend de stockage intégrés manquent d'entrées de nom alternatif du sujet (SAN), vous recevrez une invite indiquant le SAN manquant.  Si vous choisissez de continuer sans valider le SAN, la mise à niveau se poursuivra, mais cela n'est pas recommandé en raison de risques de sécurité potentiels.

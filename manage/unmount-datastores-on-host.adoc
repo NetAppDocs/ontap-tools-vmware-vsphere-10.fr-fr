@@ -11,13 +11,13 @@ summary: 'L"action de démontage du datastore démonte un datastore NFS ou VMFS 
 
 
 [role="lead"]
-L'action de démontage du datastore démonte un datastore NFS ou VMFS des hôtes ESXi. L'action démonter le datastore est activée pour les datastores NFS et VMFS découverts ou gérés par les outils ONTAP pour VMware vSphere.
+L'action « Démonter le datastore » supprime un datastore NFS ou VMFS des hôtes ESXi.  Il est disponible pour les banques de données découvertes ou gérées par les ONTAP tools for VMware vSphere.
 
 .Étapes
 . Connectez-vous au client vSphere.
 . Cliquez avec le bouton droit sur un objet de banque de données NFS ou VMFS et sélectionnez *Démonter la banque de données*.
 +
-Une boîte de dialogue s'ouvre et répertorie les hôtes ESXi sur lesquels le datastore est monté. Lorsque l'opération est effectuée sur un datastore protégé, un message d'avertissement s'affiche à l'écran.
+Le client vSphere ouvre une boîte de dialogue et liste les hôtes ESXi qui montent la banque de données. Lorsque l'opération est effectuée sur une banque de données protégée, un message d'avertissement s'affiche à l'écran.
 
 . Sélectionnez un ou plusieurs hôtes ESXi pour démonter le datastore.
 +

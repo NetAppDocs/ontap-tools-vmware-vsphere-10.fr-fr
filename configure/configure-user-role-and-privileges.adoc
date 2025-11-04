@@ -104,7 +104,7 @@ Ajoutez le *chemin d'accès à l'API REST* et choisissez l'accès dans la liste 
 
 === Liste des privilèges minimaux requis pour les utilisateurs du cluster dont le périmètre global n'est pas défini sur admin
 
-Cette section répertorie les privilèges minimaux requis pour un utilisateur de cluster à portée globale non administrateur sans fichier JSON.  Si un cluster est dans la portée locale, utilisez le fichier JSON pour créer des utilisateurs, car les ONTAP tools for VMware vSphere nécessitent plus que de simples privilèges de lecture pour le provisionnement sur ONTAP.
+Cette page répertorie les privilèges minimaux requis pour un utilisateur de cluster global non administrateur sans fichier JSON. Si un cluster est dans la portée locale, utilisez le fichier JSON pour créer des utilisateurs, car les ONTAP tools for VMware vSphere nécessitent plus que de simples privilèges de lecture pour le provisionnement sur ONTAP.
 
 Vous pouvez accéder aux fonctionnalités en utilisant les API :
 

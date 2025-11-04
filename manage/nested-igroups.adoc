@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Si vous gérez à la fois des machines virtuelles ONTAP et des systèmes de stockage ONTAP , il est important de comprendre le comportement des igroups, en particulier lors du déplacement de banques de données d'environnements non gérés par les outils ONTAP vers ceux qui le sont.  Cette section explique comment les igroups sont mis à jour au cours de ce processus.
+Si vous gérez à la fois des machines virtuelles ONTAP et des systèmes de stockage ONTAP , il est important de comprendre le comportement des igroups, en particulier lors du déplacement de banques de données d'environnements non gérés par les outils ONTAP vers ceux qui le sont. Cette page explique comment les igroups sont mis à jour au cours de ce processus.
 
 Les ONTAP tools for VMware vSphere 10.4 et versions ultérieures créent et maintiennent automatiquement les objets ONTAP et vCenter pour simplifier la gestion des banques de données dans les environnements de centre de données VMware.
 

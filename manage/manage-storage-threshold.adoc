@@ -17,5 +17,5 @@ Vous pouvez définir le seuil de réception des notifications dans vCenter Serve
 . Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP , accédez à *Paramètres* > *Paramètres de seuil* > *Modifier*.
-. Dans la fenêtre *Modifier le seuil*, indiquez les valeurs souhaitées dans les champs *presque plein* et *plein* et sélectionnez *Enregistrer*. Vous pouvez réinitialiser les chiffres sur les valeurs recommandées, soit 80 pour presque plein et 90 pour plein.
+. Dans la fenêtre *Modifier le seuil*, indiquez les valeurs souhaitées dans les champs *Presque plein* et *Plein* et sélectionnez *Enregistrer*. Vous pouvez rétablir les valeurs seuils aux valeurs par défaut recommandées : 80 pour Presque plein et 90 pour Plein.
 

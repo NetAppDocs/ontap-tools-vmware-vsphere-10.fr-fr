@@ -13,6 +13,9 @@ summary: 'Le montage d"un datastore permet d"accéder au stockage à des hôtes 
 [role="lead"]
 Le montage d'un datastore permet d'accéder au stockage à des hôtes supplémentaires. Après avoir ajouté les hôtes à votre environnement VMware, vous pouvez monter le datastore sur les hôtes supplémentaires.
 
+
+NOTE: Lorsque vous ajoutez un nouvel hôte ESXi à l'aide de https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Ajouter un hôte ESX à votre flux de travail de cluster vSphere"] Veuillez attendre que la découverte planifiée de l'hôte soit terminée avant qu'elle n'apparaisse dans les outils ONTAP . Vous pouvez également lancer manuellement la découverte à partir de l'écran de présentation des outils NetApp ONTAP .
+
 .Description de la tâche
 * Certaines actions du clic droit sont désactivées ou indisponibles selon la version du client vSphere et le type de datastore sélectionné.
 +
@@ -20,15 +23,18 @@ Le montage d'un datastore permet d'accéder au stockage à des hôtes supplémen
 ** De vSphere 7.0U3 à vSphere 8.0, même si les options apparaissent, l'action est désactivée.
 
 
-* L'option mount datastore est désactivée lorsque le cluster hôte est protégé avec des configurations uniformes.
+* vSphere désactive l'option de montage de la banque de données lorsque le cluster hôte est protégé par des configurations uniformes.
 
 
 .Étapes
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.
 . Dans le volet de navigation de gauche, sélectionnez les centres de données contenant les hôtes.
-. Pour monter des datastores NFS/VMFS sur un hôte ou un cluster hôte, cliquez avec le bouton droit de la souris et sélectionnez *NetApp ONTAP Tools* > *Mount datastores*.
+. Pour monter des banques de données NFS/VMFS sur un hôte ou un cluster d'hôtes, cliquez avec le bouton droit et sélectionnez * Outils NetApp ONTAP * > *Monter les banques de données *.
 . Sélectionnez les datastores à monter et sélectionnez *Mount*.
 
 
 .Et la suite ?
 Vous pouvez suivre la progression dans le panneau des tâches récentes.
+
+.Sujet connexe
+link:../manage/add-vsphere-host.html["Ajouter de nouveaux hôtes VMware vSphere"]

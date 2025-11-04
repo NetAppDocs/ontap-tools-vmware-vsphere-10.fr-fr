@@ -24,7 +24,7 @@ Vous pouvez migrer les machines virtuelles protégées vers :
 * Il existe un autre datastore compatible vVvols dans un hôte VMware ESXi différent
 
 
-Si la machine virtuelle est migrée vers un autre volume FlexVol, le fichier de métadonnées correspondant est également mis à jour avec les informations de la machine virtuelle. Si une machine virtuelle est migrée vers un autre hôte VMware ESXi mais un même stockage, le fichier de métadonnées du volume FlexVol sous-jacent ne sera pas modifié.
+Si vous migrez la machine virtuelle vers un autre FlexVol volume, le système met à jour le fichier de métadonnées de ce volume avec les informations de la machine virtuelle. Si une machine virtuelle est migrée vers un autre hôte ESXi mais avec le même stockage, le fichier de métadonnées du FlexVol volume sous-jacent ne sera pas modifié.
 
 
 
@@ -60,4 +60,4 @@ Actuellement, seuls les snapshots de machine virtuelle sans mémoire sont pris e
 
 Vous ne pouvez pas non plus protéger les machines virtuelles non protégées qui disposent d’un instantané de mémoire.  Pour cette version, vous devez supprimer l'instantané de mémoire avant d'activer la protection de la machine virtuelle.
 
-Pour une machine virtuelle Windows avec un type de stockage ASA r2, lorsque vous créez un snapshot de la machine virtuelle, il s'agit d'un snapshot en lecture seule. Lorsqu'un appel de mise sous tension est lancé pour la machine virtuelle, le fournisseur VASA crée un LUN à l'aide du snapshot en lecture seule, puis il l'active pour les IOPS. Lors de la demande de mise hors tension, VASA Provider supprime le LUN qui a été créé, puis désactive les IOPS.
+Pour une machine virtuelle Windows avec le type de stockage ASA r2, un instantané de la machine virtuelle est en lecture seule.  Lorsque vous mettez la VM sous tension, le fournisseur VASA crée un LUN à partir de l'instantané en lecture seule et active les IOPS.  Lorsque vous mettez la machine virtuelle hors tension, le fournisseur VASA supprime le LUN et désactive les IOPS.

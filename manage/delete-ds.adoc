@@ -11,7 +11,7 @@ summary: 'L"action Supprimer le datastore supprime le datastore. Dans le cas d"u
 
 
 [role="lead"]
-Cette section décrit comment supprimer des banques de données NFS, VMFS ou vVols à l’aide des outils ONTAP dans vCenter Server.
+Cette page explique comment supprimer des banques de données NFS, VMFS ou vVols à l'aide des outils ONTAP dans vCenter Server.
 
 Lorsque vous supprimez une banque de données, les actions suivantes sont effectuées en fonction du type de banque de données :
 
@@ -33,7 +33,7 @@ NOTE: Vous ne pouvez pas supprimer une banque de données utilisée par des mach
 +
 .. Dans le cas d'une banque de données NFS ou VMFS, une boîte de dialogue apparaît avec la liste des machines virtuelles utilisant la banque de données.
 .. Si aucune machine virtuelle n’est associée à une banque de données VMFS, une boîte de dialogue de confirmation s’affiche.  Si la protection du cluster hôte est activée et qu'une relation AFD existe, vous pouvez nettoyer les éléments de stockage secondaires.
-.. Pour les banques de données VMFS protégées sur les systèmes ASA r2, assurez-vous que la protection est supprimée avant la suppression.  À partir d’ ONTAP 9.17.1 et des ONTAP tools for VMware vSphere 10.5, vous pouvez supprimer une banque de données protégée.  S'il s'agit de la seule banque de données du groupe de protection, la protection du cluster hôte est automatiquement supprimée.
+.. Pour les banques de données VMFS protégées sur les systèmes ASA r2, supprimez la protection avant de les supprimer. À partir d’ ONTAP 9.17.1 et des ONTAP tools for VMware vSphere 10.5, vous pouvez supprimer une banque de données protégée.  S'il s'agit du seul datastore du groupe de protection, la protection du cluster hôte est automatiquement supprimée.
 .. Pour les magasins de données vVols , vous ne pouvez supprimer le magasin de données que s'il n'y a aucun vVols présent.  La boîte de dialogue *Supprimer la banque de données* inclut une option permettant de supprimer des volumes du cluster ONTAP .
 .. Pour les banques de données vVols sur les systèmes ASA r2, vous ne pouvez pas supprimer les volumes de sauvegarde d' ONTAP à l'aide de l'option *Supprimer la banque de données*.
 
@@ -45,4 +45,4 @@ NOTE: Pour les banques de données VMFS sur un stockage ONTAP unifié qui font p
 
 
 
-Lorsque vous supprimez une banque de données NFS, VMFS ou vVols , les groupes parents restent sur le système ONTAP .  Les groupes enfants qui ne sont mappés à aucun LUN sont supprimés automatiquement.  Les outils ONTAP effectuent un nettoyage quotidien pour supprimer les groupes parents par défaut non mappés.  Les groupes parents personnalisés doivent être supprimés manuellement dans ONTAP.  Tous les groupes parents restants deviennent obsolètes et ne peuvent pas être réutilisés par les outils ONTAP .
+Lorsque vous supprimez une banque de données NFS, VMFS ou vVols , les groupes parents restent sur le système ONTAP . Les groupes enfants qui ne sont mappés à aucun LUN sont supprimés automatiquement. Les outils ONTAP effectuent un nettoyage quotidien pour supprimer les groupes parents par défaut non mappés. Supprimez manuellement les igroups parents personnalisés dans ONTAP.  Les outils ONTAP ne peuvent pas réutiliser les igroups parents obsolètes.
