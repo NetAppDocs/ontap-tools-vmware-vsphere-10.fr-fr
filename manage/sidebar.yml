@@ -63,8 +63,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: Démarrez SSH sur les autres nœuds
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: Mettez à jour les informations d'identification du serveur vCenter et de
-      ONTAP
+  - title: Mettez à jour les informations d'identification du serveur vCenter.
     url: "/manage/update-vcenter-credentials.html"
   - title: Modifier l'indicateur de validation du certificat
     url: "/manage/change-valid-flag.html"

@@ -48,11 +48,20 @@ Vous pouvez effectuer une mise à niveau des ONTAP tools for VMware vSphere 10.3
 * Assurez-vous que le branchement à chaud pour le processeur et la RAM est activé.
 * Pour le déploiement des ONTAP tools for VMware vSphere 10.3 ou 10.4, prenez un snapshot suspendu sur la machine virtuelle des outils ONTAP avant la mise à niveau.
 * Activez la sauvegarde à faible RPO et assurez-vous qu'une sauvegarde est visible dans l'interface client vCenter.
++
+Se référer à link:../manage/backup-settings.html["Modifier les paramètres de sauvegarde"] et link:../manage/recover-backup.html["Récupérer la configuration des outils ONTAP"] pour plus d'informations sur la sauvegarde et la restauration.
+
 
 
 .Étapes
 . Télécharger les outils ONTAP pour VMware vSphere, mettez à niveau ISO vers la bibliothèque de contenu.
-. Sur la page VM principale, sélectionnez *actions* > *Modifier les paramètres*
+. Sur la page principale de la VM, sélectionnez *Actions* > *Modifier les paramètres*. Pour identifier le nom de la machine virtuelle principale :
++
+.. Activer le shell de diagnostic sur n'importe quel nœud
+.. Exécutez la commande suivante :
+`grep sourceHost /opt/netapp/meta/ansible_vars.yaml`
+
+
 . Sélectionnez le *fichier ISO de la bibliothèque de contenu* dans la fenêtre des paramètres d'édition sous le champ *lecteur CD/DVD*.
 . Sélectionnez le fichier ISO, cochez la case *Connecté* pour le champ *lecteur CD/DVD* et cliquez sur *OK*.
 . À partir du serveur vCenter, ouvrez une console pour accéder aux outils ONTAP.

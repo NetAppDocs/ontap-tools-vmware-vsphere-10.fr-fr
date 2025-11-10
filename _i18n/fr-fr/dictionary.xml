@@ -204,9 +204,6 @@
   <block id="ad9681c4b067c102640e512ffe944ae5" category="paragraph">Assurez-vous que VASA Provider ne s'exécute sur aucune des machines virtuelles que vous prévoyez de migrer. Si vous migrez une machine virtuelle qui exécute VASA Provider dans un datastore vvols, vous ne pouvez pas effectuer d'opérations de gestion, y compris la mise sous tension des machines virtuelles qui se trouvent sur des datastores vvols.</block>
   <block id="87dd176d02dc14ceef36faeb3b3e32ae" category="paragraph">Lorsque vous migrez d'un datastore NFS et VMFS vers un datastore vVols, vCenter Server utilise les API vStorage APIs for Array Integration (VAAI) pour décharger les données lors du déplacement de datastores VMFS, mais pas à partir d'un fichier VMDK NFS. VAAI réduit généralement la charge sur l'hôte.</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="doc">Gérer les certificats</block>
-  <block id="a6f65a806180d1ff3c8d5e553e634e9d" category="summary">Vous pouvez mettre à jour les informations d'identification de vCenter Server et ONTAP à l'aide de la console de maintenance.</block>
-  <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">Mettre à jour les informations d'identification du serveur vCenter et de ONTAP</block>
-  <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">Vous pouvez mettre à jour l'instance du serveur vCenter et les informations d'identification ONTAP à l'aide de la console de maintenance.</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">Vous devez disposer des informations d'identification de l'utilisateur de maintenance.</block>
   <block id="2e7ce9d8495225c584175fd7caa148ce" category="summary">Le plug-in ONTAP Tools for VMware vSphere fournit des rapports pour les machines virtuelles et les datastores.</block>
   <block id="bd294460cf119253eaf3ca5c5ff6bb68" category="summary">Pendant l'opération de redémarrage du système d'exploitation invité, le menu GRUB affiche une option permettant de réinitialiser le mot de passe utilisateur de la console de maintenance. </block>
@@ -475,7 +472,6 @@ Vérifiez l'accès aux LUN mappées sur l'hôte ESXi pour vérifier la connectiv
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">Enregistrez VASA Provider sur vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">CORRECTIF</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">Télécharger les outils ONTAP pour VMware vSphere, mettez à niveau ISO vers la bibliothèque de contenu.</block>
-  <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">Sur la page VM principale, sélectionnez *actions* &gt; *Modifier les paramètres*</block>
   <block id="6aa61138e01e77bb590500715db216a4" category="list-text">Lorsque vous effectuez une mise à niveau, les actions suivantes sont automatiquement exécutées :</block>
   <block id="ea228e7ce90fb22b7336716e47dc7d35" category="summary">Cette page présente les codes d'erreur relatifs à l'opération de mise à niveau des outils ONTAP pour le système VMware vSphere.</block>
   <block id="f804f395829e966ca161a8be7756fec4" category="doc">Codes d'erreur de mise à niveau</block>
@@ -576,8 +572,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Exécutez la commande Perl pour configurer SRA avec les nouvelles informations d'identification :</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Sélectionnez la paire de matrices requise et vérifiez les détails correspondants.</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Entrez<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> pour sélectionner le menu de configuration du système.</block>
-  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Entrez<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> pour modifier les informations d'identification ONTAP.</block>
-  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Entrez<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> pour modifier les informations d'identification de vCenter.</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">Double pile</block>
   <block id="5541521d8d465590f0919510f29154b2" category="summary">Limites de configuration pour le déploiement des outils ONTAP pour VMware vSphere</block>
   <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">Vous pouvez utiliser le tableau suivant comme guide pour configurer les outils ONTAP pour VMware vSphere.</block>
@@ -677,7 +671,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">Montez les datastores NFS et VMFS</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">Démontez les datastores NFS et VMFS</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">Développez le datastore vVol</block>
-  <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">Mettez à jour les informations d'identification du serveur vCenter et de ONTAP</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">Gestion de la protection des clusters hôtes</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">Modifier la protection du cluster hôte</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">Restauration de site en direct VMware</block>
@@ -2440,8 +2433,18 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="0e527af09bb57a137d15be7b82466174" category="cell">Répertorie tous les volumes. Vous pouvez étendre ou supprimer du stockage à partir du volet de stockage ONTAP . Les outils ONTAP ne prennent pas en charge cette vue pour les datastores vVols basés sur le système ASA r2.</block>
   <block id="c39c392ff0013e0b93fcc63dc310cc30" category="paragraph">L'action « Démonter le datastore » supprime un datastore NFS ou VMFS des hôtes ESXi.  Il est disponible pour les banques de données découvertes ou gérées par les ONTAP tools for VMware vSphere.</block>
   <block id="0901929c9c2cc418f53328e6412b7d46" category="paragraph">Le client vSphere ouvre une boîte de dialogue et liste les hôtes ESXi qui montent la banque de données. Lorsque l'opération est effectuée sur une banque de données protégée, un message d'avertissement s'affiche à l'écran.</block>
-  <block id="e65e1eb2c16cb3c35af4e401b566b7c4" category="paragraph">Si vous avez modifié les informations d'identification de vCenter Server, ONTAP ou Data LIF après le déploiement, mettez-les à jour en suivant cette procédure.</block>
   <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">La vue de stockage affiche la liste des vVols créés par la machine virtuelle.</block>
   <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">Cette vue s'applique aux machines virtuelles disposant d'au moins un disque provenant d'un datastore vVols géré par les ONTAP tools for VMware vSphere .</block>
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">Entrez *2* pour sélectionner le menu *Configuration système*.</block>
+  <block id="bac860f1d4bb4c20d8de991eeeedd998" category="paragraph">Cliquez pour développer ou réduire le tableau des exigences relatives aux ports.</block>
+  <block id="f59d6f6c2fbe5659bab55bb335b17871" category="summary">Vous pouvez mettre à jour les informations d'identification du serveur vCenter à l'aide de la console de maintenance.</block>
+  <block id="d546c3915b2e0bc231d2bd0456f2d736" category="doc">Mettez à jour les informations d'identification du serveur vCenter.</block>
+  <block id="6e73e8087488ddc10c72aeec0f27cc93" category="paragraph">Vous pouvez mettre à jour les informations d'identification de l'instance vCenter Server à l'aide de la console de maintenance.</block>
+  <block id="f13c11fc9998fa4e2d133fe7f943fb4f" category="paragraph">Si vous avez modifié les informations d'identification de vCenter Server après le déploiement, mettez-les à jour en suivant cette procédure.</block>
+  <block id="a38dbe6982c223d82e53b7d0feab69ce" category="list-text">Entrer<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block> modifier les informations d'identification vCenter.</block>
+  <block id="b09a768d508454c0e540ea7b37cb5509" category="paragraph">Se référer à <block ref="afe6cee65a7db7868c8d2eef90c140e6" category="inline-link-macro-rx"></block> et <block ref="da3a0196b755588b543a28093241fcfa" category="inline-link-macro-rx"></block> pour plus d'informations sur la sauvegarde et la restauration.</block>
+  <block id="a928a1b805644ea87a643f7f8d60a477" category="list-text">Sur la page principale de la VM, sélectionnez *Actions* &gt; *Modifier les paramètres*. Pour identifier le nom de la machine virtuelle principale :</block>
+  <block id="75a86edd37c9b2122be450b28fa09149" category="list-text">Activer le shell de diagnostic sur n'importe quel nœud</block>
+  <block id="e016d50ae26af4214e6a864c1c2c8db5" category="list-text">Exécutez la commande suivante :<block ref="1ebe86b64a17c55ae52f4488cffae75f" prefix=" " category="inline-code"></block></block>
+  <block id="e40ec845cea3d17ed090f7fc08824c3f" category="sidebar">Mettez à jour les informations d'identification du serveur vCenter.</block>
 </blocks>

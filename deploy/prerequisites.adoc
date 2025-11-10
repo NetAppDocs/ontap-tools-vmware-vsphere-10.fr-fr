@@ -94,7 +94,10 @@ Le tableau suivant présente les ports réseau utilisés par NetApp et leurs fon
 
 NOTE: Assurez-vous que tous les nœuds des outils ONTAP résident sur le même sous-réseau pour maintenir une communication ininterrompue entre eux.
 
+Cliquez pour développer ou réduire le tableau des exigences relatives aux ports.
 
+[%collapsible]
+====
 |===
 | *Nom du service/composant* | *Port* | *Protocole* | *Type de port* | *Description* 
 
@@ -152,6 +155,7 @@ NOTE: Assurez-vous que tous les nœuds des outils ONTAP résident sur le même s
 
 NOTE: Pour les déploiements HA, assurez-vous que le port UDP 8472 est ouvert entre tous les nœuds. Ce port permet la communication entre les pods au sein des nœuds ; son blocage interrompra la mise en réseau entre les nœuds.
 
+====
 
 
 == Limites de configuration pour le déploiement des outils ONTAP pour VMware vSphere
