@@ -19,7 +19,7 @@ Vous devez disposer des informations d'identification de l'utilisateur de mainte
 .Étapes
 . À partir du serveur vCenter, ouvrez une console pour accéder aux outils ONTAP.
 . Connectez-vous en tant qu'utilisateur de maintenance.
-. Entrer `1` pour sélectionner le menu de configuration de l'application.
+. Entrer `1` pour sélectionner le menu *Configuration de l'application*.
 . Entrer `3` pour modifier l'indicateur de validation du certificat.
 +
 La console de maintenance affiche l’état de l’indicateur de validation du certificat et vous invite à le modifier.

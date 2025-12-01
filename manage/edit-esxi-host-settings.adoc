@@ -11,17 +11,17 @@ summary: Vous pouvez utiliser le tableau de bord des outils ONTAP pour VMware vS
 
 
 [role="lead"]
-Vous pouvez utiliser le tableau de bord des outils ONTAP pour VMware vSphere afin de modifier les paramètres de votre hôte ESXi.
+Utilisez le tableau de bord des outils ONTAP dans VMware vSphere pour identifier les problèmes de configuration, sélectionner les hôtes ESXi, consulter les paramètres recommandés par NetApp et les appliquer.
 
 .Avant de commencer
-En cas de problème avec vos paramètres d'hôte ESXi, le problème s'affiche dans le portlet des systèmes hôtes ESXi du tableau de bord. Vous pouvez sélectionner le problème pour afficher le nom d'hôte ou l'adresse IP de l'hôte ESXi présentant le problème.
+Le portlet des systèmes hôtes ESXi affiche les problèmes liés aux paramètres de l'hôte ESXi.  Sélectionnez un problème pour afficher le nom d'hôte ou l'adresse IP.
 
 .Étapes
 . Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Accédez au portlet *ESXi Host Compliance* dans la Présentation (tableau de bord) du plug-in ONTAP Tools for VMware vSphere.
 . Sélectionnez le lien *appliquer les paramètres recommandés*.
-. Dans la fenêtre *appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes que vous souhaitez respecter avec les paramètres d'hôte recommandés par NetApp et sélectionnez *Suivant*.
+. Dans la fenêtre *Appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes pour lesquels vous souhaitez utiliser les paramètres d'hôte recommandés par NetApp , puis sélectionnez *Suivant*.
 +
 
 NOTE: Vous pouvez développer l'hôte ESXi pour voir les valeurs actuelles.

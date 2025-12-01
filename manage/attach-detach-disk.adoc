@@ -10,18 +10,21 @@ summary: Reliez un disque de données à une machine virtuelle pour augmenter la
 :imagesdir: ../media/
 
 
+[role="lead"]
+Suivez ces étapes pour attacher ou détacher des disques de données de machines virtuelles dans vSphere et gérer leurs ressources de stockage.
+
 
 
 == Reliez un disque de données à une machine virtuelle
 
-Reliez un disque de données à une machine virtuelle pour augmenter la capacité de stockage.
+Connectez un disque de données à une machine virtuelle pour augmenter son espace de stockage.
 
 .Étapes
 . Connectez-vous au client vSphere.
 . Cliquez avec le bouton droit sur une machine virtuelle dans l’inventaire et sélectionnez *Modifier les paramètres*.
 . Dans l'onglet *matériel virtuel*, sélectionnez *disque dur existant*.
 . Sélectionnez la machine virtuelle sur laquelle le disque existe.
-. Sélectionnez le disque que vous souhaitez connecter et sélectionnez *OK*
+. Sélectionnez le disque que vous souhaitez connecter et sélectionnez le bouton *OK*.
 
 
 .Résultat
@@ -31,7 +34,7 @@ Le disque dur apparaît dans la liste périphériques matériels virtuels.
 
 == Détacher un disque de données de la machine virtuelle
 
-Vous pouvez détacher un disque de données connecté à une machine virtuelle lorsqu'il n'est plus nécessaire. Lorsque vous détachez le disque de la machine virtuelle, il n'est pas automatiquement supprimé ; il reste sur le système de stockage ONTAP.
+Détachez un disque de données d'une machine virtuelle lorsque vous n'en avez plus besoin.  Le disque n'est pas supprimé ; il reste sur le système de stockage ONTAP .
 
 .Étapes
 . Connectez-vous au client vSphere.

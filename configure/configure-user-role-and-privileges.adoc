@@ -11,7 +11,7 @@ summary: Configurez les rôles et privilèges utilisateur pour les backends de s
 
 
 [role="lead"]
-Configurez les rôles et privilèges utilisateur pour les backends de stockage avec le fichier JSON des ONTAP tools for VMware vSphere et ONTAP System Manager.
+Utilisez cette section pour configurer les rôles et privilèges des utilisateurs ONTAP pour les systèmes de stockage avec les ONTAP tools for VMware vSphere et ONTAP System Manager.  Vous pouvez attribuer des rôles à l'aide des fichiers JSON fournis, créer manuellement des utilisateurs et des rôles, et appliquer les privilèges minimaux requis aux comptes non administrateurs.
 
 .Avant de commencer
 * Téléchargez le fichier ONTAP Privileges à partir des ONTAP tools for VMware vSphere à l'aide de _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.  Après avoir téléchargé le fichier zip, vous trouverez deux fichiers JSON.  Utilisez le fichier JSON spécifique à ASA r2 lors de la configuration d'un système ASA r2.

@@ -21,8 +21,8 @@ Vous pouvez effectuer une mise à niveau des ONTAP tools for VMware vSphere 10.3
 
 ====
 .Avant de commencer
+* Assurez-vous que tous les nœuds sont actifs.
 * Assurez-vous que le certificat système ONTAP et les certificats vCenter intégrés sont valides pendant au moins 5 jours. Si les certificats expirent plus tôt, la mise à niveau échoue.
-* Pour garantir une mise à niveau sécurisée, vérifiez que vos certificats incluent des entrées de nom alternatif du sujet (SAN). Si les certificats manquent d’entrées SAN, définissez l’indicateur de validation du certificat sur faux pour contourner les vérifications SAN pendant la mise à niveau.
 * Assurez-vous d’avoir un cinquième disque d’une capacité de 100 Go sur tous les nœuds.
 * Vérifiez que la configuration du nœud correspond aux spécifications du tableau ci-dessous.
 
@@ -46,8 +46,8 @@ Vous pouvez effectuer une mise à niveau des ONTAP tools for VMware vSphere 10.3
 | HAUTE disponibilité | 17 | 34 | 350 | 51 | 102 | 1050 
 |===
 * Assurez-vous que le branchement à chaud pour le processeur et la RAM est activé.
-* Pour le déploiement des ONTAP tools for VMware vSphere 10.3 ou 10.4, prenez un snapshot suspendu sur la machine virtuelle des outils ONTAP avant la mise à niveau.
-* Activez la sauvegarde à faible RPO et assurez-vous qu'une sauvegarde est visible dans l'interface client vCenter.
+* Activez la sauvegarde à faible RPO et assurez-vous qu'une sauvegarde soit visible dans l'interface du client vCenter.  Téléchargez le dossier de sauvegarde avant la mise à niveau.
+* Une sauvegarde avec un RPO faible est recommandée.  Toutefois, dans un déploiement non HA, vous pouvez prendre un instantané mis au repos de la machine virtuelle des outils ONTAP avant la mise à niveau.
 +
 Se référer à link:../manage/backup-settings.html["Modifier les paramètres de sauvegarde"] et link:../manage/recover-backup.html["Récupérer la configuration des outils ONTAP"] pour plus d'informations sur la sauvegarde et la restauration.
 
@@ -85,7 +85,8 @@ Pendant la mise à niveau, si des certificats backend de stockage intégrés man
 Après la mise à niveau vers les ONTAP tools for VMware vSphere 10.5 :
 
 * Surveillez les alertes système et prévoyez de renouveler le certificat de passerelle avant son expiration dans un an.
-* Supprimez l'adaptateur SRA 10.4 ou 10.3 des outils ONTAP et téléchargez le fichier tar de l'adaptateur SRA 10.5.  Ensuite, analysez à nouveau les adaptateurs SRA pour mettre à jour la page Adaptateurs de réplication de stockage VMware Site Recovery.
+* Supprimez l'adaptateur SRA 10.4 ou 10.3 des outils ONTAP et téléchargez le fichier tar de l'adaptateur SRA 10.5.
+* Exécutez la commande d'installation après avoir téléchargé l'archive tar de l'adaptateur SRA. Ensuite, analysez à nouveau les adaptateurs SRA pour mettre à jour la page des adaptateurs de réplication de stockage VMware Site Recovery.
 
 
 Après la mise à niveau, vous pouvez :

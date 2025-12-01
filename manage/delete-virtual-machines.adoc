@@ -11,10 +11,10 @@ summary: Suivez les étapes de cette section pour effectuer un nettoyage VASA.
 
 
 [role="lead"]
-Suivez ces instructions pour mener à bien le processus de nettoyage VASA.
+Pour mener à bien le processus de nettoyage VASA, suivez ces étapes.
 
 
-NOTE: Il est recommandé de supprimer tous les datastores vVols avant d'effectuer le nettoyage de VASA.
+NOTE: Il est recommandé de supprimer tous les datastores vVols avant de commencer le nettoyage VASA.
 
 .Étapes
 . Annulez l'enregistrement du plug-in en accédant à \https://OTV_IP:8143/Register.html

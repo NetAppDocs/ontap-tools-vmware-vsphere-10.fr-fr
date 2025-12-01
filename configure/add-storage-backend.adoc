@@ -11,13 +11,13 @@ summary: Les systèmes back-end de stockage sont des systèmes que les hôtes ES
 
 
 [role="lead"]
-Lorsque vous ajoutez des backends de stockage aux outils ONTAP , vous pouvez provisionner et gérer des banques de données directement à partir de vCenter Server.
+Utilisez les ONTAP tools for VMware vSphere afin d'ajouter et de gérer les systèmes de stockage pour vos hôtes ESXi.  Vous pouvez intégrer des clusters ou des SVM, activer la prise en charge de MetroCluster et valider les certificats pour une connectivité sécurisée.  Vous pouvez configurer les systèmes de stockage à l'aide ONTAP Tools Manager ou du client vSphere, surveiller l'état des certificats et redécouvrir manuellement les ressources après des modifications du cluster.
 
-Pour ajouter des backends de stockage localement, utilisez les informations d’identification du cluster ou SVM dans l’interface des outils ONTAP .  Ces backends de stockage sont disponibles uniquement pour le serveur vCenter sélectionné.  Les outils ONTAP mappent les SVM au serveur vCenter pour la gestion des banques de données vVols ou VMFS.  Pour les workflows de banque de données VMFS et SRA, vous pouvez utiliser les informations d’identification SVM sans avoir besoin d’un cluster mappé globalement.
+Pour ajouter un système de stockage local, utilisez les informations d'identification du cluster ou de la SVM dans l'interface des outils ONTAP .  Les systèmes de stockage local sont disponibles uniquement pour le serveur vCenter sélectionné. Les outils ONTAP mappent les SVM au serveur vCenter pour la gestion des banques de données vVols ou VMFS.  Pour les banques de données VMFS et les flux de travail SRA, vous pouvez utiliser les informations d'identification SVM sans mapper un cluster globalement.
 
-Vous pouvez ajouter des backends de stockage globaux à l’aide des informations d’identification du cluster ONTAP dans le gestionnaire d’outils ONTAP .  Les backends de stockage globaux permettent aux workflows de découverte d'identifier les ressources de cluster nécessaires à la gestion de vVol.  Dans les configurations multilocataires, vous pouvez ajouter un utilisateur SVM localement pour gérer les banques de données vVols .
+Pour ajouter un système de stockage global, utilisez les informations d'identification du cluster ONTAP dans ONTAP Tools Manager.  Les systèmes de stockage globaux permettent aux flux de travail de découverte d'identifier les ressources du cluster nécessaires à la gestion des vVol.  Dans les environnements mutualisés, vous pouvez ajouter localement un utilisateur SVM pour gérer les banques de données vVols .
 
-Lorsque vous activez la prise en charge de MetroCluster dans le système ONTAP , intégrez les clusters source et de destination en tant que backends de stockage locaux ou globaux.
+Si la prise en charge de MetroCluster est activée dans ONTAP, intégrez les clusters source et de destination en tant que backends de stockage locaux ou globaux.
 
 .Avant de commencer
 Vérifiez que le certificat inclut un champ Nom alternatif du sujet (SAN) valide.  Les systèmes ONTAP utilisent le champ SAN pour identifier les LIF de gestion des clusters et des SVM.

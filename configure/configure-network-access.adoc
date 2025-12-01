@@ -11,7 +11,7 @@ summary: 'Si vous n"avez pas configuré l"accès au réseau, toutes les adresses
 
 
 [role="lead"]
-À moins que l’accès au réseau n’ait été configuré, toutes les adresses IP découvertes à partir de l’hôte ESXi sont automatiquement incluses dans la politique d’exportation.  Vous pouvez configurer la stratégie pour autoriser uniquement certaines adresses IP et en exclure d’autres ; toutefois, si vous essayez de monter à partir d’un hôte ESXi exclu, l’opération échouera.
+Par défaut, toutes les adresses IP détectées depuis l'hôte ESXi sont automatiquement ajoutées à la stratégie d'exportation, sauf si vous configurez l'accès réseau.  Vous pouvez modifier la politique d'exportation pour autoriser l'accès uniquement à partir d'adresses IP spécifiques.  Si un hôte ESXi exclu tente une opération de montage, l'opération échoue.
 
 .Étapes
 . Connectez-vous au client vSphere.
