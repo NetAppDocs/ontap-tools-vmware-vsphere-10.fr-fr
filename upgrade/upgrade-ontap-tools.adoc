@@ -68,8 +68,9 @@ Se référer à link:../manage/backup-settings.html["Modifier les paramètres de
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez *2* pour sélectionner le menu *Configuration système*.
 . Entrez *7* pour sélectionner l’option *Mise à niveau*.
+. Fournissez les informations d'identification vCenter lorsque vous y êtes invité.  Il s'agit de l'instance vCenter sur laquelle sont hébergés les outils ONTAP .
 +
-Si vous déployez des outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP .  Vous pouvez créer un utilisateur et un rôle vCenter dédiés avec uniquement les autorisations de banque de données listées ci-dessous requises pour le déploiement du modèle OVF :
+Si vous utilisez les outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP .  Vous pouvez créer un utilisateur et un rôle vCenter dédiés avec uniquement les autorisations de banque de données listées ci-dessous :
 
 +
 ** Allouer de l'espace
