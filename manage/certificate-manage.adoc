@@ -11,7 +11,7 @@ summary: Une seule instance des outils ONTAP pour VMware vSphere peut gérer plu
 
 
 [role="lead"]
-Un certificat auto-signé est généré pour les outils ONTAP et VASA Provider par défaut lors du déploiement. À l’aide de l’interface du gestionnaire d’outils ONTAP , vous pouvez renouveler le certificat ou le mettre à niveau vers une autorité de certification personnalisée. Vous devez utiliser des certificats d'autorité de certification personnalisés dans un déploiement multi-vCenter.
+Un certificat auto-signé est généré par défaut pour les outils ONTAP et le fournisseur VASA lors du déploiement. Vous pouvez utiliser l'interface du gestionnaire d'outils ONTAP pour renouveler ce certificat ou le remplacer par un certificat d'autorité de certification personnalisé. Dans les déploiements multi-vCenter, l'utilisation de certificats d'autorité de certification personnalisés est requise.
 
 .Avant de commencer
 Vous devriez avoir les éléments suivants avant de commencer :
@@ -47,7 +47,7 @@ NOTE: Le système sera hors ligne jusqu'à ce que le certificat soit renouvelé 
 . Pour mettre à niveau le certificat auto-signé vers un certificat CA personnalisé, sélectionnez *certificats* > *ONTAP Tools* > *mettre à niveau vers CA* option.
 +
 .. Dans la fenêtre contextuelle, téléchargez le certificat du serveur, la clé privée du certificat du serveur, le certificat de l'autorité de certification racine et les fichiers de certificat intermédiaires.
-.. Entrez le nom de domaine pour lequel vous avez généré ce certificat et mettez à niveau le certificat.
+.. Saisissez le nom de domaine complet (FQDN) de l'adresse IP de l'équilibreur de charge pour lequel vous avez généré ce certificat et mettez-le à jour.
 +
 
 NOTE: Le système sera hors ligne jusqu'à la fin de la mise à niveau et vous serez déconnecté de l'interface du Gestionnaire d'outils ONTAP.
@@ -68,7 +68,7 @@ Les outils ONTAP pour VMware vSphere sont déployés avec un certificat auto-sig
 . Sélectionnez *certificats* > *VASA Provider* ou *ONTAP Tools* > *mettre à niveau vers CA* pour mettre à niveau le certificat auto-signé vers un certificat CA personnalisé.
 +
 .. Dans la fenêtre contextuelle, téléchargez le certificat du serveur, la clé privée du certificat du serveur, le certificat de l'autorité de certification racine et les fichiers de certificat intermédiaires.
-.. Entrez le nom de domaine pour lequel vous avez généré ce certificat et mettez à niveau le certificat.
+.. Saisissez le nom de domaine complet (FQDN) de l'adresse IP de l'équilibreur de charge pour lequel vous avez généré ce certificat et mettez-le à jour.
 +
 
 NOTE: Le système sera hors ligne jusqu'à la fin de la mise à niveau et vous serez déconnecté de l'interface du Gestionnaire d'outils ONTAP.

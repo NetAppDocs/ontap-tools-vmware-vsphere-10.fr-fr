@@ -1117,7 +1117,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="700e580d2a33afbe04073228203485fe" category="paragraph">Vous pouvez renouveler le certificat s'il a expiré ou s'il approche de sa date d'expiration. L'option renouveler est disponible lorsque le type de certificat est signé par une autorité de certification. Dans la fenêtre contextuelle, indiquez le certificat du serveur, la clé privée, l'autorité de certification racine et le certificat intermédiaire.</block>
   <block id="04b97a75d793e5e8d9c91f69fb8803f5" category="admonition">Le système sera hors ligne jusqu'à ce que le certificat soit renouvelé et vous serez déconnecté de l'interface du Gestionnaire d'outils ONTAP.</block>
   <block id="2da89430805560f209041c63cfb2f20f" category="list-text">Dans la fenêtre contextuelle, téléchargez le certificat du serveur, la clé privée du certificat du serveur, le certificat de l'autorité de certification racine et les fichiers de certificat intermédiaires.</block>
-  <block id="ca148a970e5b5a81a77ce6e27a1e6a55" category="list-text">Entrez le nom de domaine pour lequel vous avez généré ce certificat et mettez à niveau le certificat.</block>
   <block id="96e25bc2ea7c946d5cb80df5623b04f4" category="admonition">Le système sera hors ligne jusqu'à la fin de la mise à niveau et vous serez déconnecté de l'interface du Gestionnaire d'outils ONTAP.</block>
   <block id="4d8920fb51dbe2e0eeb3d23c3b11224b" category="paragraph">Les outils ONTAP pour VMware vSphere sont déployés avec un certificat auto-signé pour VASA Provider. Avec cela, une seule instance vCenter Server peut être gérée pour les datastores vVols. Lorsque vous gérez plusieurs instances de vCenter Server et que vous souhaitez activer la fonctionnalité vVols sur celles-ci, vous devez remplacer le certificat auto-signé par un certificat d'autorité de certification personnalisé.</block>
   <block id="81914abf558d30aee207170f7eb62743" category="list-text">Sélectionnez *certificats* &gt; *VASA Provider* ou *ONTAP Tools* &gt; *Renew* pour renouveler les certificats.</block>
@@ -1291,7 +1290,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="cf3ebf71afc09e18d1f314148fa3811e" category="section-title">Rôles inclus avec les outils ONTAP pour VMware vSphere 10</block>
   <block id="9956bf2190822dfa9e747d5beea541f5" category="paragraph">Pour simplifier l'utilisation du RBAC de vCenter Server, les outils ONTAP pour VMware vSphere fournissent des rôles prédéfinis adaptés à diverses tâches d'administration.</block>
   <block id="164df67d012e8e0ac61963c54eda6893" category="admonition">Vous pouvez créer de nouveaux rôles personnalisés si nécessaire. Dans ce cas, vous devez cloner l'un des rôles d'outils ONTAP existants et le modifier si nécessaire. Après avoir modifié la configuration, les utilisateurs du client vSphere concernés doivent se déconnecter et se reconnecter pour activer les modifications.</block>
-  <block id="63c3900e2803574b915938ebce0260d4" category="paragraph">Pour afficher les outils ONTAP pour les rôles VMware vSphere, sélectionnez *Menu* en haut du client vSphere et cliquez sur *Administration*, puis sur *rôles* à gauche. Il existe trois rôles prédéfinis, comme décrit ci-dessous.</block>
   <block id="37dfa1e83e1bae8babc789706610e685" category="paragraph">Fournit tous les outils vCenter Server Privileges natifs et ONTAP spécifiques Privileges requis pour effectuer les tâches d'administration des principaux outils ONTAP pour VMware vSphere.</block>
   <block id="cd027b3cb7fb1e8712103dffdf01a491" category="paragraph-title">Outils NetApp ONTAP pour le provisionnement VMware vSphere</block>
   <block id="7e5cada6cb223f80ed0a2b6fee9ab3dc" category="section-title">Objets vSphere et systèmes back-end de stockage ONTAP</block>
@@ -2336,7 +2334,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="c81c266dd6001708c9f3076ddf21214c" category="paragraph">Le nouvel hôte est désormais détecté et géré par les ONTAP tools for VMware vSphere. Vous pouvez maintenant procéder à la gestion du datastore sur le nouvel hôte.</block>
   <block id="11d81e4c78f6be23d5539c87f4f3a7a7" category="list-text"><block ref="c5978119f323c1ceb37571472aaae169" category="inline-link-macro-rx"></block>sur de nouveaux hôtes.</block>
   <block id="063680c82bcd7ffea25b1d4d5c3c6470" category="list-text"><block ref="b5251e50ffdcc6a83e84a63c2a1cd1e4" category="inline-link-macro-rx"></block>sur de nouveaux hôtes.</block>
-  <block id="0eb234ccef0fdd3bb9f5b615c5ec8eef" category="paragraph">Un certificat auto-signé est généré pour les outils ONTAP et VASA Provider par défaut lors du déploiement. À l’aide de l’interface du gestionnaire d’outils ONTAP , vous pouvez renouveler le certificat ou le mettre à niveau vers une autorité de certification personnalisée. Vous devez utiliser des certificats d'autorité de certification personnalisés dans un déploiement multi-vCenter.</block>
   <block id="badf77f43d93c8a563816ac386123a63" category="paragraph">Vous devriez avoir les éléments suivants avant de commencer :</block>
   <block id="37b0536bf9555d4fd2d03f77ee0b0bab" category="list-text">Le nom de domaine correspond à l'adresse IP virtuelle.</block>
   <block id="d417b5848864e0c056fdd924f5f377f5" category="list-text">Résolution réussie du nom de domaine par nslookup, confirmant qu'il correspond à l'adresse IP correcte.</block>
@@ -2410,7 +2407,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="3a7af0096c6ddabf7582b1bae1272dd6" category="paragraph">Si vous déployez des outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP .  Vous pouvez créer un utilisateur et un rôle vCenter dédiés avec uniquement les autorisations de banque de données listées ci-dessous requises pour le déploiement du modèle OVF :</block>
   <block id="c6519d60f243eebfcc92d096e23bdb8b" category="list-text">Allouer de l'espace</block>
   <block id="653ea8411fd85f46f22e62ee3cabb643" category="list-text">Parcourir le magasin de données</block>
-  <block id="c1e99705ec496cfaec18f7abaf8deb4f" category="list-text">Opérations de fichiers de bas niveau</block>
   <block id="b21f085d08623fc7a5a9da204cc66c8c" category="list-text">Supprimer le fichier</block>
   <block id="e9cfb64d47efe034339436bf09172593" category="list-text">Mettre à jour les fichiers de la machine virtuelle</block>
   <block id="08437994b9601a135d92f032a83daf1c" category="list-text">Mettre à jour les métadonnées de la machine virtuelle</block>
@@ -2507,4 +2503,109 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">Réplication SRA pour les banques de données iSCSI VMFS et NFS v3, protection sur trois sites combinant SMAS et VMware Live Site Recovery. Prise en charge SRA pour FCP avec VMFS.</block>
   <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">Fournissez les informations d'identification vCenter lorsque vous y êtes invité.  Il s'agit de l'instance vCenter sur laquelle sont hébergés les outils ONTAP .</block>
   <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">Si vous utilisez les outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP .  Vous pouvez créer un utilisateur et un rôle vCenter dédiés avec uniquement les autorisations de banque de données listées ci-dessous :</block>
+  <block id="02086c74e7c7de9c13df55ddb85cb6a9" category="paragraph">Pour afficher les ONTAP tools for VMware vSphere , sélectionnez *Menu* en haut du client vSphere, puis cliquez sur *Administration* et enfin sur *Rôles* à gauche. Les privilèges suivants doivent être inclus dans le rôle attribué à l'utilisateur vCenter responsable du déploiement ou de l'intégration de vCenter. Assurez-vous que ces privilèges sont configurés comme condition préalable au déploiement ou au processus d'intégration.</block>
+  <block id="301d574ef42563b03638c8eae19225cb" category="list-text">Alarmes</block>
+  <block id="6c352acb91887b241b030d91d72bdf66" category="list-text">Accuser réception de l'alarme</block>
+  <block id="55764a40428feb54ed131a5442e5e9d6" category="list-text">Bibliothèque de contenu</block>
+  <block id="7fda80facd4b5302f2a2c887c2ecb595" category="list-text">Ajouter un élément de bibliothèque</block>
+  <block id="1e1c0c7bc66940beac7add74f122a6f5" category="list-text">Vérifier dans un modèle</block>
+  <block id="68bc9937a90b947daae3bb691abad236" category="list-text">Consultez un modèle</block>
+  <block id="3fcf474605790b0472ff59a3b813e230" category="list-text">Télécharger les fichiers</block>
+  <block id="2ccfd03d6c52fc23815076ccc63f020a" category="list-text">Stockage d'importation</block>
+  <block id="bf0d559fc72e2b15ec4b32db14be07ad" category="list-text">Stockage de lecture</block>
+  <block id="df4952ff5cee5ec41685b522c3c98e1f" category="list-text">Élément de bibliothèque synchroniser</block>
+  <block id="bb08c14df0dc403c06e4d04c8d09aa47" category="list-text">Bibliothèque synchronisée par abonnement</block>
+  <block id="4f2a0b4125eaf9d8804c99dcd015f5c0" category="list-text">Afficher les paramètres de configuration</block>
+  <block id="0c675ffdeb5e9d32e027b53289046420" category="list-text">Opérations de fichiers de bas niveau</block>
+  <block id="8c79c9b6e95183161d6876a3c3e5e7de" category="list-text">Gestionnaire d'agents ESX</block>
+  <block id="4351cfebe4b61d8aa5efa1d020710005" category="list-text">View</block>
+  <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="list-text">Dossier</block>
+  <block id="5dc1e97c14fbe72d8b566ce29c39f010" category="list-text">Créer un dossier</block>
+  <block id="c2ca16d048ec66e04bca283eab048ec2" category="list-text">Hôte</block>
+  <block id="254f642527b45bc260048e30704edb39" category="list-text">Configuration</block>
+  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="list-text">Paramètres avancés</block>
+  <block id="1221ff7164cdee8b469096ebf5e997f6" category="list-text">Modifier les paramètres</block>
+  <block id="5dd57c2a315d3af44c2eb40eefc47111" category="list-text">Configuration du réseau</block>
+  <block id="4f925d4097e72dc18c34b7ebba99bc4f" category="list-text">Ressources système</block>
+  <block id="d154fb143613245dc009aa97a790ae3b" category="list-text">configuration du démarrage automatique de la machine virtuelle</block>
+  <block id="97fc2547b66cc43d6329a79c740cc008" category="list-text">Opérations locales</block>
+  <block id="5daad9a463f9102e036b5aaa1cf2b87e" category="list-text">Créer une machine virtuelle</block>
+  <block id="dd230a946aa4a56d733b1f9296f90610" category="list-text">Supprimer la machine virtuelle</block>
+  <block id="d4d82afbdd25c6582604ef24a51dd4eb" category="list-text">Reconfigurer la machine virtuelle</block>
+  <block id="eec89088ee408b80387155272b113256" category="list-text">Réseau</block>
+  <block id="0f2a9e2e169a500cc92684521eaa4a9a" category="list-text">Attribuer un réseau</block>
+  <block id="f1206f9fadc5ce41694f69129aecac26" category="list-text">Configure</block>
+  <block id="1b4221480b16d411125810dde8dde8f9" category="list-text">Gestionnaire Ovf</block>
+  <block id="fe84a57f372ccd35cea7a9f532b0758e" category="list-text">Accès consommateur Ovf</block>
+  <block id="1e96581e09b24e0b3ef2fa9e9837a567" category="list-text">Profil de l'hôte</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="list-text">Ressource</block>
+  <block id="be4e8bed170ca25e86a8395892b08952" category="list-text">Affecter une machine virtuelle au pool de ressources</block>
+  <block id="fdae47a7dc2be0ca39d6eaef415f393e" category="list-text">Tâche planifiée</block>
+  <block id="dbce9628ef585e7df3a0399258ab906a" category="list-text">Créer des tâches</block>
+  <block id="dc5458cbf6935d24490c83f49e40b5db" category="list-text">Modifier la tâche</block>
+  <block id="7020e3d2f102ae19d25897edced29ba9" category="list-text">Exécuter la tâche</block>
+  <block id="ef615563c8e8ea902c7fcac3cd2c4246" category="list-text">Tâches</block>
+  <block id="9c0f21d13609c634ed11fdef5006227b" category="list-text">Créer une tâche</block>
+  <block id="fb6df535efad5feef144fec0d962d6fd" category="list-text">Tâche de mise à jour</block>
+  <block id="776c22edd71a94b798c726e47a0fce00" category="list-text">vApp</block>
+  <block id="9a8c4687d06865a95cc7648eeddb3a61" category="list-text">Ajouter une machine virtuelle</block>
+  <block id="d3489e687ecac056ebf2c2638db98a8f" category="list-text">Affecter un pool de ressources</block>
+  <block id="4fc186574fa1d6007738c545dfd83193" category="list-text">Attribuer une vApp</block>
+  <block id="72d6d7a1885885bb55a565fd1070581a" category="list-text">Importer</block>
+  <block id="6bc362dbf494c61ea117fe3c71ca48a5" category="list-text">Se déplacer</block>
+  <block id="1bb202d66fd437a5e7ad355057d3dcb3" category="list-text">Mise hors tension</block>
+  <block id="eb503c4e76174415d5b8c63a4393ee0b" category="list-text">Mise sous tension</block>
+  <block id="a140a7a64a801da8270ca529a9f13fb4" category="list-text">Récupérer depuis l'URL</block>
+  <block id="6539d32084cd2a9331de2229c0f1b1ea" category="list-text">Afficher l'environnement OVF</block>
+  <block id="56a1d9dbd940bf6b46e973e279c60c10" category="list-text">Modifier la configuration</block>
+  <block id="c629a65bf0cad09db50b338d3b22ceaa" category="list-text">Ajouter un disque existant</block>
+  <block id="290f3ac3e6b4bd78ff9a9070bb2c965a" category="list-text">Ajouter un nouveau disque</block>
+  <block id="ef1affd058b739f5a69433d49a5ddfe8" category="list-text">Ajouter ou supprimer un appareil</block>
+  <block id="119dd5a342e981b13bf0024d5c6a6933" category="list-text">Configuration avancée</block>
+  <block id="61705f157c64f8c4f27e58eff60b09e2" category="list-text">Modifier le nombre de cœurs du processeur</block>
+  <block id="e99fa5e2795936890719554d3dc1dbcf" category="list-text">Changer la mémoire</block>
+  <block id="2ad5d114916a79d614211b7622b98251" category="list-text">Modifier les paramètres</block>
+  <block id="b81398b82bb104abd241c7bce6d3450b" category="list-text">Modifier la ressource</block>
+  <block id="86381d484481a4d844f53e28c769eaad" category="list-text">Étendre le disque virtuel</block>
+  <block id="7a4d0d96ff85f2e26f1ac8d0a5c42b74" category="list-text">Modifier les paramètres de l'appareil</block>
+  <block id="175d3bc37a203b0e58c2d1bb572971de" category="list-text">Retirer le disque</block>
+  <block id="6c2cadc5f0b182e333bf2dad08ca8ff1" category="list-text">Réinitialiser les informations des invités</block>
+  <block id="5ec85f637822f3afefe71224e4f551b5" category="list-text">Mise à niveau de la compatibilité des machines virtuelles</block>
+  <block id="4d37e6414fba199227861f08a4aefb2f" category="list-text">Modifier l'inventaire</block>
+  <block id="eb420426750166280dc02d6c621c14d0" category="list-text">Créer à partir d'un existant</block>
+  <block id="f7f78b9dfe29752b9e04490253838264" category="list-text">Créer un nouveau</block>
+  <block id="0ba7583639a274c434bbe6ef797115a4" category="list-text">Registre</block>
+  <block id="1063e38cb53d94d386f21227fcd84717" category="list-text">Retirer</block>
+  <block id="9d4a8f2dfe3c62f3ce3011035d28fb66" category="list-text">Désinscription</block>
+  <block id="61ee5a22cd5f14ed4e48eb5611031e74" category="list-text">Interaction</block>
+  <block id="2db1c743d337c4f4d863422ad30d97cd" category="list-text">Opération de sauvegarde sur machine virtuelle</block>
+  <block id="0dc00ee511e76ee47dd673fefe3dbe99" category="list-text">Configurer le support CD</block>
+  <block id="9a0f1db822b6f7870f968161a6f8d334" category="list-text">Configurer le lecteur de disquettes</block>
+  <block id="90d357ff2349f9ba8e8edcd12eb41b7d" category="list-text">Appareils de connexion</block>
+  <block id="477528aa800f91aa21332ac6b7ef36fc" category="list-text">Interaction avec la console</block>
+  <block id="9068dd22ad3328ced9301270e409df6a" category="list-text">Gestion du système d'exploitation invité par l'API VIX</block>
+  <block id="526d688f37a86d3c3f27d0c5016eb71d" category="list-text">Réinitialiser</block>
+  <block id="b3834d6f7a63e5e750e0ca5ecf31e3b9" category="list-text">Suspendre</block>
+  <block id="89c3bcf0ecc1114f8d19734d9156cb40" category="list-text">Provisionnement</block>
+  <block id="5680f22aa1fdfe0f98deeffd2ff47d08" category="list-text">Autoriser l'accès au disque</block>
+  <block id="e175434c80ef613608d78e91fd789903" category="list-text">Modèle clone</block>
+  <block id="598fbc9a28d6f19e92b27e1a5af7ad0e" category="list-text">Personnaliser l'expérience invité</block>
+  <block id="c7578f41f073fde5296d8ddc592abd31" category="list-text">Modèle de déploiement</block>
+  <block id="3c42b71d77b9e5f83e0ee3f8ed97d8da" category="list-text">Modifier les spécifications de personnalisation</block>
+  <block id="c2578bfe84d0cf1e9df740a50d2613b1" category="list-text">Lire les spécifications de personnalisation</block>
+  <block id="70f03bba53aef7388a7ba23be66f7ca0" category="list-text">Gestion des instantanés</block>
+  <block id="bfb2cee5de3a54c30810194a0077e673" category="list-text">Créer un instantané</block>
+  <block id="ada1b8fca015644eb0e5c19ee82795da" category="list-text">Supprimer l'instantané</block>
+  <block id="c3b272eb798aaa11b258a91dbf4ef016" category="list-text">Renommer l'instantané</block>
+  <block id="e2a5f777b44916836fdc3739a3964e98" category="list-text">Rétablir l'instantané</block>
+  <block id="9d907c3f5539ff6f152a649a7d58d691" category="paragraph">Il existe trois rôles prédéfinis comme décrit ci-dessous.</block>
+  <block id="ed6bb5734812ec0d7dd5450746f207a0" category="paragraph">Un certificat auto-signé est généré par défaut pour les outils ONTAP et le fournisseur VASA lors du déploiement. Vous pouvez utiliser l'interface du gestionnaire d'outils ONTAP pour renouveler ce certificat ou le remplacer par un certificat d'autorité de certification personnalisé. Dans les déploiements multi-vCenter, l'utilisation de certificats d'autorité de certification personnalisés est requise.</block>
+  <block id="324fa302eeeb16cb22483400ce096be0" category="list-text">Saisissez le nom de domaine complet (FQDN) de l'adresse IP de l'équilibreur de charge pour lequel vous avez généré ce certificat et mettez-le à jour.</block>
+  <block id="1289a0b5a75e6b47ee61b41fe287786a" category="section-title">Renouveler le certificat du serveur vCenter</block>
+  <block id="45666909a9079a8d4af9a72d51a83220" category="paragraph">Les outils ONTAP vous avertissent lorsque le certificat vCenter approche de son expiration ou a expiré. Après avoir renouvelé le certificat vCenter, téléchargez le nouveau certificat sur les outils ONTAP en suivant les étapes suivantes :</block>
+  <block id="282eed63cac957955b046d29d83d09d8" category="list-text">Connectez-vous à l'interface de diagnostic à distance des outils ONTAP .</block>
+  <block id="e6452e8e9c18000281aae81760220823" category="list-text">Obtenez le certificat vCenter renouvelé depuis l'interface de diagnostic :</block>
+  <block id="8012fc6ae8c7c5cd0d9d44e8d3169bbb" category="list-text">Assurez-vous que le certificat est au format ASCII Base 64 et qu'il comprend les lignes de début et de fin, par exemple :</block>
+  <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">Copiez le résultat et enregistrez-le dans un fichier texte avec un<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> extension sur votre bureau.</block>
+  <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
 </blocks>
