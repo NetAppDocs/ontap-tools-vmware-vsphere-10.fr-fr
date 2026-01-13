@@ -70,22 +70,13 @@ Se référer à link:../manage/backup-settings.html["Modifier les paramètres de
 . Entrez *7* pour sélectionner l’option *Mise à niveau*.
 . Fournissez les informations d'identification vCenter lorsque vous y êtes invité.  Il s'agit de l'instance vCenter sur laquelle sont hébergés les outils ONTAP .
 +
-Si vous utilisez les outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP .  Vous pouvez créer un utilisateur et un rôle vCenter dédiés avec uniquement les autorisations de banque de données listées ci-dessous :
+Si vous utilisez les outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP . Vous pouvez créer un utilisateur et un rôle vCenter dédiés, disposant uniquement des autorisations requises pour le déploiement du modèle OVF. Pour plus de détails, consultez les rôles énumérés dans https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Rôles inclus avec les outils ONTAP pour VMware vSphere 10"].
 
-+
-** Allouer de l'espace
-** Parcourir le magasin de données
-** Opérations de fichiers de bas niveau
-** Supprimer le fichier
-** Mettre à jour les fichiers de la machine virtuelle
-** Mettre à jour les métadonnées de la machine virtuelle
 +
 Pour l'instance vCenter qui sera gérée par les outils ONTAP , assurez-vous que le compte utilisateur vCenter dispose des privilèges d'administrateur.
 
 +
 Pendant la mise à niveau, si des certificats backend de stockage intégrés manquent d'entrées de nom alternatif du sujet (SAN), vous recevrez une invite indiquant le SAN manquant.  Si vous choisissez de continuer sans valider le SAN, la mise à niveau se poursuivra, mais cela n'est pas recommandé en raison de risques de sécurité potentiels.
-
-
 
 . Lorsque vous effectuez une mise à niveau, les actions suivantes sont automatiquement exécutées :
 +

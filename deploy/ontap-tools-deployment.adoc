@@ -84,18 +84,12 @@ NOTE: Ne stockez jamais d'outils ONTAP pour la machine virtuelle VMware vSphere 
 NOTE: Le nom d'hôte vCenter correspond au nom de l'instance vCenter Server sur laquelle l'appliance ONTAP Tools est déployée.
 
 +
-Si vous déployez des outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP .  Vous pouvez créer un utilisateur et un rôle vCenter dédiés avec uniquement les autorisations de banque de données listées ci-dessous requises pour le déploiement du modèle OVF :
+Si vous déployez des outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP . Vous pouvez créer un utilisateur et un rôle vCenter dédiés, disposant uniquement des autorisations requises pour le déploiement du modèle OVF. Pour plus de détails, consultez les rôles énumérés dans https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Rôles inclus avec les outils ONTAP pour VMware vSphere 10"].
 
-+
-** Allouer de l'espace
-** Parcourir le magasin de données
-** Opérations de fichiers de bas niveau
-** Supprimer le fichier
-** Mettre à jour les fichiers de la machine virtuelle
-** Mettre à jour les métadonnées de la machine virtuelle
 +
 Pour l'instance vCenter qui sera gérée par les outils ONTAP , assurez-vous que le compte utilisateur vCenter dispose des privilèges d'administrateur.
 
++
 ** Les noms d'hôte doivent comporter des lettres (A-Z, a-z), des chiffres (0-9) et des tirets (-). Pour configurer la double pile, spécifiez le nom d'hôte mappé sur l'adresse IPv6.
 +
 
