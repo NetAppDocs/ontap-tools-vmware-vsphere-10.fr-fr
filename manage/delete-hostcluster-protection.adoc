@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: Lorsque vous supprimez la protection du cluster hôte, les datastores deviennent non protégés. 
 ---
-= Retirez la protection du cluster hôte
+= Supprimer la protection du cluster hôte dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

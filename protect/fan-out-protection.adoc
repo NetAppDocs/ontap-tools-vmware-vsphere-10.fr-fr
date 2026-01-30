@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Dans un scénario de protection en éventail, le groupe de cohérence est doublement protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le deuxième cluster ONTAP de destination. 
 ---
-= Protection contre les ventilateurs
+= Protection contre le fan-out dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

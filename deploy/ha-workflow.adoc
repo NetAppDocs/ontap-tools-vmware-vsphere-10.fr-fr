@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: La mise en route des outils ONTAP pour VMware vSphere comprend quelques étapes. 
 ---
-= Workflow de déploiement de la haute disponibilité (HA
+= Flux de travail de déploiement à haute disponibilité pour ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

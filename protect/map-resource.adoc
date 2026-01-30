@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Vous devez mapper vos ressources sur le site protégé et le site de reprise de manière à ce que les machines virtuelles soient configurées pour basculer vers un groupe d"hôtes ou vers un autre.' 
 ---
-= Configurer les mappages de ressources
+= Configurer les mappages de ressources dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

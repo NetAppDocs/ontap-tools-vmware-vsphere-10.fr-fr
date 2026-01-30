@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Les outils ONTAP pour VMware vSphere permettent d"activer la fonctionnalité SRA pour configurer la reprise après incident.' 
 ---
-= Configurer SRA pour protéger les banques de données
+= Configurez SRA dans ONTAP tools pour protéger les banques de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

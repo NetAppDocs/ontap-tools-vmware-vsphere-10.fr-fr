@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools vmware vsphere rest api reference 
 summary: 'Même si REST établit un ensemble commun de technologies et de bonnes pratiques, l"implémentation exacte de chaque API peut varier en fonction des choix de conception. Vous devez vous familiariser avec la conception préalable des outils ONTAP pour l"API REST VMware vSphere 10.' 
 ---
-= Détails de mise en œuvre des outils ONTAP pour l'API REST VMware vSphere 10
+= Détails d'implémentation de l'API REST des ONTAP tools
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

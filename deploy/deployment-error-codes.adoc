@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: 'Cette page présente les codes d"erreur relatifs aux opérations de déploiement, de redémarrage et de restauration des outils ONTAP pour le système VMware vSphere.' 
 ---
-= Résoudre les erreurs de déploiement
+= Dépanner les erreurs de déploiement des outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Vous pouvez modifier l’indicateur de validation du certificat à l’aide de la console de maintenance. 
 ---
-= Modifier l'indicateur de validation du certificat
+= Modifier l'indicateur de validation du certificat dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

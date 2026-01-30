@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Vous devez vérifier que le site protégé et le site de reprise sont correctement couplés après avoir configuré Storage Replication adapter \(SRA\). Le système de stockage répliqué doit être détectable par le site protégé et le site de reprise.' 
 ---
-= Vérification des systèmes de stockage répliqués
+= Vérifier les systèmes de stockage répliqués dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

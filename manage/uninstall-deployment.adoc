@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Suivez les instructions de cette section pour mettre fin aux outils ONTAP pour un déploiement VMware vSphere en toute simplicité. 
 ---
-= Désinstallez les outils ONTAP pour VMware vSphere
+= Désinstaller les outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

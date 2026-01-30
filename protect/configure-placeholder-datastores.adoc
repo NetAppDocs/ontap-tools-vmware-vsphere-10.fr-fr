@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Configurez une banque de données d’espace réservé pour réserver de l’espace dans l’inventaire vCenter sur le site de récupération pour les machines virtuelles (VM) protégées.  Les magasins de données d"espace réservé nécessitent une capacité minimale, car les machines virtuelles d"espace réservé sont petites et n"utilisent généralement que quelques centaines de kilo-octets.' 
 ---
-= Configurez les datastores à espace réservé
+= Configurer les magasins de données de substitution dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

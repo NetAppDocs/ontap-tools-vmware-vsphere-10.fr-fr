@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network access configuration, export policy, mount operation, ESXi hosts 
 summary: 'Si vous n"avez pas configuré l"accès au réseau, toutes les adresses IP découvertes de l"hôte ESXi sont ajoutées à la règle d"export par défaut.' 
 ---
-= Configurer l'accès au réseau
+= Configurer l'accès réseau dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

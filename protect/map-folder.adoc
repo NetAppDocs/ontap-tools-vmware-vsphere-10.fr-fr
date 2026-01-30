@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Vous devez mapper vos dossiers sur le site protégé et le site de reprise pour permettre la communication entre eux. 
 ---
-= Configurer les mappages de dossiers
+= Configurer les mappages de dossiers dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

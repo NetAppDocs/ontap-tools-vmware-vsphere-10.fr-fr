@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: Vous pouvez modifier les relations SnapMirror du cluster hôte protégé. Vous pouvez ajouter, modifier et supprimer les relations. Toutefois, vous ne pouvez pas modifier le nom du groupe de cohérence. 
 ---
-= Modifier le cluster hôte protégé
+= Modifier un cluster d'hôtes protégé dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

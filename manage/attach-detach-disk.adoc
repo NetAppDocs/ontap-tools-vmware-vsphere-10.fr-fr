@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Reliez un disque de données à une machine virtuelle pour augmenter la capacité de stockage. 
 ---
-= Attacher ou détacher un disque de données d'une machine virtuelle
+= Attacher ou détacher un disque de données d'une machine virtuelle dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: 'Lorsque vous sélectionnez l"icône du plug-in ONTAP Tools for VMware vSphere dans la section des raccourcis du client vCenter, l"interface utilisateur accède à la page de présentation. Cette page fonctionne comme le tableau de bord qui fournit le résumé du plug-in ONTAP Tools for VMware vSphere.' 
 ---
-= Présentation du tableau de bord des outils ONTAP pour VMware vSphere
+= Découvrez le tableau de bord des ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

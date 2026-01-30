@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Vous pouvez définir le seuil de réception des notifications dans vCenter Server lorsque le volume et la capacité globale atteignent certains niveaux.  
 ---
-= Gérer les seuils de stockage
+= Gérer les seuils de stockage dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

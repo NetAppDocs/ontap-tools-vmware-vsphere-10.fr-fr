@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Les outils ONTAP pour VMware vSphere vérifient et définissent les paramètres de chemins d"accès multiples de l"hôte VMware ESXi et les paramètres de délai de l"adaptateur HBA qui fonctionnent le mieux avec les systèmes de stockage NetApp.' 
 ---
-= Configurer les paramètres de l'hôte ESXi
+= Configurer les paramètres de l'hôte ESXi dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

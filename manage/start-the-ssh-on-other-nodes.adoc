@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Vous devez démarrer SSH sur les autres nœuds avant la mise à niveau. 
 ---
-= Démarrez SSH sur les autres nœuds
+= Démarrer SSH sur les autres nœuds ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

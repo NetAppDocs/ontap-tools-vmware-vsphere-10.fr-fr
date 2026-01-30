@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Lorsque vous créez une banque de données au niveau du cluster hôte, les outils ONTAP la montent sur tous les hôtes de destination et activent l"action uniquement si vous disposez des privilèges requis.' 
 ---
-= Créer un datastore
+= Créer un datastore dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Lors de la migration des données de stockage, les systèmes back-end sont intégrés manuellement via des API REST. Lors de la migration des données VASA Provider, les données sont exportées à partir de la base de données Derby existante et importées dans la base de données MongoDB. 
 ---
-= Migrer le fournisseur VASA et mettre à jour le SRA
+= Migrez le fournisseur VASA et mettez à jour le SRA dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

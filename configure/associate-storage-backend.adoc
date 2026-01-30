@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Associez un système back-end de stockage à vCenter Server pour créer un mappage global entre le système back-end de stockage et l"instance vCenter Server intégrée.' 
 ---
-= Associer un back-end de stockage à une instance vCenter Server
+= Associer un système de stockage principal à une instance de serveur vCenter dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

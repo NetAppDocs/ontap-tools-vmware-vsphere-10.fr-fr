@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Vous devez mapper vos réseaux sur le site protégé et le site de reprise pour permettre la communication entre eux. 
 ---
-= Configurer les mappages du réseau
+= Configurer les mappages réseau dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

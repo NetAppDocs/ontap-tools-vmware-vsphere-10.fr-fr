@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap rbac, ontap rbac environment 
 summary: 'ONTAP fournit un environnement RBAC robuste et extensible. Vous pouvez utiliser la fonctionnalité RBAC pour contrôler l"accès aux opérations du système et du stockage comme exposées via l"API REST et l"interface de ligne de commande. Il est utile de se familiariser avec l"environnement avant de l"utiliser avec les outils ONTAP pour le déploiement de VMware vSphere 10.' 
 ---
-= Environnement ONTAP RBAC avec les outils ONTAP pour VMware vSphere 10
+= Fonctionnement du contrôle d'accès basé sur les rôles (RBAC) ONTAP avec les ONTAP tools
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Vous devez configurer les intervalles de délai de stockage en fonction des paramètres recommandés pour Storage Replication adapter \(SRA\) afin de garantir des performances optimales dans des environnements hautement évolutifs.' 
 ---
-= Configurez SRA pour les environnements hautement évolutifs
+= Configurer SRA dans ONTAP tools pour les environnements à grande échelle
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 'L"action Supprimer le datastore supprime le datastore. Dans le cas d"un datastore NFS ou VMFS, une boîte de dialogue s"affiche avec la liste des machines virtuelles qui utilisent le datastore.' 
 ---
-= Supprimer les datastores
+= Supprimer les banques de données dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

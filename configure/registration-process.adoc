@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Vous pouvez enregistrer le fournisseur VASA auprès d"une instance vCenter Server à l"aide des ONTAP tools for VMware vSphere .' 
 ---
-= Enregistrer le fournisseur VASA auprès d'une instance vCenter Server à l'aide des outils ONTAP
+= Enregistrez le fournisseur VASA auprès d'une instance de serveur vCenter dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

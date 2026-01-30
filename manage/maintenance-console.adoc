@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'La console de maintenance des outils ONTAP vous permet de gérer vos configurations d"applications, système et réseau. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.' 
 ---
-= Présentation des outils ONTAP pour la console de maintenance VMware vSphere
+= Découvrez la console de maintenance des ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

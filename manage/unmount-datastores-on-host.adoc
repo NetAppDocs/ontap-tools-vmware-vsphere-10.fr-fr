@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'L"action de démontage du datastore démonte un datastore NFS ou VMFS des hôtes ESXi. L"action démonter le datastore est activée pour les datastores NFS et VMFS découverts ou gérés par les outils ONTAP pour VMware vSphere.' 
 ---
-= Démontez les datastores NFS et VMFS
+= Démontez les datastores NFS et VMFS dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

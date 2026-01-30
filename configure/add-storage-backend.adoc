@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilisent pour le stockage des données. 
 ---
-= Ajouter un backend de stockage aux outils ONTAP
+= Ajouter un système de stockage dorsal aux ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
