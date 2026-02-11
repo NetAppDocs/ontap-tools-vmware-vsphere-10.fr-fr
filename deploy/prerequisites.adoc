@@ -53,7 +53,7 @@ NOTE: Lorsque la sauvegarde est activée, chaque cluster d'outils ONTAP a besoin
 | Stockage, hôte et applications | Exigences de version 
 
 
-| ONTAP | 9.15.1, 9.16.0, 9.16.1, 9.17.0 et 9.17.1 
+| ONTAP | 9.15.1, 9.16.1, et 9.17.0 
 
 
 | Les outils ONTAP prennent en charge les hôtes ESXi | à partir de 7.0.3 
