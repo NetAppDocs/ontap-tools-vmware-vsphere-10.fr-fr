@@ -28,3 +28,16 @@ La console de maintenance affiche l’état de l’indicateur de validation du c
 
 
 Lorsque vous activez l'indicateur de validation du certificat (défini sur vrai), les outils ONTAP vérifient que tous les systèmes de stockage utilisent des certificats avec un nom alternatif de sujet (SAN).  Si un système dorsal utilise un certificat sans SAN, la validation du certificat ne peut pas être activée.  Avant d'activer cette option, vérifiez que tous les systèmes de stockage utilisent des certificats basés sur SAN.  Si vous désactivez l'indicateur de validation du certificat (défini sur false), les outils ONTAP contournent la validation du certificat pour tous les systèmes de stockage configurés.
+
+
+
+== Vérifiez les certificats basés sur SAN pour les backends de stockage
+
+Pour garantir une communication sécurisée et une validation correcte, vérifiez que tous les storage backends utilisent des certificats basés sur SAN :
+
+. Vérifiez que le certificat de gestion ONTAP comprend une entrée Subject Alternative Name (SAN).
+. Confirmez que les entrées SAN correspondent à l'adresse IP de gestion ONTAP ou au nom DNS, ou aux deux.
+. Assurez-vous que les détails utilisés pour l'onboarding ONTAP correspondent à l'adresse IP ou au nom DNS dans l'entrée SAN du certificat.
+
+
+Le respect de ces étapes permet d'éviter les problèmes de validation des certificats et garantit que le système ONTAP est intégré de manière sécurisée.
