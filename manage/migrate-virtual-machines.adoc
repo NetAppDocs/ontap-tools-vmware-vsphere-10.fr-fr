@@ -56,8 +56,8 @@ Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-
 
 == Snapshots de machine virtuelle
 
-Actuellement, seuls les snapshots de machine virtuelle sans mémoire sont pris en charge. Si la machine virtuelle possède une copie Snapshot de la mémoire, la machine virtuelle n'est pas prise en compte pour sa protection.
+Les instantanés de machines virtuelles sans mémoire sont pris en charge. Si une machine virtuelle possède un instantané avec mémoire, la machine virtuelle ne peut pas être protégée.
 
-Vous ne pouvez pas non plus protéger les machines virtuelles non protégées qui disposent d’un instantané de mémoire.  Pour cette version, vous devez supprimer l'instantané de mémoire avant d'activer la protection de la machine virtuelle.
+Vous ne pouvez pas protéger les machines virtuelles non protégées qui contiennent des instantanés de mémoire. Supprimez les instantanés de mémoire avant d’activer la protection de la machine virtuelle.
 
-Pour une machine virtuelle Windows avec le type de stockage ASA r2, un instantané de la machine virtuelle est en lecture seule.  Lorsque vous mettez la VM sous tension, le fournisseur VASA crée un LUN à partir de l'instantané en lecture seule et active les IOPS.  Lorsque vous mettez la machine virtuelle hors tension, le fournisseur VASA supprime le LUN et désactive les IOPS.
+Pour une machine virtuelle Windows avec un type de stockage ASA r2, les snapshots de la machine virtuelle sont en lecture seule. Lorsque vous allumez la machine virtuelle, VASA Provider crée un LUN à partir du snapshot en lecture seule et active les IOPS. Lorsque vous éteignez la machine virtuelle, VASA Provider supprime le LUN et désactive les IOPS.
