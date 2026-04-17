@@ -163,7 +163,7 @@ Si le déploiement échoue avec le code d'erreur 114, procédez comme suit :
 
 * Activez le shell de diagnostic.
 * Exécutez la commande suivante : `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Consultez les journaux à  `/var/log/otvng/post-deploy-upgrade.log`.
+* Consultez les journaux à `/var/log/otvng/post-deploy-upgrade.log`
 
 
 |===
