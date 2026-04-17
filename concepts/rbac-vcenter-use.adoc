@@ -36,12 +36,12 @@ Toutes les autorisations sont validées dans la hiérarchie des objets vSphere, 
 
 == Rôles inclus avec les outils ONTAP pour VMware vSphere 10
 
-Pour simplifier l'utilisation du RBAC de vCenter Server, les outils ONTAP pour VMware vSphere fournissent des rôles prédéfinis adaptés à diverses tâches d'administration.
+Pour simplifier le travail avec le contrôle d'accès basé sur les rôles (RBAC) du serveur vCenter, ONTAP tools for VMware vSphere fournit des rôles prédéfinis adaptés à diverses tâches administratives.
 
 
-NOTE: Vous pouvez créer de nouveaux rôles personnalisés si nécessaire. Dans ce cas, vous devez cloner l'un des rôles d'outils ONTAP existants et le modifier si nécessaire. Après avoir modifié la configuration, les utilisateurs du client vSphere concernés doivent se déconnecter et se reconnecter pour activer les modifications.
+NOTE: Vous pouvez créer des rôles personnalisés si nécessaire. Pour ce faire, clonez l'un des rôles existants des ONTAP tools et modifiez-le selon vos besoins. Après avoir effectué les modifications de configuration, les utilisateurs clients vSphere concernés doivent se déconnecter puis se reconnecter pour activer les changements.
 
-Pour afficher les ONTAP tools for VMware vSphere , sélectionnez *Menu* en haut du client vSphere, puis cliquez sur *Administration* et enfin sur *Rôles* à gauche. Les privilèges suivants doivent être inclus dans le rôle attribué à l'utilisateur vCenter responsable du déploiement ou de l'intégration de vCenter. Assurez-vous que ces privilèges sont configurés comme condition préalable au déploiement ou au processus d'intégration.
+Pour afficher les rôles ONTAP tools for VMware vSphere, sélectionnez *Menu* en haut du client vSphere, puis cliquez sur *Administration* et ensuite sur *Rôles* à gauche. Les privilèges suivants doivent être inclus dans le rôle attribué à l'utilisateur vCenter responsable du déploiement ou de l'intégration du serveur vCenter. Assurez-vous que ces privilèges sont configurés comme prérequis au processus de déploiement ou d'intégration.
 
 * Alarmes
 +

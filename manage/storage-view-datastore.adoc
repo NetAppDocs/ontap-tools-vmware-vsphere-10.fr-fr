@@ -2,7 +2,7 @@
 permalink: manage/storage-view-datastore.html 
 sidebar: sidebar 
 keywords: Remove vVol datastore 
-summary: 'La vue du stockage ONTAP sous l"onglet Configure d"un outil ONTAP pour VMware vSphere fournit les données relatives au datastore et à son volume.' 
+summary: 'La vue de stockage ONTAP sous l"onglet Configurer des ONTAP tools for VMware vSphere fournit des données relatives à la banque de données et à ses volumes.' 
 ---
 = Vues de stockage ONTAP pour les banques de données dans ONTAP tools
 :allow-uri-read: 

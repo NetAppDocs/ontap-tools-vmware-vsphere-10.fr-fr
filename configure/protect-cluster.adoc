@@ -11,7 +11,7 @@ summary: Les outils ONTAP pour VMware vSphere permettent de gérer la protection
 
 
 [role="lead"]
-Les outils ONTAP pour VMware vSphere gèrent la protection des clusters hôtes. Tous les datastores appartenant au SVM sélectionné et montés sur un ou plusieurs hôtes du cluster sont protégés sous un cluster hôte.
+ONTAP tools for VMware vSphere gèrent la protection des clusters d'hôtes. Toutes les banques de données appartenant à la SVM sélectionnée et montées sur un ou plusieurs hôtes du cluster sont protégées sous un cluster d'hôtes.
 
 .Avant de commencer
 Assurez-vous de répondre à ces exigences avant de protéger un cluster hôte :
@@ -34,10 +34,10 @@ Assurez-vous de répondre à ces exigences avant de protéger un cluster hôte 
 Le type de règle peut être asynchrone ou automatique FailOverDuplex.
 
 +
-Lorsque vous ajoutez la relation SnapMirror en tant que stratégie de type AutomatedFailOverDuplex, vous devez ajouter la machine virtuelle de stockage cible en tant que back-end de stockage au serveur vCenter sur lequel les outils ONTAP pour VMware vSphere sont déployés.
+Lorsque vous ajoutez la relation SnapMirror en tant que stratégie de type AutomatedFailOverDuplex, vous devez ajouter la machine virtuelle de stockage cible en tant que backend de stockage au même vCenter où ONTAP tools for VMware vSphere est déployé.
 
 +
-Dans le type de stratégie AutomatedFailOverDuplex, il existe des configurations d’hôte uniformes et non uniformes.  Lorsque vous sélectionnez le bouton bascule *configuration uniforme de l'hôte*, la configuration du groupe d'initiateurs de l'hôte est implicitement répliquée sur le site cible. Pour plus d'informations, reportez-vous à link:../concepts/ontap-tools-concepts-terms.html["Concepts et termes clés"] .
+Dans le type de stratégie AutomatedFailOverDuplex, il existe des configurations d'hôtes uniformes et non uniformes. Lorsque vous sélectionnez le bouton bascule *Configuration d'hôtes uniforme*, la configuration du groupe d'initiateurs hôtes est implicitement répliquée sur le site cible. Pour plus d'informations, consultez link:../concepts/ontap-tools-concepts-terms.html["Concepts et termes clés"].
 
 . Si vous choisissez d'avoir une configuration hôte non uniforme, sélectionnez l'accès hôte (source/cible) pour chaque hôte à l'intérieur de ce cluster.
 . Sélectionnez *Ajouter*.

@@ -17,7 +17,7 @@ Assurez-vous que les conditions suivantes sont remplies avant de poursuivre le d
 | De formation | Votre statut 
 
 
-| La version vSphere, la version ONTAP et la version hôte ESXi sont compatibles avec la version des outils ONTAP. | ❏ Oui ❏ non 
+| vSphere version, version ONTAP et version de l'hôte ESXi sont compatibles avec la version des ONTAP tools. | ❏ Oui ❏ non 
 
 
 | L'environnement vCenter Server est configuré et configuré | ❏ Oui ❏ non 
@@ -63,7 +63,7 @@ Utilisez la feuille de calcul suivante pour rassembler les informations requises
 | Adresse IP de l’application ONTAP tools. Il s’agit de l’adresse IP permettant d’accéder à l’interface web du gestionnaire ONTAP tools (load balancer) à `\https://<ip>:8443/virtualization/ui/` |  
 
 
-| Adresse IP virtuelle des outils ONTAP pour la communication interne.  Cette adresse IP est utilisée pour la communication interne dans une configuration avec plusieurs instances d'outils ONTAP .  Cette adresse IP ne doit pas être la même que l'adresse IP de l'application des outils ONTAP . (Le plan de contrôle Kubernetes) |  
+| Adresse IP virtuelle ONTAP tools pour la communication interne. Cette adresse IP est utilisée pour la communication interne dans une configuration avec plusieurs instances ONTAP tools. Cette adresse IP ne doit pas être la même que l'adresse IP de l'application ONTAP tools. (Le plan de contrôle Kubernetes) |  
 
 
 | Nom d'hôte DNS pour le nœud de gestion des outils ONTAP |  
@@ -96,7 +96,7 @@ Utilisez la feuille de calcul suivante pour rassembler les informations requises
 | Passerelle pour l'adresse IPv6 (facultatif) |  
 |===
 
-NOTE: Créez des enregistrements DNS pour toutes les adresses IP ci-dessus. Avant d'attribuer des noms d'hôte, mappez-les aux adresses IP libres sur le DNS. Toutes les adresses IP doivent se trouver sur le même VLAN sélectionné pour le déploiement.
+NOTE: Créez des enregistrements DNS pour toutes les adresses IP ci-dessus. Avant d'attribuer des noms d'hôtes, associez-les aux adresses IP disponibles dans DNS. Toutes les adresses IP doivent être sur le même VLAN sélectionné pour le déploiement.
 
 
 

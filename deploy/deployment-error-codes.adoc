@@ -17,10 +17,10 @@ Si vous rencontrez des problèmes de déploiement, consultez les journaux et les
 
 == Collectez les fichiers journaux
 
-Vous pouvez collecter les fichiers journaux des outils ONTAP pour VMware vSphere à partir des options disponibles dans l'interface utilisateur de ONTAP Tools Manager. Le support technique peut vous demander de collecter les fichiers journaux afin de résoudre un problème.
+Vous pouvez collecter les fichiers journaux pour ONTAP tools for VMware vSphere à partir des options disponibles dans l'interface utilisateur du gestionnaire ONTAP tools. Le support technique peut vous demander de collecter les fichiers journaux pour aider à résoudre un problème.
 
 
-NOTE: La génération de journaux à partir du Gestionnaire d'outils ONTAP inclut tous les journaux de toutes les instances de vCenter Server. La génération des journaux à partir de l'interface utilisateur du client vCenter est étendue pour le serveur vCenter sélectionné.
+NOTE: La génération de journaux à partir du gestionnaire d'outils ONTAP inclut tous les journaux pour toutes les instances de serveur vCenter. La génération de journaux à partir de l'interface utilisateur du client vCenter est limitée au serveur vCenter sélectionné.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -57,7 +57,7 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
 Tous les journaux d'erreurs sont enregistrés dans le fichier ansible-perl-errors.log sous le répertoire /var/log pour faciliter le suivi et la résolution des problèmes.  Ce fichier journal contient le code d'erreur et la tâche Ansible ayant échoué.
 
 
-NOTE: Les codes d'erreur fournis sur cette page sont fournis à titre de référence uniquement. Contactez l'équipe d'assistance si l'erreur persiste ou si aucune résolution n'est mentionnée.
+NOTE: Les codes d'erreur affichés sur cette page sont fournis à titre indicatif uniquement. Veuillez contacter l'équipe d'assistance si l'erreur persiste ou si aucune solution n'est mentionnée.
 
 Le tableau suivant répertorie les codes d'erreur et les noms de fichier correspondants.
 
@@ -107,10 +107,10 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 049 | Pour le réseau et la validation, le script perl les attribuera également sous peu | - 
 
 
-| 050 | Échec de la génération de la clé SSH | Redémarrez la machine virtuelle (VM) principale. 
+| 050 | La génération de la clé SSH a échoué | Redémarrez la machine virtuelle (VM) principale. 
 
 
-| 053 | Echec de l'installation de RKE2 | Exécutez les opérations suivantes et redémarrez la machine virtuelle principale ou redéployez :
+| 053 | Échec de l'installation de RKE2 | Exécutez les opérations suivantes et redémarrez la machine virtuelle principale ou redéployez :
 Sudo rke2-killall.sh (toutes les VM)
 Sudo rke2-uninstall.sh (toutes les VM). 
 
@@ -118,10 +118,10 @@ Sudo rke2-uninstall.sh (toutes les VM).
 | 054 | Échec du paramétrage kubeconfig | Redéploiement 
 
 
-| 055 | Échec du déploiement du registre | Si le pod de registre est présent, attendez que le pod soit prêt, puis redémarrez la machine virtuelle principale ou redéployez-la. 
+| 055 | Échec du déploiement du registre | Si le pod de registre est présent, attendez que le pod soit prêt, puis redémarrez la machine virtuelle principale ou redéployez. 
 
 
-| 059 | Échec du déploiement KubeVip | Vérifiez que l'adresse IP virtuelle du plan de contrôle Kubernetes et l'adresse IP des outils ONTAP fournies lors du déploiement appartiennent au même VLAN et sont des adresses IP libres. Redémarrez si tous les points précédents sont corrects. Sinon, redéployer. 
+| 059 | Échec du déploiement KubeVip | Assurez-vous que l'adresse IP virtuelle du plan de contrôle Kubernetes et l'adresse IP des outils ONTAP fournies lors du déploiement appartiennent au même VLAN et sont des adresses IP libres. Redémarrez si tous les points précédents sont corrects. Sinon, redéployez. 
 
 
 | 060 | Le déploiement de l'opérateur a échoué | Redémarrer 
@@ -136,7 +136,14 @@ Sudo rke2-uninstall.sh (toutes les VM).
 | 065 | L'URL de la page swagger est inaccessible | Redéploiement 
 
 
-| 066 | Les étapes de post-déploiement du certificat de passerelle ont échoué | Procédez comme suit pour récupérer/terminer la mise à niveau : * Activer le shell de diagnostic. * Exécutez la commande 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'. * Consultez les journaux dans /var/log/post-deploy-upgrade.log. 
+| 066 | Les étapes de post-déploiement du certificat de passerelle ont échoué  a| 
+Pour récupérer/terminer la mise à niveau, procédez comme suit :
+
+* Activer le shell de diagnostic.
+* Exécutez la commande 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'.
+* Consultez les journaux à /var/log/post-deploy-upgrade.log.
+
+
 
 
 | 088 | La configuration de la rotation du journal pour journald a échoué | Vérifiez les paramètres réseau de la machine virtuelle compatibles avec l'hôte sur lequel la machine virtuelle est hébergée. Vous pouvez essayer de migrer vers un autre hôte et redémarrer la machine virtuelle. 
@@ -149,6 +156,16 @@ Sudo rke2-uninstall.sh (toutes les VM).
 
 
 | 108 | Echec du script d'amorçage | - 
+
+
+| 114 | La mise à jour du certificat interne dans la collection MongoDB a échoué  a| 
+Si le déploiement échoue avec le code d'erreur 114, procédez comme suit :
+
+* Activez le shell de diagnostic.
+* Exécutez la commande suivante : `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
+* Consultez les journaux à  `/var/log/otvng/post-deploy-upgrade.log`.
+
+
 |===
 |===
 

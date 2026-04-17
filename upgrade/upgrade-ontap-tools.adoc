@@ -15,7 +15,7 @@ Vous pouvez effectuer une mise à niveau des ONTAP tools for VMware vSphere 10.3
 
 [NOTE]
 ====
-* Pour les systèmes ASA r2, assurez-vous de mettre à niveau les ONTAP tools for VMware vSphere vers 10.5 et ONTAP vers 9.16.1, avant de configurer davantage de zones de disponibilité de stockage (SAZ).
+* Pour les systèmes ASA r2, assurez-vous de mettre à niveau ONTAP tools for VMware vSphere vers la version 10.5 et ONTAP vers la version 9.16.1 avant de configurer davantage de zones de disponibilité de stockage (SAZ).
 * Si la mise à niveau des ONTAP tools for VMware vSphere 10.3 ou 10.4 vers 10.5 échoue, vous ne pouvez pas revenir en arrière. Utilisez un RPO faible ou une récupération de snapshot pour restaurer la configuration. Pour les ONTAP tools for VMware vSphere 10.2 et versions antérieures, utilisez le RPO zéro pour restaurer la configuration.
 
 
@@ -68,7 +68,7 @@ Se référer à link:../manage/backup-settings.html["Modifier les paramètres de
 . Connectez-vous en tant qu'utilisateur de maintenance.
 . Entrez *2* pour sélectionner le menu *Configuration système*.
 . Entrez *7* pour sélectionner l’option *Mise à niveau*.
-. Fournissez les informations d'identification vCenter lorsque vous y êtes invité.  Il s'agit de l'instance vCenter sur laquelle sont hébergés les outils ONTAP .
+. Fournissez les informations d'identification vCenter lorsque vous y êtes invité. Il s'agit de l'instance vCenter sur laquelle les outils ONTAP sont hébergés.
 +
 Si vous utilisez les outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP . Vous pouvez créer un utilisateur et un rôle vCenter dédiés, disposant uniquement des autorisations requises pour le déploiement du modèle OVF. Pour plus de détails, consultez les rôles énumérés dans https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Rôles inclus avec les outils ONTAP pour VMware vSphere 10"].
 

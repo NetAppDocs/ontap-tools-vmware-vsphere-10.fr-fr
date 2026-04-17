@@ -23,7 +23,7 @@ Vous pouvez faire évoluer verticalement les outils ONTAP de la configuration VM
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Activation des services
 [role="quick-margin-para"]
-Pour configurer les magasins de données vVols , vous devez activer le service VASA Provider.  Enregistrez le fournisseur VASA auprès de vCenter et assurez-vous que vos politiques de stockage répondent aux exigences HA, y compris les configurations de réseau et de stockage appropriées.
+Pour configurer les banques de données vVols, vous devez activer le service VASA Provider. Enregistrez le fournisseur VASA auprès de vCenter et assurez-vous que vos politiques de stockage respectent les exigences de haute disponibilité, notamment en ce qui concerne la configuration correcte du réseau et du stockage.
 
 [role="quick-margin-para"]
 Utilisez les services SRA (ONTAP Tools Storage Replication adapter) pour VMware site Recovery Manager (SRM) ou VMware Live site Recovery (VLSR).

@@ -40,7 +40,7 @@ curl --request POST \
 +
 Copiez et enregistrez le jeton d'accès renvoyé dans la réponse.
 
-. Exécutez l'API suivante depuis swagger ou dans Postman pour effectuer la migration.
+. Utilisez l'API suivante depuis Swagger ou Postman pour effectuer la migration.
 +
 [listing]
 ----
@@ -246,11 +246,11 @@ Après la mise à niveau, si l'état de conformité de la machine virtuelle est 
 Dans le plan de récupération, le site protégé désigne l'emplacement où les machines virtuelles sont actuellement exécutées, tandis que le site de récupération désigne l'emplacement où elles seront restaurées. L'interface du dispositif VMware Live Site Recovery affiche l'état du plan de récupération avec des détails sur les sites protégés et de récupération.  Dans le plan de récupération, les boutons NETTOYER et REPROTÉGER sont désactivés, tandis que les boutons TESTER et EXÉCUTER restent activés. Cela indique que le site est prêt pour la récupération des données. Avant de migrer le SRA, vérifiez qu'un site est en état protégé et l'autre en état de récupération.
 
 
-NOTE: Ne commencez pas la migration si le basculement a été effectué mais que la reprotection est en attente.  Assurez-vous que le processus de reprotection est terminé avant de procéder à la migration.  Si un basculement de test est en cours, nettoyez le basculement de test et démarrez la migration.
+NOTE: Ne lancez pas la migration si le basculement est terminé mais que la reprotection est en attente. Assurez-vous que le processus de reprotection est terminé avant de poursuivre la migration. Si un basculement de test est en cours, nettoyez le basculement de test et lancez la migration.
 
 . Procédez comme suit pour supprimer l'adaptateur ONTAP Tools SRA pour VMware vSphere 9.xx dans VMware site Recovery :
+. Accédez à la page de gestion de la configuration de VMware Live Site Recovery.
 +
-.. Accédez à la page de gestion de la configuration de VMware Live site Recovery
 .. Accédez à la section *Storage Replication adapter*.
 .. Dans le menu points de suspension, sélectionnez *Réinitialiser la configuration*.
 .. Dans le menu points de suspension, sélectionnez *Supprimer*.

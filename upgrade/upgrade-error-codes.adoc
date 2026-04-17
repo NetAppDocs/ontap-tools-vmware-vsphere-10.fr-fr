@@ -17,7 +17,7 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
 Tous les journaux d'erreurs sont enregistrés dans le fichier ansible-perl-errors.log pour faciliter le suivi et la résolution des problèmes. Ce fichier journal contient le code d'erreur et la tâche Ansible qui a échoué.
 
 
-NOTE: Les codes d'erreur fournis sur cette page sont fournis à titre de référence uniquement. Contactez l'équipe d'assistance si l'erreur persiste ou si aucune résolution n'est mentionnée.
+NOTE: Les codes d'erreur affichés sur cette page sont fournis à titre indicatif uniquement. Veuillez contacter l'équipe d'assistance si l'erreur persiste ou si aucune solution n'est mentionnée.
 
 Le tableau suivant répertorie les codes d'erreur et les noms de fichier correspondants.
 
@@ -107,13 +107,13 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 083 | La suppression de la sauvegarde a échoué | Utilisez une restauration basée sur des snapshots ou un RPO nul et réessayez la mise à niveau. 
 
 
-| 084 | Echec de la remise en production du JobManager | Suivez les étapes ci-dessous pour récupérer/terminer la mise à niveau. 1. Activer le shell de diagnostic 2. Exécutez la commande : _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Vérifiez les journaux dans /var/log/post-deploy-upgrade.log 
+| 084 | Echec de la remise en production du JobManager | Pour récupérer/terminer la mise à niveau, procédez comme suit : 1. Activez l’interface de diagnostic 2. Exécutez la commande : _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Consultez les journaux dans /var/log/post-deploy-upgrade.log 
 
 
 | 087 | Échec des étapes post-mise à niveau. | Procédez comme suit pour récupérer/terminer la mise à niveau. 1. Activer le shell de diagnostic 2. Exécutez _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ command 3. Vérifiez les journaux dans /var/log/post-deploy-upgrade.log 
 
 
-| 088 | La configuration de la rotation du journal pour journald a échoué | Vérifiez les paramètres réseau de la machine virtuelle compatibles avec l'hôte sur lequel la machine virtuelle est hébergée. Vous pouvez essayer de migrer la machine virtuelle vers un autre hôte et redémarrer. 
+| 088 | La configuration de la rotation du journal pour journald a échoué | Vérifiez que les paramètres réseau de la machine virtuelle sont compatibles avec l'hôte qui l'héberge. Vous pouvez essayer de migrer la machine virtuelle vers un autre hôte et de la redémarrer. 
 
 
 | 089 | La modification de la propriété du fichier de configuration de rotation du journal de synthèse a échoué | Réessayez la mise à niveau. 
@@ -149,7 +149,7 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 113 | L'actualisation des ressources sur les nœuds secondaires a échoué | Consultez les journaux de mise à niveau et réessayez la mise à niveau. 
 
 
-| 104 | Le redémarrage du nœud secondaire a échoué | Redémarrez les nœuds manuellement un par un 
+| 104 | Le redémarrage du nœud secondaire a échoué | Redémarrez les nœuds manuellement, un par un. 
 
 
 | 100 | échec de la restauration du noyau | - 
@@ -162,6 +162,81 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 
 
 | 090 | la validation du certificat pour les backends de stockage et vCenter a échoué | Vérifiez les journaux de mise à niveau et le fichier journal dans /var/log/cert_validation_error.log et réessayez la mise à niveau. 
+
+
+| 114 | La mise à jour du certificat interne dans la collection MongoDB a échoué  a| 
+Si la mise à niveau échoue avec le code d'erreur 114, procédez comme suit :
+
+. Connectez-vous à l'ISO de mise à niveau sur le nœud principal et activez le shell de diagnostic.
+. Monter l'ISO depuis la session SSH sur le nœud principal :
++
+[listing]
+----
+sudo mount /dev/cdrom
+sudo mount -o loop,ro /dev/cdrom/APPLIANCE_UPGRADE.bin /upgrade
+----
+. Installer les paquets Debian :
++
+[listing]
+----
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vplatform.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vpupgrader.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vmware-tools.deb
+----
+. Copiez le fichier d'informations de compilation :
++
+[listing]
+----
+sudo cp /upgrade/APPLIANCE_BUILD /
+----
+. Ajoutez les certificats à la collection en activant l'interface de diagnostic et en exécutant :
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection
+----
++
+Consultez les journaux à  `/var/log/otvng/post-deploy-upgrade.log`.
+
+. Redémarrez les nœuds :
++
+[listing]
+----
+sudo bash /home/maint/scripts/vault_decrypt.sh
+cd /home/maint/rke2-pb
+sudo ansible-playbook site.yaml --tags restart_nodes --skip-tags debian_upgrade,kernel_upgrade,rescan_scsi_bus,source_iso,eject_upgrade,mountIso,upgradeNodes,registryUpg,deleteOldImages,wait,checkReachability,delete_otv_cr,uninstall_trident,del_trident_images,refresh_resources,ntp_configure,ntpd_uninstall
+----
+. Effectuez les étapes suivant la mise à niveau :
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
+----
+. Vérifiez que l'opération a bien été effectuée en consultant les journaux :
++
+[listing]
+----
+tail -f /var/log/post-deploy-upgrade.log
+----
++
+Recherchez le message de réussite : `Completed post 10.5 upgrade steps.`
+
+. Éjectez l'ISO :
++
+[listing]
+----
+sudo umount -l -f /upgrade
+sudo umount -l -f /dev/cdrom
+sudo eject /dev/cdrom
+----
+. Redémarrez le nœud principal :
++
+[listing]
+----
+sudo reboot -f
+----
+
+
 |===
 
 NOTE: À partir des outils ONTAP pour VMware vSphere 10.3, le RPO nul n'est pas pris en charge.

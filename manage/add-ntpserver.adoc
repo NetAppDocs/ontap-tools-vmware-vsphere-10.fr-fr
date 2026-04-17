@@ -19,6 +19,6 @@ Entrez les détails du serveur NTP pour synchroniser les horloges de l'appliance
 . Sélectionnez l'option *Paramètres* > *serveur NTP* > *Modifier*.
 . Entrez le nom de domaine complet (FQDN) séparé par des virgules, IPv4 ou adresses IPv6.
 +
-Actualisez l'écran pour afficher les valeurs mises à jour.
+Actualisez l'écran pour voir les valeurs mises à jour.
 
 

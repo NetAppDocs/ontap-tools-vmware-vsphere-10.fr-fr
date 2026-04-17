@@ -26,7 +26,7 @@ Une fois que vous avez intégré le stockage et exécuté la découverte de la b
 À partir des ONTAP tools for VMware vSphere 10.3, vous pouvez créer une banque de données vVols sur des systèmes ASA r2 avec une efficacité spatiale telle que thin.vVol.  Le fournisseur VASA crée un conteneur et les points de terminaison de protocole souhaités lors de la création de la banque de données vVol.  Le fournisseur VASA n'attribue aucun volume de sauvegarde à ce conteneur.
 
 .Avant de commencer
-* Assurez-vous que les agrégats racines ne sont pas mappés à SVM.
+* Assurez-vous que les agrégats racines ne sont pas mappés sur la SVM.
 * Assurez-vous que le fournisseur VASA est enregistré avec le vCenter sélectionné.
 * Dans le système de stockage ASA r2, le SVM doit être mappé à l'agrégat pour l'utilisateur SVM.
 
@@ -34,7 +34,7 @@ Une fois que vous avez intégré le stockage et exécuté la découverte de la b
 .Étapes
 . Connectez-vous au client vSphere.
 . Cliquez avec le bouton droit sur un système hôte, un cluster hôte ou un centre de données et sélectionnez * Outils NetApp ONTAP * > * Créer une banque de données *.
-. Sélectionnez vVols *type de datastore*.
+. Sélectionnez vVols comme *type de magasin de données*.
 . Entrez les informations *nom du datastore* et *Protocole*.
 +
 
@@ -44,7 +44,7 @@ NOTE: Le système ASA r2 prend en charge les protocoles iSCSI et FC pour les vVo
 . Sous Options avancées :
 +
 ** Si vous sélectionnez la *politique d’exportation personnalisée*, assurez-vous d’exécuter la découverte dans vCenter pour tous les objets.  Il est recommandé de ne pas utiliser cette option.
-** Vous pouvez sélectionner *Nom du groupe initiateur* personnalisé pour les protocoles iSCSI et FC.
+** Vous pouvez sélectionner un nom de *groupe d'initiateurs personnalisé* pour les protocoles iSCSI et FC.
 +
 
 NOTE: Dans le type de système de stockage ASA r2 SVM, les unités de stockage (LUN/espace de noms) ne sont pas créées car la banque de données n'est qu'un conteneur logique.
@@ -53,7 +53,7 @@ NOTE: Dans le type de système de stockage ASA r2 SVM, les unités de stockage (
 
 . Dans le volet *attributs de stockage*, vous pouvez créer de nouveaux volumes ou utiliser les volumes existants. Toutefois, vous ne pouvez pas combiner ces deux types de volumes pour créer un datastore vVols.
 +
-Lors de la création d'un nouveau volume, vous pouvez activer la QoS sur la banque de données.  Par défaut, un volume est créé pour chaque demande de création de LUN.  Ignorez cette étape pour les banques de données vVols sur les systèmes de stockage ASA r2.
+Lors de la création d'un volume, vous pouvez activer la QoS sur la banque de données. Par défaut, un volume est créé pour chaque demande de création de LUN. Ignorez cette étape pour les banques de données vVols sur les systèmes de stockage ASA r2.
 
 . Vérifiez votre sélection dans le volet *Résumé* et sélectionnez *Terminer*.
 
@@ -137,9 +137,9 @@ Pour plus d'informations sur l'utilisation de NVMe/FC avec VMware vSphere 7.0, r
 .Étapes
 . Connectez-vous au client vSphere.
 . Cliquez avec le bouton droit sur un système hôte, un cluster hôte ou un centre de données et sélectionnez * Outils NetApp ONTAP * > * Créer une banque de données *.
-. Sélectionnez le type de datastore VMFS.
+. Sélectionnez le type de banque de données VMFS.
 . Saisissez le nom, la taille et les informations de protocole du magasin de données dans le volet *Nom et protocole*.  Pour ajouter le nouveau magasin de données à un cluster VMFS existant, sélectionnez le cluster de magasin de données dans les Options avancées.
-. Sélectionnez Storage VM dans le volet *Storage*. Indiquez le *Nom du groupe d'initiateurs personnalisé* dans la section *Options avancées*, si nécessaire. Vous pouvez choisir un groupe initiateur existant pour le datastore ou créer un nouveau groupe initiateur avec un nom personnalisé.
+. Sélectionnez une machine virtuelle de stockage dans le volet *Stockage*. Indiquez le *Nom du groupe d'initiateurs personnalisé* dans la section *Options avancées* si nécessaire. Vous pouvez choisir un groupe d'initiateurs existant pour la banque de données ou en créer un nouveau avec un nom personnalisé.
 +
 Lorsque le protocole NVMe/FC ou NVMe/TCP est sélectionné, un nouveau sous-système d'espace de noms est créé et utilisé pour le mappage d'espace de noms.  Les outils ONTAP créent le sous-système d’espace de noms à l’aide du nom généré automatiquement qui inclut le nom de la banque de données.  Vous pouvez renommer le sous-système d'espace de noms dans le champ *nom du sous-système d'espace de noms personnalisé* dans les options avancées du volet *Stockage*.
 
@@ -162,7 +162,7 @@ NOTE: À partir de ONTAP 9.16.1, les systèmes de stockage ASA r2 prennent en ch
 .. Sélectionnez *utiliser le volume existant*, *Activer les options QoS* selon les besoins et fournissez les détails.
 +
 
-NOTE: Dans le type de stockage ASA r2, la création ou la sélection de volume ne s'applique pas à la création d'unité de stockage (LUN/espace de noms).  Par conséquent, ces options ne sont pas affichées.
+NOTE: Dans le type de stockage ASA r2, la création ou la sélection de volumes ne s'applique pas à la création d'unités de stockage (LUN/Namespace). Par conséquent, ces options ne sont pas affichées.
 
 +
 

@@ -49,6 +49,9 @@ Lors de la création d'une banque de données à l'aide de l'interface utilisate
 
 Cette opération peut également être effectuée à l’aide de l’API.  Pour réutiliser un igroup existant lors de la création d'une banque de données, spécifiez l'UUID igroup dans la charge utile de la demande d'API.
 
+
+NOTE: Seuls les igroups personnalisés peuvent être réutilisés. Les igroups créés lors de la migration depuis ONTAP tools 9.x (igroups migrés) ne peuvent pas être réutilisés et, à partir de ONTAP tools 10.5P2, sont automatiquement supprimés lorsqu'ils ne sont plus utilisés.
+
 *Lorsque vous créez un datastore et un igroup nativement à partir ONTAP et de vCenter*
 
 Si vous créez l'igroup et le datastore directement dans les systèmes ONTAP et les environnements VMware, les outils ONTAP ne gèrent pas ces objets dans un premier temps.  Cela crée une structure igroup plate.

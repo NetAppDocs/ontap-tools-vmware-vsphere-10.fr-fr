@@ -34,11 +34,11 @@ Les rôles REST ont été introduits avec ONTAP 9.6 et sont généralement appli
 
 * Traditionnel
 +
-Il s'agit des rôles hérités inclus avant ONTAP 9.6. Elles continuent d'être un aspect fondamental du RBAC. Les Privileges sont définies en termes d'accès aux commandes de l'interface de ligne de commandes ONTAP.
+Il s'agit des rôles hérités antérieurs à ONTAP 9.6. Ils demeurent un élément fondamental du RBAC. Les privilèges sont définis en termes d'accès aux commandes CLI ONTAP.
 
 
 
-Alors que les AUTRES rôles ont été introduits plus récemment, les rôles traditionnels ont quelques avantages. Par exemple, des paramètres de requête supplémentaires peuvent être inclus de manière à ce que Privileges définisse plus précisément les objets auxquels ils sont appliqués.
+Bien que les rôles REST soient plus récents, les rôles traditionnels présentent certains avantages. Par exemple, des paramètres de requête supplémentaires peuvent être inclus afin de permettre aux Privileges de définir plus précisément les objets auxquels ils s'appliquent.
 
 .Portée
 Les rôles ONTAP peuvent être définis avec l'une des deux étendues différentes. Elles peuvent être appliquées à un SVM de données spécifique (niveau SVM) ou à l'ensemble du cluster ONTAP (niveau cluster).

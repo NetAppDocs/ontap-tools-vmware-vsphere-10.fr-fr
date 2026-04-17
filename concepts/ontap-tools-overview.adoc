@@ -39,4 +39,4 @@ Vous n’avez pas besoin d’effectuer de configuration supplémentaire pour act
 Les ONTAP tools for VMware vSphere ne prennent pas en charge vCenter HA.
 
 ====
-Pour utiliser la fonctionnalité HA, assurez-vous que l'ajout à chaud du processeur et le branchement à chaud de la mémoire sont activés pendant le déploiement ou ultérieurement dans les paramètres de la machine virtuelle.
+Pour utiliser la fonction HA, assurez-vous que l'ajout à chaud du processeur et le branchement à chaud de la mémoire sont activés lors du déploiement ou dans les paramètres de la machine virtuelle.

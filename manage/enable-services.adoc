@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Vous pouvez modifier le mot de passe de l"administrateur à l"aide du gestionnaire d"outils ONTAP pour activer des services tels que le fournisseur VASA, l"importation de la configuration vVols et la reprise après incident (SRA) à l"aide du gestionnaire d"outils ONTAP.' 
+summary: 'Vous pouvez activer des services optionnels tels que VASA Provider, l"importation de vVols configuration et la reprise après sinistre (SRA) à l"aide de ONTAP tools Manager.' 
 ---
 = Activer les services ONTAP tools
 :allow-uri-read: 

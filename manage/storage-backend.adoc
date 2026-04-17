@@ -68,7 +68,7 @@ Vous devez supprimer tous les magasins de données attachés au backend de stock
 . Sélectionnez le menu des ellipses verticales et sélectionnez *Supprimer*.  Assurez-vous que le backend de stockage ne contient aucun magasin de données.  Vous pouvez suivre la progression dans le panneau des tâches récentes.
 
 
-Vous pouvez effectuer l'opération de suppression pour les clusters ONTAP globaux à l'aide du gestionnaire d'outils ONTAP.
+Vous pouvez supprimer les clusters ONTAP globaux à l'aide du Gestionnaire d'outils ONTAP.
 
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
@@ -92,7 +92,7 @@ La page de résumé fournit les détails suivants :
 * Informations de base sur la machine virtuelle
 * Détails du certificat tels que le statut du certificat et la date d'expiration.
 * Informations réseau telles que l'adresse IP et le port du réseau.  Pour le SVM enfant, les informations sont les mêmes que celles du backend de stockage parent.
-* Privileges autorisés et restreints pour le backend de stockage.  Pour le SVM enfant, les informations sont les mêmes que celles du backend de stockage parent.  Les outils ONTAP affichent les privilèges uniquement sur les backends de stockage basés sur des clusters.  Si vous ajoutez SVM comme backend de stockage, les informations sur les privilèges ne sont pas affichées.
+* Privileges autorisés et restreints pour le stockage backend. Pour la SVM enfant, les informations sont identiques à celles du stockage backend parent. ONTAP tools affiche les privileges uniquement sur les stockages backend basés sur le cluster. Si vous ajoutez une SVM comme stockage backend, les informations relatives aux privileges ne sont pas affichées.
 * La vue détaillée du cluster système ASA r2 n'inclut pas l'onglet des niveaux locaux lorsque la propriété désagrégée est définie sur « vrai » pour le SVM ou le cluster.
 * Pour les systèmes SVM ASA r2, le portlet capacité n'est pas affiché. Le portail de capacité n'est requis que lorsque la propriété désagrégée est définie comme « true » pour le SVM ou le cluster.
 * Pour les systèmes ASA r2 SVM, la section informations de base présente le type de plateforme.

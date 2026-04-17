@@ -11,11 +11,11 @@ summary: Lors de la migration des données de stockage, les systèmes back-end s
 
 
 [role="lead"]
-Le déplacement des outils NetApp ONTAP tools for VMware vSphere de la version 9.xx vers la version 10.5 nécessite un processus de migration en raison des mises à jour et des améliorations importantes du produit entre les versions.
+Le passage de la configuration NetApp ONTAP tools for VMware vSphere de la version 9.xx à la version 10.5 nécessite un processus de migration en raison des mises à jour et améliorations importantes du produit entre les versions.
 
 Vous pouvez migrer des ONTAP tools for VMware vSphere 9.12D1, 9.13D2 et 9.13P2 vers les ONTAP tools for VMware vSphere 10.5.
 
-Si vous disposez de banques de données NFS et VMFS et d'aucune banque de données vVols dans votre configuration, désinstallez simplement les outils ONTAP 9.xx et déployez les outils ONTAP 10.5.  Cependant, si votre configuration contient des magasins de données vVols , vous devrez suivre un processus de migration du fournisseur VASA et du SRA.
+Si vous avez des datastores NFS et VMFS et aucun datastore vVols dans votre configuration, désinstallez simplement ONTAP tools 9.xx et déployez ONTAP tools 10.5. En revanche, si votre configuration contient des datastores vVols, vous devez procéder à la migration du VASA Provider et du SRA.
 
 Le tableau suivant décrit le processus de migration dans ces deux scénarios différents.
 

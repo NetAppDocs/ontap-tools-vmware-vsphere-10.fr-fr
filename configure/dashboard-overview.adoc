@@ -2,7 +2,7 @@
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: 'Lorsque vous sélectionnez l"icône du plug-in ONTAP Tools for VMware vSphere dans la section des raccourcis du client vCenter, l"interface utilisateur accède à la page de présentation. Cette page fonctionne comme le tableau de bord qui fournit le résumé du plug-in ONTAP Tools for VMware vSphere.' 
+summary: Lorsque vous sélectionnez l’icône du plug-in ONTAP tools for VMware vSphere dans la section des raccourcis sur le client vCenter, l’interface utilisateur navigue vers la page de présentation. Cette page fait office de tableau de bord et fournit un résumé du plug-in ONTAP tools for VMware vSphere. 
 ---
 = Découvrez le tableau de bord des ONTAP tools
 :allow-uri-read: 
@@ -18,7 +18,7 @@ En mode lié amélioré (ELM), la liste déroulante vCenter Server apparaît.  C
 Depuis la page d'aperçu, vous pouvez exécuter l'action *Découverte*. L'action de découverte détecte les backends de stockage, les hôtes, les banques de données et l'état ou les relations de protection nouvellement ajoutés ou mis à jour au niveau de vCenter.  Exécutez la découverte à la demande sans attendre la découverte planifiée.
 
 
-NOTE: Le bouton d’action *Découverte* est activé uniquement si vous disposez du privilège requis pour effectuer l’action de découverte.
+NOTE: Le bouton *Découverte* n'est activé que si vous disposez du privilège requis pour effectuer la découverte.
 
 Une fois la demande de découverte soumise, vous pouvez suivre la progression de l'action dans le panneau des tâches récentes.
 
@@ -30,10 +30,10 @@ Le tableau de bord comporte plusieurs cartes montrant différents éléments du 
 | *Carte* | *Description* 
 
 
-| État | La carte d'état indique le nombre de systèmes back-end de stockage et l'état global de santé des systèmes back-end de stockage et du fournisseur VASA. L'état des systèmes back-end de stockage affiche *Healthy* lorsque l'état de tous les systèmes back-end de stockage est normal et indique *malsain* si l'un des systèmes back-end de stockage présente un problème (état Inconnu/inaccessible/dégradé). Sélectionnez l'info-bulle pour ouvrir les détails sur le statut des systèmes back-end de stockage. Pour plus de détails, vous pouvez sélectionner n'importe quel système back-end. *Other VASA Provider States* link indique l'état actuel du VASA Provider enregistré dans vCenter Server. 
+| État | La fiche d'état affiche le nombre de storage backends et l'état de santé global des storage backends et du VASA Provider. L'état des storage backends indique *Sain* lorsque tous les statuts des storage backends sont normaux et *Non sain* si un storage backend présente un problème (statut Inconnu/Injoignable/Dégradé). Sélectionnez l'infobulle pour ouvrir les détails de l'état des storage backends. Vous pouvez sélectionner n'importe quel storage backend pour plus de détails. Le lien *Autres états du VASA Provider* affiche l'état actuel du VASA Provider enregistré dans le vCenter Server. 
 
 
-| Systèmes back-end de stockage - capacité | Cette carte affiche la capacité totale utilisée et disponible de tous les backends de stockage pour l'instance vCenter Server sélectionnée. Pour les systèmes de stockage ASA r2, les données de capacité ne sont pas affichées, car il s'agit d'un système désagrégé. 
+| Systèmes back-end de stockage - capacité | Cette fiche présente la capacité cumulée utilisée et disponible de tous les backends de stockage pour l’instance de serveur vCenter sélectionnée. Pour les systèmes de stockage ASA r2, les données de capacité ne sont pas affichées car le stockage est désagrégé. 
 
 
 | Ordinateurs virtuels | Cette fiche présente les 10 principales machines virtuelles classées par mesure de performance. Vous pouvez sélectionner l'en-tête pour obtenir les 10 premières machines virtuelles de la mesure sélectionnée, triées par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la carte persistent jusqu'à ce que vous changiez ou effacez le cache du navigateur. 
@@ -42,5 +42,5 @@ Le tableau de bord comporte plusieurs cartes montrant différents éléments du 
 | Datastore | Cette carte présente les 10 principaux datastores classés par mesure de performance. Vous pouvez sélectionner l'en-tête pour obtenir les 10 principaux datastores de la mesure sélectionnée triés par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la carte persistent jusqu'à ce que vous changiez ou effacez le cache du navigateur. Une liste déroulante Type de datastore permet de sélectionner le type de datastores : NFS, VMFS ou vVols. 
 
 
-| Carte de conformité de l'hôte ESXi | Cette carte indique si tous les hôtes ESXi (pour le vCenter sélectionné) suivent les paramètres d'hôte NetApp recommandés par groupe ou catégorie. Vous pouvez sélectionner le lien *Appliquer les paramètres recommandés* pour appliquer les paramètres recommandés. Vous pouvez sélectionner l’état de conformité des hôtes pour voir la liste des hôtes. 
+| Carte de conformité de l'hôte ESXi | Cette fiche indique si tous les hôtes ESXi (pour le vCenter sélectionné) respectent les paramètres hôte NetApp recommandés par groupe ou catégorie. Vous pouvez sélectionner le lien *Appliquer les paramètres recommandés* pour appliquer les paramètres recommandés. Vous pouvez sélectionner l'état de conformité des hôtes pour afficher la liste des hôtes. 
 |===

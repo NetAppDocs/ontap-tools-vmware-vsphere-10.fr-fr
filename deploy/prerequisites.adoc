@@ -13,7 +13,7 @@ summary: Avant de déployer les outils ONTAP pour VMware vSphere, vous devez con
 [role="lead"]
 Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître les besoins en espace requis pour le package de déploiement et la configuration système hôte de base requise.
 
-Vous pouvez utiliser les outils ONTAP pour VMware vSphere avec VMware vCenter Server Virtual Appliance (vCSA). Vous devez déployer les outils ONTAP pour VMware vSphere sur un client vSphere pris en charge qui inclut le système ESXi.
+Vous pouvez utiliser ONTAP tools for VMware vSphere avec VMware vCenter Server Virtual Appliance (vCSA). Vous devez déployer ONTAP tools for VMware vSphere sur un environnement vSphere pris en charge qui inclut des hôtes ESXi.
 
 
 
@@ -240,7 +240,7 @@ Le tableau suivant indique les chiffres pris en charge par instance VMware Live 
 
 | Nombre de VM | 4000 | 7000 
 |===
-Le tableau suivant indique le nombre de VMware Live site Recovery et les outils ONTAP correspondants pour la taille du déploiement de VMware vSphere.
+Le tableau suivant présente le nombre d'instances VMware Live Site Recovery et la taille de déploiement correspondante des ONTAP tools for VMware vSphere.
 
 |===
 

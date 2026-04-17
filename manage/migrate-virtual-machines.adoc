@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: Vous devez prendre en compte certaines considérations lors de la migration des machines virtuelles existantes dans votre data Center. 
+summary: Vous devez tenir compte de certains éléments lors de la migration de machines virtuelles existantes dans votre centre de données. 
 ---
 = Considérations relatives à la migration et au clonage de machines virtuelles pour ONTAP tools
 :allow-uri-read: 
@@ -11,20 +11,22 @@ summary: Vous devez prendre en compte certaines considérations lors de la migra
 
 
 [role="lead"]
-Lors de la migration de machines virtuelles existantes dans votre data Center, vous devez prendre en compte certaines considérations.
+ONTAP tools for VMware vSphere prennent en charge tous les principaux types de migration de machines virtuelles, y compris la migration de calcul uniquement (vMotion), la migration de stockage uniquement (Storage vMotion) et la migration combinée de calcul et de stockage sur l'ensemble des datastores. Ce document présente les points clés à prendre en compte et les bonnes pratiques pour garantir la réussite de la migration et du clonage des machines virtuelles, quel que soit le type de datastore sous-jacent.
 
 
 
 == Migrer des machines virtuelles protégées
 
-Vous pouvez migrer les machines virtuelles protégées vers :
+Vous pouvez migrer les machines virtuelles protégées vers :
 
-* Même datastore vVvols dans un autre hôte ESXi
-* Il existe un autre datastore compatible vVvols dans le même hôte ESXi
-* Il existe un autre datastore compatible vVvols dans un hôte VMware ESXi différent
+* Le même datastore sur un hôte ESXi différent
+* Un autre datastore compatible sur le même hôte ESXi
+* Un autre datastore compatible sur un autre hôte ESXi
 
 
-Si vous migrez la machine virtuelle vers un autre FlexVol volume, le système met à jour le fichier de métadonnées de ce volume avec les informations de la machine virtuelle. Si une machine virtuelle est migrée vers un autre hôte ESXi mais avec le même stockage, le fichier de métadonnées du FlexVol volume sous-jacent ne sera pas modifié.
+Si vous migrez la machine virtuelle vers un autre FlexVol volume, le système met à jour le fichier de métadonnées de ce volume avec les informations de la machine virtuelle. Si une machine virtuelle est migrée vers un autre hôte ESXi mais sur le même stockage, le fichier de métadonnées du volume FlexVol sous-jacent ne sera pas modifié.
+
+Pour plus d'informations sur la migration des machines virtuelles, consultez la documentation Broadcom : https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere Migration des machines virtuelles"]
 
 
 
@@ -32,32 +34,37 @@ Si vous migrez la machine virtuelle vers un autre FlexVol volume, le système me
 
 Vous pouvez cloner des machines virtuelles protégées à plusieurs méthodes :
 
-* Même conteneur du même volume FlexVol à l'aide du groupe de réplication
+* Le même conteneur du même FlexVol volume utilisant un groupe de réplication
 +
-Le fichier de métadonnées du volume FlexVol est mis à jour avec les détails de la machine virtuelle clonée.
+Le fichier de métadonnées du même volume FlexVol est mis à jour avec les détails de la machine virtuelle clonée.
 
-* Même conteneur d'un autre volume FlexVol utilisant le groupe de réplication
+* Le même conteneur d'un volume FlexVol différent utilisant un groupe de réplication
 +
-Volume FlexVol où la machine virtuelle clonée est placée, le fichier de métadonnées est mis à jour avec les détails de la machine virtuelle clonée.
+Dans le volume FlexVol où est placée la machine virtuelle clonée, le fichier de métadonnées est mis à jour avec les détails de la machine virtuelle clonée.
 
-* Il existe un autre conteneur ou datastore vvols
+* Un conteneur différent ou un datastore vVols
 +
-Volume FlexVol sur lequel la machine virtuelle clonée est placée, le fichier de métadonnées est mis à jour les informations relatives à la machine virtuelle.
+Dans le volume FlexVol où est placée la machine virtuelle clonée, le fichier de métadonnées est mis à jour avec les détails de la machine virtuelle.
 
 
 
-VMware ne prend actuellement pas en charge les machines virtuelles clonées sur un modèle de machine virtuelle.
+VMware ne prend actuellement pas en charge les machines virtuelles clonées sur un modèle de VM.
 
-Le clonage d'une machine virtuelle protégée est pris en charge.
+Il est possible de cloner un clone d'une machine virtuelle protégée.
 
-Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html["Création d'une machine virtuelle pour le clonage"] pour plus de détails.
+Consultez la documentation Broadcom: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html["Création d'une machine virtuelle pour le clonage"] pour plus de détails.
 
 
 
-== Snapshots de machine virtuelle
+== instantanés de machines virtuelles
 
-Les instantanés de machines virtuelles sans mémoire sont pris en charge. Si une machine virtuelle possède un instantané avec mémoire, la machine virtuelle ne peut pas être protégée.
+ONTAP tools prend en charge les instantanés de machines virtuelles via les flux de travail VMware standard. Les instantanés sont des points de restauration temporaires destinés à des cas d'utilisation tels que les tests et la préparation de correctifs. Ils ne remplacent pas la sauvegarde ni la protection des données basée sur la réplication. L'exécution prolongée d'une machine virtuelle sur un instantané peut entraîner une instabilité et une perte de données.
 
-Vous ne pouvez pas protéger les machines virtuelles non protégées qui contiennent des instantanés de mémoire. Supprimez les instantanés de mémoire avant d’activer la protection de la machine virtuelle.
+Vous pouvez créer des instantanés cohérents en cas de panne (instantanés sans état de la mémoire, permettant de redémarrer la machine virtuelle dans un état cohérent) sur tous les types de datastores pris en charge. Les instantanés mis au repos, qui utilisent VMware Tools pour vider les données en mémoire sur le disque avant la capture, sont également pris en charge. Pour une présentation des types d'instantanés et de leur comportement, consultez  https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["Aperçu des instantanés de machines virtuelles dans vSphere"].
 
-Pour une machine virtuelle Windows avec un type de stockage ASA r2, les snapshots de la machine virtuelle sont en lecture seule. Lorsque vous allumez la machine virtuelle, VASA Provider crée un LUN à partir du snapshot en lecture seule et active les IOPS. Lorsque vous éteignez la machine virtuelle, VASA Provider supprime le LUN et désactive les IOPS.
+
+NOTE: Les instantanés mémoire capturent l'état de la mémoire en cours d'exécution et suspendent temporairement la machine virtuelle. Ils ne sont pas pris en charge dans les workflows des outils ONTAP. Si une machine virtuelle possède un instantané mémoire, vous devez le supprimer avant que la machine virtuelle puisse être incluse dans un groupe de cohérence ou une relation de cluster hôte gérée par les outils ONTAP.
+
+Sur les systèmes de stockage ASA r2, le comportement des snapshots de machines virtuelles diffère de celui des autres types de stockage. Les snapshots sont en lecture seule. Lorsque vous mettez sous tension la machine virtuelle, VASA Provider crée un LUN à partir du snapshot en lecture seule et active les IOPS. Lorsque vous mettez hors tension la machine virtuelle, VASA Provider supprime le LUN et désactive les IOPS.
+
+Pour plus d'informations sur la gestion des instantanés de machines virtuelles, reportez-vous à la documentation Broadcom https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["Gérer les machines virtuelles avec des instantanés"].

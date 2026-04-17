@@ -90,11 +90,11 @@ Ajoutez le *chemin d'accès à l'API REST* et choisissez l'accès dans la liste 
 
 . Créer des utilisateurs :
 +
-.. Sélectionnez *Ajouter* dans la table *utilisateurs*.
+.. Sélectionnez *Ajouter* sous le tableau *Utilisateurs*.
 .. Dans la boîte de dialogue *Ajouter un utilisateur*, sélectionnez *System Manager*.
 .. Entrez le *Nom d'utilisateur*.
 .. Sélectionnez *role* parmi les options créées à l'étape *Create Roles* ci-dessus.
-.. Entrez les applications à laquelle vous souhaitez accorder l'accès et la méthode d'authentification. ONTAPI et HTTP sont les applications requises et le type d'authentification est *Password*.
+.. Saisissez les applications auxquelles vous souhaitez donner accès et la méthode d'authentification. ONTAPI et HTTP sont les applications requises, et le type d'authentification est *Password*.
 .. Définissez le *Mot de passe pour l'utilisateur* et le *Enregistrer* pour l'utilisateur.
 
 
@@ -259,13 +259,13 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
 
 ----
-En outre, pour ONTAP versions 9.16.0 et supérieures, exécutez la commande suivante :
+De plus, pour les versions ONTAP 9.16.0 et supérieures, exécutez la commande suivante :
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
 ----
-Pour les systèmes ASA r2 sous ONTAP versions 9.16.1 et supérieures, exécutez la commande suivante :
+Pour les systèmes ASA r2 sur ONTAP versions 9.16.1 et supérieures, exécutez la commande suivante :
 
 [listing]
 ----
@@ -355,13 +355,13 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly -vserver <vserver-name>
 ----
-En outre, pour ONTAP versions 9.16.0 et supérieures, exécutez la commande suivante :
+De plus, pour les versions ONTAP 9.16.0 et supérieures, exécutez la commande suivante :
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>
 ----
-Pour créer un utilisateur basé sur une API à l'aide des rôles basés sur une API créés ci-dessus, exécutez la commande suivante :
+Pour créer un nouvel utilisateur basé sur l'API en utilisant les rôles basés sur l'API créés précédemment, exécutez la commande suivante :
 
 [listing]
 ----

@@ -31,4 +31,4 @@ Vous devez avoir connecté les sites protégés et de reprise.
 
 
 .Résultat
-La page mappages des dossiers affiche les ressources du site protégé et les ressources du site de reprise. Vous pouvez suivre les mêmes étapes pour les autres réseaux de votre environnement.
+La page « Mappage des dossiers » affiche les ressources du site protégé et celles du site de récupération. Vous pouvez suivre la même procédure pour les autres dossiers de votre environnement.

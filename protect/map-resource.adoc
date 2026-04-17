@@ -25,7 +25,7 @@ NOTE: Dans VMware Live site Recovery, les ressources peuvent être des pools de 
 . Sélectionnez *mappages de ressources* > *Nouveau* dans l'onglet gérer pour créer un mappage de ressources.
 . Dans l'assistant Créer un mappage de ressources, effectuez les opérations suivantes :
 +
-.. Sélectionnez *préparer automatiquement les mappages pour la ressource avec les noms correspondants* et sélectionnez *Suivant*.
+.. Sélectionnez *Préparer automatiquement les mappages pour les ressources ayant des noms correspondants* et sélectionnez *Suivant*.
 .. Sélectionnez les objets de centre de données requis pour les sites protégés et de récupération, puis sélectionnez *Ajouter des mappages*.
 .. Sélectionnez *Suivant* une fois les mappages créés.
 .. Sélectionnez l'objet utilisé précédemment pour créer le mappage inverse, puis sélectionnez *Terminer*.
@@ -34,4 +34,4 @@ NOTE: Dans VMware Live site Recovery, les ressources peuvent être des pools de 
 
 
 .Résultat
-La page mappages des ressources affiche les ressources protégées du site et les ressources du site de reprise. Vous pouvez suivre les mêmes étapes pour les autres réseaux de votre environnement.
+La page « Mappages de ressources » affiche les ressources du site protégé et celles du site de récupération. Vous pouvez suivre la même procédure pour les autres ressources de votre environnement.

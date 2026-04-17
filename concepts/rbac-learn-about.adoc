@@ -22,10 +22,10 @@ Le modèle standard RBAC se compose de plusieurs technologies d'implémentation 
 
 == Composants RBAC
 
-À un niveau élevé, plusieurs composants sont généralement inclus dans chaque implémentation de RBAC. Ces composants sont liés de différentes manières dans le cadre de la définition des processus d'autorisation.
+De manière générale, plusieurs composants sont inhérents à toute implémentation RBAC. Ces composants sont liés entre eux de différentes manières afin de définir les processus d'autorisation.
 
 .Privilèges
-Un privilège est une action ou une capacité qui peut être autorisée ou refusée. Il peut s'agir d'une action simple, comme la possibilité de lire un fichier, ou d'une opération plus abstraite, spécifique à un système logiciel donné. Des Privileges peuvent également être définis pour restreindre l'accès aux points de terminaison de l'API REST et aux commandes CLI. Chaque implémentation RBAC inclut des privilèges prédéfinis et peut également permettre aux administrateurs de créer des privilèges personnalisés.
+Un privilège est une action ou une capacité qui peut être autorisée ou refusée. Il peut s'agir d'une action simple, comme la possibilité de lire un fichier, ou d'une opération plus abstraite, spécifique à un système logiciel donné. Privileges peuvent également être définis pour restreindre l'accès aux points de terminaison REST API et aux commandes CLI. Chaque implémentation RBAC inclut des privilèges prédéfinis et peut également permettre aux administrateurs de créer des privilèges personnalisés.
 
 .Rôles
 Un _role_ est un conteneur qui inclut un ou plusieurs Privileges. Les rôles sont généralement définis en fonction de tâches ou de fonctions particulières. Lorsqu'un rôle est attribué à un utilisateur, tous les Privileges contenus dans le rôle lui sont attribués. Comme avec Privileges, les implémentations incluent des rôles prédéfinis et permettent généralement de créer des rôles personnalisés.

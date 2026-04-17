@@ -16,7 +16,7 @@ Lorsque vous supprimez la protection du cluster hôte, les datastores deviennent
 .Étapes
 . Pour afficher la liste des clusters d'hôtes protégés, accédez à * Outils NetApp ONTAP * > *Protection* > *Relations entre les clusters d'hôtes*.
 +
-Sur cette page, surveillez les clusters d'hôtes protégés, l'état de protection, la relation SnapMirror et le statut.  Sélectionnez des groupes de cohérence pour afficher la capacité, les banques de données associées et les groupes enfants.
+Sur cette page, vous pouvez surveiller les clusters d'hôtes protégés, l'état de protection, la relation SnapMirror et le statut. Sélectionnez les groupes de cohérence pour afficher la capacité, les banques de données associées et les groupes enfants.
 
 . Dans la fenêtre *Protection du cluster hôte*, sélectionnez le menu à points de suspension à côté du cluster et sélectionnez *Supprimer la protection*.
 +

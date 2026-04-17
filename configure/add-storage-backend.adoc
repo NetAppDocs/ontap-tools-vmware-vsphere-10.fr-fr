@@ -72,9 +72,6 @@ NOTE: Une fois que le système ONTAP a effectué un basculement et un retour en 
 
 
 
-.Et la suite ?
-Les outils ONTAP mettent à jour la liste pour afficher le nouveau backend de stockage.
-
 --
 ====
 Les outils ONTAP répertorient le backend de stockage nouvellement ajouté sur la page *Backends de stockage*.  Si un certificat expire dans 30 jours ou moins, les outils ONTAP affichent un avertissement dans la colonne de date d’expiration du certificat.  Après expiration, les outils ONTAP marquent le backend de stockage comme inconnu car il ne peut pas se connecter au système de stockage.

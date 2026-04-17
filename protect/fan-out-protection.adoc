@@ -14,7 +14,7 @@ summary: Dans un scénario de protection en éventail, le groupe de cohérence e
 Dans un scénario de protection en éventail, le groupe de cohérence est doublement protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le deuxième cluster ONTAP de destination.  Les flux de travail de création, de modification et de suppression de la protection de synchronisation active SnapMirror maintiennent la protection synchrone.  Les flux de travail de basculement et de reprotection des appliances VMware Live Site Recovery maintiennent la protection asynchrone.
 
 
-NOTE: Le déploiement n'est pas pris en charge pour l'utilisateur SVM.
+NOTE: La fonction de diffusion n'est pas prise en charge pour les utilisateurs de SVM.
 
 Pour configurer la protection en éventail, associez les trois clusters de sites et les SVM.
 
@@ -44,14 +44,14 @@ Exemple :
 Le schéma suivant montre la configuration de la protection en éventail :image:../media/fan-out-protection.png["Configuration de la protection en éventail"] image:../media/fan-out-protection-relationship.png["Relation de protection en éventail"]
 
 .Étapes
-. Sélectionnez un nouveau magasin de données d'espace réservé.  Les critères de sélection du magasin de données d'espace réservé pour la protection par phases sont :
+. Sélectionnez un nouveau magasin de données de substitution. Les critères de sélection du magasin de données de substitution pour la protection progressive sont les suivants :
 +
 ** Ne placez pas le magasin de données d’espace réservé dans le cluster hôte que vous protégez.
-** Si vous devez inclure la banque de données d'espace réservé dans le cluster hôte, ajoutez-la à l'appliance VMware Live Site Recovery avant de configurer la protection de synchronisation active SnapMirror .  Avec cette configuration, vous pouvez laisser le magasin de données d'espace réservé hors de protection.
+** Si vous devez inclure le datastore de substitution dans le cluster hôte, ajoutez-le à l'appliance VMware Live Site Recovery avant de configurer la protection SnapMirror active sync. Avec cette configuration, vous pouvez laisser le datastore de substitution en dehors de la protection.
 +
 Pour plus d'informations, reportez-vous à https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Sélectionnez un datastore de placeholder"]
 
 
 
-. Ajoutez une banque de données à la protection du cluster hôte en suivantlink:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"] .  Ajoutez des types de politiques asynchrones et synchrones.
+. Ajoutez des banques de données à la protection du cluster hôte en suivant link:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"]. Ajoutez des types de stratégies asynchrones et synchrones.
 

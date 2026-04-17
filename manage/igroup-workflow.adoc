@@ -223,6 +223,12 @@ Pendant la migration :
 
 Cela garantit le respect du modèle hiérarchique.
 
+À partir d'ONTAP tools 10.5P2, les igroups migrés sont supprimés lorsqu'ils ne sont plus utilisés. Dans les versions précédentes, les igroups migrés n'étaient jamais supprimés. Remarque :
+
+* Les igroups migrés ne peuvent pas être réutilisés entre les banques de données.
+* Les igroups personnalisés (définis par l'utilisateur) ne sont jamais supprimés et peuvent toujours être réutilisés.
+
+
 .Sections connexes
 https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["À propos des igroups"]
 

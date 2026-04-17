@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: 'L"action Supprimer le datastore supprime le datastore. Dans le cas d"un datastore NFS ou VMFS, une boîte de dialogue s"affiche avec la liste des machines virtuelles qui utilisent le datastore.' 
+summary: 'L"action « Supprimer la banque de données » supprime la banque de données. Dans le cas d"une banque de données NFS ou VMFS, une boîte de dialogue s"affiche avec la liste des machines virtuelles utilisant cette banque de données.' 
 ---
 = Supprimer les banques de données dans ONTAP tools
 :allow-uri-read: 
@@ -16,7 +16,7 @@ Cette page explique comment supprimer des banques de données NFS, VMFS ou vVols
 Lorsque vous supprimez une banque de données, les actions suivantes sont effectuées en fonction du type de banque de données :
 
 * Le conteneur vVol est démonté.
-* Si l'igroup n'est pas utilisé, iqn est supprimé de l'igroup.
+* Si l'igroup n'est pas utilisé, ses initiateurs sont retirés de l'igroup.
 * Le conteneur vVol est supprimé.
 * Les volumes flexibles sont laissés sur la baie de stockage.
 
