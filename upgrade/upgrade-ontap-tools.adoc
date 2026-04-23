@@ -70,7 +70,7 @@ Se référer à link:../manage/backup-settings.html["Modifier les paramètres de
 . Entrez *7* pour sélectionner l’option *Mise à niveau*.
 . Fournissez les informations d'identification vCenter lorsque vous y êtes invité. Il s'agit de l'instance vCenter sur laquelle les outils ONTAP sont hébergés.
 +
-Si vous utilisez les outils ONTAP dans une topologie à deux serveurs vCenter (où l'appliance est hébergée dans une instance vCenter et en gère une autre), vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP . Vous pouvez créer un utilisateur et un rôle vCenter dédiés, disposant uniquement des autorisations requises pour le déploiement du modèle OVF. Pour plus de détails, consultez les rôles énumérés dans https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Rôles inclus avec les outils ONTAP pour VMware vSphere 10"].
+Si vous utilisez les outils ONTAP dans une topologie à deux serveurs vCenter—où l'appliance est hébergée dans une instance vCenter et en gère une autre, vous pouvez attribuer un rôle restreint à l'instance vCenter hébergeant les outils ONTAP. Vous pouvez créer un utilisateur et un rôle vCenter dédiés, disposant uniquement des autorisations nécessaires au déploiement du modèle OVF. Pour plus de détails, consultez les rôles listés dans link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Rôles inclus avec les outils ONTAP pour VMware vSphere 10"].
 
 +
 Pour l'instance vCenter qui sera gérée par les outils ONTAP , assurez-vous que le compte utilisateur vCenter dispose des privilèges d'administrateur.
