@@ -2,7 +2,7 @@
 permalink: manage/nested-igroups.html 
 sidebar: sidebar 
 keywords:  
-summary:  
+summary: Découvrez comment les ONTAP tools for VMware vSphere représentent et gèrent les igroups, y compris le comportement des igroups imbriqués, la réutilisation et les modifications de nettoyage de la version 10.5 P2. 
 ---
 = Comment les ONTAP tools gèrent les igroups
 :allow-uri-read: 
@@ -11,19 +11,33 @@ summary:
 
 
 [role="lead"]
-Si vous gérez à la fois des machines virtuelles ONTAP et des systèmes de stockage ONTAP , il est important de comprendre le comportement des igroups, en particulier lors du déplacement de banques de données d'environnements non gérés par les outils ONTAP vers ceux qui le sont. Cette page explique comment les igroups sont mis à jour au cours de ce processus.
+Si vous gérez à la fois les machines virtuelles ONTAP tools et les systèmes de stockage ONTAP, il est important de comprendre comment les igroups se comportent, en particulier lors du déplacement de datastores d'environnements non gérés par ONTAP tools vers ceux qui le sont. Cette page explique comment ONTAP tools for VMware vSphere représente et gère les igroups. Il s'agit d'informations conceptuelles pour comprendre les différences de comportement entre les versions précédentes et le modèle actuel d'igroup imbriqué.
 
-À partir de ONTAP tools for VMware vSphere 10.4, les outils ONTAP créent et gèrent automatiquement les objets ONTAP et vCenter, simplifiant la gestion des datastores dans les environnements de datacenter VMware.
+À partir de ONTAP tools for VMware vSphere 10.4, ONTAP tools crée et gère automatiquement les objets ONTAP et vCenter, simplifiant la gestion des datastores dans les environnements de datacenter VMware. À partir de ONTAP tools for VMware vSphere 10.5 P2, les igroups migrés sont également supprimés automatiquement lorsqu'ils ne sont plus utilisés.
 
-Les ONTAP tools for VMware vSphere interprètent les igroups dans deux contextes différents :
+
+
+== Résumé rapide du comportement
+
+* Les datastores VMFS gérés par les outils ONTAP utilisent des igroups imbriqués : un igroup parent par contexte de datastore et des igroups enfants par hôte.
+* Les mappages LUN sont appliqués aux igroups enfants.
+* Les igroups parents personnalisés peuvent être réutilisés dans plusieurs datastores.
+* Les igroups migrés depuis ONTAP tools 9.x ne peuvent pas être réutilisés.
+
+
+
+
+== Contextes de groupe
+
+Les outils ONTAP pour VMware vSphere gèrent les igroups dans deux contextes.
 
 .igroups gérés par des outils non ONTAP
-En tant qu'administrateur de stockage, vous pouvez créer des igroups sur le système ONTAP sous forme de structures plates ou imbriquées.  L'illustration montre un igroup plat créé dans le système ONTAP .
+En tant qu'administrateur de stockage, vous pouvez créer des igroups sur le système ONTAP sous forme de structures plates ou imbriquées. L'illustration suivante montre un igroup plat créé directement dans ONTAP.
 
 image:../media/non-otv-managed.png["Outils non gérés par ONTAP igroup"]
 
 .igroups gérés par les outils ONTAP
-Lorsque vous créez des banques de données, les ONTAP tools for VMware vSphere créent automatiquement des igroups à l'aide d'une structure imbriquée pour faciliter le mappage LUN.
+Lorsque vous créez des banques de données, ONTAP tools for VMware vSphere crée des igroups dans une structure imbriquée.
 
 Par exemple, lorsque datastore1 est créé et monté sur les hôtes 1, 2 et 3, et qu'un nouveau datastore (datastore2) est créé et monté sur les hôtes 3, 4 et 5, les outils ONTAP réutilisent le groupe i au niveau de l'hôte pour une gestion efficace.
 
@@ -31,41 +45,69 @@ image:../media/otv-managed.png["Outils ONTAP gérés par igroup"]
 
 image:../media/otv-managed2.png["Outils ONTAP gérés par igroup avec igroup enfant réutilisé"]
 
-Voici quelques cas d' ONTAP tools for VMware vSphere .
-
-*Lorsque vous créez une banque de données avec les paramètres igroup par défaut*
-
-Lorsque vous créez une banque de données et laissez le champ igroup vide (paramètre par défaut), les outils ONTAP génèrent automatiquement une structure igroup imbriquée pour cette banque de données.  Le groupe parent au niveau du magasin de données est nommé à l'aide du modèle : otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>.  Chaque groupe enfant au niveau de l'hôte suit le modèle : otv_<hostMoref>_<vcguid>.  Vous pouvez afficher l'association entre les groupes parents (au niveau du magasin de données) et enfants (au niveau de l'hôte) dans la section *Groupe d'initiateurs parents* de l'interface de stockage ONTAP .
-
-Avec l’approche igroup imbriquée, les LUN sont mappés uniquement aux igroups enfants. L’inventaire vCenter Server affiche ensuite la nouvelle banque de données.
-
-*Lorsque vous créez une banque de données avec un nom de groupe i personnalisé*
-
-Lors de la création d'une banque de données dans les outils ONTAP , vous pouvez saisir un nom de groupe d'applications personnalisé au lieu de le sélectionner dans la liste déroulante. Les outils ONTAP créent ensuite un groupe parent au niveau du magasin de données en utilisant le nom que vous avez spécifié. Si le même hôte est utilisé pour plusieurs banques de données, le groupe i existant au niveau de l'hôte (enfant) est réutilisé. Par conséquent, le LUN du nouveau magasin de données est mappé à ce groupe i enfant existant, qui peut désormais être associé à plusieurs groupes i parents (un pour chaque magasin de données). Vous pouvez voir le nouveau magasin de données avec le nom igroup personnalisé dans l’interface vCenter Server.
-
-*Lorsque vous réutilisez le nom du groupe i lors de la création du magasin de données*
-
-Lors de la création d'une banque de données à l'aide de l'interface utilisateur des outils ONTAP , vous pouvez choisir un groupe parent personnalisé existant dans la liste déroulante.  Après avoir réutilisé le groupe parent pour créer une autre banque de données, l'interface utilisateur des systèmes ONTAP affiche cette association.  Le nouveau magasin de données apparaît également dans l’interface utilisateur de vCenter Server.
-
-Cette opération peut également être effectuée à l’aide de l’API.  Pour réutiliser un igroup existant lors de la création d'une banque de données, spécifiez l'UUID igroup dans la charge utile de la demande d'API.
 
 
-NOTE: Seuls les igroups personnalisés peuvent être réutilisés. Les igroups créés lors de la migration depuis ONTAP tools 9.x (igroups migrés) ne peuvent pas être réutilisés et, à partir de ONTAP tools 10.5P2, sont automatiquement supprimés lorsqu'ils ne sont plus utilisés.
+== Comportement de dénomination
 
-*Lorsque vous créez un datastore et un igroup nativement à partir ONTAP et de vCenter*
+Lorsque vous créez un datastore et laissez le champ igroup vide, ONTAP tools crée une structure igroup imbriquée par défaut.
 
-Si vous créez l'igroup et le datastore directement dans les systèmes ONTAP et les environnements VMware, les outils ONTAP ne gèrent pas ces objets dans un premier temps.  Cela crée une structure igroup plate.
+* Modèle de nommage des igroups parents : `otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>`
+* Modèle de nommage des igroups enfants : `otv_<hostMoref>_<vcguid>`
+
+
+L'interface des systèmes ONTAP affiche la relation entre les igroups parents et enfants dans le champ *Parent Initiator Group*.
+
+
+
+== Comportement selon le scénario
+
+[cols="25,25,25,25"]
+|===
+| Scénario | Comportement du groupe parent | Comportement du groupe enfant | Cartographie et visibilité des LUN 
+
+
+| Magasin de données créé avec les paramètres igroup par défaut | Un groupe igroup parent géré par défaut par les ONTAP tools est créé. | Des igroups enfants au niveau de l'hôte sont créés selon les besoins. | Les LUN sont mappées à des igroups enfants. La banque de données apparaît dans l'inventaire du serveur vCenter. 
+
+
+| Magasin de données créé avec un nom d'igroup personnalisé | Un igroup parent personnalisé est créé avec le nom spécifié. | Les igroups enfants existants au niveau de l'hôte sont réutilisés en cas de chevauchement des hôtes. | Le nouveau LUN de la banque de données est mappé à l'igroup enfant réutilisé ou nouvellement créé. La banque de données apparaît dans le serveur vCenter. 
+
+
+| Groupe igroup personnalisé existant réutilisé lors de la création du datastore | Un igroup parent personnalisé existant est sélectionné et réutilisé. | Les igroups enfants sont réutilisés ou étendus en fonction de l'appartenance à l'hôte. | Le nouveau LUN de la banque de données est mappé via l'igroup enfant associé. La banque de données apparaît dans le serveur vCenter. 
+
+
+| Le datastore et l'igroup sont créés nativement dans ONTAP et vCenter, puis découverts par les ONTAP tools | ONTAP tools crée un igroup parent dans son contexte de gestion et conserve le nom d'igroup d'origine. | ONTAP tools renomment l'igroup d'origine avec le  `otv_` préfixe et le représentent comme un igroup enfant dans la hiérarchie. | Les mappages d'initiateurs restent inchangés. Seuls les igroups mappés aux banques de données sont convertis lors de la découverte. 
+|===
+
+
+== Réutilisation personnalisée des igroups et comportement de l'API
+
+Dans l'interface utilisateur des ONTAP tools, vous pouvez réutiliser un igroup parent personnalisé existant à partir de la liste déroulante lors de la création d'un datastore.
+
+Ce même comportement est pris en charge par l'API. Pour réutiliser un igroup existant lors de la création d'un datastore, fournissez l'UUID de l'igroup dans la charge utile de la requête API.
+
+
+NOTE: Seuls les igroups personnalisés peuvent être réutilisés. Les igroups migrés depuis ONTAP tools 9.x ne peuvent pas être réutilisés et, à partir de ONTAP tools 10.5 P2, sont automatiquement supprimés lorsqu'ils ne sont plus utilisés.
+
+
+
+== Vue de conversion native vers gérée
+
+Si vous créez directement l'igroup et le datastore dans les systèmes ONTAP et les environnements VMware, ONTAP tools ne gère pas initialement ces objets. Il en résulte une structure d'igroup plate.
 
 image:../media/vmfsds-native.png["Datastore et igroup créés nativement"]
 
-Pour gérer une banque de données et un groupe d'applications existants avec les outils ONTAP , vous devez effectuer une découverte de banque de données.  Les outils ONTAP identifient et enregistrent le magasin de données et l'igroup, et les convertissent en une structure imbriquée dans sa base de données.  Un nouveau groupe parent est créé en utilisant le nom personnalisé, tandis que le groupe existant est renommé avec le préfixe « otv_ » et devient le groupe enfant.  Les mappages d’initiateurs restent inchangés.  Seuls les igroups mappés aux banques de données sont convertis lors de la découverte.  Après cela, la structure igroup ressemble à l’illustration ci-dessous.
+Après la découverte des datastores, ONTAP tools identifie et enregistre les igroups mappés sur les datastores, puis les représente dans un modèle imbriqué. L'igroup parent est représenté au niveau du datastore, l'igroup existant est renommé avec le  `otv_` préfixe en tant qu'igroup enfant, et les mappages d'initiateurs restent inchangés.
 
 image:../media/otv-ds.png["Banque de données et igroup gérés par les outils ONTAP"]
 
-Une fois la découverte de banque de données exécutée dans les outils ONTAP , ONTAP derniers convertissent le groupe d'extension plat en une structure imbriquée. Les outils ONTAP gèrent ensuite l'igroup, en le renommant avec le préfixe « otv_ ». Le LUN reste mappé au même igroup tout au long de ce processus.
+ONTAP tools for VMware vSphere ne détecte ni ne gère les igroups qui sont créés dans les systèmes ONTAP mais qui ne sont pas associés à une banque de données ou liés aux ONTAP tools. Lors de la découverte, ONTAP tools convertit uniquement les igroups qui sont associés aux banques de données détectées ; les autres igroups restent non gérés.
 
-*Comment les outils ONTAP réutilisent les igroups créés nativement*
 
-Vous pouvez créer une banque de données dans les outils ONTAP à l'aide d'un igroup qui a d'abord été créé dans les systèmes ONTAP , une fois que les outils ONTAP l'ont géré. Ces groupes i apparaissent dans la liste déroulante des noms de groupe d'initiateurs personnalisés. Le nouveau LUN pour le magasin de données est ensuite mappé au groupe enfant normalisé correspondant, tel que « otv_NativeIgroup1 ».
 
-Les ONTAP tools for VMware vSphere ne détectent ni n'utilisent les igroups créés dans le système ONTAP qui ne sont pas gérés par les outils ONTAP ou liés à une banque de données.
+== Réutilisation des igroups natifs découverts
+
+Après qu'ONTAP tools a géré un igroup natif découvert, cet igroup est disponible dans la liste déroulante du nom du groupe d'initiateurs personnalisé pour la création de datastore.
+
+Le nouveau LUN de la banque de données est mappé au groupe d'interface enfant normalisé, par exemple, `otv_NativeIgroup1`.
+
+ONTAP tools for VMware vSphere ne détecte ni n'utilise les igroups créés dans les systèmes ONTAP qui ne sont pas gérés par ONTAP tools ou qui ne sont pas liés à une banque de données.
