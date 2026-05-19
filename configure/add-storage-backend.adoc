@@ -2,7 +2,7 @@
 permalink: configure/add-storage-backend.html 
 sidebar: sidebar 
 keywords:  
-summary: Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilisent pour le stockage des données. 
+summary: 'Ajoutez et gérez les systèmes de stockage localement pour une instance vCenter ou globalement pour une découverte à l"échelle du cluster dans les outils ONTAP.' 
 ---
 = Ajouter un système de stockage dorsal aux ONTAP tools
 :allow-uri-read: 
@@ -16,6 +16,8 @@ Utilisez les ONTAP tools for VMware vSphere afin d'ajouter et de gérer les syst
 Pour ajouter un système de stockage local, utilisez les informations d'identification du cluster ou de la SVM dans l'interface des outils ONTAP .  Les systèmes de stockage local sont disponibles uniquement pour le serveur vCenter sélectionné. Les outils ONTAP mappent les SVM au serveur vCenter pour la gestion des banques de données vVols ou VMFS.  Pour les banques de données VMFS et les flux de travail SRA, vous pouvez utiliser les informations d'identification SVM sans mapper un cluster globalement.
 
 Pour ajouter un système de stockage global, utilisez les informations d'identification du cluster ONTAP dans ONTAP Tools Manager.  Les systèmes de stockage globaux permettent aux flux de travail de découverte d'identifier les ressources du cluster nécessaires à la gestion des vVol.  Dans les environnements mutualisés, vous pouvez ajouter localement un utilisateur SVM pour gérer les banques de données vVols .
+
+Consultez l'article de la base de connaissances : https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10 : Quelle est la portée globale et locale du storage backend"^] pour plus d'informations sur les systèmes de stockage globaux et locaux.
 
 Si la prise en charge de MetroCluster est activée dans ONTAP, intégrez les clusters source et de destination en tant que backends de stockage locaux ou globaux.
 
@@ -77,4 +79,6 @@ NOTE: Une fois que le système ONTAP a effectué un basculement et un retour en 
 Les outils ONTAP répertorient le backend de stockage nouvellement ajouté sur la page *Backends de stockage*.  Si un certificat expire dans 30 jours ou moins, les outils ONTAP affichent un avertissement dans la colonne de date d’expiration du certificat.  Après expiration, les outils ONTAP marquent le backend de stockage comme inconnu car il ne peut pas se connecter au système de stockage.
 
 .Informations associées
+https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10 : Quelle est la portée globale et locale du storage backend"^]
+
 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html["Configuration des clusters dans une configuration MetroCluster"]

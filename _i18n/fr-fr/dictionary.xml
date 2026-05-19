@@ -2791,4 +2791,8 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="45f0d050845f640650733b37410eca9f" category="paragraph">Après qu'ONTAP tools a géré un igroup natif découvert, cet igroup est disponible dans la liste déroulante du nom du groupe d'initiateurs personnalisé pour la création de datastore.</block>
   <block id="8d90581e01616bc6e833be117c8bf966" category="paragraph">Le nouveau LUN de la banque de données est mappé au groupe d'interface enfant normalisé, par exemple,<block ref="e2e2c5bf7535645ea2278f194b28ad1e" prefix=" " category="inline-code"></block>.</block>
   <block id="270b8c3a2baff1c0296c4a92204b5a54" category="paragraph">ONTAP tools for VMware vSphere ne détecte ni n'utilise les igroups créés dans les systèmes ONTAP qui ne sont pas gérés par ONTAP tools ou qui ne sont pas liés à une banque de données.</block>
+  <block id="3830b8eac1743f2f8fe4765b99fa2547" category="summary">Ajoutez et gérez les systèmes de stockage localement pour une instance vCenter ou globalement pour une découverte à l'échelle du cluster dans les outils ONTAP.</block>
+  <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10 : Quelle est la portée globale et locale du storage backend</block>
+  <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">Consultez l'article de la base de connaissances :<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block> pour plus d'informations sur les systèmes de stockage globaux et locaux.</block>
+  <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
 </blocks>
