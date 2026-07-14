@@ -24,6 +24,7 @@ NOTE: Vous devez effectuer la découverte de stockage après avoir créé, modif
 
 
 
+[[monitor-host-cluster-protection]]
 == Surveillez la protection des clusters hôtes
 
 Surveillez l’état de protection, les relations SnapMirror , les banques de données et l’état SnapMirror pour chaque cluster d’hôtes protégé.
@@ -39,6 +40,7 @@ La colonne de protection affiche une icône qui indique l'état de protection.
 
 
 
+[[add-new-datastores-or-hosts]]
 == Ajoutez de nouveaux datastores ou hôtes
 
 Ajoutez des hôtes ou créez des banques de données sur le cluster protégé à l’aide de l’interface utilisateur vCenter.
@@ -69,6 +71,7 @@ Les outils ONTAP créent une tâche vCenter et vous pouvez suivre sa progression
 
 
 
+[[add-a-new-snapmirror-relationship]]
 == Ajouter une nouvelle relation SnapMirror
 
 .Étapes
@@ -91,6 +94,7 @@ Les outils ONTAP créent une tâche vCenter et vous pouvez suivre sa progression
 
 
 
+[[delete-an-existing-snapmirror-relationship]]
 == Supprimez une relation SnapMirror existante
 
 Pour supprimer une relation asynchrone SnapMirror , assurez-vous que le SVM ou le cluster du site secondaire est ajouté en tant que backend de stockage dans les ONTAP tools for VMware vSphere.  Vous ne pouvez pas supprimer toutes les relations SnapMirror à la fois.  La suppression d’une relation supprime également la relation correspondante du cluster ONTAP .  Lorsque vous supprimez une relation SnapMirror Duplex de basculement automatisé, le système démappe les banques de données de destination et supprime le groupe de cohérence, les LUN, les volumes et les igroups du cluster ONTAP de destination.
@@ -118,6 +122,7 @@ Les outils ONTAP créent une tâche vCenter et vous pouvez suivre sa progression
 
 
 
+[[modify-an-existing-snapmirror-relationship]]
 == Modifier une relation SnapMirror existante
 
 Pour modifier une relation asynchrone SnapMirror , assurez-vous que le SVM ou le cluster du site secondaire est ajouté en tant que backend de stockage dans les ONTAP tools for VMware vSphere.  Pour les relations SnapMirror Duplex de basculement automatisé, vous pouvez mettre à jour la proximité de l'hôte pour les configurations uniformes ou l'accès à l'hôte pour les configurations non uniformes.  Le changement entre les types de stratégie Duplex de basculement asynchrone et automatisé n'est pas pris en charge.  Vous pouvez configurer les paramètres de proximité ou d’accès pour les hôtes nouvellement découverts dans le cluster.

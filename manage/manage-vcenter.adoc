@@ -15,6 +15,7 @@ Les instances vCenter Server sont des plateformes de gestion centralisée qui vo
 
 
 
+[[dissociate-storage-backends-with-the-vcenter-server-instance]]
 == Dissociez les systèmes back-end de stockage de l'instance vCenter Server
 
 La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut être associée ou dissociée à un système back-end de stockage.
@@ -29,6 +30,7 @@ La page de liste vCenter Server affiche le nombre de systèmes back-end de stock
 
 
 
+[[modify-a-vcenter-server-instance]]
 == Modifier une instance de vCenter Server
 
 Suivez les étapes ci-dessous pour modifier des instances de vCenter Server.
@@ -43,6 +45,7 @@ Suivez les étapes ci-dessous pour modifier des instances de vCenter Server.
 
 
 
+[[remove-a-vcenter-server-instance]]
 == Supprimer une instance de vCenter Server
 
 Supprimez tous les backends de stockage du vCenter Server avant de le supprimer.
@@ -65,6 +68,7 @@ Lorsque vous supprimez des instances de vCenter Server dans les outils ONTAP, le
 
 
 
+[[renew-vcenter-server-certificate]]
 == Renouveler le certificat du serveur vCenter
 
 Les outils ONTAP vous avertissent lorsque le certificat vCenter approche de son expiration ou a expiré. Après avoir renouvelé le certificat vCenter, téléchargez le nouveau certificat sur les outils ONTAP en suivant les étapes suivantes :

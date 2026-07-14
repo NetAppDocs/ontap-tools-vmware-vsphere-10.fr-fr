@@ -17,6 +17,7 @@ Vous pouvez utiliser ONTAP tools for VMware vSphere avec VMware vCenter Server V
 
 
 
+[[system-requirements]]
 == Configuration minimale requise
 
 * *Espace requis pour le package d'installation par nœud*
@@ -47,6 +48,7 @@ NOTE: Lorsque la sauvegarde est activée, chaque cluster d'outils ONTAP a besoin
 
 
 
+[[minimum-storage-and-application-requirements]]
 == Exigences minimales en matière de stockage et d'applications
 
 |===
@@ -82,6 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+[[port-requirements]]
 == Configuration requise pour les ports
 
 Le tableau suivant présente les ports réseau utilisés par NetApp et leurs fonctions. Il existe trois types de ports différents :
@@ -158,6 +161,7 @@ NOTE: Pour les déploiements HA, assurez-vous que le port UDP 8472 est ouvert en
 ====
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
 == Limites de configuration pour déployer ONTAP tools for VMware vSphere pour les datastores vVols
 
 Vous pouvez utiliser le tableau suivant comme guide pour configurer les ONTAP tools for VMware vSphere.
@@ -187,6 +191,7 @@ NOTE: Le nombre d'hôtes indiqué dans le tableau représente le total combiné 
 
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
 == Limites de configuration pour le déploiement des ONTAP tools for VMware vSphere pour les datastores VMFS et NFS
 
 Les limites de configuration indiquées dans cette section sont validées et prises en charge par NetApp. Les limites réelles peuvent varier en fonction de votre environnement et de votre charge de travail. Le dépassement de ces limites peut impacter les performances ou la prise en charge et est déconseillé. Tenez compte des éléments suivants lors de l’examen du tableau :
@@ -218,6 +223,7 @@ Les limites de configuration indiquées dans cette section sont validées et pri
 |===
 
 
+[[ontap-tools-for-vmware-vsphere-storage-replication-adapter-sra]]
 == Outils ONTAP pour VMware vSphere - Storage Replication adapter (SRA)
 
 Le tableau suivant indique les chiffres pris en charge par instance VMware Live site Recovery à l'aide des outils ONTAP pour VMware vSphere.

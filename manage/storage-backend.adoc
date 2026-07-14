@@ -15,6 +15,7 @@ Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilis
 
 
 
+[[discover-storage]]
 == Découverte du stockage
 
 Vous pouvez exécuter la découverte d'un backend de stockage à la demande sans attendre qu'une découverte planifiée mette à jour immédiatement les détails de stockage.  Pour les configurations MetroCluster , exécutez la découverte des outils ONTAP manuellement après un basculement.
@@ -32,6 +33,7 @@ Vous pouvez suivre la progression dans le panneau tâches récentes.
 
 
 
+[[modify-storage-backends]]
 == Modification des systèmes back-end de stockage
 
 Vous pouvez modifier les informations d’identification du backend de stockage ou le nom du port.  Vous pouvez également modifier le backend de stockage pour les clusters ONTAP globaux à l'aide du gestionnaire d'outils ONTAP .  Si le certificat expire dans 30 jours ou moins, les outils ONTAP affichent un avertissement.  Modifiez le backend de stockage et téléchargez le nouveau certificat depuis l'administrateur ONTAP .
@@ -58,6 +60,7 @@ Modifiez les clusters ONTAP globaux avec le gestionnaire d’outils ONTAP comme 
 
 
 
+[[remove-storage-backends]]
 == Suppression des systèmes back-end
 
 Vous devez supprimer tous les magasins de données attachés au backend de stockage avant de le supprimer.  Suivez les étapes ci-dessous pour supprimer un backend de stockage.
@@ -79,6 +82,7 @@ Vous pouvez supprimer les clusters ONTAP globaux à l'aide du Gestionnaire d'out
 
 
 
+[[drill-down-view-of-storage-backend]]
 == Vue détaillée du système back-end de stockage
 
 La page backend de stockage répertorie tous les backends de stockage.  Vous pouvez effectuer des opérations de découverte, de modification et de suppression de stockage sur les backends de stockage que vous avez ajoutés, mais pas sur le SVM enfant individuel sous le cluster.

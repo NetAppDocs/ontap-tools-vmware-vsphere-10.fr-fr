@@ -15,6 +15,7 @@ Si vous rencontrez des problèmes de déploiement, consultez les journaux et les
 
 
 
+[[collect-the-log-files]]
 == Collectez les fichiers journaux
 
 Vous pouvez collecter les fichiers journaux pour ONTAP tools for VMware vSphere à partir des options disponibles dans l'interface utilisateur du gestionnaire ONTAP tools. Le support technique peut vous demander de collecter les fichiers journaux pour aider à résoudre un problème.
@@ -49,6 +50,7 @@ NOTE: L'ensemble de journaux généré remplace l'ensemble de journaux généré
 
 
 
+[[deployment-error-codes]]
 == Codes d'erreur de déploiement
 
 Des codes d'erreur peuvent s'afficher lors du déploiement, du redémarrage et des opérations de restauration des outils ONTAP pour VMware vSphere.

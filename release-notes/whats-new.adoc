@@ -45,6 +45,7 @@ Le processus de mise à niveau et de migration des versions précédentes des ON
 
 
 
+[[supported-ontap-platforms-and-vcenter-server-versions]]
 == Plateformes ONTAP et versions de vCenter Server prises en charge
 
 ONTAP tools for VMware vSphere 10.5 P1 prend en charge les configurations de haute disponibilité (HA) de vCenter pour les composants SRA et SnapMirror active sync. vVols n'est pas pris en charge dans cette configuration. Lors d'un basculement HA, vCenter peut être indisponible pendant plusieurs minutes. Dans les grands environnements ou en cas d'erreur, la durée du basculement peut dépasser 15 minutes.

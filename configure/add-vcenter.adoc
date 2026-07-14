@@ -16,6 +16,14 @@ Ajoutez des instances de vCenter Server aux outils ONTAP pour VMware vSphere pou
 .Description de la tâche
 Les outils ONTAP s'intègrent à vCenter Server pour effectuer des tâches de stockage telles que le provisionnement, les instantanés et la protection des données directement à partir du client vSphere.
 
+L'ajout d'une instance de serveur vCenter aux outils ONTAP déclenche automatiquement les actions suivantes :
+
+* Les outils ONTAP enregistrent le plug-in client vCenter en tant que plug-in distant.
+* Les Privileges personnalisés pour les plug-ins et les API sont appliqués à l'instance de vCenter Server.
+* Des rôles personnalisés sont créés pour gérer les utilisateurs.
+* Le plug-in apparaît sous la forme d'un raccourci dans l'interface utilisateur vSphere.
+
+
 .Avant de commencer
 * Assurez-vous que le certificat du serveur vCenter inclut une extension SAN (Subject Alternative Name) valide avec des entrées DNS et d'adresse IP. Par exemple :
 +
@@ -53,12 +61,4 @@ Si le FQDN n'est pas disponible, vous pouvez définir le PNID sur l'adresse IP e
 
 NOTE: Vous n'avez pas besoin d'un compte d'administrateur pour ajouter des instances vCenter aux outils ONTAP. Vous pouvez créer un rôle personnalisé sans le compte admin avec des autorisations limitées. Voir link:../concepts/rbac-vcenter-use.html["Utilisez vCenter Server RBAC avec les outils ONTAP pour VMware vSphere 10"] pour plus de détails.
 
-
-
-L'ajout d'une instance de serveur vCenter aux outils ONTAP déclenche automatiquement les actions suivantes :
-
-* Les outils ONTAP enregistrent le plug-in client vCenter en tant que plug-in distant.
-* Les Privileges personnalisés pour les plug-ins et les API sont appliqués à l'instance de vCenter Server.
-* Des rôles personnalisés sont créés pour gérer les utilisateurs.
-* Le plug-in apparaît sous la forme d'un raccourci dans l'interface utilisateur vSphere.
 

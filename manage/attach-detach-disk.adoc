@@ -15,6 +15,7 @@ Suivez ces étapes pour attacher ou détacher des disques de données de machine
 
 
 
+[[attach-a-data-disk-to-a-virtual-machine]]
 == Reliez un disque de données à une machine virtuelle
 
 Connectez un disque de données à une machine virtuelle pour augmenter son espace de stockage.
@@ -32,6 +33,7 @@ Le disque dur apparaît dans la liste périphériques matériels virtuels.
 
 
 
+[[detach-a-data-disk-from-the-virtual-machine]]
 == Détacher un disque de données de la machine virtuelle
 
 Détachez un disque de données d'une machine virtuelle lorsque vous n'en avez plus besoin.  Le disque n'est pas supprimé ; il reste sur le système de stockage ONTAP .

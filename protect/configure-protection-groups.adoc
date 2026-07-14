@@ -17,6 +17,7 @@ Lorsque vous ajoutez une nouvelle banque de données, vous pouvez l'inclure dans
 
 
 
+[[pair-protected-and-recovery-sites]]
 == Protection par paires et sites de reprise après incident
 
 Vous devez coupler les sites protégés et de reprise créés à l'aide de votre client vSphere pour permettre à Storage Replication adapter (SRA) de détecter les systèmes de stockage.
@@ -47,6 +48,7 @@ La boîte de dialogue *Objets* affiche les sites protégés et de récupération
 
 
 
+[[configure-protection-groups]]
 == Configuration des groupes de protection
 
 .Avant de commencer

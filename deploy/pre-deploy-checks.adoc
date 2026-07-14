@@ -48,10 +48,12 @@ Assurez-vous que les conditions suivantes sont remplies avant de poursuivre le d
 |===
 
 
+[[deployment-worksheet]]
 == Fiche technique de déploiement
 
 
 
+[[for-single-node-deployment]]
 === Pour le déploiement d'un seul nœud
 
 Utilisez la feuille de calcul suivante pour rassembler les informations requises pour les outils ONTAP pour le déploiement initial de VMware vSphere :
@@ -100,6 +102,7 @@ NOTE: Créez des enregistrements DNS pour toutes les adresses IP ci-dessus. Avan
 
 
 
+[[for-high-availability-ha-deployment]]
 === Pour les déploiements haute disponibilité (HA)
 
 Outre les exigences de déploiement d'un seul nœud, vous aurez besoin des informations suivantes pour les déploiements HA :
@@ -132,12 +135,14 @@ Outre les exigences de déploiement d'un seul nœud, vous aurez besoin des infor
 |===
 
 
+[[network-firewall-configuration]]
 == Configuration du pare-feu réseau
 
 Assurez-vous que les ports de pare-feu nécessaires sont ouverts pour toutes les adresses IP concernées.  Les outils ONTAP nécessitent un accès au LIF via le port 443.  Pour une liste complète des ports requis, consultez la section relative aux exigences de port à l'adresselink:../deploy/prerequisites.html["Exigences et limites de configuration des outils ONTAP pour VMware vSphere"] .
 
 
 
+[[ontap-storage-settings]]
 == Paramètres de stockage ONTAP
 
 Pour assurer une intégration transparente du stockage ONTAP avec les outils ONTAP pour VMware vSphere, tenez compte des paramètres suivants :
