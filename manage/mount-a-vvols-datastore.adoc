@@ -1,8 +1,8 @@
 ---
 permalink: manage/mount-a-vvols-datastore.html 
 sidebar: sidebar 
-keywords: Mount vVol 
-summary: 'Vous pouvez monter un datastore VMware Virtual volumes \(vVvols\) sur un ou plusieurs hôtes supplémentaires en utilisant la boîte de dialogue Mount vvols datastore. Le montage du datastore permet d"accéder au stockage à des hôtes supplémentaires. Vous pouvez démonter le datastore vVols uniquement à l"aide des API.' 
+keywords: mount vVols datastore, add vVol datastore to hosts, ONTAP tools vVol host access, VMware virtual volumes mount 
+summary: Montez un datastore vVols sur des hôtes supplémentaires pour fournir un accès au stockage dans votre environnement virtuel. 
 ---
 = Monter un datastore vVols dans ONTAP tools
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'Vous pouvez monter un datastore VMware Virtual volumes \(vVvols\) sur 
 
 
 [role="lead"]
-Vous pouvez monter un datastore VMware Virtual volumes (vVols) sur un ou plusieurs hôtes supplémentaires pour fournir un accès au stockage à des hôtes supplémentaires. Vous pouvez démonter le datastore vVols uniquement à l'aide des API.
+Vous pouvez monter un datastore VMware Virtual Volumes (vVols) sur un ou plusieurs hôtes supplémentaires afin de fournir un accès au stockage à ces hôtes. Vous pouvez démonter un datastore vVols uniquement via les API au niveau de l’hôte. Le démontage d’un datastore au niveau du cluster n’est pas pris en charge.
 
 
-NOTE: Lorsque vous ajoutez un nouvel hôte ESXi à l'aide de https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Ajouter un hôte ESX à votre flux de travail de cluster vSphere"] Veuillez attendre que la découverte planifiée de l'hôte soit terminée avant qu'elle n'apparaisse dans les outils ONTAP . Vous pouvez également lancer manuellement la découverte à partir de l'écran de présentation des outils NetApp ONTAP .
+NOTE: Après avoir ajouté l'hôte, attendez la fin de la découverte planifiée de l'hôte avant qu'il n'apparaisse dans ONTAP tools. Vous pouvez également lancer la découverte manuellement depuis l'écran de présentation des NetApp ONTAP tools. Pour savoir comment ajouter un hôte ESXi à votre cluster vSphere, consultez  https://techdocs.broadcom.com/["Broadcom Documentation technique"].
 
 .Étapes
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.

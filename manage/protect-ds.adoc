@@ -1,0 +1,55 @@
+---
+permalink: manage/protect-ds.html 
+sidebar: sidebar 
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
+summary: 'Protégez un datastore VMFS éligible en l"ajoutant à un groupe de protection avec la réplication SnapMirror.' 
+---
+= Protéger un datastore VMFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez cette tâche pour protéger un datastore VMFS éligible en l'ajoutant à un groupe de protection.
+
+.Avant de commencer
+* Assurez-vous que le datastore utilise le protocole iSCSI ou FC.
+* Confirmez que vous disposez des privilèges d'administrateur dans vSphere.
+* Vérifiez que le datastore ne fait pas déjà partie d'un groupe de protection.
+
+
+.Étapes
+. Connectez-vous au client vSphere.
+. Sélectionnez un cluster hôte et sélectionnez *Datastores*.
+. Cliquez avec le bouton droit sur le datastore VMFS éligible que vous souhaitez protéger et sélectionnez *NetApp ONTAP tools* > *Protect*.
++
+Le système vérifie l’éligibilité du datastore à la protection. Si le datastore est éligible, le processus de protection se poursuit. Si le datastore n’est pas éligible, un message affiche les raisons et vous ne pouvez pas continuer.
+
+. Choisissez si vous souhaitez ajouter le datastore à un groupe de protection existant ou créer un nouveau groupe de protection.
++
+.. Pour utiliser un groupe de protection existant, sélectionnez le groupe de protection et continuez.
+.. Pour créer un nouveau groupe de protection :
++
+... Indiquez un nom pour le groupe de protection.
+... Sélectionnez *Ajouter une relation*.
+... Dans la fenêtre *Ajouter une relation SnapMirror*, sélectionnez *VM de stockage cible* et le type *Stratégie*.
++
+Le type de politique peut être *asynchrone* ou *AutomatedFailOverDuplex*.
+
++
+Si vous sélectionnez *AutomatedFailOverDuplex*, ajoutez la machine virtuelle de stockage cible en tant que backend de stockage au même serveur vCenter où ONTAP tools for VMware vSphere est déployé.
+
++
+Pour *AutomatedFailOverDuplex*, choisissez une configuration d’hôte uniforme ou non uniforme. Lorsque vous sélectionnez l’option *configuration d’hôte uniforme*, la configuration du groupe d’initiateurs hôtes est implicitement répliquée sur le site cible. Pour plus d’informations, consultez link:../concepts/ontap-tools-concepts-terms.html["Concepts et termes clés"].
+
+... Si vous sélectionnez une configuration d'hôte non uniforme, sélectionnez l'accès à l'hôte (source/cible) pour chaque hôte du cluster.
+
+
+
+
+. Sélectionnez *OK* pour démarrer le workflow de protection.
+
+
+.Résultat
+Le datastore apparaît dans le groupe de protection sélectionné. Vous pouvez consulter et gérer l'état de la protection à partir du plug-in ONTAP tools.

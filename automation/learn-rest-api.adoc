@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: automation/learn-rest-api.html 
-keywords: ontap tools vmware vsphere rest api 
+keywords: REST API fundamentals, HTTP methods, JSON, authentication 
 summary: 'Les outils ONTAP pour VMware vSphere 10 sont un ensemble d"outils destinés à la gestion du cycle de vie des machines virtuelles. Elle comprend une API REST robuste que vous pouvez utiliser dans le cadre de vos processus d"automatisation.' 
 ---
 = Découvrez l'API REST des ONTAP tools
@@ -55,7 +55,7 @@ L'environnement ONTAP Tools Manager comporte plusieurs aspects à prendre en com
 Les ONTAP tools for VMware vSphere 10 sont déployés à l’aide de l’architecture de plug-in distant vSphere.  Le logiciel, y compris la prise en charge de l'API REST, s'exécute sur une machine virtuelle distincte.
 
 .Adresse IP des outils ONTAP
-Les outils ONTAP pour VMware vSphere 10 exposent une adresse IP unique qui fournit une passerelle vers les fonctionnalités de la machine virtuelle. Vous devez fournir cette adresse lors de la configuration initiale et l'attribuer à un composant d'équilibrage de charge interne. L'adresse est utilisée par l'interface utilisateur du Gestionnaire d'outils ONTAP ainsi que pour accéder directement à la page de documentation swagger et à l'API REST.
+ONTAP tools for VMware vSphere 10 expose une adresse IP externe unique (anciennement équilibreur de charge) qui sert de passerelle vers les fonctionnalités de la machine virtuelle. Vous fournissez cette adresse lors de la configuration initiale. Cette adresse est utilisée par l’interface ONTAP tools Manager et permet d’accéder directement à la page de documentation Swagger et à l’API REST.
 
 .Deux API REST
 Outre les outils ONTAP pour l'API REST de VMware vSphere 10, le cluster ONTAP dispose de sa propre API REST. Le gestionnaire d'outils ONTAP utilise l'API REST ONTAP en tant que client pour effectuer des tâches liées au stockage. Il est important de garder à l'esprit que ces deux API sont distinctes. Pour plus d'informations, reportez-vous https://docs.netapp.com/us-en/ontap-automation/["Automatisation ONTAP"^]à .

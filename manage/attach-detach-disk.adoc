@@ -1,8 +1,8 @@
 ---
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
-keywords:  
-summary: Reliez un disque de données à une machine virtuelle pour augmenter la capacité de stockage. 
+keywords: attach data disk VM, detach VM disk, ONTAP tools virtual machine disk, VMware VM storage expansion 
+summary: Attachez ou détachez des disques de données de machine virtuelle pour gérer la capacité de stockage. 
 ---
 = Attacher ou détacher un disque de données d'une machine virtuelle dans ONTAP tools
 :allow-uri-read: 

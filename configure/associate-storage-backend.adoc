@@ -1,8 +1,8 @@
 ---
 permalink: configure/associate-storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Associez un système back-end de stockage à vCenter Server pour créer un mappage global entre le système back-end de stockage et l"instance vCenter Server intégrée.' 
+keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
+summary: Associez un système de stockage global à une instance de serveur vCenter dans ONTAP tools. 
 ---
 = Associer un système de stockage principal à une instance de serveur vCenter dans ONTAP tools
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: 'Associez un système back-end de stockage à vCenter Server pour crée
 
 
 [role="lead"]
-Associez un backend de stockage à une instance de vCenter Server pour activer l’accès à toutes les instances de vCenter Server.  Pour la configuration de MetroCluster , lorsque vous associez un cluster backend de stockage, assurez-vous d'associer également son cluster homologue au vCenter Server.
+Utilisez cette tâche pour associer un système de stockage global à une instance de serveur vCenter. Un système de stockage global est un système ajouté dans ONTAP tools Manager qui n'est pas encore associé à des instances de serveur vCenter spécifiques. Pour les configurations NetApp MetroCluster, lorsque vous associez un cluster de stockage, associez également son cluster homologue au serveur vCenter.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez vCenter dans la barre latérale.
-. Sélectionnez les points de suspension verticaux en regard de l’instance vCenter Server à laquelle vous souhaitez connecter les backends de stockage.
+. Sélectionnez les points de suspension verticaux à côté de l’instance de serveur vCenter que vous souhaitez connecter aux backends de stockage.
 . Dans le menu déroulant, choisissez le backend de stockage que vous souhaitez associer à l’instance vCenter Server sélectionnée.
 

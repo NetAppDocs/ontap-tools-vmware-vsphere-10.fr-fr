@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilisent pour le stockage des données. 
+keywords: manage storage backends, ONTAP backend systems, storage backend operations, VMware datastore backend configuration 
+summary: Gérez les systèmes de stockage utilisés par les hôtes ESXi pour le stockage des données. 
 ---
 = Gérer les backends de stockage dans ONTAP tools
 :allow-uri-read: 
@@ -26,7 +26,7 @@ Suivez les étapes ci-dessous pour découvrir les systèmes back-end.
 . Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP , accédez à *Backends de stockage* et sélectionnez un backend de stockage.
-. Sélectionnez le menu des ellipses verticales et sélectionnez *découvrir le stockage*
+. Sélectionnez le menu à trois points verticaux et sélectionnez *Découvrir le stockage*
 
 
 Vous pouvez suivre la progression dans le panneau tâches récentes.
@@ -45,7 +45,7 @@ Suivez les étapes de cette section pour modifier un système back-end de stocka
 . Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP , accédez à *Backends de stockage* et sélectionnez un backend de stockage.
-. Sélectionnez le menu des ellipses verticales et sélectionnez *Modifier* pour modifier les informations d'identification ou le nom du port. Vous pouvez suivre la progression dans le panneau tâches récentes.
+. Sélectionnez le menu à trois points verticaux, puis *Modifier* pour modifier les identifiants ou le nom du port. Vous pouvez suivre la progression dans le panneau des tâches récentes.
 
 
 Modifiez les clusters ONTAP globaux avec le gestionnaire d’outils ONTAP comme suit.
@@ -54,7 +54,7 @@ Modifiez les clusters ONTAP globaux avec le gestionnaire d’outils ONTAP comme 
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez les systèmes back-end de stockage dans la barre latérale.
 . Sélectionnez le back-end de stockage à modifier.
-. Sélectionnez le menu ellipses verticales et sélectionnez *Modifier*.
+. Sélectionnez le menu à trois points verticaux et sélectionnez *Modifier*.
 . Vous pouvez modifier les informations d'identification ou le port. Entrez *Nom d'utilisateur* et *Mot de passe* pour modifier le backend de stockage.
 
 
@@ -68,7 +68,7 @@ Vous devez supprimer tous les magasins de données attachés au backend de stock
 . Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP , accédez à *Backends de stockage* et sélectionnez un backend de stockage.
-. Sélectionnez le menu des ellipses verticales et sélectionnez *Supprimer*.  Assurez-vous que le backend de stockage ne contient aucun magasin de données.  Vous pouvez suivre la progression dans le panneau des tâches récentes.
+. Sélectionnez le menu à trois points verticaux, puis *Supprimer*. Assurez-vous que le stockage principal ne contient aucun datastore. Vous pouvez suivre la progression dans le panneau des tâches récentes.
 
 
 Vous pouvez supprimer les clusters ONTAP globaux à l'aide du Gestionnaire d'outils ONTAP.
@@ -77,7 +77,7 @@ Vous pouvez supprimer les clusters ONTAP globaux à l'aide du Gestionnaire d'out
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *systèmes back-end de stockage* dans la barre latérale.
 . Sélectionnez le système back-end de stockage à supprimer
-. Sélectionnez le menu ellipses verticales et sélectionnez *Supprimer*.
+. Sélectionnez le menu à trois points verticaux et sélectionnez *Supprimer*.
 
 
 

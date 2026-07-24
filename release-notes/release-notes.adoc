@@ -1,22 +1,22 @@
 ---
 permalink: release-notes/release-notes.html 
 sidebar: sidebar 
-keywords: release notes, ontap tools for VMware vSphere 
-summary: Fournit des informations importantes sur cette version des outils ONTAP pour VMware vSphere, y compris les nouvelles fonctionnalités et améliorations, les problèmes résolus, les problèmes connus, les précautions et les limites. 
+keywords: release notes, ONTAP tools for VMware vSphere, 10.6 
+summary: Consultez les notes de version des ONTAP tools for VMware vSphere 10.6 pour connaître les fonctionnalités, la compatibilité et les chemins de migration pris en charge. 
 ---
-= Notes de version pour ONTAP tools
+= Notes de version des ONTAP tools for VMware vSphere 10.6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Découvrez les fonctionnalités nouvelles et améliorées disponibles dans les ONTAP tools for VMware vSphere 10.5.
+Consultez cette page pour obtenir des informations clés sur ONTAP tools for VMware vSphere 10.6, puis suivez les rubriques liées pour obtenir des détails sur les fonctionnalités, la compatibilité et les informations de migration.
 
-Pour obtenir la liste complète des nouvelles fonctionnalités et améliorations, veuillez consulter xref:whats-new.adoc[Nouveautés des ONTAP tools for VMware vSphere 10.5].
+Pour obtenir la liste complète des nouvelles fonctionnalités et améliorations, veuillez consulter xref:whats-new.adoc[Nouveautés des ONTAP tools for VMware vSphere 10.6].
 
 Pour obtenir les informations de compatibilité les plus récentes, veuillez consulter https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
 
-La migration est prise en charge à partir des ONTAP tools for VMware vSphere 9.12D1, 9.13D2 et 9.13P2 vers les ONTAP tools for VMware vSphere 10.5.
+La migration est prise en charge à partir des versions ONTAP tools for VMware vSphere 9.12D1, 9.13D2 et 9.13P2 vers ONTAP tools for VMware vSphere 10.6.
 
-Pour plus d'informations, consultez  https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876["Notes de publication des ONTAP tools for VMware vSphere 10.5"^]. Vous devez vous connecter avec votre compte NetApp ou créer un compte pour accéder aux notes de version.
+Pour plus d'informations, veuillez consulter le  https://library.netapp.com/ecm/ecm_download_file/ECMLP3383264["Notes de version des ONTAP tools for VMware vSphere 10.6"^]. Vous devez vous connecter avec votre compte NetApp ou créer un compte pour accéder à ce document.

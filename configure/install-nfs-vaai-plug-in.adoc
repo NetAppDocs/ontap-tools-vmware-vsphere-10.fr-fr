@@ -1,8 +1,8 @@
 ---
 permalink: configure/install-nfs-vaai-plug-in.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Vous pouvez installer le plug-in NetApp NFS pour VMware vStorage APIs for Array Integration \(VAAI\) à l"aide des outils ONTAP pour VMware vSphere.' 
+keywords: install NFS VAAI plug-in, NetApp NFS Plug-in for VAAI, ONTAP tools VAAI installation, vSphere NFS offload 
+summary: 'Installez le plug-in NFS NetApp pour VAAI à l"aide des outils ONTAP pour VMware vSphere.' 
 ---
 = Installer le plug-in NFS VAAI à l'aide des outils ONTAP
 :allow-uri-read: 

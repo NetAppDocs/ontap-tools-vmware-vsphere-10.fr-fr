@@ -1,0 +1,62 @@
+---
+permalink: protect/protect-multiple-ds.html 
+sidebar: sidebar 
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration 
+summary: Protégez plusieurs banques de données VMFS dans un cluster hôte en regroupant les banques de données en groupes de protection et en appliquant des stratégies SnapMirror. 
+---
+= Protégez les banques de données d'un cluster avec les outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez une protection granulaire des banques de données lorsqu'un cluster hôte comprend des banques de données provenant de plusieurs machines virtuelles de stockage (SVM) et que vous devez protéger certaines banques de données avec des politiques différentes.
+
+.Avant de commencer
+Assurez-vous de respecter les exigences suivantes avant de protéger les banques de données dans un cluster hôte :
+
+* Les banques de données sont des banques de données VMFS qui utilisent les protocoles iSCSI ou FC.
+* Les banques de données sont détectées et disponibles dans ONTAP tools.
+* Les machines virtuelles de stockage source et cible sont configurées pour des relations SnapMirror.
+
+
+.Étapes
+. Connectez-vous au client vSphere.
+. Cliquez avec le bouton droit sur un hôte ou un cluster d'hôtes et sélectionnez *NetApp ONTAP tools* > *Protéger les datastores*.
+. Sélectionnez la *VM de stockage* dans le cluster.
++
+Les banques de données du SVM sélectionné sont affichées.
+
+. Le champ *Type de banque de données* est prérempli avec VMFS comme seul type de banque de données pris en charge pour la protection et est désactivé.
+. Dans la liste qui se remplit en fonction des critères d'éligibilité, sélectionnez les datastores que vous souhaitez protéger et cliquez sur *Suivant*.
+. Dans la fenêtre *Paramètres de protection*, choisissez si vous souhaitez protéger les banques de données sélectionnées dans un groupe de protection existant ou dans un nouveau groupe de protection.
+. Si vous sélectionnez *Créer nouveau*, indiquez un nom pour le groupe de protection et sélectionnez *Ajouter une relation*.
+. Dans la fenêtre *Ajouter une relation SnapMirror*, sélectionnez *VM de stockage cible* et le type *Stratégie*.
++
+Le type de stratégie peut être asynchrone ou AutomatedFailOverDuplex. AutomatedFailOverDuplex est pris en charge uniquement pour les banques de données provisionnées sur ONTAP 9.15.1 avec les protocoles iSCSI ou FC et montées sur le cluster hôte.
+
++
+Si vous ajoutez la relation SnapMirror en tant que AutomatedFailOverDuplex, ajoutez le stockage cible en tant que backend de stockage sur le même serveur vCenter où ONTAP tools for VMware vSphere est déployé.
+
++
+Dans le type de stratégie AutomatedFailOverDuplex, il existe des configurations de cluster uniformes et non uniformes. Pour une configuration de cluster uniforme, la configuration du groupe d'initiateurs hôtes est répliquée sur le site cible. Pour plus d'informations, consultez link:../concepts/ontap-tools-concepts-terms.html["Concepts et termes clés"].
+
+. Pour une configuration de cluster non uniforme, sélectionnez l'accès hôte (source ou cible) pour chaque hôte du cluster. ONTAP tools crée les configurations de groupe d'initiateurs hôtes correspondantes sur le stockage cible afin de permettre l'accès des hôtes aux objets de stockage cibles.
+. Sélectionnez *Enregistrer*.
+. Vérifiez la configuration dans la fenêtre *Résumé* et sélectionnez *Protéger*.
+. Pour afficher les détails de tous les groupes de protection disponibles, accédez à *NetApp ONTAP tools* > *Protection* > *Protection groups*.
+
+
+.Résultat
+Un nouveau groupe de protection est créé avec les banques de données sélectionnées et la relation SnapMirror est ajoutée à ce groupe de protection. Le système crée une tâche vCenter avec les détails de l’ID du travail et affiche sa progression dans le panneau des tâches récentes. Il s’agit d’une tâche asynchrone ; l’interface utilisateur affiche uniquement l’état de soumission de la requête et n’attend pas la fin de la tâche.
+
+[NOTE]
+====
+Pour les clusters de stockage ONTAP (ONTAP 9), la suppression de la protection d’un datastore autre que le dernier n’est pas prise en charge si le groupe de protection a une relation asynchrone.
+
+====
+.Informations associées
+* link:../manage/protect-ds.html["Protéger un datastore VMFS"]
+* link:../manage/unprotect-ds.html["Déprotéger un datastore VMFS"]
+

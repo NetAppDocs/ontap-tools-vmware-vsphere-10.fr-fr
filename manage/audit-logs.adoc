@@ -1,0 +1,158 @@
+---
+permalink: manage/audit-logs.html 
+sidebar: sidebar 
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention 
+summary: Examinez comment ONTAP tools capture, conserve et surveille les journaux des audits pour la sécurité et la conformité. 
+---
+= Gérez les journaux des audits pour les outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez cette tâche pour gérer le comportement de la journalisation des audits et la réponse opérationnelle dans ONTAP tools for VMware vSphere. Les journaux des audits fournissent un historique des événements indiquant qui a effectué une action, quelle action a été effectuée, quand elle s'est produite, la source de la requête et si elle a réussi ou échoué.
+
+.Avant de commencer
+* Assurez-vous de disposer d'un accès administrateur à ONTAP tools Manager.
+* Assurez-vous de disposer d'un accès à la console de maintenance si vous prévoyez de modifier les paramètres de rétention locaux.
+* Examinez les exigences de votre organisation en matière de sécurité et de conformité concernant la conservation, le transfert et la réponse aux incidents.
+
+
+.Description de la tâche
+Les outils ONTAP capturent des événements d'audit complets pour une visibilité opérationnelle et de conformité.
+
+La couverture de l'audit comprend :
+
+* Opérations utilisateur et API, telles que la création/suppression de datastore, l'intégration de vCenter et les actions du backend de stockage
+* Appels de service internes, y compris les interactions du service VASA Provider
+* Tâches, y compris la découverte, la protection et les opérations sur les agrégats
+* Activités de la console de maintenance
+
+
+Les entrées du journal des audits peuvent inclure :
+
+* Nom d'utilisateur, le cas échéant
+* Opération effectuée
+* Horodatage
+* Source de la requête (interface utilisateur, API ou inter-service)
+* Détails de la requête et de la réponse avec statut
+
+
+Les archives d'audit sont générées quotidiennement et sont disponibles dans le bundle de support généré dans ONTAP tools Manager. Les archives d'une journée donnée sont disponibles le lendemain.
+
+La journalisation des audits présente les limites opérationnelles suivantes :
+
+* La désactivation de la journalisation d'audit n'est pas prise en charge.
+* La taille du fichier journal des audits n'est pas configurable par l'utilisateur.
+
+
+La gestion des données sensibles est intégrée :
+
+* Les données sensibles, telles que les mots de passe, les jetons et le matériel de clé privée, sont expurgées.
+* Les requêtes et réponses longues peuvent être tronquées.
+
+
+.Étapes
+. Générez un bundle de support à partir du gestionnaire ONTAP tools :
++
+.. Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+.. Connectez-vous avec les identifiants d'administrateur des ONTAP tools for VMware vSphere.
+.. Sélectionnez *Log Bundles* dans la barre latérale.
+.. Sélectionnez *Générer*.
+.. Saisissez une étiquette pour le paquet journal et sélectionnez *Générer*.
++
+Les journaux des audits sont disponibles dans les archives quotidiennes sous le répertoire d'audit dans le bundle de support téléchargé.
+
+
+
+. Facultatif : configurez la rétention locale depuis la console de maintenance :
++
+.. Connectez-vous au serveur vCenter.
+.. Localisez la machine virtuelle ONTAP tools et lancez la console Web.
+.. Connectez-vous en utilisant les `maint` identifiants.
+.. Appuyez sur  `1` Entrée pour sélectionner *Configuration de l'application*.
+.. Appuyez sur  `4` pour sélectionner *Modifier la durée de conservation du journal des audits*.
+.. Saisissez la durée de conservation en jours et confirmez la modification.
++
+La durée de conservation par défaut est de 30 jours et la plage prise en charge est de 1 à 180 jours.
+
++
+
+WARNING: La modification de la durée de conservation du journal des audits redémarre les services et constitue une opération perturbatrice.
+
+
+
+. Surveillez l'intégrité du journal des audits dans ONTAP tools Manager :
++
+.. Sur le tableau de bord ONTAP tools Manager, consultez la carte *Alertes* pour les alertes actives.
+.. Sélectionnez le lien hypertexte du nombre d'alertes ou ouvrez *Gérer les alertes* pour afficher les détails et l'état des alertes.
++
+ONTAP tools vérifie l'intégrité des archives du journal des audits toutes les 3 minutes. ONTAP tools conserve un enregistrement des archives attendues. Si une archive est manquante ou modifiée, ONTAP tools génère une alerte dans ONTAP tools Manager.
+
+
+
+. Facultatif : Modifiez l’intervalle de contrôle d’intégrité du journal des audits depuis la console de maintenance :
++
+.. Connectez-vous au serveur vCenter.
+.. Localisez la machine virtuelle ONTAP tools et lancez la console Web.
+.. Connectez-vous en utilisant les `maint` identifiants.
+.. Appuyez sur  `4` Entrée pour sélectionner *Assistance et diagnostic*.
+.. Appuyez sur  `2` pour sélectionner *Activer l'accès au diagnostic*.
+.. Connectez-vous en tant qu' `diag`utilisateur.
+.. Exécutez la commande suivante pour modifier l'intervalle en secondes :
++
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
+
++
+L'intervalle minimal pris en charge est de 60 secondes.
+
++
+
+WARNING: Modifier l'intervalle de contrôle d'intégrité des audits entraîne le redémarrage des services et constitue une opération perturbatrice.
+
+
+
+. Facultatif : Transférez les journaux d’audit vers une destination syslog externe. Utilisez le transfert syslog lorsque vous avez besoin d’une surveillance centralisée, d’une conservation à long terme ou d’une corrélation avec un système SIEM (Security Information and Event Management). Respectez les normes de votre organisation concernant TLS, les certificats, les ports et la conservation.
+. En cas d'alerte d'intégrité, effectuez les actions de réponse à l'incident.
++
+.. Collectez un bundle de support dès que possible.
+.. Conservez les paquets exportés et les archives conformément au processus de réponse aux incidents de votre organisation.
+.. Consultez les détails de l'alerte dans ONTAP tools Manager et contactez le support NetApp si nécessaire.
+
+
+
+
+
+
+[[example-audit-record]]
+== Exemple d’enregistrement d’audit
+
+Les enregistrements d'audit comprennent un ensemble cohérent de champs pour faciliter la traçabilité. Les champs typiques comprennent :
+
+* Horodatage (UTC)
+* Nom d'utilisateur (identité de l'utilisateur authentifié)
+* Opération (méthode HTTP et URI de requête)
+* Source de la requête (interface utilisateur, API ou inter-service)
+* Statut (succès ou échec et code de statut)
+* Agent utilisateur (identité du client, si disponible)
+* Identifiant de la requête, lorsqu'il est disponible (par exemple, correlation ID)
+* Identifiant de la tâche, lorsqu'il est disponible (pour les flux de travail asynchrones)
+* Identifiant du locataire ou de vCenter, le cas échéant
+
+
+L'exemple suivant illustre le type d'informations recueillies. Les champs exacts peuvent varier selon le flux de travail.
+
+[source, json]
+----
+{
+  "timestamp": "2026-01-29T08:21:51Z",
+  "username": "administrator",
+  "operation": "POST /virtualization/api/v1/vcenters/{vcguid}/traditional/datastores",
+  "status": "Success 202",
+  "user_agent": "Mozilla/5.0 ...",
+  "correlation_id": "9ee9a89e-900d-4538-bcab-79830d4ab7cc",
+  "job_id": "3416",
+  "type": "audit"
+}
+----

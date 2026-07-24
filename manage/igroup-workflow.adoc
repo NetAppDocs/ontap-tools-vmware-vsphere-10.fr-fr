@@ -1,8 +1,8 @@
 ---
 permalink: manage/igroup-workflow.html 
 sidebar: sidebar 
-keywords:  
-summary:  
+keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
+summary: 'Comprenez comment ONTAP tools crée et gère les igroups et les export policies pour l"accès aux datastores.' 
 ---
 = Comment les ONTAP tools gèrent les igroups et les politiques d'exportation
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 Les groupes d'initiateurs (igroups) sont des tables de noms de port mondiaux (WWPN) d'hôte de protocole FC ou de noms de nœuds qualifiés d'hôte iSCSI. Vous pouvez définir des groupes initiateurs et les mapper sur des LUN pour contrôler l'accès des initiateurs aux LUN.
 
-Dans les ONTAP tools for VMware vSphere 9.x, les igroups étaient créés et gérés dans une structure plate, où chaque banque de données dans vCenter était associée à un seul igroup. Ce modèle limitait la flexibilité et la réutilisation des igroups sur plusieurs banques de données. Les ONTAP tools for VMware vSphere introduisent des igroups imbriqués, où chaque banque de données de vCenter est associée à un igroup parent, tandis que chaque hôte est lié à un igroup enfant sous ce parent. Vous pouvez définir des groupes parents personnalisés avec des noms définis par l'utilisateur pour les réutiliser dans les banques de données afin de faciliter la gestion des groupes.  Comprendre le flux de travail igroup pour gérer les LUN et les banques de données dans les ONTAP tools for VMware vSphere. Différents flux de travail génèrent des configurations igroup variables, comme illustré dans les exemples suivants :
+Dans ONTAP tools for VMware vSphere 9.x, les igroups étaient créés et gérés selon une structure plate, chaque datastore dans vCenter étant associé à un seul igroup. Ce modèle limitait la flexibilité et la réutilisation des igroups entre plusieurs datastores. ONTAP tools for VMware vSphere 10.4 introduit les igroups imbriqués, où chaque datastore dans vCenter est associé à un igroup parent, tandis que chaque hôte est lié à un igroup enfant sous ce parent. Vous pouvez définir des igroups parents personnalisés avec des noms définis par l'utilisateur pour une réutilisation entre les datastores afin de faciliter la gestion des igroups. Comprenez le flux de travail des igroups pour gérer les LUN et les datastores dans ONTAP tools for VMware vSphere. Différents flux de travail génèrent des configurations d'igroups variées, comme illustré dans les exemples suivants :
 
 
 NOTE: Les noms mentionnés sont uniquement à des fins d'illustration et ne font pas référence aux vrais noms de groupes i.  Les groupes gérés par les outils ONTAP utilisent le préfixe « otv_ ».  Les groupes i personnalisés peuvent recevoir n'importe quel nom.

@@ -1,7 +1,7 @@
 ---
 permalink: automation/rest-implementation.html 
 sidebar: sidebar 
-keywords: ontap tools vmware vsphere rest api reference 
+keywords: REST API implementation, HTTP headers, endpoint URL, HTTP status codes 
 summary: 'Même si REST établit un ensemble commun de technologies et de bonnes pratiques, l"implémentation exacte de chaque API peut varier en fonction des choix de conception. Vous devez vous familiariser avec la conception préalable des outils ONTAP pour l"API REST VMware vSphere 10.' 
 ---
 = Détails d'implémentation de l'API REST des ONTAP tools

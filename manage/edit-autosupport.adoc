@@ -1,8 +1,8 @@
 ---
 permalink: manage/edit-autosupport.html 
 sidebar: sidebar 
-keywords:  
-summary: Lors de la première configuration des ONTAP tools for VMware vSphere , AutoSupport est activé par défaut.  Il envoie des messages au support technique 24 heures après son activation. 
+keywords: ONTAP tools AutoSupport, configure AutoSupport settings, technical support messages, appliance telemetry settings 
+summary: Configurez les paramètres AutoSupport pour les ONTAP tools et examinez le comportement par défaut des messages de support. 
 ---
 = Modifier les paramètres AutoSupport des outils ONTAP
 :allow-uri-read: 

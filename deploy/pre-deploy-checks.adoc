@@ -1,8 +1,8 @@
 ---
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Avant de déployer les outils ONTAP pour VMware vSphere, vous devez connaître les besoins en espace requis pour le package de déploiement et la configuration système hôte de base requise. 
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server 
+summary: Complétez la liste de contrôle préalable au déploiement des ONTAP tools, y compris la compatibilité vSphere, le dimensionnement, les certificats et les exigences réseau. 
 ---
 = Exigences préalables au déploiement des ONTAP tools
 :allow-uri-read: 
@@ -58,14 +58,15 @@ Assurez-vous que les conditions suivantes sont remplies avant de poursuivre le d
 
 Utilisez la feuille de calcul suivante pour rassembler les informations requises pour les outils ONTAP pour le déploiement initial de VMware vSphere :
 
+[cols="3,1"]
 |===
 | Conditions requises | Votre valeur 
 
 
-| Adresse IP de l’application ONTAP tools. Il s’agit de l’adresse IP permettant d’accéder à l’interface web du gestionnaire ONTAP tools (load balancer) à `\https://<ip>:8443/virtualization/ui/` |  
+| Adresse IP des ONTAP tools (anciennement load balancer). Cette adresse IP externe est utilisée pour accéder à l’interface ONTAP tools Manager à  `\https://<ip>:8443/virtualization/ui/`, envoyer des appels API et accéder au plug-in ONTAP tools depuis l’interface vCenter. |  
 
 
-| Adresse IP virtuelle ONTAP tools pour la communication interne. Cette adresse IP est utilisée pour la communication interne dans une configuration avec plusieurs instances ONTAP tools. Cette adresse IP ne doit pas être la même que l'adresse IP de l'application ONTAP tools. (Le plan de contrôle Kubernetes) |  
+| Adresse IP virtuelle des ONTAP tools (anciennement interconnexion de nœuds). Cette adresse IP est attribuée au serveur API Kubernetes et sert d'adresse IP virtuelle pour le plan de contrôle Kubernetes dans les déploiements à nœud unique et à nœuds multiples. Elle est utilisée pour la communication interne du cluster et la gestion de Kubernetes, et elle doit être différente de l'adresse IP des ONTAP tools. |  
 
 
 | Nom d'hôte DNS pour le nœud de gestion des outils ONTAP |  
@@ -80,7 +81,7 @@ Utilisez la feuille de calcul suivante pour rassembler les informations requises
 | Domaine de recherche DNS |  
 
 
-| Adresse IPv4 pour le nœud de gestion des outils ONTAP. Il s'agit d'une adresse IPv4 unique pour l'interface de gestion du nœud sur le réseau de gestion. Ceci est utilisé pour se connecter à l'appliance des outils ONTAP pour un accès de diagnostic à distance via SSH. |  
+| Adresse IPv4 pour le nœud de gestion des ONTAP tools. Dans un déploiement à nœud unique, cette adresse correspond au nom de l'hôte spécifié pour la machine virtuelle ONTAP tools. Dans un déploiement en haute disponibilité, vous devez fournir des adresses IPv4 supplémentaires pour les deux machines virtuelles ONTAP tools supplémentaires. |  
 
 
 | Masque de sous-réseau de l'adresse IPv4 |  
@@ -107,6 +108,7 @@ NOTE: Créez des enregistrements DNS pour toutes les adresses IP ci-dessus. Avan
 
 Outre les exigences de déploiement d'un seul nœud, vous aurez besoin des informations suivantes pour les déploiements HA :
 
+[cols="3,1"]
 |===
 
 

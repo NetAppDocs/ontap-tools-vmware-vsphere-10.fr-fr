@@ -1,0 +1,83 @@
+---
+permalink: protect/granular-datastore-protection-concept.html 
+sidebar: sidebar 
+keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
+summary: 'Comprenez la protection granulaire des datastores et les critères d"éligibilité des datastores avant de protéger des datastores dans un cluster hôte.' 
+---
+= Critères d'éligibilité à la protection granulaire des datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez la protection granulaire des banques de données pour protéger les banques de données VMFS sélectionnées dans un cluster hôte au lieu de protéger l'ensemble du cluster.
+
+La protection granulaire des datastores est disponible avec ONTAP tools for VMware vSphere 10.6 et versions ultérieures. Cette fonctionnalité permet une planification de la protection au niveau du datastore plutôt qu'une sélection à l'échelle du cluster.
+
+Cette fonctionnalité vous permet de :
+
+* Protégez uniquement les banques de données sélectionnées dans un cluster hôte.
+* Regroupez les banques de données sélectionnées en groupes de protection.
+* Appliquez les relations et les politiques SnapMirror au niveau du groupe de protection.
+* Utilisez des approches de protection différentes pour les différents groupes de banques de données dans le même cluster.
+
+
+Cette fonctionnalité prend uniquement en charge les banques de données VMFS qui utilisent les protocoles iSCSI ou FC.
+
+Vous pouvez utiliser les types de politiques suivants pour les banques de données éligibles :
+
+* *AutomatedFailOverDuplex (AFD)*
++
+** *Configuration hôte uniforme* : Les hôtes des deux sites peuvent accéder aux banques de données protégées.
+** *Configuration hôte non uniforme* : l’accès aux hôtes est limité aux hôtes spécifiques du site.
+
+
+* *Asynchrone* : Le site cible conserve une copie asynchrone pour la récupération.
+
+
+La protection par diffusion peut combiner l'AFD entre les sites principaux et la réplication asynchrone vers un troisième site.
+
+
+
+[[eligibility-evaluation]]
+== Évaluation d'admissibilité
+
+L’admissibilité est évaluée en deux étapes : inscription et sélection.
+
+Les banques de données ne sont répertoriées pour la protection granulaire des banques de données que lorsqu'elles répondent à tous les critères suivants :
+
+* Le type de datastore est VMFS.
+* Le protocole est iSCSI ou FC.
+* Le datastore est monté uniquement sur les hôtes du cluster d'hôtes sélectionné.
+* Les outils ONTAP peuvent évaluer la banque de données en vue de sa protection lorsque celle-ci se trouve dans le cluster hôte sélectionné dans le serveur vCenter.
+
+
+Une fois qu'un datastore est répertorié, il ne peut être sélectionné pour la protection que lorsque toutes les conditions suivantes sont remplies :
+
+* Le datastore n'est pas encore protégé.
+* Le datastore reste monté uniquement au sein du cluster hôte sélectionné.
+* Les SVM source et cible sont appariées et intégrées dans ONTAP tools.
+* La version d'ONTAP est 9.15.1 ou ultérieure.
+* Seules les combinaisons de nœuds de cluster source et de cluster de destination 2x2 et 4x4 sont prises en charge.
+* MetroCluster Les configurations ne sont pas éligibles.
+* Le volume FlexVol ou le LUN qui sous-tend la banque de données ne fait pas partie d'un groupe de cohérence existant.
+* Le volume FlexVol ou LUN qui sous-tend la banque de données ne fait pas partie d'une relation SnapMirror existante.
+
+
+Considérez les limites et le comportement opérationnels suivants :
+
+* Configurez la proximité du cluster avant de configurer la protection du datastore.
+* Un cluster hôte unique peut utiliser une configuration AFD uniforme ou non uniforme, pas les deux.
+* Le déplacement des banques de données entre groupes de protection n'est pas pris en charge. Supprimez la protection, puis appliquez-la de nouveau dans le groupe cible.
+* La protection inter-SVM au sein d'un même cluster hôte, avec une source et plusieurs cibles différentes, n'est pas prise en charge.
+* Les stratégies asynchrones personnalisées ne sont pas prises en charge. Utilisez la stratégie asynchrone ONTAP par défaut.
+* Dans les configurations tertiaires ou uniquement asynchrones, le nettoyage des relations asynchrones est manuel.
+* Déclenchez le basculement depuis ONTAP System Manager. Configurez ONTAP Mediator en dehors des outils ONTAP.
+
+
+Lors de la mise à niveau depuis ONTAP tools 10.5, les configurations de protection des clusters hôtes existantes sont migrées vers un format de protection granulaire des banques de données. Après la mise à niveau, vérifiez les groupes de protection et l'appartenance aux banques de données.
+
+.Informations associées
+* link:../protect/protect-multiple-ds.html["Protégez les banques de données d'un cluster avec les outils ONTAP"]
+

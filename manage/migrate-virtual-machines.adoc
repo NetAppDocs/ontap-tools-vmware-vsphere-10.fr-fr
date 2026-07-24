@@ -1,8 +1,8 @@
 ---
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
-keywords:  
-summary: Vous devez tenir compte de certains éléments lors de la migration de machines virtuelles existantes dans votre centre de données. 
+keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
+summary: Examinez les points clés à prendre en compte avant de migrer les machines virtuelles existantes de votre centre de données. 
 ---
 = Considérations relatives à la migration et au clonage de machines virtuelles pour ONTAP tools
 :allow-uri-read: 
@@ -27,7 +27,7 @@ Vous pouvez migrer les machines virtuelles protégées vers :
 
 Si vous migrez la machine virtuelle vers un autre FlexVol volume, le système met à jour le fichier de métadonnées de ce volume avec les informations de la machine virtuelle. Si une machine virtuelle est migrée vers un autre hôte ESXi mais sur le même stockage, le fichier de métadonnées du volume FlexVol sous-jacent ne sera pas modifié.
 
-Pour plus d'informations sur la migration des machines virtuelles, consultez la documentation Broadcom : https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere Migration des machines virtuelles"]
+Pour plus d'informations sur la migration des machines virtuelles, consultez https://techdocs.broadcom.com/["Broadcom Documentation technique"]
 
 
 
@@ -63,11 +63,11 @@ Consultez la documentation Broadcom: https://techdocs.broadcom.com/us/en/vmware-
 
 ONTAP tools prend en charge les instantanés de machines virtuelles via les flux de travail VMware standard. Les instantanés sont des points de restauration temporaires destinés à des cas d'utilisation tels que les tests et la préparation de correctifs. Ils ne remplacent pas la sauvegarde ni la protection des données basée sur la réplication. L'exécution prolongée d'une machine virtuelle sur un instantané peut entraîner une instabilité et une perte de données.
 
-Vous pouvez créer des instantanés cohérents en cas de panne (instantanés sans état de la mémoire, permettant de redémarrer la machine virtuelle dans un état cohérent) sur tous les types de datastores pris en charge. Les instantanés mis au repos, qui utilisent VMware Tools pour vider les données en mémoire sur le disque avant la capture, sont également pris en charge. Pour une présentation des types d'instantanés et de leur comportement, consultez  https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["Aperçu des instantanés de machines virtuelles dans vSphere"].
+Vous pouvez créer des instantanés cohérents en cas de panne (instantanés sans état de la mémoire, permettant de redémarrer la machine virtuelle dans un état cohérent) sur tous les types de datastores pris en charge. Les instantanés mis au repos, qui utilisent VMware Tools pour vider les données en mémoire sur le disque avant la capture, sont également pris en charge. Pour une présentation des types d'instantanés et de leur comportement, consultez  https://techdocs.broadcom.com/["Broadcom Documentation technique"].
 
 
 NOTE: Les instantanés mémoire capturent l'état de la mémoire en cours d'exécution et suspendent temporairement la machine virtuelle. Ils ne sont pas pris en charge dans les workflows des outils ONTAP. Si une machine virtuelle possède un instantané mémoire, vous devez le supprimer avant que la machine virtuelle puisse être incluse dans un groupe de cohérence ou une relation de cluster hôte gérée par les outils ONTAP.
 
 Sur les systèmes de stockage ASA r2, le comportement des snapshots de machines virtuelles diffère de celui des autres types de stockage. Les snapshots sont en lecture seule. Lorsque vous mettez sous tension la machine virtuelle, VASA Provider crée un LUN à partir du snapshot en lecture seule et active les IOPS. Lorsque vous mettez hors tension la machine virtuelle, VASA Provider supprime le LUN et désactive les IOPS.
 
-Pour plus d'informations sur la gestion des instantanés de machines virtuelles, reportez-vous à la documentation Broadcom https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["Gérer les machines virtuelles avec des instantanés"].
+Pour plus d'informations sur la gestion des instantanés de machines virtuelles, consultez https://techdocs.broadcom.com/["Broadcom Documentation technique"].

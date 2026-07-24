@@ -1,8 +1,8 @@
 ---
 permalink: concepts/ontap-tools-overview.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Les outils ONTAP pour VMware vSphere sont un ensemble d"outils destinés à la gestion du cycle de vie des machines virtuelles. Il s"intègre à l"écosystème VMware et aide au provisionnement, à la protection de base et à la reprise après incident des machines virtuelles.' 
+keywords: ONTAP tools overview, virtual machine lifecycle, VASA Provider, disaster recovery 
+summary: Découvrez comment les ONTAP tools for VMware vSphere prennent en charge la gestion du cycle de vie du stockage des machines virtuelles, le provisionnement des datastores et la reprise après sinistre. 
 ---
 = Découvrez les outils ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Les outils ONTAP pour VMware vSphere sont un ensemble d"outils destin�
 
 
 [role="lead"]
-Les ONTAP tools for VMware vSphere sont un ensemble d’outils pour la gestion du cycle de vie des machines virtuelles.  Il s'intègre à l'écosystème VMware pour simplifier le provisionnement des banques de données et fournir une protection de base aux machines virtuelles.  Il s'agit d'un ensemble de microservices évolutifs horizontalement et pilotés par événements, déployés en tant qu'appliance virtuelle ouverte (OVA).
+ONTAP tools pour VMware vSphere est un ensemble d'outils de gestion du cycle de vie du stockage des machines virtuelles. Il s'intègre à l'écosystème VMware pour simplifier le provisionnement des datastores et fournir une protection de base pour les machines virtuelles. Il s'agit d'une collection de microservices à scalabilité horizontale et pilotés par les événements, déployés sous forme d'Open Virtual Appliance (OVA).
 
 Les ONTAP tools for VMware vSphere prennent en charge :
 

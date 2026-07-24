@@ -1,8 +1,8 @@
 ---
 permalink: configure/configure-user-role-and-privileges.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: Configurez les rôles et privilèges utilisateur pour les backends de stockage avec le fichier JSON des ONTAP tools for VMware vSphere et ONTAP System Manager. 
+keywords: ONTAP user roles and privileges, ONTAP tools JSON role file, storage backend least privilege, ONTAP System Manager roles 
+summary: Configurez les rôles et privilèges des utilisateurs pour les backends de stockage avec le fichier JSON des ONTAP tools et ONTAP System Manager. 
 ---
 = Configurer les rôles et privilèges des utilisateurs ONTAP pour les outils ONTAP
 :allow-uri-read: 

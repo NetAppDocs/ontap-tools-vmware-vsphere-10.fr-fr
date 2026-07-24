@@ -1,8 +1,8 @@
 ---
 permalink: manage/start-the-ssh-on-other-nodes.html 
 sidebar: sidebar 
-keywords:  
-summary: Vous devez démarrer SSH sur les autres nœuds avant la mise à niveau. 
+keywords: start SSH on nodes, ONTAP tools node SSH access, pre-upgrade SSH enablement, appliance cluster troubleshooting 
+summary: 'Démarrez SSH sur les autres nœuds avant d"effectuer une mise à niveau.' 
 ---
 = Démarrer SSH sur les autres nœuds ONTAP tools
 :allow-uri-read: 
@@ -20,8 +20,9 @@ Activez l'extension VASA Provider pour votre instance vCenter Server.
 Répétez cette procédure sur chaque nœud avant la mise à niveau.
 
 .Étapes
-. Depuis vCenter Server, ouvrez une console vers VASA Provider.
-. Connectez-vous en tant qu'utilisateur de maintenance.
+. Connectez-vous au serveur vCenter.
+. Localisez la machine virtuelle du nœud ONTAP tools et lancez la console Web.
+. Connectez-vous en utilisant les `maint` identifiants.
 . Entrez `4` Pour sélectionner support et Diagnostics.
 . Entrez `1` Pour sélectionner accès au shell de diagnostic.
 . Entrez `y` pour continuer.

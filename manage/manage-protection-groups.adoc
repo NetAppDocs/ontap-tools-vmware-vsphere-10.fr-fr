@@ -1,0 +1,105 @@
+---
+permalink: manage/manage-protection-groups.html 
+sidebar: sidebar 
+keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups 
+summary: Afficher, modifier et supprimer les groupes de protection et leurs relations dans ONTAP tools. 
+---
+= Gérer les groupes de protection dans ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez cette tâche pour afficher, modifier et supprimer les groupes de protection et leurs relations à partir de la page Groupes de protection dans ONTAP tools.
+
+.Avant de commencer
+* Assurez-vous de disposer des privilèges d'administrateur dans vSphere.
+* Assurez-vous que votre compte utilisateur ONTAP tools dispose des autorisations nécessaires pour gérer les groupes de protection.
+
+
+
+IMPORTANT: Avant de modifier ou de supprimer une protection, consultez les messages d'avertissement dans la boîte de dialogue. La suppression de relations peut avoir une incidence sur le comportement de la sauvegarde et de la cohérence.
+
+.Description de la tâche
+* Les outils ONTAP mettent à jour les enregistrements de protection locaux dans l’instance d’outils ONTAP sélectionnée.
+* Si vous sélectionnez *Supprimer les éléments de stockage associés*, ONTAP tools supprime les éléments de stockage du groupe de protection.
+* Si vous ne sélectionnez pas *Supprimer les éléments de stockage associés*, supprimez manuellement les relations côté destination et les éléments de stockage dans ONTAP.
+
+
+
+
+[[view-protection-groups]]
+== Afficher les groupes de protection
+
+.Étapes
+. Dans le plug-in ONTAP tools, accédez à *Protection* > *Groupes de protection*.
++
+La liste des groupes de protection affiche les relations associées, notamment les groupes de cohérence, SnapMirror, les politiques et les banques de données protégées.
+
+. Examinez les détails du groupe de protection, y compris le nombre de banques de données protégées.
+
+
+
+
+[[edit-protection-group-relationships]]
+== Modifier les relations du groupe de protection
+
+.Étapes
+. Dans le plug-in ONTAP tools, accédez à *Protection* > *Groupes de protection*.
+. Sélectionnez les points de suspension verticaux (trois points) à côté du groupe de protection que vous souhaitez modifier.
+. Sélectionnez *Modifier le groupe de protection*.
+. Mettez à jour les paramètres de la relation :
++
+.. Si un groupe de protection possède une relation Automated Failover Duplex (AFD), vous pouvez ajouter une relation asynchrone.
+.. Si un groupe de protection a une relation asynchrone, vous pouvez ajouter une relation Automated Failover Duplex (AFD).
+.. Si un groupe de protection comporte à la fois une relation Automated Failover Duplex (AFD) et une relation asynchrone, vous pouvez supprimer l'une ou l'autre relation depuis la fenêtre *Modifier le groupe de protection*.
+.. Chaque groupe de protection ne peut avoir qu'une seule relation Automated Failover Duplex (AFD) et une seule relation asynchrone.
+.. Pour utiliser une relation AFD différente, supprimez la relation AFD existante, puis ajoutez la nouvelle relation AFD.
+.. Si vous supprimez une relation existante dans la fenêtre *Modifier le groupe de protection*, examinez l’avertissement indiquant que la suppression de la relation peut avoir un impact sur les sauvegardes et la cohérence.
+.. Si vous supprimez une relation asynchrone dans la fenêtre *Modifier le groupe de protection*, les ressources de stockage côté destination ne sont pas supprimées automatiquement. Supprimez manuellement les relations et les éléments de stockage côté destination dans ONTAP.
+
+
+
+
+
+NOTE: Les modifications sont limitées aux paramètres de relation pris en charge. Veuillez consulter votre politique de protection et les exigences de votre flux de travail avant d'enregistrer les modifications.
+
+
+
+[[remove-a-protection-group]]
+== Supprimer un groupe de protection
+
+.Étapes
+. Dans le plug-in ONTAP tools, accédez à *Protection* > *Groupes de protection*.
+. Sélectionnez les points de suspension verticaux (trois points) à côté du groupe de protection que vous souhaitez supprimer.
+. Sélectionnez *Supprimer la protection*.
+. Dans la boîte de dialogue *Supprimer la protection*, prenez connaissance du message indiquant que la suppression de la protection du cluster hôte entraîne des banques de données non protégées.
+. Facultatif : sélectionnez *Supprimer les éléments de stockage associés* (nettoyer les artefacts) pour supprimer les éléments de stockage dans le groupe de protection.
++
+Les éléments de stockage peuvent inclure des groupes de cohérence, des volumes, des unités de stockage et des instantanés.
+
+. Si vous ne sélectionnez pas *Supprimer les éléments de stockage associés*, ONTAP tools ne supprime que les enregistrements de protection locaux. Supprimez manuellement les relations et les éléments de stockage côté destination dans ONTAP.
+
+
+[cols="1,1,1,1"]
+|===
+| Type de relation | Supprimer la portée | Nettoyage automatique | Nettoyage manuel requis 
+
+
+| Duplex de basculement automatisé (AFD) | La suppression de la protection sur l’un ou l’autre site supprime la relation sur les deux sites. | Les enregistrements de relations sont supprimés dans le cadre du workflow. | Si vous ne sélectionnez pas *Supprimer les éléments de stockage associés*, supprimez manuellement les éléments de stockage restants selon vos besoins. 
+
+
+| Asynchrone | La suppression s'applique uniquement à l'instance locale des outils ONTAP ; la suppression intersites n'est pas disponible. | Les enregistrements de protection locale sont supprimés. | Supprimez manuellement les relations côté destination et les éléments de stockage dans ONTAP. 
+|===
+.Résultat
+* ONTAP tools supprime les enregistrements de protection locaux pour le groupe de protection sélectionné.
+* Si vous avez sélectionné *Supprimer les éléments de stockage associés*, ONTAP tools supprime les éléments de stockage sélectionnés dans le groupe de protection.
+* Si des relations ou des éléments de stockage côté destination subsistent, supprimez-les manuellement dans ONTAP.
+
+
+.Sections connexes
+* link:../manage/protect-ds.html["Protéger un datastore VMFS"]
+* link:../protect/protect-multiple-ds.html["Protéger plusieurs datastores"]
+* link:../protect/config-proximity.html["Configurer le cluster pour la protection du datastore avec les outils ONTAP"]
+

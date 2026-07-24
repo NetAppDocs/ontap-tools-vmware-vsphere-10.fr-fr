@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-resource.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Vous devez mapper vos ressources sur le site protégé et le site de reprise de manière à ce que les machines virtuelles soient configurées pour basculer vers un groupe d"hôtes ou vers un autre.' 
+keywords: resource mappings, ESXi hosts and clusters, VMware Live Site Recovery, failover configuration, ONTAP tools 
+summary: 'Associez les pools de ressources, les hôtes ou les clusters entre les sites protégés et les sites de récupération afin de placer correctement les machines virtuelles lors d"un basculement.' 
 ---
 = Configurer les mappages de ressources dans ONTAP tools
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: Lorsque vous sélectionnez l’icône du plug-in ONTAP tools for VMware vSphere dans la section des raccourcis sur le client vCenter, l’interface utilisateur navigue vers la page de présentation. Cette page fait office de tableau de bord et fournit un résumé du plug-in ONTAP tools for VMware vSphere. 
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
+summary: 'Consultez le tableau de bord des ONTAP tools pour obtenir un résumé de l"état des plug-ins, des banques de données et des données du serveur vCenter.' 
 ---
 = Découvrez le tableau de bord des ONTAP tools
 :allow-uri-read: 
@@ -16,6 +16,10 @@ La sélection de l’icône du plug-in ONTAP tools for VMware vSphere dans la se
 En mode lié amélioré (ELM), la liste déroulante vCenter Server apparaît.  Choisissez un serveur vCenter pour afficher ses données.  La liste déroulante est disponible dans toutes les vues de liste du plug-in. Lorsque vous sélectionnez un serveur vCenter sur une page, il reste identique lorsque vous changez d'onglet dans le plug-in.image:../media/remote-plugin-dashboard.png["Présentation du tableau de bord"]
 
 Depuis la page d'aperçu, vous pouvez exécuter l'action *Découverte*. L'action de découverte détecte les backends de stockage, les hôtes, les banques de données et l'état ou les relations de protection nouvellement ajoutés ou mis à jour au niveau de vCenter.  Exécutez la découverte à la demande sans attendre la découverte planifiée.
+
+Si vous ajoutez un nouvel hôte à un cluster d'hôtes protégés, les paramètres de protection passent à *Protection partielle*.
+
+Pour résoudre ce problème, ouvrez *Modifier la configuration du cluster*, attribuez l'hôte au site approprié (source ou cible) et sélectionnez *Modifier*.
 
 
 NOTE: Le bouton *Découverte* n'est activé que si vous disposez du privilège requis pour effectuer la découverte.

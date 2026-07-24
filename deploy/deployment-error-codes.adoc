@@ -1,8 +1,8 @@
 ---
 permalink: deploy/deployment-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: 'Cette page présente les codes d"erreur relatifs aux opérations de déploiement, de redémarrage et de restauration des outils ONTAP pour le système VMware vSphere.' 
+keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
+summary: 'Utilisez les codes d"erreur de déploiement des outils ONTAP pour diagnostiquer et résoudre les échecs de déploiement, de redémarrage et de récupération.' 
 ---
 = Dépanner les erreurs de déploiement des outils ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Cette page présente les codes d"erreur relatifs aux opérations de d�
 
 
 [role="lead"]
-Si vous rencontrez des problèmes de déploiement, consultez les journaux et les codes d’erreur pour diagnostiquer et résoudre les problèmes.  À partir des ONTAP tools for VMware vSphere 10.5, les groupes de journaux collectés à partir des pods incluent les journaux de MongoDB, RabbitMQ et Vault, ainsi que l'état et les descriptions de tous les pods.  Ils sont fournis en plus des journaux de service des outils ONTAP existants, améliorant ainsi la prise en charge et le dépannage.
+En cas de problèmes de déploiement, consultez les journaux et les codes d'erreur pour diagnostiquer et résoudre les problèmes. À partir de ONTAP tools pour VMware vSphere 10.6, les ensembles de journaux collectés à partir des pods incluent les journaux de MongoDB, RabbitMQ et Vault, ainsi que l'état et la description de tous les pods. ONTAP tools 10.6 ajoute également la journalisation d'audit pour améliorer la traçabilité lors du dépannage. Ces journaux viennent s'ajouter aux journaux de service existants d'ONTAP tools, améliorant ainsi la capacité de support et de dépannage.
 
 
 
@@ -56,7 +56,7 @@ NOTE: L'ensemble de journaux généré remplace l'ensemble de journaux généré
 Des codes d'erreur peuvent s'afficher lors du déploiement, du redémarrage et des opérations de restauration des outils ONTAP pour VMware vSphere.
 Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres représentant le script qui a rencontré le problème, et les trois derniers chiffres représentent le flux de travail spécifique de ce script.
 
-Tous les journaux d'erreurs sont enregistrés dans le fichier ansible-perl-errors.log sous le répertoire /var/log pour faciliter le suivi et la résolution des problèmes.  Ce fichier journal contient le code d'erreur et la tâche Ansible ayant échoué.
+Tous les journaux d'erreurs sont enregistrés dans le fichier ansible-perl-errors.log sous le répertoire /var/log/otvng afin de faciliter le suivi et la résolution des problèmes. Ce fichier journal contient le code d'erreur et la tâche Ansible ayant échoué.
 
 
 NOTE: Les codes d'erreur affichés sur cette page sont fournis à titre indicatif uniquement. Veuillez contacter l'équipe d'assistance si l'erreur persiste ou si aucune solution n'est mentionnée.
@@ -129,10 +129,10 @@ Sudo rke2-uninstall.sh (toutes les VM).
 | 060 | Le déploiement de l'opérateur a échoué | Redémarrer 
 
 
-| 061 | Le déploiement des services a échoué | Effectuez des opérations de débogage Kubernetes de base comme GET pods, GET RS, GET svc, etc. Dans l'espace de noms du système ntv pour plus de détails et des journaux d'erreurs dans /var/log/ansible-perl-errors.log et /var/log/ansible-run.log et redéployez. 
+| 061 | Le déploiement des services a échoué | Effectuez un débogage Kubernetes de base comme get pods, get rs, get svc, etc. dans l'espace de noms ntv-system pour plus de détails et les journaux d'erreurs dans /var/log/otvng/ansible-perl-errors.log et /var/log/otvng/ansible-run.log, puis redéployez. 
 
 
-| 062 | Le déploiement des services d'outils ONTAP a échoué | Reportez-vous aux journaux d'erreurs à l'adresse /var/log/ansible-perl-errors.log pour plus de détails et redéployez. 
+| 062 | Le déploiement des services d'outils ONTAP a échoué | Consultez les journaux d'erreurs à l'emplacement /var/log/otvng/ansible-perl-errors.log pour plus de détails, puis redéployez. 
 
 
 | 065 | L'URL de la page swagger est inaccessible | Redéploiement 
@@ -143,7 +143,7 @@ Pour récupérer/terminer la mise à niveau, procédez comme suit :
 
 * Activer le shell de diagnostic.
 * Exécutez la commande 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'.
-* Consultez les journaux à /var/log/post-deploy-upgrade.log.
+* Consultez les journaux à /var/log/otvng/post-deploy-upgrade.log.
 
 
 
@@ -158,16 +158,6 @@ Pour récupérer/terminer la mise à niveau, procédez comme suit :
 
 
 | 108 | Echec du script d'amorçage | - 
-
-
-| 114 | La mise à jour du certificat interne dans la collection MongoDB a échoué  a| 
-Si le déploiement échoue avec le code d'erreur 114, procédez comme suit :
-
-* Activez le shell de diagnostic.
-* Exécutez la commande suivante : `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Consultez les journaux à `/var/log/otvng/post-deploy-upgrade.log`
-
-
 |===
 |===
 

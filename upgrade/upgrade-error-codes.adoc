@@ -1,8 +1,8 @@
 ---
 permalink: upgrade/upgrade-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: 'Cette page présente les codes d"erreur relatifs à l"opération de mise à niveau des outils ONTAP pour le système VMware vSphere.' 
+keywords: upgrade error codes, ONTAP tools, VMware vSphere, troubleshooting, Ansible logs 
+summary: 'Utilisez les codes d"erreur de mise à niveau des outils ONTAP pour identifier les flux de travail ayant échoué et résoudre les problèmes de mise à niveau dans VMware vSphere.' 
 ---
 = Codes d'erreur de mise à niveau des ONTAP tools
 :allow-uri-read: 
@@ -65,7 +65,7 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 052 | L'ISO peut être la même que la version actuelle ou deux versions au-dessus de la version actuelle. | Utilisez une version ISO compatible pour effectuer une mise à niveau à partir de votre version actuelle. 
 
 
-| 068 | Échec de la restauration des paquets Debian | Utilisez une restauration basée sur des snapshots ou un RPO nul et réessayez la mise à niveau. 
+| 068 | La restauration des paquets du système d'exploitation Debian a échoué | Utilisez une restauration basée sur des snapshots ou un RPO nul et réessayez la mise à niveau. 
 
 
 | 069 | Échec de la restauration des fichiers | Utilisez une restauration basée sur des snapshots ou un RPO nul et réessayez la mise à niveau. 
@@ -77,7 +77,7 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 071 | Cluster Kubernetes défectueux | - 
 
 
-| 074 | Echec du montage ISO | Vérifiez le fichier /var/log/upgrade-run.log et réessayez la mise à niveau. 
+| 074 | Echec du montage ISO | Vérifiez le fichier /var/log/otvng/upgrade-run.log et réessayez la mise à niveau. 
 
 
 | 075 | Échec des pré-vérifications de mise à niveau | Réessayez la mise à niveau. 
@@ -107,10 +107,10 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 083 | La suppression de la sauvegarde a échoué | Utilisez une restauration basée sur des snapshots ou un RPO nul et réessayez la mise à niveau. 
 
 
-| 084 | Echec de la remise en production du JobManager | Pour récupérer/terminer la mise à niveau, procédez comme suit : 1. Activez l’interface de diagnostic 2. Exécutez la commande : _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Consultez les journaux dans /var/log/post-deploy-upgrade.log 
+| 084 | Echec de la remise en production du JobManager | Pour récupérer/terminer la mise à niveau, procédez comme suit : 1. Activez l’interface de diagnostic 2. Exécutez la commande : _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Consultez les journaux dans /var/log/otvng/post-deploy-upgrade.log 
 
 
-| 087 | Échec des étapes post-mise à niveau. | Procédez comme suit pour récupérer/terminer la mise à niveau. 1. Activer le shell de diagnostic 2. Exécutez _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ command 3. Vérifiez les journaux dans /var/log/post-deploy-upgrade.log 
+| 087 | Échec des étapes post-mise à niveau. | Pour récupérer/terminer la mise à niveau, effectuez les étapes suivantes. 1. Activez l’interface de diagnostic 2. Exécutez la commande _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Vérifiez les journaux à l’emplacement /var/log/otvng/post-deploy-upgrade.log 
 
 
 | 088 | La configuration de la rotation du journal pour journald a échoué | Vérifiez que les paramètres réseau de la machine virtuelle sont compatibles avec l'hôte qui l'héberge. Vous pouvez essayer de migrer la machine virtuelle vers un autre hôte et de la redémarrer. 
@@ -128,10 +128,13 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 097 | La désinstallation des services pour la mise à niveau a échoué | Utilisez un RPO nul ou une restauration basée sur des snapshots et réessayez la mise à niveau. 
 
 
-| 098 | échec de la copie du secret dockercred du système ntv vers l'espace de noms du mécanisme de provisionnement de stockage dynamique | Consultez les journaux de mise à niveau et réessayez la mise à niveau. 
+| 098 | La copie du secret dockercred de l'espace de noms ntv-system vers l'espace de noms rook-ceph a échoué | Consultez les journaux de mise à niveau et réessayez la mise à niveau. 
 
 
 | 099 | Impossible de valider l'ajout de nouveau disque dur | Ajout du nouveau disque dur à tous les nœuds en cas de haute disponibilité et à un nœud en cas de déploiement non HA 
+
+
+| 108 | Echec du script d'amorçage | - 
 
 
 | 109 | la sauvegarde des données du volume persistant a échoué | Consultez les journaux de mise à niveau et réessayez la mise à niveau. 
@@ -161,7 +164,7 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 056 | échec de la suppression de la sauvegarde de migration | NA 
 
 
-| 090 | la validation du certificat pour les backends de stockage et vCenter a échoué | Vérifiez les journaux de mise à niveau et le fichier journal dans /var/log/cert_validation_error.log et réessayez la mise à niveau. 
+| 090 | la validation du certificat pour les backends de stockage et vCenter a échoué | Vérifiez les journaux de mise à niveau et le fichier journal à /var/log/otvng/cert_validation_error.log et réessayez la mise à niveau. 
 
 
 | 114 | La mise à jour du certificat interne dans la collection MongoDB a échoué  a| 
@@ -216,7 +219,7 @@ sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
 +
 [listing]
 ----
-tail -f /var/log/post-deploy-upgrade.log
+tail -f /var/log/otvng/post-deploy-upgrade.log
 ----
 +
 Recherchez le message de réussite : `Completed post 10.5 upgrade steps.`

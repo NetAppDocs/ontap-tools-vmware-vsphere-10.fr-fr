@@ -1,0 +1,59 @@
+---
+permalink: protect/config-proximity.html 
+sidebar: sidebar 
+keywords: cluster configuration, datastore protection, SVM pairing, VMware vSphere, failover management 
+summary: Configurez les paramètres de proximité du cluster hôte pour définir les sites source et cible, attribuer les hôtes et associer les SVM pour la protection du datastore. 
+---
+= Configurer le cluster pour la protection du datastore avec les outils ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez les outils ONTAP pour VMware vSphere afin de configurer les paramètres de configuration du cluster (proximité hôte-stockage), permettant une protection efficace des datastores et une gestion simplifiée des basculements pour votre environnement virtualisé.
+
+.Avant de commencer
+* Vérifiez que vous disposez des privilèges d'administrateur dans vSphere.
+* Les paramètres de configuration du cluster s'appliquent aux configurations uniformes et non uniformes, tandis que les paramètres d'accès ne s'appliquent qu'au type de relation AFD.
+
+
+.Étapes
+. Dans le vSphere client, cliquez avec le bouton droit sur le cluster hôte et sélectionnez *Configurer la protection du cluster*.
++
+
+NOTE: Si le cluster possède déjà une configuration de cluster, cette option vous permet de modifier la configuration existante.
+
+. Dans la fenêtre *Type de configuration* :
++
+.. Sélectionnez *Uniforme* pour permettre aux hôtes des deux domaines de panne d'accéder aux ressources de stockage des deux sites. Un domaine de panne est un groupe de composants matériels et d'infrastructure. Attribuez chaque hôte à un domaine de panne pour les deux sites.
+.. Sélectionnez *Non uniforme* pour limiter les hôtes de chaque site à l'accès au stockage uniquement sur leur site respectif. Attribuez les hôtes aux domaines de défaillance en conséquence.
+.. Saisissez les noms de domaines de panne. Les noms par défaut sont « Site A » et « Site B ». Vous pouvez modifier ces valeurs. Les noms de site correspondent aux domaines de panne source et cible. L’interface utilisateur valide les entrées au fur et à mesure de votre saisie et affiche des messages pour les caractères non pris en charge ou les valeurs dépassant la limite de caractères.
++
+
+NOTE: Le type de configuration ne peut plus être modifié une fois défini. Pour changer le type de configuration, supprimez la configuration du cluster et créez-en une nouvelle avec les paramètres souhaités.
+
+
+
+. Sélectionnez *Suivant*.
+. Dans la fenêtre *Hôtes*, affectez chaque hôte soit au domaine de panne source, soit au domaine de panne cible. Tous les hôtes doivent être affectés, et un hôte ne peut appartenir aux deux sites. Les noms de site affichés dans l’assistant correspondent aux noms des domaines de panne source et de panne cible. Le bouton *Suivant* est activé une fois que tous les hôtes sont affectés.
+. Sélectionnez *Suivant*.
+. Sur la page *Hôtes SVM de stockage*, affectez chaque SVM au site approprié. Vous pouvez affecter plusieurs homologues SVM, mais au moins un doit être affecté à chaque site. Lorsque vous affectez un SVM à un site, son homologue SVM est automatiquement affecté au site opposé.
+. Sélectionnez *Suivant*.
+. Consultez la page *Résumé*. Vérifiez les paramètres de configuration du cluster pour les domaines de panne respectifs.
+. Sélectionnez *Créer* pour appliquer la configuration.
+. Pour afficher ou modifier une configuration de protection de cluster existante :
++
+.. Accédez à la vue du plug-in ONTAP tools.
+.. Accédez à *Protection* > *Configuration de la protection du cluster*.
+.. Sélectionnez le cluster pour afficher sa configuration actuelle.
+.. Cliquez sur les points de suspension verticaux et sélectionnez *Modifier* pour modifier la configuration. L'assistant affiche les paramètres actuels pour modification.
++
+image:../media/edit-protection.png["Modifier la configuration de protection du cluster"]
+
+
+
+
+
+.Résultat
+La configuration est appliquée et vous pouvez la consulter ou la modifier dans le plugin ONTAP tools.

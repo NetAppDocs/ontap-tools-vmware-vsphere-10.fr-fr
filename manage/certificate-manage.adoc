@@ -1,8 +1,8 @@
 ---
 permalink: manage/certificate-manage.html 
 sidebar: sidebar 
-keywords:  
-summary: Une seule instance des outils ONTAP pour VMware vSphere peut gérer plusieurs instances vCenter Server. Les outils ONTAP pour VMware vSphere sont déployés avec un certificat auto-signé pour VASA Provider. Avec cela, une seule instance vCenter Server peut être gérée pour les datastores vVols. 
+keywords: ONTAP tools certificates, VASA provider certificate, vCenter certificate trust, manage appliance certificates 
+summary: Gérez les certificats des ONTAP tools et du VASA Provider, renouvelez les certificats par défaut ou remplacez-les par des certificats CA personnalisés. 
 ---
 = Gérer les certificats des outils ONTAP
 :allow-uri-read: 
@@ -13,16 +13,19 @@ summary: Une seule instance des outils ONTAP pour VMware vSphere peut gérer plu
 [role="lead"]
 Un certificat auto-signé est généré par défaut pour les outils ONTAP et le fournisseur VASA lors du déploiement. Vous pouvez utiliser l'interface du gestionnaire d'outils ONTAP pour renouveler ce certificat ou le remplacer par un certificat d'autorité de certification personnalisé. Dans les déploiements multi-vCenter, l'utilisation de certificats d'autorité de certification personnalisés est requise.
 
+
+WARNING: Si les certificats expirent sans être renouvelés à temps, ONTAP tools cesse de fonctionner. Renouvelez les certificats avant leur expiration afin de garantir un fonctionnement continu et d’éviter toute interruption de service.
+
 .Avant de commencer
 Vous devriez avoir les éléments suivants avant de commencer :
 
-* Le nom de domaine correspond à l'adresse IP virtuelle.
+* Le nom de domaine associé à l'adresse IP des ONTAP tools.
 * Résolution réussie du nom de domaine par nslookup, confirmant qu'il correspond à l'adresse IP correcte.
 * Certificats créés avec le nom de domaine et l'adresse IP des outils ONTAP .
 
 
 
-NOTE: Une adresse IP des outils ONTAP doit correspondre à un nom de domaine complet (FQDN). Les certificats doivent contenir le même nom de domaine complet mappé à l'adresse IP des outils ONTAP dans les autres noms d'objet ou d'objet.
+NOTE: Une adresse IP des ONTAP tools doit correspondre à un nom de domaine complet (FQDN). Les certificats doivent contenir le même FQDN associé à l'adresse IP des ONTAP tools dans le champ subject ou subject alternative names.
 
 
 NOTE: Vous ne pouvez pas passer d'un certificat signé par une autorité de certification à un certificat auto-signé.
@@ -38,7 +41,7 @@ L'onglet Outils ONTAP affiche des détails tels que le type de certificat (auto-
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez *certificats* > *ONTAP Tools* > *Renew* pour renouveler les certificats.
 +
-Vous pouvez renouveler le certificat s'il a expiré ou s'il approche de sa date d'expiration. L'option renouveler est disponible lorsque le type de certificat est signé par une autorité de certification. Dans la fenêtre contextuelle, indiquez le certificat du serveur, la clé privée, l'autorité de certification racine et le certificat intermédiaire.
+Vous pouvez renouveler le certificat s'il a expiré ou si sa date d'expiration approche. L'option de renouvellement est disponible lorsque le type de certificat est auto-signé ou signé par une autorité de certification. Dans la fenêtre contextuelle, fournissez le certificat serveur, la clé privée, l'autorité de certification racine et les détails du certificat intermédiaire.
 
 +
 
@@ -47,7 +50,7 @@ NOTE: Le système sera hors ligne jusqu'à ce que le certificat soit renouvelé 
 . Pour mettre à niveau le certificat auto-signé vers un certificat CA personnalisé, sélectionnez *certificats* > *ONTAP Tools* > *mettre à niveau vers CA* option.
 +
 .. Dans la fenêtre contextuelle, téléchargez le certificat du serveur, la clé privée du certificat du serveur, le certificat de l'autorité de certification racine et les fichiers de certificat intermédiaires.
-.. Saisissez le nom de domaine complet (FQDN) de l'adresse IP de l'équilibreur de charge pour lequel vous avez généré ce certificat et mettez-le à jour.
+.. Saisissez le nom de domaine complet (FQDN) associé à l'adresse IP des ONTAP tools (anciennement adresse IP de l'équilibreur de charge) pour laquelle vous avez généré ce certificat, puis mettez à niveau le certificat.
 +
 
 NOTE: Le système sera hors ligne jusqu'à la fin de la mise à niveau et vous serez déconnecté de l'interface du Gestionnaire d'outils ONTAP.
@@ -68,7 +71,7 @@ Les outils ONTAP pour VMware vSphere sont déployés avec un certificat auto-sig
 . Sélectionnez *certificats* > *VASA Provider* ou *ONTAP Tools* > *mettre à niveau vers CA* pour mettre à niveau le certificat auto-signé vers un certificat CA personnalisé.
 +
 .. Dans la fenêtre contextuelle, téléchargez le certificat du serveur, la clé privée du certificat du serveur, le certificat de l'autorité de certification racine et les fichiers de certificat intermédiaires.
-.. Saisissez le nom de domaine complet (FQDN) de l'adresse IP de l'équilibreur de charge pour lequel vous avez généré ce certificat et mettez-le à jour.
+.. Saisissez le nom de domaine complet (FQDN) associé à l'adresse IP des ONTAP tools (anciennement adresse IP de l'équilibreur de charge) pour laquelle vous avez généré ce certificat, puis mettez à niveau le certificat.
 +
 
 NOTE: Le système sera hors ligne jusqu'à la fin de la mise à niveau et vous serez déconnecté de l'interface du Gestionnaire d'outils ONTAP.
@@ -76,6 +79,24 @@ NOTE: Le système sera hors ligne jusqu'à la fin de la mise à niveau et vous s
 
 
 
+
+--
+.Actualiser le certificat des services ONTAP tools
+--
+À partir d'ONTAP tools 10.5, la durée de validité des certificats est passée de 10 ans à 1 an. À partir d'ONTAP tools 10.5P2, lors de la mise à niveau d'ONTAP tools, les certificats de communication des services internes sont automatiquement renouvelés et le certificat auto-signé de la passerelle est également actualisé.
+
+Utilisez cette option de la console de maintenance pour actualiser manuellement les certificats de communication des services internes lorsque vous recevez une alerte indiquant qu’un certificat interne arrive à expiration ou si ONTAP tools n’a pas été mis à niveau depuis un an. À partir d’ONTAP tools 10.5P2, les mises à niveau renouvellent automatiquement ces certificats. Les certificats actualisés conservent une période de validité d’un an (365 jours), ce qui contribue à répondre aux exigences d’audit.
+
+.Étapes
+. Connectez-vous au serveur vCenter.
+. Localisez la machine virtuelle ONTAP tools et lancez la console Web.
+. Connectez-vous en utilisant les `maint` identifiants.
+. Entrer `2` pour sélectionner *Configuration système*.
+. Appuyez sur  `9` pour sélectionner *Actualiser les certificats des services ONTAP tools*.
+
+
+
+WARNING: Cette action redémarre tous les services et peut entraîner une interruption ou une perturbation. Pour continuer, confirmez l'avertissement en saisissant  `y`, puis le processus d'actualisation démarre.
 
 --
 ====

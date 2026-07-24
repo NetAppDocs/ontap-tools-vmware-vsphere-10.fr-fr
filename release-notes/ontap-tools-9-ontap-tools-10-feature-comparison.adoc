@@ -1,8 +1,8 @@
 ---
 permalink: release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html 
 sidebar: sidebar 
-keywords: release notes, feature, comparison 
-summary: En savoir plus sur la comparaison des fonctionnalités des ONTAP tools for VMware vSphere 9 et ONTAP tools for VMware vSphere 10 
+keywords: ONTAP tools feature comparison, VMware vSphere, version upgrade, compatibility, NetApp tools 
+summary: 'Comparez les fonctionnalités des ONTAP tools for VMware vSphere 9 et 10 afin de décider s"il convient de migrer vers ONTAP tools 10.2 ou une version ultérieure.' 
 ---
 = Comparaison des fonctionnalités des ONTAP tools for VMware vSphere 9 et 10
 :allow-uri-read: 
@@ -11,26 +11,28 @@ summary: En savoir plus sur la comparaison des fonctionnalités des ONTAP tools 
 
 
 [role="lead"]
-Découvrez si la migration des ONTAP tools for VMware vSphere 9 vers les ONTAP tools for VMware vSphere 10.2 ou versions ultérieures vous convient.
+Découvrez pourquoi la migration des ONTAP tools for VMware vSphere 9 vers ONTAP tools for VMware vSphere 10.2 ou version ultérieure peut être le bon choix pour votre environnement.
 
 
-NOTE: Pour obtenir les informations de compatibilité les plus récentes, veuillez consulter https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+NOTE: Pour obtenir les informations les plus récentes sur la compatibilité, veuillez consulter https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+Pour obtenir les informations les plus récentes sur la fin du support des ONTAP tools 9.x, veuillez consulter https://mysupport.netapp.com/site/info/version-support["Prise en charge des versions logicielles"^].
 
 [cols="20%,25%,30%"]
 |===
 | Fonctionnalité | Outils ONTAP 9.13 | Outils ONTAP 10.2 et versions ultérieures 
 
 
-| Proposition de valeur clé | Rationalisez et simplifiez les opérations du jour 0 au jour 2 grâce à des capacités de sécurité, de conformité et d'automatisation améliorées | Prise en charge étendue pour inclure FC pour VMFS et NVMe-oF pour VMFS uniquement. Facilité d'utilisation pour NetApp SnapMirror, configuration simple pour les clusters de stockage métropolitains vSphere et prise en charge de VMware Live Site Recovery sur trois sites 
+| Proposition de valeur clé | Rationalisez et simplifiez les opérations du jour 0 au jour 2 grâce à des capacités améliorées de sécurité, de conformité et d'automatisation. Prend en charge un seul serveur vCenter par appliance ONTAP tools. | Prise en charge étendue incluant FC pour VMFS et NVMe-oF pour VMFS uniquement. Simplicité d'utilisation pour NetApp SnapMirror, configuration simple pour les clusters de stockage MetroCluster vSphere, et prise en charge de VMware Live Site Recovery sur trois sites. Prise en charge de plusieurs instances de vCenter Server par appliance ONTAP tools, réduisant ainsi le nombre d'appliances et les besoins globaux en ressources. 
 
 
-| Qualification de la version ONTAP | ONTAP 9.9.1 à ONTAP 9.16.1 | ONTAP 9.12.1 à 9.15.1 pour ONTAP tools 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 et 9.16.1 pour ONTAP tools 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 et 9.16.1 pour ONTAP tools 10.4. ONTAP 9.16.1P3 et versions ultérieures sont requis pour ONTAP tools 10.4 lors de l'utilisation de systèmes ASA r2. ONTAP 9.15.1, 9.16.1 et 9.17.0 pour ONTAP tools 10.5 
+| Qualification de la version ONTAP | ONTAP 9.9.1 à ONTAP 9.16.1 | ONTAP 9.12.1 à 9.15.1 pour ONTAP tools 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 et 9.16.1 pour ONTAP tools 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 et 9.16.1 pour ONTAP tools 10.4. ONTAP 9.16.1P3 et versions ultérieures sont requis pour ONTAP tools 10.4 lors de l’utilisation de systèmes ASA r2. ONTAP 9.15.1, 9.16.1 et 9.17.0 pour ONTAP tools 10.5 ONTAP 9.16.1, 9.17.1, 9.18.1 et 9.19.1, et les versions ASA r2 9.16.1P3, 9.17.1, 9.18.1 et 9.19.1 pour ONTAP tools 10.6. 
 
 
-| Prise en charge des versions VMware | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 vers VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0 à partir d' ONTAP tools 10.5 VMware Site Recovery Manager (SRM) 8.7 à VMware Live Site Recovery 9.0 *REMARQUE :* Dans ONTAP tools 10.x, SRM prend en charge les sites partagés, permettant une évolutivité accrue et des performances améliorées. 
+| Prise en charge des versions VMware | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 vers VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0 à partir de ONTAP tools 10.5 et versions ultérieures VMware Site Recovery Manager (SRM) 8.7 à VMware Live Site Recovery 9.0, 9.0.1, 9.0.2, 9.0.3 et 9.0.4 
 
 
-| Prise en charge du protocole | Magasins de données NFS et VMFS : NFS (v3 et v4.1), VMFS (iSCSI et FCP) | Magasins de données NFS et VMFS : NFS (v3 et v4.1), VMFS (iSCSI/FCP/NVMe-oF) 
+| Prise en charge du protocole | Magasins de données NFS et VMFS : NFS (v3 et v4.1), VMFS (iSCSI et FCP) | Magasins de données NFS et VMFS : NFS (v3 et v4.1), VMFS (iSCSI/FCP/NVMe-TCP et NVMe-FC) 
 
 
 | Évolutivité | Hôtes et machines virtuelles : 300 hôtes, jusqu’à 10 000 machines virtuelles. Banques de données : 600 NFS, jusqu’à 50 VMFS. | Hôtes et machines virtuelles : 600 hôtes 
@@ -39,7 +41,7 @@ NOTE: Pour obtenir les informations de compatibilité les plus récentes, veuill
 | Observabilité | Tableaux de bord des performances, de la capacité et de la conformité de l'hôte Rapports dynamiques sur les machines virtuelles et les banques de données | Tableaux de bord mis à jour sur les performances, la capacité et la conformité de l'hôte Rapports dynamiques sur les machines virtuelles et les banques de données 
 
 
-| Protection des données | Réplication SRA pour VMFS et NFS.  Intégration SCV et interopérabilité pour la sauvegarde. | Réplication SRA pour les banques de données iSCSI VMFS et NFS v3, protection sur trois sites combinant SMAS et VMware Live Site Recovery. Prise en charge SRA pour FCP avec VMFS. 
+| Protection des données | Réplication SRA pour VMFS et NFS.  Intégration SCV et interopérabilité pour la sauvegarde. | Réplication SRA pour les datastores iSCSI VMFS et NFS v3 avec protection sur trois sites, combinant SMAS et VMware Live Site Recovery. Prise en charge SRA de FCP avec VMFS. Protection granulaire des datastores et gestion des groupes de cohérence depuis ONTAP tools 10.6. *REMARQUE :* Dans ONTAP tools 10.x, SRM prend en charge les sites partagés, ce qui permet une évolutivité et des performances améliorées. 
 
 
 | Assistance aux fournisseurs VASA | VASA 4,0 | VASA 3,0 

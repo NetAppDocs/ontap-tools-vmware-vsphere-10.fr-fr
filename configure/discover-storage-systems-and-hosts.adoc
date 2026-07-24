@@ -1,8 +1,8 @@
 ---
 permalink: configure/discover-storage-systems-and-hosts.html 
 sidebar: sidebar 
-keywords:  
-summary: Lors de la première exécution des outils ONTAP pour VMware vSphere dans un client vSphere, les outils ONTAP pour VMware vSphere permettent de détecter les hôtes ESXi, leurs LUN et leurs exportations NFS, ainsi que les systèmes de stockage NetApp qui possèdent ces LUN et ces exportations. 
+keywords: discover storage systems and hosts, ONTAP tools first discovery, ESXi host and LUN discovery, NFS export discovery 
+summary: Découvrez les hôtes ESXi, les LUN, les exports NFS et les systèmes de stockage NetApp dans ONTAP tools lors du premier lancement. 
 ---
 = Découvrez les systèmes de stockage et les hôtes dans ONTAP tools
 :allow-uri-read: 
@@ -24,8 +24,8 @@ Vous pouvez découvrir de nouveaux systèmes de stockage ou mettre à jour ceux 
 Lors de la découverte des systèmes de stockage, les outils ONTAP pour VMware vSphere collectent des informations à partir des hôtes ESXi gérés par l'instance vCenter Server.
 
 .Étapes
-. Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.
-. Cliquez avec le bouton droit sur le centre de données requis et sélectionnez *NetApp ONTAP tools* > *Mettre à jour les données de l'hôte*.
+. Depuis la page d'accueil du client vSphere, sélectionnez *Hôtes et clusters*.
+. Cliquez avec le bouton droit sur le centre de données requis et sélectionnez *NetApp ONTAP tools* > *Mettre à jour les données de l'hôte et du stockage*.
 +
 Dans la boîte de dialogue *confirmer*, confirmez votre choix.
 

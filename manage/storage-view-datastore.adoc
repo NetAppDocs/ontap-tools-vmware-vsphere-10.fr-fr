@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-view-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: 'La vue de stockage ONTAP sous l"onglet Configurer des ONTAP tools for VMware vSphere fournit des données relatives à la banque de données et à ses volumes.' 
+keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility 
+summary: Affichez les détails du datastore et du volume depuis la page Stockage ONTAP dans ONTAP tools for VMware vSphere. 
 ---
 = Vues de stockage ONTAP pour les banques de données dans ONTAP tools
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'La vue de stockage ONTAP sous l"onglet Configurer des ONTAP tools for 
 
 
 [role="lead"]
-Les outils ONTAP pour VMware vSphere affichent la vue côté stockage ONTAP des datastores et de leurs volumes dans l'onglet configurer.
+Utilisez la page ONTAP Storage dans l'onglet *Configurer* pour afficher les informations sur la banque de données et le volume.
 
 .Étapes
-. Depuis le client vSphere, accédez au magasin de données.
+. Dans l'inventaire du client vSphere, sélectionnez le datastore.
 . Sélectionnez l'onglet *configurer* dans le volet de droite.
 . Sélectionnez * Outils NetApp ONTAP * > * Stockage ONTAP *. L'affichage varie selon le type de base de données.  Voir le tableau ci-dessous :
 
@@ -25,11 +25,13 @@ Les outils ONTAP pour VMware vSphere affichent la vue côté stockage ONTAP des 
 | *Type de datastore* | *Information disponible* 
 
 
-| Datastore NFS | La page *Détails du stockage* contient des informations sur les systèmes back-end de stockage, les agrégats et les volumes. La page *NFS details* contient des données relatives au datastore NFS. 
+| datastores NFS | La page *Détails du stockage* contient des systèmes de stockage, des agrégats et des informations sur les volumes. La page *Détails NFS* contient des données relatives à la banque de données NFS. Remarque : si la valeur nconnect est modifiée en dehors des ONTAP tools, la valeur affichée dans ONTAP tools peut ne pas refléter cette modification externe. 
 
 
-| Datastores VMFS | La page *Détails du stockage* contient les détails du back-end de stockage, de l'agrégat, du volume et de la zone de disponibilité du stockage (SAZ). La page *Détails de l'unité de stockage* contient des détails sur l'unité de stockage. 
+| Datastores VMFS | La page *Détails du stockage* contient des informations sur le backend de stockage, les agrégats, les volumes et les zones de disponibilité du stockage (SAZ). La page *Détails de l'unité de stockage* contient des informations sur l'unité de stockage. 
 
 
 | Datastores vVols | Répertorie tous les volumes. Vous pouvez étendre ou supprimer du stockage à partir du volet de stockage ONTAP . Les outils ONTAP ne prennent pas en charge cette vue pour les datastores vVols basés sur le système ASA r2. 
 |===
+.Résultat
+Vous pouvez consulter les détails de la banque de données côté ONTAP en fonction du type de datastore sélectionné.

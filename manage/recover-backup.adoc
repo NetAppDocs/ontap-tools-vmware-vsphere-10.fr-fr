@@ -1,8 +1,8 @@
 ---
 permalink: manage/recover-backup.html 
 sidebar: sidebar 
-keywords:  
-summary: 'À partir des outils ONTAP pour VMware vSphere 10.3, l"appliance utilise un mécanisme de provisionnement du stockage dynamique. Vous ne pouvez pas atteindre un RPO nul. Toutefois, vous pouvez atteindre un RPO proche de zéro.' 
+keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
+summary: 'Restaurez les ONTAP tools à partir d"une sauvegarde et comprenez le comportement zéro RPO et quasi zéro RPO selon la version.' 
 ---
 = Récupérer la configuration des outils ONTAP
 :allow-uri-read: 
@@ -26,8 +26,9 @@ Assurez-vous que la nouvelle machine virtuelle utilise la même adresse IP des o
 
 
 . Mettez hors tension la machine virtuelle existante.  Ensuite, déployez une nouvelle machine virtuelle en utilisant le même fichier OVA que le déploiement d’origine.
-. Dans vCenter Server, ouvrez la console de maintenance.
-. Connectez-vous en tant qu'utilisateur de maintenance.
+. Connectez-vous au serveur vCenter.
+. Localisez la machine virtuelle ONTAP tools nouvellement déployée et lancez la console web.
+. Connectez-vous en utilisant les `maint` identifiants.
 . Entrez `4` pour sélectionner *support et diagnostic*.
 . Entrez `2` pour sélectionner l'option *Activer l'accès au diagnostic à distance* et créer un nouveau mot de passe pour l'accès au diagnostic.
 . Choisissez un fichier de sauvegarde dans le répertoire téléchargé.  Reportez-vous au fichier _OTV_backup_info.txt_ pour identifier la dernière sauvegarde.
@@ -48,7 +49,7 @@ NOTE: ne modifiez pas le chemin de destination et le nom du fichier (/home/diag/
 sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
 ----
 +
-Les journaux sont enregistrés dans le fichier _/var/log/post-deploy-upgrade.log_.
+Les journaux sont enregistrés dans le fichier _/var/log/otvng/post-deploy-upgrade.log_.
 
 
 

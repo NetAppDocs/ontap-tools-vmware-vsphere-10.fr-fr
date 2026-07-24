@@ -1,55 +1,126 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.5, ONTAP tools for VMware vSphere' 
-summary: Découvrez les nouvelles fonctionnalités disponibles dans les ONTAP tools for VMware vSphere 10.5. 
+keywords: ONTAP tools 10.6, VMware vSphere release notes, datastore protection, audit logging, nconnect 
+summary: Découvrez les nouvelles fonctionnalités et améliorations dans ONTAP tools for VMware vSphere 10.6. 
 ---
-= Nouveautés des ONTAP tools for VMware vSphere 10.5
+= Nouveautés des ONTAP tools for VMware vSphere 10.6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Découvrez les nouvelles fonctionnalités disponibles dans les ONTAP tools for VMware vSphere 10.5.
-
-* *Qualification de la plateforme*
-
-
-Les ONTAP tools for VMware vSphere 10.5 ajoutent la prise en charge des systèmes ASA r2, offrant une compatibilité avec les dernières configurations matérielles et logicielles.  Cette version inclut également l'intégration avec ONTAP 9.16.1 et 9.17.1, élargissant ainsi les environnements pris en charge.
-
-* *Qualification et certifications VMware*
-
-
-Les ONTAP tools for VMware vSphere 10.5 sont conformes aux normes de certification d’interopérabilité VMware actuelles, prenant en charge à la fois l’hôte ESXi et vCenter Server.
-
-* * Prise en charge de MetroCluster *
-
-
-Cette version introduit la prise en charge des configurations MetroCluster , améliorant ainsi les capacités de haute disponibilité et de reprise après sinistre.
-
-* *Gestion de la sécurité et des certificats*
-
-
-Cette version introduit une gestion simplifiée des certificats auto-signés, améliorant à la fois l'expérience utilisateur et le respect des normes de sécurité.  Il fournit des flux de travail de validation de certificat améliorés pour sécuriser les outils ONTAP et ONTAP tools for VMware vSphere .
-
-* *Améliorations de la réplication*
-
-
-Cette version prend en charge la réplication VMFS avec un groupe de cohérence hiérarchique incluant SRA et SnapMirror Active Sync dans les systèmes ASA r2.  Il prend en charge les sauvegardes RPO zéro pour améliorer la protection et la récupération des données.
-
-* *Mise à niveau et migration*
-
-
-Le processus de mise à niveau et de migration des versions précédentes des ONTAP tools for VMware vSphere vers les ONTAP tools for VMware vSphere 10.5 est conçu pour être transparent et efficace, minimisant les temps d'arrêt et garantissant une transition en douceur.
+Découvrez les nouvelles fonctionnalités et améliorations dans ONTAP tools for VMware vSphere 10.6.
 
 
 
-[[supported-ontap-platforms-and-vcenter-server-versions]]
-== Plateformes ONTAP et versions de vCenter Server prises en charge
+[[granular-datastore-protection]]
+== Protection granulaire des datastores
 
-ONTAP tools for VMware vSphere 10.5 P1 prend en charge les configurations de haute disponibilité (HA) de vCenter pour les composants SRA et SnapMirror active sync. vVols n'est pas pris en charge dans cette configuration. Lors d'un basculement HA, vCenter peut être indisponible pendant plusieurs minutes. Dans les grands environnements ou en cas d'erreur, la durée du basculement peut dépasser 15 minutes.
+ONTAP tools 10.6 introduit une protection au niveau du datastore, vous permettant ainsi d'appliquer une protection à des datastores sélectionnés plutôt qu'à l'ensemble d'un cluster hôte.
 
-Pour plus d'informations, consultez le  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-availability/vcenter-server-high-availability.html["Documentation de haute disponibilité vCenter"^]. Pour des questions concernant vCenter HA, contactez  https://support.broadcom.com/["Support Broadcom"^].
+Les principales améliorations comprennent :
 
-Pour les derniers détails sur la compatibilité des versions, reportez-vous à https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Matrice d'interopérabilité NetApp"^] .
+* Protection au niveau du datastore pour les systèmes ONTAP et les systèmes ASA r2
+* Basculement automatique duplex (AFD) et politiques de protection asynchrones
+* Prise en charge des datastores VMFS iSCSI et FC
+* Groupes de cohérence hiérarchiques et configurations de distribution
+* Contrôle de l'appartenance au groupe de cohérence en sélectionnant les banques de données à protéger ensemble
+* Configurations de protection AFD uniformes et non uniformes
+* Possibilité de modifier la protection en ajoutant ou en supprimant des banques de données et des hôtes
+* Flux de travail de protection du datastore dans le plug-in vCenter
+* Chemin de mise à niveau de la protection du cluster hôte vers la protection au niveau du datastore
+
+
+
+
+[[audit-logging]]
+== Journalisation des audits
+
+ONTAP tools 10.6 ajoute la journalisation d'audit pour améliorer la sécurité et la traçabilité opérationnelle.
+
+La journalisation des audits comprend :
+
+* Tous les appels d'API REST autres que GET, y compris les détails des requêtes et des réponses
+* Tâches de découverte, tâches de regroupement AutoSupport, tâches de nettoyage et opérations de console de maintenance
+* Protection de l'intégrité des archives du journal des audits, y compris les alertes de falsification et de suppression
+* Prise en charge du transfert Syslog
+
+
+Ces mises à jour permettent de répondre aux exigences de conformité et de sécurité.
+
+
+
+[[nconnect-support-for-nfs-datastores]]
+== Prise en charge de nconnect pour les datastores NFS
+
+ONTAP tools 10.6 ajoute la prise en charge de nconnect pour les datastores VMware NFS, permettant plusieurs connexions TCP parallèles entre les hôtes ESXi et les datastores ONTAP NFS.
+
+Cette version prend en charge :
+
+* nconnect pour les datastores NFSv3 lors du provisionnement
+* nconnect pour les datastores NFSv4.1 lors du provisionnement avec vCenter 8.0U3 et versions ultérieures
+* Modification de la valeur maximale de nconnect sur les hôtes ESXi
+
+
+Cela contribue à améliorer le débit et les performances des banques de données NFS pour les charges de travail multi-VM.
+
+
+
+[[smaller-default-deployment-with-xs-profile]]
+== Déploiement par défaut plus petit avec profil XS
+
+ONTAP tools 10.6 introduit un profil de déploiement par défaut extra-small (XS) plus petit afin de réduire la surcharge de ressources et de simplifier le déploiement initial.
+
+Les améliorations comprennent :
+
+* XS comme configuration par défaut pour le déploiement initial
+* Déploiement OVA avec paramètres matériels par défaut optimisés
+* Prise en charge du provisionnement, de la protection, de l'activation du service SRA et du mode HA avec XS pour les datastores
+* Quatre profils de déploiement disponibles dans l’interface utilisateur du Manager : extra-petit (XS), petit (S), moyen (M) et grand (L)
+
+
+Ce modèle offre un encombrement de départ plus faible avec une voie d'extension claire.
+
+
+
+[[ease-of-deployment-improvement]]
+== Amélioration de la facilité de déploiement
+
+ONTAP tools 10.6 active par défaut l'ajout à chaud de processeur et le branchement à chaud de mémoire pour les nouveaux déploiements de la machine virtuelle principale ONTAP tools.
+
+Cela élimine la nécessité d'activer manuellement ces paramètres avant ou après le déploiement.
+
+
+
+[[protection-workflow-improvement]]
+== Amélioration du flux de travail de protection
+
+ONTAP tools 10.6 supprime la nécessité de déclencher manuellement la découverte du stockage lorsque les clusters ONTAP sont indisponibles, simplifiant ainsi les flux de travail de protection.
+
+
+
+[[platform-and-interoperability-qualification]]
+== Qualification de la plateforme et de l'interopérabilité
+
+ONTAP tools 10.6 étend la prise en charge de la plateforme et de l'interopérabilité entre les principales versions d'ONTAP et de VMware, permettant une intégration transparente du stockage NetApp dans les environnements VMware.
+
+Cette version est alignée sur les configurations actuelles de la plateforme ONTAP et les versions de VMware, ce qui réduit la complexité opérationnelle lors des mises à niveau de la plateforme et des actualisations de la pile VMware.
+
+
+
+[[supportability-enhancements]]
+== Améliorations de la facilité de support
+
+ONTAP tools 10.6 améliore le dépannage et la gestion du cycle de vie.
+
+Les principales nouveautés sont les suivantes :
+
+* Suppression forcée des entrées vCenter inaccessibles ou obsolètes
+* Migration de  `ntpd` à  `chronyd` pour la synchronisation de l'heure, avec migration automatique des paramètres du serveur NTP existant lors de la mise à niveau
+* Option de la console de maintenance permettant de renouveler les certificats des services internes, même après expiration
+* Prise en charge des serveurs NTP traditionnels et des serveurs chrony basés sur RHEL via le protocole NTP standard (port UDP 123)
+
+
+Pour obtenir les dernières informations sur la compatibilité des versions, consultez  https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].

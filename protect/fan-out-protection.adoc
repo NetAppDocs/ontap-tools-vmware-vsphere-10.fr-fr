@@ -1,8 +1,8 @@
 ---
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
-keywords:  
-summary: Dans un scénario de protection en éventail, le groupe de cohérence est doublement protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le deuxième cluster ONTAP de destination. 
+keywords: fan-out protection, SnapMirror active sync, asynchronous replication, VMware Live Site Recovery, placeholder datastore, host cluster protection 
+summary: Protégez un groupe de cohérence avec une protection de répartition en utilisant la réplication synchrone et asynchrone sur deux clusters ONTAP de destination. 
 ---
 = Protection contre le fan-out dans ONTAP tools
 :allow-uri-read: 
@@ -11,37 +11,35 @@ summary: Dans un scénario de protection en éventail, le groupe de cohérence e
 
 
 [role="lead"]
-Dans un scénario de protection en éventail, le groupe de cohérence est doublement protégé avec une relation synchrone sur le premier cluster ONTAP de destination et avec une relation asynchrone sur le deuxième cluster ONTAP de destination.  Les flux de travail de création, de modification et de suppression de la protection de synchronisation active SnapMirror maintiennent la protection synchrone.  Les flux de travail de basculement et de reprotection des appliances VMware Live Site Recovery maintiennent la protection asynchrone.
+Utilisez la protection par répartition pour protéger un groupe de cohérence sur deux clusters ONTAP de destination. ONTAP tools maintient la relation synchrone via les workflows de création, modification et suppression de protection de synchronisation active SnapMirror, et VMware Live Site Recovery maintient la relation asynchrone via les workflows de basculement et de reprotection.
 
 
 NOTE: La fonction de diffusion n'est pas prise en charge pour les utilisateurs de SVM.
 
 Pour configurer la protection en éventail, associez les trois clusters de sites et les SVM.
 
+Le schéma suivant illustre la configuration de protection par dérivation : image:../media/fan-out-protection.png["Configuration de la protection en éventail"]
+
 Exemple :
 
-|===
+Si :
 
-
-| Si | ensuite 
-
-
- a| 
 * Le groupe de cohérence source se trouve sur le cluster c1 et le SVM svm1
 * Le premier groupe de cohérence de destination se trouve sur le cluster c2 et le SVM svm2 et
 * Le second groupe de cohérence de destination se trouve sur le cluster c3 et le SVM svm3
 
- a| 
+
+Ensuite,
+
 * Le cluster peering sur le cluster ONTAP source sera (C1, C2) et (C1, C3).
 * Le cluster peering sur le premier cluster ONTAP de destination sera (C2, C1) et (C2, C3) et
 * Le cluster peering sur le second cluster ONTAP de destination sera (C3, C1) et (C3, C2).
 * Le peering de SVM sur la SVM source sera (svm1, svm2) et (svm1, svm3).
 * Le peering de SVM sur la première SVM de destination sera (svm2, svm1) et (svm2, svm3) et
-* Le peering de SVM sur la deuxième svm de destination sera (svm3, svm1) et (svm3, svm2).
+* L'appairage SVM sur le deuxième SVM de destination sera (svm3, svm1) et (svm3, svm2).
 
 
-|===
-Le schéma suivant montre la configuration de la protection en éventail :image:../media/fan-out-protection.png["Configuration de la protection en éventail"] image:../media/fan-out-protection-relationship.png["Relation de protection en éventail"]
+image:../media/fan-out-protection-relationship.png["Relation de protection en éventail"]
 
 .Étapes
 . Sélectionnez un nouveau magasin de données de substitution. Les critères de sélection du magasin de données de substitution pour la protection progressive sont les suivants :
@@ -49,9 +47,9 @@ Le schéma suivant montre la configuration de la protection en éventail :image
 ** Ne placez pas le magasin de données d’espace réservé dans le cluster hôte que vous protégez.
 ** Si vous devez inclure le datastore de substitution dans le cluster hôte, ajoutez-le à l'appliance VMware Live Site Recovery avant de configurer la protection SnapMirror active sync. Avec cette configuration, vous pouvez laisser le datastore de substitution en dehors de la protection.
 +
-Pour plus d'informations, reportez-vous à https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Sélectionnez un datastore de placeholder"]
+Pour plus d’informations, consultez  https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Sélectionnez un magasin de données de substitution"]
 
 
 
-. Ajoutez des banques de données à la protection du cluster hôte en suivant link:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"]. Ajoutez des types de stratégies asynchrones et synchrones.
+. Ajoutez des banques de données à la protection du cluster hôte en suivant link:../protect/protect-multiple-ds.html["Protéger les banques de données d'un cluster"]. Ajoutez des types de stratégies asynchrones et synchrones.
 

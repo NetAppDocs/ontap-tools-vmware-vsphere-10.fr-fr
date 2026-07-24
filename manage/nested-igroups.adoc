@@ -1,8 +1,8 @@
 ---
 permalink: manage/nested-igroups.html 
 sidebar: sidebar 
-keywords:  
-summary: Découvrez comment les ONTAP tools for VMware vSphere représentent et gèrent les igroups, y compris le comportement des igroups imbriqués, la réutilisation et les modifications de nettoyage de la version 10.5 P2. 
+keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
+summary: Découvrez comment les ONTAP tools représentent et gèrent les igroups imbriqués pour un mappage efficace des hôtes et des banques de données. 
 ---
 = Comment les ONTAP tools gèrent les igroups
 :allow-uri-read: 

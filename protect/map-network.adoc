@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-network.html 
 sidebar: sidebar 
-keywords:  
-summary: Vous devez mapper vos réseaux sur le site protégé et le site de reprise pour permettre la communication entre eux. 
+keywords: network mappings, protected and recovery sites, VMware Live Site Recovery, resource mappings, ONTAP tools 
+summary: Cartographiez les réseaux entre les sites protégés et les sites de récupération afin d’aligner la connectivité des machines virtuelles lors du basculement de VMware Live Site Recovery. 
 ---
 = Configurer les mappages réseau dans ONTAP tools
 :allow-uri-read: 

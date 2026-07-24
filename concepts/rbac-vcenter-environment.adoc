@@ -1,8 +1,8 @@
 ---
 permalink: concepts/rbac-vcenter-environment.html 
 sidebar: sidebar 
-keywords: vcenter, vcenter server, vcenter server rbac, rbac environment 
-summary: 'VMware vCenter Server propose une fonctionnalité RBAC qui vous permet de contrôler l"accès aux objets vSphere. Il s"agit d"une partie importante des services de sécurité d"authentification et d"autorisation centralisés vCenter.' 
+keywords: vCenter Server RBAC, vSphere object access, permissions, authorization 
+summary: 'Examinez comment le contrôle d"accès basé sur les rôles (RBAC) du serveur vCenter gère l"accès aux objets vSphere dans le cadre de l"authentification centralisée.' 
 ---
 = Comment le contrôle d'accès basé sur les rôles (RBAC) du serveur vCenter fonctionne avec les outils ONTAP
 :hardbreaks:

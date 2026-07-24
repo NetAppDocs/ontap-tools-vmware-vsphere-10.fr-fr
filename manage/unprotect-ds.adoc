@@ -1,0 +1,57 @@
+---
+permalink: manage/unprotect-ds.html 
+sidebar: sidebar 
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
+summary: Déprotégez une banque de données VMFS et, si vous le souhaitez, supprimez les éléments de stockage côté cible associés. 
+---
+= Déprotéger un datastore VMFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez cette tâche pour déprotéger une banque de données VMFS et, éventuellement, supprimer les éléments de stockage associés côté cible sur le site secondaire.
+
+.Description de la tâche
+Lorsque vous déprotégez une banque de données VMFS, tenez compte du comportement suivant :
+
+* La suppression de la protection du dernier datastore dans un groupe de protection supprime le groupe de protection ainsi que le nom de ses paramètres de protection.
+* Pour un dernier datastore, ONTAP tools affiche le nom des paramètres de protection.
+
+
+.Avant de commencer
+* Assurez-vous de disposer des privilèges d'administrateur dans vSphere.
+* Assurez-vous que votre compte utilisateur ONTAP tools dispose des autorisations nécessaires pour gérer les paramètres de protection.
+* Examinez l'impact de la suppression de la protection du dernier datastore dans un groupe de protection.
+* Sur les clusters ONTAP 9, la déprotection des datastores autres que le dernier n'est prise en charge que pour les relations AutomatedFailOverDuplex.
+
+
+.Étapes
+. Connectez-vous au client vSphere.
+. Sélectionnez le cluster hôte, puis sélectionnez *Datastores*.
+. Cliquez avec le bouton droit sur la banque de données VMFS éligible que vous souhaitez déprotéger et sélectionnez *NetApp ONTAP tools* > *Déprotéger la banque de données*.
++
+
+NOTE: Vous ne pouvez déprotéger qu'une seule banque de données à la fois. La déprotection multiple n'est pas prise en charge.
+
+. Dans la boîte de dialogue de confirmation, vérifiez le message *Cette action supprime la protection du datastore. Voulez-vous continuer ?*.
+. Facultatif : sélectionnez *Supprimer les éléments de stockage associés (LUN) et les igroups du stockage secondaire* pour supprimer les LUN répliqués et les groupes de cohérence sur le site cible.
+. Sélectionnez *Déprotéger la banque de données*.
++
+
+NOTE: Pour les banques de données autres que les dernières, le comportement diffère selon le type de stockage :
+
++
+** Pour ASA r2, la suppression de la protection d'un datastore autre que le dernier affiche le même message de confirmation et vous permet de supprimer les ressources du site secondaire à partir de la boîte de dialogue.
+** Pour le stockage ONTAP avec une relation SnapMirror asynchrone, la suppression de la protection d'un datastore autre que le dernier n'est pas prise en charge.
+** Pour le stockage ONTAP avec une relation AutomatedFailOverDuplex (AFD), la suppression de la protection d’un datastore non dernier supprime la relation AFD et la recrée, car la réduction du groupe de cohérence n’est pas prise en charge.
++
+L'opération de déprotection lance une tâche que vous pouvez surveiller dans ONTAP tools Manager.
+
+
+
+
+
+.Résultat
+La banque de données est retirée de la protection. S'il s'agissait de la dernière banque de données du groupe de protection, ONTAP tools supprime le groupe de protection et les paramètres de protection. Si vous avez sélectionné l'option de suppression, les LUN répliquées côté cible et les groupes de cohérence sont également supprimés. Pour les banques de données éligibles qui ne sont pas les dernières sur le stockage ONTAP (AutomatedFailOverDuplex uniquement), ONTAP tools supprime et recrée la relation AFD dans le cadre de l'opération.

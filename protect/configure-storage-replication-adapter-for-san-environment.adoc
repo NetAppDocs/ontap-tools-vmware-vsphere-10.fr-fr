@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Vous devez configurer les systèmes de stockage avant d"exécuter Storage Replication adapter \(SRA\) pour VMware Live site Recovery.' 
+keywords: SRA SAN configuration, VMware Live Site Recovery, iSCSI and Fibre Channel, SnapMirror, ONTAP tools 
+summary: 'Configurez les systèmes de stockage SAN et NAS avant d"exécuter les flux de travail SRA dans VMware Live Site Recovery.' 
 ---
 = Configurer SRA dans ONTAP tools for VMware vSphere pour les environnements SAN et NAS
 :allow-uri-read: 
@@ -19,7 +19,7 @@ Vous devez configurer les systèmes de stockage avant d'exécuter Storage Replic
 == Configurez SRA pour les environnements SAN
 
 
-NOTE: Les groupes de cohérence dans les flux de travail SRA ne sont pris en charge qu'avec les protocoles SAN (iSCSI et Fibre Channel) sur les systèmes de stockage Unified et ASA r2.
+NOTE: Les groupes de cohérence dans les flux de travail SRA ne sont pris en charge qu'avec les protocoles SAN (iSCSI et Fibre Channel) sur les systèmes de stockage ONTAP et ASA r2.
 
 .Avant de commencer
 Les programmes suivants doivent être installés sur le site protégé et le site de reprise :

@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-highly-scaled-environment.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Vous devez configurer les intervalles de délai de stockage en fonction des paramètres recommandés pour Storage Replication adapter \(SRA\) afin de garantir des performances optimales dans des environnements hautement évolutifs.' 
+keywords: SRA timeout settings, highly scaled environment, VMware Live Site Recovery, storage provider settings, ONTAP tools 
+summary: 'Configurez les paramètres de délai d"expiration du fournisseur de stockage VMware Live Site Recovery pour SRA dans les environnements à forte évolutivité.' 
 ---
 = Configurer SRA dans ONTAP tools pour les environnements à grande échelle
 :allow-uri-read: 

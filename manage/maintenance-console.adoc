@@ -1,8 +1,8 @@
 ---
 permalink: manage/maintenance-console.html 
 sidebar: sidebar 
-keywords:  
-summary: 'La console de maintenance des outils ONTAP vous permet de gérer vos configurations d"applications, système et réseau. Vous pouvez modifier votre mot de passe administrateur et votre mot de passe de maintenance. Vous pouvez également générer des offres de support, définir différents niveaux de journal, afficher et gérer les configurations TLS et démarrer les diagnostics à distance.' 
+keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
+summary: Gérez les configurations des outils ONTAP, réinitialisez les mots de passe, générez des bundles de support et configurez les paramètres TLS. 
 ---
 = Découvrez la console de maintenance des ONTAP tools
 :allow-uri-read: 
@@ -41,11 +41,13 @@ Configuration du système
  a| 
 . Redémarrez la machine virtuelle
 . Arrêter la machine virtuelle
-. Modifier le mot de passe utilisateur « familiariser »
+. Générez un jeton pour réinitialiser le mot de passe de l'interface utilisateur du gestionnaire
 . Modifier le fuseau horaire
 . Augmentation de la taille des disques de prison (/prison)
 . Mise à niveau
 . Installez VMware Tools
+. Mettre à jour les identifiants vCenter
+. Actualiser les certificats des services ONTAP tools
 
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: manage/unmount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: 'L"action de démontage du datastore démonte un datastore NFS ou VMFS des hôtes ESXi. L"action démonter le datastore est activée pour les datastores NFS et VMFS découverts ou gérés par les outils ONTAP pour VMware vSphere.' 
+keywords: unmount NFS VMFS datastore, remove datastore from host, ONTAP tools datastore unmount, ESXi host storage detach 
+summary: 'Démontez les datastores NFS ou VMFS des hôtes ESXi à l"aide des ONTAP tools.' 
 ---
 = Démontez les datastores NFS et VMFS dans ONTAP tools
 :allow-uri-read: 
@@ -11,13 +11,15 @@ summary: 'L"action de démontage du datastore démonte un datastore NFS ou VMFS 
 
 
 [role="lead"]
-L'action « Démonter le datastore » supprime un datastore NFS ou VMFS des hôtes ESXi.  Il est disponible pour les banques de données découvertes ou gérées par les ONTAP tools for VMware vSphere.
+Utilisez cette tâche pour démonter une banque de données NFS ou VMFS depuis des hôtes ESXi. Le démontage des banques de données au niveau du cluster n'est pas pris en charge via l'interface utilisateur ni les API.
+
+À partir de la version 10.6 des ONTAP tools, le démontage est bloqué pour les datastores VMFS protégés.
 
 .Étapes
 . Connectez-vous au client vSphere.
-. Cliquez avec le bouton droit sur un objet de banque de données NFS ou VMFS et sélectionnez *Démonter la banque de données*.
+. Cliquez avec le bouton droit sur un objet de datastore NFS ou VMFS et sélectionnez *Démonter le datastore*.
 +
-Le client vSphere ouvre une boîte de dialogue et liste les hôtes ESXi qui montent la banque de données. Lorsque l'opération est effectuée sur une banque de données protégée, un message d'avertissement s'affiche à l'écran.
+Le client vSphere ouvre une boîte de dialogue et affiche la liste des hôtes ESXi qui montent la banque de données. Si la banque de données est protégée, ONTAP tools bloque la requête et affiche un message indiquant que la banque de données est sous protection et ne peut pas être démontée.
 
 . Sélectionnez un ou plusieurs hôtes ESXi pour démonter le datastore.
 +
@@ -25,12 +27,12 @@ Vous ne pouvez pas démonter le datastore de tous les hôtes. L'interface utilis
 
 . Sélectionnez le bouton *Unmount*.
 +
-Si le datastore fait partie d'un cluster hôte protégé, un message d'avertissement s'affiche.
+L'option *Démonter le datastore* est disponible uniquement lorsque l'hôte est déplacé hors du cluster d'hôtes protégé.
 
 
 
 
-NOTE: Si la banque de données protégée est démontée, le paramètre de protection existant peut entraîner une protection partielle. Consultez link:../manage/edit-hostcluster-protection.html["Modifier le cluster hôte protégé"] pour permettre une protection complète.
+NOTE: Si un datastore est protégé, vous devez supprimer la protection avant de pouvoir le démonter.
 
 .Et la suite ?
 Vous pouvez suivre la progression dans le panneau tâches récentes.
