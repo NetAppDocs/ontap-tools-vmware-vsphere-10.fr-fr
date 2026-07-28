@@ -67,11 +67,6 @@ Ajoutez des backends de stockage locaux avec des identifiants de cluster ou de S
 [discrete]
 == Tâches suivantes facultatives
 
-
-
-[[optional-next-tasks]]
-== Tâches suivantes facultatives
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"]Configurer les rôles et privilèges des utilisateurs ONTAP
 [role="quick-margin-para"]
 Configurez des rôles ONTAP personnalisés pour un accès aux privilèges minimaux au lieu d'utiliser le compte administrateur par défaut.

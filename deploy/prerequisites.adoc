@@ -197,6 +197,13 @@ NOTE: Le nombre d'hôtes indiqué dans le tableau représente le total combiné 
 
 
 
+[[configuration-limits-for-storage-backend-discovery]]
+== Limites de configuration pour la découverte du stockage backend
+
+Les outils ONTAP prennent en charge la découverte du backend de stockage pour un maximum de 200 SVM et environ 10 000 LUN.
+
+
+
 [[configuration-limits-for-vmfs-and-nfs-datastores]]
 == Limites de configuration pour les datastores VMFS et NFS
 
