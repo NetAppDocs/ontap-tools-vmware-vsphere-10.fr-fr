@@ -11,7 +11,7 @@ summary: Gérez les instances vCenter dans ONTAP tools pour contrôler les hôte
 
 
 [role="lead"]
-Les instances vCenter Server sont des plateformes de gestion centralisée qui vous permettent de contrôler les hôtes, les machines virtuelles et les systèmes back-end de stockage.
+Les instances vCenter Server sont des plateformes de gestion centralisées qui vous permettent de contrôler les hôtes, les machines virtuelles et les backends de stockage. Dans ONTAP tools, vous pouvez dissocier les backends de stockage, modifier les détails des instances, supprimer des instances et renouveler les certificats vCenter Server.
 
 
 
@@ -32,6 +32,8 @@ La page de liste vCenter Server affiche le nombre de systèmes back-end de stock
 
 [[modify-a-vcenter-server-instance]]
 == Modifier une instance de vCenter Server
+
+Modifiez une instance de serveur vCenter en suivant les étapes suivantes.
 
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
@@ -117,7 +119,7 @@ Les outils ONTAP vous avertissent lorsque le certificat vCenter approche de son 
 ----
 echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
 ----
-. Assurez-vous que le certificat est au format ASCII Base 64 et qu'il comprend les lignes de début et de fin, par exemple :
+. Vérifiez que le certificat est au format ASCII Base 64 et qu'il comprend les lignes de début et de fin, par exemple :
 +
 [listing]
 ----

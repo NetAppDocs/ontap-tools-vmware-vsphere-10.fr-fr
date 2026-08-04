@@ -11,7 +11,7 @@ summary: 'Utilisez ONTAP tools Manager pour gérer l"appliance, les locataires e
 
 
 [role="lead"]
-Les ONTAP tools for VMware vSphere prennent en charge la multilocation, permettant la gestion de plusieurs instances de vCenter Server.
+ONTAP tools Manager est une console web que vous utilisez pour gérer ONTAP tools for VMware vSphere, y compris les instances de serveur vCenter, les backends de stockage et la configuration de l'appliance, comme la haute disponibilité (HA) et la mise à l'échelle des nœuds. Elle prend en charge la multi-location, ce qui vous permet de gérer plusieurs instances de serveur vCenter à partir d'une seule interface.
 
 ONTAP Tools Manager est une console Web permettant de gérer les ONTAP tools for VMware vSphere, les instances vCenter Server, les backends de stockage et la configuration des appliances telles que la haute disponibilité (HA) et la mise à l'échelle des nœuds.
 
@@ -20,14 +20,14 @@ ONTAP Tools Manager offre les fonctionnalités suivantes :
 * Gérer les alertes - Affichez et filtrez les alertes générées par les ONTAP tools for VMware vSphere.
 * Gérer les backends de stockage - Ajoutez et gérez les clusters de stockage ONTAP et mappez-les aux instances vCenter Server à l'échelle mondiale.
 * Gérer les instances vCenter Server - Ajoutez et gérez les instances vCenter Server dans les outils ONTAP .
-* Surveillez et déboguez les tâches asynchrones lancées depuis l’interface du plug-in ONTAP tools et l’interface ONTAP tools Manager. Vous pouvez filtrer les tâches par période, ajuster la taille de la page et consulter les détails de chaque tâche, y compris les erreurs et les sous-tâches. Cliquez sur le statut d’échec pour afficher les détails de l’erreur. Pour les tâches comportant des sous-tâches, développez la ligne pour afficher les descriptions et les statuts. Pour les sous-tâches, utilisez l’exploration de la tâche pour afficher les détails.
+* Surveillez les tâches : surveillez et déboguez les tâches asynchrones lancées à partir de l’interface du plug-in ONTAP tools et de l’interface ONTAP tools Manager. Vous pouvez filtrer les tâches par période, ajuster la taille de la page et afficher les détails des tâches, y compris les erreurs et les sous-tâches. Sélectionnez l’état « Échec » pour afficher les détails de l’erreur. Pour les tâches comportant des sous-tâches, développez la ligne pour afficher les descriptions et les statuts. Pour les sous-tâches, utilisez l’exploration de la tâche pour afficher les détails.
 * Télécharger des bundles de journaux - Collectez des fichiers journaux pour dépanner les ONTAP tools for VMware vSphere.
 * Gérer les certificats - Remplacez le certificat auto-signé par un certificat d'autorité de certification personnalisé et renouvelez ou actualisez les certificats pour les outils VASA Provider et ONTAP .
 * Réinitialiser les mots de passe - Modifiez le mot de passe du fournisseur VASA et du SRA.
 * Gérer les paramètres de l'appliance - Configurez l'appliance des outils ONTAP , y compris l'activation de la haute disponibilité et l'augmentation de la taille des nœuds.
 
 
-Pour accéder au gestionnaire d'outils ONTAP, lancez `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`-le à partir du navigateur et connectez-vous à l'aide des informations d'identification d'administrateur ONTAP Tools for VMware vSphere que vous avez fournies lors du déploiement.
+Pour accéder à ONTAP tools Manager, lancez  `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` depuis le navigateur et connectez-vous avec les identifiants d'administrateur ONTAP tools for VMware vSphere que vous avez fournis lors du déploiement.
 
 image:../media/ontap-tools-manager-overview.png["Présentation du tableau de bord du gestionnaire d'outils ONTAP"]
 
@@ -47,5 +47,5 @@ image:../media/ontap-tools-manager-overview.png["Présentation du tableau de bor
 | Carte des backends de stockage | La carte Backends de stockage affiche l’état de santé et de connectivité de tous les clusters de stockage ONTAP configurés dans les outils ONTAP .  Vous pouvez afficher les détails de chaque backend de stockage en sélectionnant le lien correspondant, qui accède à une page contenant plus d'informations sur le cluster sélectionné. 
 
 
-| Carte des nœuds des outils ONTAP | La carte des nœuds des outils ONTAP affiche tous les nœuds de l'appliance, y compris le nom du nœud, le nom de la machine virtuelle, l'état et les informations réseau.  Sélectionnez *Afficher les détails* pour voir plus de détails sur un nœud spécifique.  [REMARQUE] Dans une configuration non HA, un seul nœud apparaît.  Dans une configuration HA, trois nœuds sont affichés. 
+| Carte des nœuds des outils ONTAP | La carte des nœuds des ONTAP tools affiche tous les nœuds de l'appliance, y compris le nom du nœud, le nom de la machine virtuelle, l'état et les informations réseau. Sélectionnez *Afficher les détails* pour voir plus de détails concernant un nœud spécifique. [REMARQUE] Dans une configuration non HA, un seul nœud apparaît. Dans une configuration HA, trois nœuds apparaissent. 
 |===

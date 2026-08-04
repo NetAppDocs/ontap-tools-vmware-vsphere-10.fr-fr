@@ -11,11 +11,11 @@ summary: 'Supprimez un datastore vVols uniquement lorsqu"il ne reste plus aucun 
 
 
 [role="lead"]
-Cette page explique comment supprimer des volumes d'un datastore vVols .
+Utilisez l'action « Supprimer le stockage de la banque de données » pour supprimer des volumes d'une vVols banque de données dans ONTAP tools, réduisant ainsi sa capacité lorsque le stockage supplémentaire n'est plus nécessaire.
 
 Utilisez l'action « Supprimer le stockage de la banque de données » sur toute banque de données vVols gérée par les outils ONTAP dans vCenter Server.
 
-Vous ne pouvez pas supprimer le stockage d'un volume s'il contient des vVols; l'option de suppression sera désactivée pour ces volumes.  Lors de la suppression de volumes de la banque de données, vous avez également la possibilité de supprimer les volumes sélectionnés du stockage ONTAP .
+Vous ne pouvez pas supprimer de stockage d'un volume s'il contient des vVols ; l'option de suppression est désactivée pour ces volumes. Lors de la suppression de volumes de la banque de données, vous avez également la possibilité de supprimer les volumes sélectionnés du stockage ONTAP.
 
 
 NOTE: L'opération de réduction de la banque de données vVols n'est pas prise en charge pour les banques de données vVols basées sur les systèmes ASA r2.
@@ -27,7 +27,7 @@ NOTE: L'opération de réduction de la banque de données vVols n'est pas prise 
 . Sélectionnez les volumes qui ne possèdent pas de vVols et sélectionnez *Supprimer*.
 +
 
-NOTE: L'option permettant de sélectionner le volume sur lequel réside vVols est désactivée.
+NOTE: L'option permettant de sélectionner le volume sur lequel vVols résident est désactivée.
 
-. Dans la fenêtre contextuelle *Supprimer le stockage*, cochez la case *Supprimer les volumes du cluster ONTAP* pour supprimer les volumes du datastore et du stockage ONTAP, puis sélectionnez *Supprimer*.
+. Dans la fenêtre contextuelle *Supprimer le stockage*, cochez la case *Supprimer les volumes du cluster ONTAP* pour supprimer les volumes de la banque de données et du stockage ONTAP, puis sélectionnez *Supprimer*.
 

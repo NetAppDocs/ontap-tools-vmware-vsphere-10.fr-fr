@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: uninstall ONTAP tools, remove ONTAP tools deployment, appliance decommission workflow, graceful deployment termination 
 summary: Terminez correctement le déploiement de vos outils ONTAP pour VMware vSphere. 
 ---
-= Désinstaller les outils ONTAP
+= Désinstallez votre déploiement ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La désinstallation des outils ONTAP pour VMware vSphere supprime toutes les données contenues dans les outils.
+La désinstallation des ONTAP tools for VMware vSphere supprime toutes les données dans les outils, vous devez donc suivre ces étapes pour terminer correctement votre déploiement et éviter toute perte de données inattendue.
 
 .Étapes
 . Supprimez ou déplacez toutes les machines virtuelles des outils ONTAP pour les datastores gérés VMware vSphere.

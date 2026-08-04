@@ -11,7 +11,7 @@ summary: Affichez les détails du datastore et du volume depuis la page Stockage
 
 
 [role="lead"]
-Utilisez la page ONTAP Storage dans l'onglet *Configurer* pour afficher les informations sur la banque de données et le volume.
+ONTAP tools for VMware vSphere affiche la vue côté stockage ONTAP des datastores et de leurs volumes dans l’onglet Configurer, y compris les détails du backend de stockage, de l’agrégat et du volume pour chaque type de datastore.
 
 .Étapes
 . Dans l'inventaire du client vSphere, sélectionnez le datastore.
@@ -25,13 +25,13 @@ Utilisez la page ONTAP Storage dans l'onglet *Configurer* pour afficher les info
 | *Type de datastore* | *Information disponible* 
 
 
-| datastores NFS | La page *Détails du stockage* contient des systèmes de stockage, des agrégats et des informations sur les volumes. La page *Détails NFS* contient des données relatives à la banque de données NFS. Remarque : si la valeur nconnect est modifiée en dehors des ONTAP tools, la valeur affichée dans ONTAP tools peut ne pas refléter cette modification externe. 
+| datastore NFS | La page *Détails du stockage* contient des informations sur le stockage backend, les agrégats et les volumes. La page *Détails NFS* contient des données relatives à la banque de données NFS. Remarque : si la valeur nconnect est modifiée en dehors des ONTAP tools, la valeur affichée dans ONTAP tools peut ne pas refléter cette modification externe. 
 
 
-| Datastores VMFS | La page *Détails du stockage* contient des informations sur le backend de stockage, les agrégats, les volumes et les zones de disponibilité du stockage (SAZ). La page *Détails de l'unité de stockage* contient des informations sur l'unité de stockage. 
+| Datastores VMFS | La page *Détails du stockage* contient des informations sur le système de stockage, les agrégats, les volumes et les zones de disponibilité du stockage (SAZ). La page *Détails de l'unité de stockage* contient des détails sur l'unité de stockage. 
 
 
-| Datastores vVols | Répertorie tous les volumes. Vous pouvez étendre ou supprimer du stockage à partir du volet de stockage ONTAP . Les outils ONTAP ne prennent pas en charge cette vue pour les datastores vVols basés sur le système ASA r2. 
+| Datastores vVols | La page répertorie tous les volumes. Vous pouvez étendre ou supprimer du stockage depuis le panneau de stockage ONTAP. ONTAP tools for VMware vSphere ne prend pas en charge cette vue pour les datastores vVols basés sur le système ASA r2. 
 |===
 .Résultat
 Vous pouvez consulter les détails de la banque de données côté ONTAP en fonction du type de datastore sélectionné.

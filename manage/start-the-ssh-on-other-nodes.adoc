@@ -11,7 +11,7 @@ summary: 'Démarrez SSH sur les autres nœuds avant d"effectuer une mise à nive
 
 
 [role="lead"]
-Vous devez démarrer SSH sur les autres nœuds avant la mise à niveau.
+Avant de mettre à niveau ONTAP tools for VMware vSphere, vous devez démarrer SSH sur chacun des autres nœuds de votre environnement.
 
 .Avant de commencer
 Activez l'extension VASA Provider pour votre instance vCenter Server.

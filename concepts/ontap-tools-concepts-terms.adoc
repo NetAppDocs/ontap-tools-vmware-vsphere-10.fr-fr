@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: key concepts, ONTAP tools terms, consistency group, dual stack 
 summary: Examinez les concepts et termes clés utilisés dans la documentation des ONTAP tools for VMware vSphere. 
 ---
-= Concepts et termes clés dans ONTAP tools
+= Termes clés et définitions pour ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La section suivante décrit les principaux concepts et termes utilisés dans le document.
+Familiarisez-vous avec les concepts et la terminologie clés utilisés dans ONTAP tools for VMware vSphere. Les définitions couvrent les backends de stockage, les volumes virtuels (vVols), la synchronisation active SnapMirror, VASA, SRA et d'autres composants essentiels.
 
 
 
@@ -53,7 +53,7 @@ Une LUN est un numéro permettant d'identifier une unité logique au sein d'un r
 [[nvme-namespace-and-subsystem]]
 === Espace de noms et sous-système NVMe
 
-Un namespace NVMe est une quantité de mémoire non volatile pouvant être formatée dans des blocs logiques. Les espaces de noms sont l'équivalent de LUN pour les protocoles FC et iSCSI, et un sous-système NVMe est similaire à un groupe initiateur. Un sous-système NVMe peut être associé à des initiateurs pour que les initiateurs associés puissent accéder aux espaces de noms dans le sous-système.
+Un espace de noms NVMe correspond à une quantité de mémoire non volatile pouvant être formatée en blocs logiques. Les espaces de noms sont l'équivalent des LUN pour les protocoles FC et iSCSI, et un sous-système NVMe est analogue à un igroup. Un sous-système NVMe peut être associé à des initiateurs, leur permettant d'accéder aux espaces de noms au sein du sous-système.
 
 
 
@@ -74,14 +74,14 @@ OVA est une norme ouverte pour le packaging et la distribution d'appliances ou d
 [[recovery-point-objective-rpo]]
 === Objectif de point de récupération
 
-Le RPO mesure la fréquence de sauvegarde ou de réplication des données. Il précise le moment exact où vous devez restaurer les données après une panne pour reprendre l'activité. Par exemple, si une entreprise a un objectif de point de récupération de 4 heures, elle peut tolérer la perte de 4 heures de données en cas d'incident.
+Le RPO (objectif de point de restauration) mesure la fréquence à laquelle vous sauvegardez ou répliquez vos données. Il spécifie le moment précis où vous devez restaurer les données après une interruption de service pour reprendre les opérations commerciales. Par exemple, si une organisation a un RPO de quatre heures, elle peut tolérer la perte de quatre heures de données en cas de sinistre.
 
 
 
 [[snapmirror-active-sync]]
 === Synchronisation active SnapMirror
 
-La synchronisation active SnapMirror assure la continuité des services, même en cas de défaillance complète d'un site. Les applications peuvent ainsi basculer en toute transparence grâce à une copie secondaire. Il n'est pas nécessaire d'intervenir manuellement ou de créer des scripts personnalisés pour déclencher un basculement avec la synchronisation active SnapMirror. En savoir plus sur https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Synchronisation active SnapMirror"].
+SnapMirror active sync permet aux services métier de continuer à fonctionner même en cas de panne complète d'un site, en prenant en charge le basculement transparent des applications grâce à une copie secondaire. SnapMirror active sync ne nécessite aucune intervention manuelle ni script personnalisé pour déclencher un basculement. En savoir plus https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Synchronisation active SnapMirror"].
 
 
 
@@ -119,7 +119,7 @@ SVM est l'unité de multitenancy dans ONTAP. À l'instar d'une machine virtuelle
 * *Accès hôte non uniforme* signifie que les hôtes de chaque site sont connectés uniquement au cluster du même site. Les chemins intersites et les chemins étendus ne sont pas connectés.
 +
 
-NOTE: Un accès uniforme à l'hôte est pris en charge pour tout déploiement SnapMirror à synchronisation active. L'accès non uniforme à l'hôte n'est pris en charge que pour les déploiements actif-actif symétriques. En savoir plus sur https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Présentation de la synchronisation active SnapMirror dans ONTAP"].
+NOTE: SnapMirror active sync prend en charge l'accès uniforme à l'hôte pour tout déploiement ; seuls les déploiements symétriques actif/actif prennent en charge l'accès non uniforme à l'hôte. En savoir plus https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Présentation de la synchronisation active SnapMirror dans ONTAP"].
 
 
 
@@ -135,7 +135,7 @@ VMFS est un système de fichiers en cluster conçu pour stocker des fichiers de 
 [[virtual-volumes-vvols]]
 === Volumes virtuels (vvols)
 
-vVols fournissent une abstraction au niveau du volume pour le stockage utilisé par une machine virtuelle. Il présente plusieurs avantages et constitue une alternative à l'utilisation d'un LUN traditionnel. Un datastore vVol est généralement associé à un seul LUN qui sert de conteneur pour les vVols.
+vVols fournissent une abstraction au niveau du volume pour le stockage utilisé par une machine virtuelle. vVols offrent plusieurs avantages et constituent une alternative à l'utilisation d'un LUN traditionnel. Un datastore vVol est généralement associé à un seul LUN qui sert de conteneur pour les vVols.
 
 
 
@@ -149,7 +149,7 @@ Les stratégies de stockage VM sont créées dans vCenter Server sous stratégie
 [[vmware-live-site-recovery]]
 === Restauration de site en direct VMware
 
-VMware Live site Recovery, anciennement site Recovery Manager (SRM), assure la continuité de l'activité, la reprise après incident, la migration de sites et les fonctionnalités de test sans interruption pour les environnements virtuels VMware.
+VMware Live Site Recovery, anciennement connu sous le nom de Site Recovery Manager (SRM), offre des fonctionnalités de continuité d'activité, de reprise après sinistre, de migration de site et de test non perturbateur pour les environnements virtuels VMware.
 
 
 

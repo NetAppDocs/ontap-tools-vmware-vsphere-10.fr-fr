@@ -11,7 +11,7 @@ summary: 'Restaurez les ONTAP tools à partir d"une sauvegarde et comprenez le c
 
 
 [role="lead"]
-À partir des ONTAP tools for VMware vSphere 10.5, la fonction de sauvegarde est activée par défaut.
+Vous pouvez restaurer la configuration des ONTAP tools for VMware vSphere en la récupérant à partir d’un fichier de sauvegarde stocké sur le datastore. À partir de ONTAP tools for VMware vSphere 10.5, la fonction de sauvegarde est activée par défaut, de sorte qu’une sauvegarde récente est disponible si vous devez redéployer ou restaurer l’appliance.
 
 La banque de données dans laquelle vous déployez les ONTAP tools for VMware vSphere stocke les fichiers de sauvegarde.  Un dossier nommé d'après l'adresse IP des outils ONTAP (points remplacés par des traits de soulignement et suffixés par _OTV_backup_) conserve les deux fichiers de sauvegarde les plus récents (_OTV_backup_1.tar.enc_ et _OTV_backup_2.tar.enc_) et un fichier d'informations (_OTV_backup_info.txt_) qui contient le nom de la dernière sauvegarde.
 
@@ -40,7 +40,7 @@ scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
 ----
 +
 
-NOTE: ne modifiez pas le chemin de destination et le nom du fichier (/home/diag/system_recovery.tar.enc) mentionnés dans la commande.
+NOTE: Ne modifiez pas le chemin de destination et le nom du fichier (/home/diag/system_recovery.tar.enc) mentionnés dans la commande.
 
 . Une fois le fichier de sauvegarde transféré, connectez-vous au shell de diagnostic et exécutez la commande suivante :
 +

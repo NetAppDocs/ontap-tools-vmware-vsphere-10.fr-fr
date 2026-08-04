@@ -11,14 +11,14 @@ summary: Gérez les systèmes de stockage utilisés par les hôtes ESXi pour le 
 
 
 [role="lead"]
-Les systèmes back-end de stockage sont des systèmes que les hôtes ESXi utilisent pour le stockage des données.
+Les systèmes de stockage backend sont utilisés par les hôtes ESXi pour le stockage des données. Vous pouvez découvrir, modifier et supprimer les systèmes de stockage backend à l'aide des ONTAP tools for VMware vSphere.
 
 
 
 [[discover-storage]]
 == Découverte du stockage
 
-Vous pouvez exécuter la découverte d'un backend de stockage à la demande sans attendre qu'une découverte planifiée mette à jour immédiatement les détails de stockage.  Pour les configurations MetroCluster , exécutez la découverte des outils ONTAP manuellement après un basculement.
+Vous pouvez exécuter la découverte du système de stockage à la demande, sans attendre la prochaine découverte planifiée pour la mise à jour des informations de stockage. Pour les configurations MetroCluster, exécutez manuellement la découverte des outils ONTAP après un basculement.
 
 Suivez les étapes ci-dessous pour découvrir les systèmes back-end.
 
@@ -36,7 +36,7 @@ Vous pouvez suivre la progression dans le panneau tâches récentes.
 [[modify-storage-backends]]
 == Modification des systèmes back-end de stockage
 
-Vous pouvez modifier les informations d’identification du backend de stockage ou le nom du port.  Vous pouvez également modifier le backend de stockage pour les clusters ONTAP globaux à l'aide du gestionnaire d'outils ONTAP .  Si le certificat expire dans 30 jours ou moins, les outils ONTAP affichent un avertissement.  Modifiez le backend de stockage et téléchargez le nouveau certificat depuis l'administrateur ONTAP .
+Vous pouvez modifier les informations d'identification du backend de stockage ou le nom du port. Vous pouvez également modifier le backend de stockage pour les clusters ONTAP globaux à l'aide de ONTAP tools Manager. Si le certificat expire dans 30 jours ou moins, ONTAP tools affiche un avertissement. Modifiez le backend de stockage et téléversez le nouveau certificat depuis l'administrateur ONTAP.
 
 Lorsque vous modifiez le backend de stockage, les ONTAP tools for VMware vSphere effectuent une découverte du backend de stockage pour mettre à jour les détails de stockage.
 
@@ -68,7 +68,7 @@ Vous devez supprimer tous les magasins de données attachés au backend de stock
 . Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP , accédez à *Backends de stockage* et sélectionnez un backend de stockage.
-. Sélectionnez le menu à trois points verticaux, puis *Supprimer*. Assurez-vous que le stockage principal ne contient aucun datastore. Vous pouvez suivre la progression dans le panneau des tâches récentes.
+. Sélectionnez le menu à trois points verticaux, puis *Supprimer*. Vérifiez que le backend de stockage ne contient aucun datastore. Vous pouvez suivre la progression dans le panneau des tâches récentes.
 
 
 Vous pouvez supprimer les clusters ONTAP globaux à l'aide du Gestionnaire d'outils ONTAP.
@@ -85,7 +85,7 @@ Vous pouvez supprimer les clusters ONTAP globaux à l'aide du Gestionnaire d'out
 [[drill-down-view-of-storage-backend]]
 == Vue détaillée du système back-end de stockage
 
-La page backend de stockage répertorie tous les backends de stockage.  Vous pouvez effectuer des opérations de découverte, de modification et de suppression de stockage sur les backends de stockage que vous avez ajoutés, mais pas sur le SVM enfant individuel sous le cluster.
+La page relative aux backends de stockage répertorie tous les backends de stockage. Vous pouvez découvrir, modifier et supprimer les backends de stockage que vous avez ajoutés, mais vous ne pouvez pas effectuer ces opérations sur les SVM enfants individuelles du cluster.
 
 Sélectionnez le cluster parent ou l’enfant pour afficher le résumé du composant.  Pour le cluster parent, utilisez la liste déroulante des actions pour découvrir le stockage, modifier ou supprimer le backend de stockage.
 
@@ -97,8 +97,8 @@ La page de résumé fournit les détails suivants :
 * Détails du certificat tels que le statut du certificat et la date d'expiration.
 * Informations réseau telles que l'adresse IP et le port du réseau.  Pour le SVM enfant, les informations sont les mêmes que celles du backend de stockage parent.
 * Privileges autorisés et restreints pour le stockage backend. Pour la SVM enfant, les informations sont identiques à celles du stockage backend parent. ONTAP tools affiche les privileges uniquement sur les stockages backend basés sur le cluster. Si vous ajoutez une SVM comme stockage backend, les informations relatives aux privileges ne sont pas affichées.
-* La vue détaillée du cluster système ASA r2 n'inclut pas l'onglet des niveaux locaux lorsque la propriété désagrégée est définie sur « vrai » pour le SVM ou le cluster.
-* Pour les systèmes SVM ASA r2, le portlet capacité n'est pas affiché. Le portail de capacité n'est requis que lorsque la propriété désagrégée est définie comme « true » pour le SVM ou le cluster.
+* La vue détaillée du cluster système ASA r2 n'inclut pas l'onglet des niveaux locaux lorsque la propriété désagrégée est définie sur « true » pour le SVM ou le cluster.
+* Pour les systèmes ASA r2 SVM, le portlet de capacité n'est pas affiché. Le portlet de capacité est requis uniquement lorsque la propriété « disaggregated » est définie sur « true » pour la SVM ou le cluster.
 * Pour les systèmes ASA r2 SVM, la section informations de base présente le type de plateforme.
 
 

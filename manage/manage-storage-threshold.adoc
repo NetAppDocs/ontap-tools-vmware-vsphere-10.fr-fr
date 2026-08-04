@@ -11,11 +11,15 @@ summary: Définissez des notifications de seuil pour les niveaux de capacité de
 
 
 [role="lead"]
-Vous pouvez définir le seuil de réception des notifications dans vCenter Server lorsque le volume et la capacité globale atteignent certains niveaux.
+Vous pouvez définir des seuils de stockage pour recevoir des notifications dans vCenter Server lorsque le volume ou la capacité agrégée atteint un certain niveau.
 
-.Étapes :
+.Étapes
 . Connectez-vous au client vSphere.
 . Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
 . Dans le volet gauche des outils ONTAP , accédez à *Paramètres* > *Paramètres de seuil* > *Modifier*.
-. Dans la fenêtre *Modifier le seuil*, indiquez les valeurs souhaitées dans les champs *Presque plein* et *Plein* et sélectionnez *Enregistrer*. Vous pouvez rétablir les valeurs seuils aux valeurs par défaut recommandées : 80 pour Presque plein et 90 pour Plein.
+. Dans la fenêtre *Modifier le seuil*, indiquez les valeurs souhaitées dans les champs *Presque plein* et *Plein*, puis sélectionnez *Enregistrer*.
++
+
+NOTE: Vous pouvez rétablir les valeurs de seuil aux valeurs par défaut recommandées : 80 pour *Presque plein* et 90 pour *Plein*.
+
 

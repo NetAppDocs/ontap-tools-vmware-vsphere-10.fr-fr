@@ -14,14 +14,14 @@ summary: 'Examinez comment le contrôle d"accès basé sur les rôles (RBAC) du 
 
 
 [role="lead"]
-VMware vCenter Server propose une fonctionnalité RBAC qui vous permet de contrôler l'accès aux objets vSphere. Il s'agit d'une partie importante des services de sécurité d'authentification et d'autorisation centralisés vCenter.
+VMware vCenter Server propose un contrôle d'accès basé sur les rôles (RBAC) qui vous permet de contrôler l'accès aux objets vSphere. Comprendre comment le RBAC de vCenter Server s'intègre avec ONTAP tools for VMware vSphere vous aide à gérer efficacement les autorisations et à sécuriser l'accès à vos ressources de stockage.
 
 
 
 [[illustration-of-a-vcenter-server-permission]]
 == Illustration d'une autorisation vCenter Server
 
-Une autorisation est la base de l'application du contrôle d'accès dans l'environnement vCenter Server. Elle est appliquée à un objet vSphere avec un utilisateur ou un groupe inclus dans la définition des autorisations. Vous trouverez une illustration de haut niveau d'une autorisation vCenter dans la figure ci-dessous.
+Une autorisation est la base pour appliquer le contrôle d'accès dans l'environnement vCenter Server. Elle s'applique à un objet vSphere et inclut un utilisateur ou un groupe dans la définition de l'autorisation. La figure suivante présente une illustration de haut niveau d'une autorisation vCenter Server.
 
 image:vc-permission.png["Autorisation vCenter"]
 
@@ -44,7 +44,7 @@ Les autorisations sont associées aux objets vSphere, tels que vCenter Server, l
 [[privileges-and-roles]]
 === Privileges et rôles
 
-Deux types de vSphere Privileges sont utilisés avec les outils ONTAP pour VMware vSphere 10. Pour simplifier l'utilisation du contrôle d'accès basé sur des rôles dans cet environnement, les outils ONTAP fournissent les rôles contenant le Privileges natif et personnalisé requis. Le Privileges comprend :
+Les outils ONTAP pour VMware vSphere utilisent deux types de privilèges vSphere. Pour simplifier la gestion du contrôle d'accès basé sur les rôles (RBAC) dans cet environnement, les outils ONTAP fournissent des rôles contenant les privilèges natifs et personnalisés requis. Les privilèges incluent :
 
 * Privilèges de serveur vCenter natif
 +
@@ -61,4 +61,4 @@ Il s'agit d'une solution Privileges personnalisée propre aux outils ONTAP pour 
 [[users-and-groups]]
 === Utilisateurs et groupes
 
-Vous pouvez définir des utilisateurs et des groupes via Active Directory ou l'instance locale de vCenter Server. En combinant un rôle, vous pouvez créer une autorisation sur un objet de la hiérarchie d'objets vSphere. L'autorisation accorde l'accès en fonction des privilèges du rôle associé. Notez que les rôles ne sont pas attribués directement aux utilisateurs. Les utilisateurs et les groupes accèdent à un objet via les privilèges de rôle, dans le cadre de l'autorisation globale de vCenter Server.
+Vous pouvez définir des utilisateurs et des groupes à l'aide d'Active Directory ou de l'instance locale du serveur vCenter. En associant un rôle, vous pouvez créer une autorisation sur un objet dans la hiérarchie d'objets vSphere. Cette autorisation accorde l'accès en fonction des privilèges du rôle associé. Les rôles ne sont pas attribués directement aux utilisateurs isolément. Au contraire, les utilisateurs et les groupes accèdent à un objet grâce aux privilèges de rôle dans le cadre de l'autorisation du serveur vCenter.
