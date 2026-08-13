@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SRA timeout settings, highly scaled environment, VMware Live Site Recovery, storage provider settings, ONTAP tools 
 summary: 'Configurez les paramètres de délai d"expiration du fournisseur de stockage VMware Live Site Recovery pour SRA dans les environnements à forte évolutivité.' 
 ---
-= Configurer SRA dans ONTAP tools pour les environnements à grande échelle
+= Paramètres de délai d'expiration SRA pour les environnements à grande échelle dans les outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

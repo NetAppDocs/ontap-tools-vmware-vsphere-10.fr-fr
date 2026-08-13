@@ -2016,8 +2016,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">Configurez SRA à l'aide du gestionnaire de baies dans ONTAP tools</block>
   <block id="f825d08cca5235c68d18f5f167189a42" category="doc">Configurez SRA sur l'appliance VMware Live Site Recovery à l'aide des ONTAP tools.</block>
   <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">Configurer les magasins de données de substitution dans ONTAP tools</block>
-  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">Configurer les sites protégés et de récupération dans ONTAP tools</block>
-  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">Configurer SRA dans ONTAP tools pour les environnements à grande échelle</block>
   <block id="366099eedc535323fc065faade609247" category="doc">Configurer SRA dans ONTAP tools for VMware vSphere pour les environnements SAN et NAS</block>
   <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">Configurez SRA dans ONTAP tools pour protéger les banques de données</block>
   <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">Protection contre le fan-out dans ONTAP tools</block>
@@ -2851,7 +2849,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="41d5b3331c49688beabf64a476565b2f" category="paragraph">Pour plus d’informations, consultez <block ref="63042c288d643bd286f708c30aa7eeb1" category="inline-link-rx"></block></block>
   <block id="70ada8320af8255a677b6ffe7e62fb77" category="list-text">Ajoutez des banques de données à la protection du cluster hôte en suivant <block ref="606bd525eb6add3259ec861686535f41" category="inline-link-macro-rx"></block>. Ajoutez des types de stratégies asynchrones et synchrones.</block>
   <block id="30c3acc62ace9fe8b9f51083513c9b1f" category="summary">Comprenez la protection granulaire des datastores et les critères d'éligibilité des datastores avant de protéger des datastores dans un cluster hôte.</block>
-  <block id="f8bdb2b4320068538b2e660cf5594097" category="doc">Critères d'éligibilité à la protection granulaire des datastores</block>
   <block id="7a6c5f13c11ac0091369e5de3372b041" category="paragraph">Utilisez la protection granulaire des banques de données pour protéger les banques de données VMFS sélectionnées dans un cluster hôte au lieu de protéger l'ensemble du cluster.</block>
   <block id="94ba1053dfcb4c2f50ecb31c2a3a48e9" category="paragraph">La protection granulaire des datastores est disponible avec ONTAP tools for VMware vSphere 10.6 et versions ultérieures. Cette fonctionnalité permet une planification de la protection au niveau du datastore plutôt qu'une sélection à l'échelle du cluster.</block>
   <block id="5885c3f17ed13c3b9ddcd82efb888751" category="paragraph">Cette fonctionnalité vous permet de :</block>
@@ -3123,4 +3120,7 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="f02ba84a6292d236b6193eb515758b58" category="cell">La page répertorie tous les volumes. Vous pouvez étendre ou supprimer du stockage depuis le panneau de stockage ONTAP. ONTAP tools for VMware vSphere ne prend pas en charge cette vue pour les datastores vVols basés sur le système ASA r2.</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">Désinstallez votre déploiement ONTAP tools for VMware vSphere</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">La désinstallation des ONTAP tools for VMware vSphere supprime toutes les données dans les outils, vous devez donc suivre ces étapes pour terminer correctement votre déploiement et éviter toute perte de données inattendue.</block>
+  <block id="61aba9a185948f67b0e30c93c8bd8745" category="doc">Associez les sites et configurez les groupes de protection dans les outils ONTAP</block>
+  <block id="2f1ee6929021bf5cd62c7d2d50b7d710" category="doc">Paramètres de délai d'expiration SRA pour les environnements à grande échelle dans les outils ONTAP</block>
+  <block id="ead0b27d7cf57e3420b139c5b99f4200" category="doc">Critères d'éligibilité à la protection granulaire des datastores dans les outils ONTAP</block>
 </blocks>
