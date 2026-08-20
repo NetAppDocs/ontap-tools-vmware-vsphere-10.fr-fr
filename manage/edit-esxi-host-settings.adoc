@@ -11,23 +11,23 @@ summary: 'Modifiez les paramètres de l"hôte ESXi depuis le tableau de bord des
 
 
 [role="lead"]
-Utilisez le tableau de bord des outils ONTAP dans VMware vSphere pour identifier les problèmes de configuration, sélectionner les hôtes ESXi, consulter les paramètres recommandés par NetApp et les appliquer.
+Utilisez le tableau de bord des ONTAP tools dans VMware vSphere pour identifier les problèmes de configuration, examiner les paramètres recommandés par NetApp pour les hôtes ESXi sélectionnés et les appliquer.
 
 .Avant de commencer
 Le portlet des systèmes hôtes ESXi affiche les problèmes liés aux paramètres de l'hôte ESXi.  Sélectionnez un problème pour afficher le nom d'hôte ou l'adresse IP.
 
 .Étapes
 . Connectez-vous au client vSphere.
-. Dans la page raccourcis, sélectionnez *NetApp ONTAP Tools* dans la section modules externes.
-. Accédez au portlet *ESXi Host Compliance* dans la Présentation (tableau de bord) du plug-in ONTAP Tools for VMware vSphere.
-. Sélectionnez le lien *appliquer les paramètres recommandés*.
-. Dans la fenêtre *Appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes pour lesquels vous souhaitez utiliser les paramètres d'hôte recommandés par NetApp , puis sélectionnez *Suivant*.
+. Sur la page Raccourcis, sélectionnez *NetApp ONTAP tools* dans la section Modules d’extension.
+. Accédez au portlet *Conformité de l’hôte ESXi* sur le tableau de bord Vue d’ensemble du plug-in ONTAP tools for VMware vSphere.
+. Sélectionnez le lien *Appliquer les paramètres recommandés*.
+. Dans la fenêtre *Appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes auxquels vous souhaitez appliquer les paramètres d'hôte recommandés NetApp, puis sélectionnez *Suivant*.
 +
 
 NOTE: Vous pouvez développer l'hôte ESXi pour voir les valeurs actuelles.
 
-. Dans la page des paramètres, sélectionnez les valeurs recommandées.
-. Dans le volet récapitulatif, vérifiez les valeurs et sélectionnez *Terminer*. Vous pouvez suivre la progression dans le panneau des tâches récentes.
+. Sur la page Paramètres, sélectionnez les valeurs recommandées selon vos besoins.
+. Dans le volet récapitulatif, vérifiez les valeurs et sélectionnez *Terminer*. Vous pouvez suivre la progression dans le panneau Tâches récentes.
 
 
 .Informations associées

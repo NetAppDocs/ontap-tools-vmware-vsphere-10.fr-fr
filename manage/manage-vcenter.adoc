@@ -11,14 +11,14 @@ summary: Gérez les instances vCenter dans ONTAP tools pour contrôler les hôte
 
 
 [role="lead"]
-Les instances vCenter Server sont des plateformes de gestion centralisées qui vous permettent de contrôler les hôtes, les machines virtuelles et les backends de stockage. Dans ONTAP tools, vous pouvez dissocier les backends de stockage, modifier les détails des instances, supprimer des instances et renouveler les certificats vCenter Server.
+Utilisez les outils ONTAP pour dissocier les systèmes de stockage, modifier les détails des instances de serveur vCenter, supprimer des instances et renouveler les certificats de serveur vCenter.
 
 
 
 [[dissociate-storage-backends-from-a-vcenter-server-instance]]
 == Dissocier les systèmes de stockage d'une instance de serveur vCenter
 
-La page de liste vCenter Server affiche le nombre de systèmes back-end de stockage associés. Chaque instance de vCenter Server peut être associée ou dissociée à un système back-end de stockage.
+La page de liste des serveurs vCenter affiche le nombre de backends de stockage associés. Chaque instance de serveur vCenter peut s'associer ou se dissocier d'un backend de stockage.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -33,7 +33,7 @@ La page de liste vCenter Server affiche le nombre de systèmes back-end de stock
 [[modify-a-vcenter-server-instance]]
 == Modifier une instance de vCenter Server
 
-Modifiez une instance de serveur vCenter en suivant les étapes suivantes.
+Pour modifier une instance de serveur vCenter, suivez les étapes suivantes.
 
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
@@ -100,7 +100,7 @@ L’instance du serveur vCenter n’est plus gérée par les outils ONTAP.
 Si le serveur vCenter est inaccessible pendant la suppression :
 
 * Les outils ONTAP suppriment l'enregistrement du serveur vCenter.
-* La désinscription du plugin n'a pas lieu.
+* La désinscription du plug-in n'a pas lieu.
 * Un avertissement s'affiche.
 * Vous devez désenregistrer manuellement le plugin auprès de VMware vCenter Server.
 
@@ -155,7 +155,7 @@ iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ---{}END CERTIFICATE{}---
 ----
-. Copiez le résultat et enregistrez-le dans un fichier texte avec un `.pem` extension sur votre bureau.
+. Copiez le résultat et enregistrez-le comme  `.pem` fichier sur votre poste de travail.
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez l'instance de vCenter Server appropriée dans la barre latérale

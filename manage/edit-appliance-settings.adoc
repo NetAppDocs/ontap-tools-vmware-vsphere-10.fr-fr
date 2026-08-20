@@ -11,7 +11,7 @@ summary: 'Mettez à l"échelle l"appliance ONTAP tools et configurez la haute di
 
 
 [role="lead"]
-Utilisez ONTAP tools Manager pour faire évoluer votre appliance et configurer la haute disponibilité (HA). Par défaut, ONTAP tools for VMware vSphere est déployé en configuration mono-nœud sans haute disponibilité.
+Utilisez ONTAP tools Manager pour faire évoluer l'appliance ou configurer la haute disponibilité (HA). Par défaut, ONTAP tools for VMware vSphere est déployé en configuration mono-nœud sans haute disponibilité.
 
 .Avant de commencer
 * Assurez-vous que votre modèle OVA correspond à la version du nœud 1 (le nœud de déploiement initial).
@@ -30,7 +30,7 @@ NOTE: Vous pouvez uniquement augmenter la taille des nœuds, pas la diminuer. Le
 . Dans la section *Configuration*, sélectionnez la taille de votre nouveau nœud et activez l'interrupteur HA pour activer la haute disponibilité.
 . Sur la page des *paramètres HA*, vérifiez les points suivants :
 +
-** La bibliothèque de contenu se trouve sur le même vCenter Server où s'exécuteront les machines virtuelles des ONTAP tools.
+** La bibliothèque de contenu réside sur le même vCenter Server où s'exécutent les machines virtuelles (VM) des ONTAP tools.
 ** Les machines virtuelles ONTAP tools sont déployées sur un cluster ou un pool de ressources, et non directement sur un hôte ESXi.
 +
 
@@ -40,7 +40,7 @@ IMPORTANT: Une fois la haute disponibilité activée, vous ne pouvez pas revenir
 
 . Dans la section *paramètres HA*, saisissez les détails du réseau pour les nœuds 2 et 3. Les outils ONTAP prennent en charge trois nœuds en mode HA.
 +
-ONTAP tools pré-remplit la plupart des champs avec les paramètres réseau du nœud 1. Vous pouvez modifier ces valeurs avant de terminer l’assistant. Les entrées d’adresse IPv6 ne sont disponibles que si IPv6 est activé sur le nœud de gestion. Assurez-vous que chaque hôte ESXi héberge une seule machine virtuelle ONTAP tools.
+L'assistant ONTAP tools pré-remplit la plupart des champs avec les paramètres réseau du nœud 1. Vous pouvez modifier ces valeurs avant de terminer l'assistant. Les entrées d'adresses IPv6 ne sont disponibles que si IPv6 est activé sur le nœud de gestion. Assurez-vous que chaque hôte ESXi exécute une seule machine virtuelle ONTAP tools.
 
 . Vérifiez le résumé et cliquez sur *Enregistrer*.
 

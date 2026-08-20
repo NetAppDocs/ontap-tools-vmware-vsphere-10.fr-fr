@@ -11,7 +11,7 @@ summary: 'Ajoutez les informations du serveur NTP pour synchroniser l"heure de l
 
 
 [role="lead"]
-Entrez les détails du serveur NTP pour synchroniser les horloges de l'appliance ONTAP Tools.
+Saisissez les informations du serveur NTP pour synchroniser les horloges de l'appliance ONTAP tools.
 
 
 NOTE: À partir de ONTAP tools for VMware vSphere 10.6, le démon de synchronisation horaire est chronyd au lieu de ntpd. Lors d’une mise à niveau vers 10.6, les paramètres du serveur NTP existants sont automatiquement migrés. Aucune reconfiguration manuelle n’est requise.
@@ -20,7 +20,7 @@ NOTE: À partir de ONTAP tools for VMware vSphere 10.6, le démon de synchronisa
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez l'option *Paramètres* > *serveur NTP* > *Modifier*.
-. Saisissez le ou les noms de domaine complets (FQDN) ou adresses IPv4, séparés par des virgules.
+. Saisissez les noms de domaine complets (FQDN) ou les adresses IPv4 séparés par des virgules.
 +
 Actualisez l'écran pour voir les valeurs mises à jour.
 

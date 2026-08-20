@@ -6,17 +6,21 @@ summary: 'Configurez les paramètres de multipathing de l"hôte ESXi et de déla
 ---
 = Configurer les paramètres de l'hôte ESXi dans ONTAP tools
 :allow-uri-read: 
+:firstname: = Configure ESXi host settings in ONTAP tools
+:author: = Configure ESXi host settings in ONTAP tools
+:authorinitials: =
+:authors: = Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La configuration des paramètres de délai d’expiration et de multi-chemin du serveur ESXi permet de maintenir la disponibilité et l’intégrité des données.  Il permet le basculement automatique vers un chemin de stockage de sauvegarde si le chemin principal devient indisponible.
+La configuration des paramètres de chemin multiple et de délai d'expiration de l'hôte ESXi contribue à garantir la disponibilité des données et l'intégrité des données. Elle permet un basculement automatique vers un chemin de stockage de sauvegarde si le chemin principal devient indisponible.
 
 
 
-[[configure-esxi-server-multipath-and-timeout-settings]]
-== Configurer les paramètres de chemins d'accès multiples et de délai d'attente du serveur ESXi
+[[apply-recommended-esxi-host-settings]]
+== Appliquer les paramètres d'hôte ESXi recommandés
 
 Les outils ONTAP pour VMware vSphere vérifient et définissent les paramètres des chemins d'accès multiples de l'hôte ESXi ainsi que les paramètres de délai d'expiration de l'adaptateur HBA qui fonctionnent mieux avec les systèmes de stockage NetApp.
 
@@ -27,7 +31,7 @@ Ce processus peut prendre du temps, en fonction de votre configuration et de la 
 . Sur la page d'accueil du client Web VMware vSphere, sélectionnez *hosts and clusters*.
 . Sur la page des raccourcis du client Web VMware vSphere, sélectionnez *NetApp ONTAP Tools* dans la section des plug-ins.
 . Accédez à la carte *ESXi Host Compliance* dans la présentation (tableau de bord) du plug-in ONTAP Tools for VMware vSphere.
-. Sélectionnez le lien *appliquer les paramètres recommandés*.
+. Sélectionnez le lien *Appliquer les paramètres recommandés*.
 . Dans la fenêtre *Appliquer les paramètres d'hôte recommandés*, sélectionnez les hôtes que vous souhaitez mettre à jour pour utiliser les paramètres recommandés par NetApp et sélectionnez *Suivant*.
 +
 
@@ -51,7 +55,7 @@ Vous pouvez définir les valeurs suivantes sur un hôte ESXi :
 [[hbacna-adapter-settings]]
 === Paramètres de l'adaptateur HBA/CNA
 
-Définit les paramètres suivants sur les valeurs par défaut :
+Les outils ONTAP attribuent aux paramètres suivants des valeurs par défaut :
 
 * Disk.QFullSampleSize
 * Disk.QFullThreshold
@@ -64,7 +68,7 @@ Définit les paramètres suivants sur les valeurs par défaut :
 [[mpio-settings]]
 === Paramètres MPIO
 
-Les paramètres MPIO sélectionnent les meilleurs chemins pour les systèmes de stockage NetApp .  Les paramètres MPIO sélectionnent le meilleur chemin et l'utilisent.
+Les paramètres MPIO sélectionnent et utilisent le meilleur chemin disponible pour les systèmes de stockage NetApp.
 
 Pour les environnements hautes performances ou lors de tests avec une seule banque de données LUN, ajustez le paramètre d'équilibrage de charge de la stratégie de sélection de chemin (PSP) à tour de rôle (VMW_PSP_RR) pour améliorer les performances.  Définissez la valeur IOPS par défaut de 1 000 à 1.
 
@@ -77,8 +81,6 @@ NOTE: Les paramètres MPIO ne s'appliquent pas aux protocoles NVMe, NVMe/FC et N
 === Paramètres NFS
 
 |===
-
-
 | Paramètre | Définir cette valeur sur... 
 
 

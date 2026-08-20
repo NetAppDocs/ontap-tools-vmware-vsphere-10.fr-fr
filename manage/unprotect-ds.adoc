@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
 summary: Déprotégez une banque de données VMFS et, si vous le souhaitez, supprimez les éléments de stockage côté cible associés. 
 ---
-= Déprotéger un datastore VMFS
+= Déprotéger un datastore VMFS dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,8 +16,8 @@ Utilisez cette tâche pour déprotéger une banque de données VMFS et, éventue
 .Description de la tâche
 Lorsque vous déprotégez une banque de données VMFS, tenez compte du comportement suivant :
 
-* La suppression de la protection du dernier datastore dans un groupe de protection supprime le groupe de protection ainsi que le nom de ses paramètres de protection.
-* Pour un dernier datastore, ONTAP tools affiche le nom des paramètres de protection.
+* La suppression de la protection du dernier datastore d'un groupe de protection supprime le groupe de protection et ses paramètres de protection.
+* Pour le dernier datastore, ONTAP tools affiche le nom des paramètres de protection.
 
 
 .Avant de commencer

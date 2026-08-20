@@ -11,11 +11,11 @@ summary: 'Ajoutez et gérez les systèmes de stockage localement pour une instan
 
 
 [role="lead"]
-Utilisez les ONTAP tools for VMware vSphere afin d'ajouter et de gérer les systèmes de stockage pour vos hôtes ESXi.  Vous pouvez intégrer des clusters ou des SVM, activer la prise en charge de MetroCluster et valider les certificats pour une connectivité sécurisée.  Vous pouvez configurer les systèmes de stockage à l'aide ONTAP Tools Manager ou du client vSphere, surveiller l'état des certificats et redécouvrir manuellement les ressources après des modifications du cluster.
+Utilisez les ONTAP tools for VMware vSphere pour ajouter et gérer les backends de stockage de vos hôtes ESXi, y compris l'intégration de clusters ou de SVM, l'activation de la prise en charge MetroCluster et la validation des certificats pour une connectivité sécurisée. Vous pouvez configurer les backends de stockage à l'aide de ONTAP tools Manager ou du vSphere Client, surveiller l'état des certificats et redécouvrir manuellement les ressources après des modifications de cluster.
 
 Pour ajouter un système de stockage local, utilisez les informations d'identification du cluster ou de la SVM dans l'interface des outils ONTAP .  Les systèmes de stockage local sont disponibles uniquement pour le serveur vCenter sélectionné. Les outils ONTAP mappent les SVM au serveur vCenter pour la gestion des banques de données vVols ou VMFS.  Pour les banques de données VMFS et les flux de travail SRA, vous pouvez utiliser les informations d'identification SVM sans mapper un cluster globalement.
 
-Pour ajouter un système de stockage global, utilisez les informations d'identification du cluster ONTAP dans ONTAP Tools Manager.  Les systèmes de stockage globaux permettent aux flux de travail de découverte d'identifier les ressources du cluster nécessaires à la gestion des vVol.  Dans les environnements mutualisés, vous pouvez ajouter localement un utilisateur SVM pour gérer les banques de données vVols .
+Pour ajouter un stockage principal global, utilisez les identifiants du cluster ONTAP dans ONTAP tools Manager. Les stockages principaux globaux permettent aux workflows de découverte d’identifier les ressources du cluster nécessaires à la gestion des vVols. Dans les environnements multitenants, vous pouvez ajouter un utilisateur SVM localement pour gérer les datastores vVols.
 
 Consultez l'article de la base de connaissances : https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10 : Quelle est la portée globale et locale du storage backend"^] pour plus d'informations sur les systèmes de stockage globaux et locaux.
 
@@ -76,7 +76,7 @@ NOTE: Une fois que le système ONTAP a effectué un basculement et un retour en 
 
 --
 ====
-Les outils ONTAP répertorient le backend de stockage nouvellement ajouté sur la page *Backends de stockage*.  Si un certificat expire dans 30 jours ou moins, les outils ONTAP affichent un avertissement dans la colonne de date d’expiration du certificat.  Après expiration, les outils ONTAP marquent le backend de stockage comme inconnu car il ne peut pas se connecter au système de stockage.
+ONTAP tools répertorie le nouveau stockage de sauvegarde ajouté sur la page *Stockage de sauvegarde*. Si un certificat expire dans 30 jours ou moins, ONTAP tools affiche un avertissement dans la colonne de la date d'expiration du certificat. Après expiration, ONTAP tools marque le stockage de sauvegarde comme inconnu car il ne peut pas se connecter au système de stockage.
 
 .Informations associées
 https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10 : Quelle est la portée globale et locale du storage backend"^]

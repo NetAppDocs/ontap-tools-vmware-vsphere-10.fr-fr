@@ -11,13 +11,13 @@ summary: Migrez les machines virtuelles des banques de données NFS et VMFS vers
 
 
 [role="lead"]
-Vous pouvez migrer des machines virtuelles des datastores NFS et VMFS vers des datastores Virtual volumes (vVols) pour tirer parti de la gestion des machines virtuelles basée sur des règles et d'autres fonctionnalités vVols. Les datastores vvols vous permettent de répondre à de plus en plus de besoins de charge de travail.
+Vous pouvez migrer des machines virtuelles depuis des datastores NFS ou VMFS vers des datastores Virtual Volumes (vVols) pour utiliser la gestion des machines virtuelles basée sur des règles et d'autres fonctionnalités vVols.
 
 .Avant de commencer
 Vérifiez que VASA Provider n'est pas exécuté sur les machines virtuelles que vous prévoyez de migrer. Si vous migrez une machine virtuelle exécutant VASA Provider vers un datastore vVols, vous ne pourrez effectuer aucune opération de gestion, y compris la mise sous tension des machines virtuelles qui se trouvent sur des datastores vVols.
 
 .Description de la tâche
-Lorsque vous migrez d'un datastore NFS et VMFS vers un datastore vVols, vCenter Server utilise les API vStorage APIs for Array Integration (VAAI) pour décharger les données lors du déplacement de datastores VMFS, mais pas à partir d'un fichier VMDK NFS. VAAI réduit généralement la charge sur l'hôte.
+Lorsque vous migrez d'un datastore NFS ou VMFS vers un datastore vVols, le serveur vCenter utilise les API vStorage pour l'intégration de baies (VAAI) pour les données déplacées depuis les datastores VMFS, mais pas depuis les fichiers VMDK NFS. Les déchargements VAAI réduisent généralement la charge de l'hôte.
 
 .Étapes
 . Cliquez avec le bouton droit de la souris sur la machine virtuelle à migrer et sélectionnez *migrer*.

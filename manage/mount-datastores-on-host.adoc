@@ -11,7 +11,7 @@ summary: Montez les banques de données sur des hôtes supplémentaires après a
 
 
 [role="lead"]
-Le montage d'une banque de données permet d'accéder au stockage depuis des hôtes supplémentaires après que vous les avez ajoutés à votre environnement VMware.
+Montez un datastore NFS ou VMFS pour fournir un accès au stockage à des hôtes supplémentaires après les avoir ajoutés à votre environnement VMware.
 
 
 NOTE: Après avoir ajouté l'hôte, attendez la fin de la découverte planifiée de l'hôte avant qu'il n'apparaisse dans ONTAP tools. Vous pouvez également lancer la découverte manuellement depuis l'écran de présentation des NetApp ONTAP tools. Pour savoir comment ajouter un hôte ESXi à votre cluster vSphere, consultez  https://techdocs.broadcom.com/["Broadcom Documentation technique"].
@@ -19,11 +19,11 @@ NOTE: Après avoir ajouté l'hôte, attendez la fin de la découverte planifiée
 .Description de la tâche
 * Certaines actions du clic droit sont désactivées ou indisponibles selon la version du client vSphere et le type de datastore sélectionné.
 +
-** Si vous utilisez vSphere client 8.0 ou une version ultérieure, certaines options du clic droit sont masquées.
+** Si vous utilisez le vSphere Client 8.0 ou une version ultérieure, certaines options du clic droit sont masquées.
 ** De vSphere 7.0U3 à vSphere 8.0, même si les options apparaissent, l'action est désactivée.
 
 
-* vSphere désactive l'option de montage de la banque de données lorsque le cluster hôte est protégé par des configurations uniformes.
+* vSphere désactive l'option *Monter les banques de données* lorsque le cluster hôte est protégé par des configurations uniformes.
 
 
 .Étapes

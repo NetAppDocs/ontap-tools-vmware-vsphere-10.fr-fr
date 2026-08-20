@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
 summary: 'Consultez le tableau de bord des ONTAP tools pour obtenir un résumé de l"état des plug-ins, des banques de données et des données du serveur vCenter.' 
 ---
-= Découvrez le tableau de bord des ONTAP tools
+= Découvrez le tableau de bord des ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La sélection de l’icône du plug-in ONTAP tools for VMware vSphere dans la section Raccourcis du client vCenter ouvre la page de présentation.  Ce tableau de bord fournit un résumé des ONTAP tools for VMware vSphere .
+Sélectionnez l'icône du plug-in ONTAP tools for VMware vSphere dans la section des raccourcis du client vCenter pour ouvrir le tableau de bord, qui récapitule l'état du plug-in, des datastores et des données du serveur vCenter.
 
 En mode lié amélioré (ELM), la liste déroulante vCenter Server apparaît.  Choisissez un serveur vCenter pour afficher ses données.  La liste déroulante est disponible dans toutes les vues de liste du plug-in. Lorsque vous sélectionnez un serveur vCenter sur une page, il reste identique lorsque vous changez d'onglet dans le plug-in.image:../media/remote-plugin-dashboard.png["Présentation du tableau de bord"]
 
-Depuis la page d'aperçu, vous pouvez exécuter l'action *Découverte*. L'action de découverte détecte les backends de stockage, les hôtes, les banques de données et l'état ou les relations de protection nouvellement ajoutés ou mis à jour au niveau de vCenter.  Exécutez la découverte à la demande sans attendre la découverte planifiée.
+Depuis la page de présentation, vous pouvez exécuter l'action *Discovery* pour détecter les systèmes de stockage, hôtes, banques de données et états ou relations de protection nouvellement ajoutés ou mis à jour au niveau de vCenter. Exécutez une découverte à la demande sans attendre la découverte planifiée.
 
 Si vous ajoutez un nouvel hôte à un cluster d'hôtes protégés, les paramètres de protection passent à *Protection partielle*.
 
@@ -40,10 +40,10 @@ Le tableau de bord comporte plusieurs cartes montrant différents éléments du 
 | Systèmes back-end de stockage - capacité | Cette fiche présente la capacité cumulée utilisée et disponible de tous les backends de stockage pour l’instance de serveur vCenter sélectionnée. Pour les systèmes de stockage ASA r2, les données de capacité ne sont pas affichées car le stockage est désagrégé. 
 
 
-| Ordinateurs virtuels | Cette fiche présente les 10 principales machines virtuelles classées par mesure de performance. Vous pouvez sélectionner l'en-tête pour obtenir les 10 premières machines virtuelles de la mesure sélectionnée, triées par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la carte persistent jusqu'à ce que vous changiez ou effacez le cache du navigateur. 
+| Ordinateurs virtuels | Cette fiche présente les 10 machines virtuelles principales, classées par indicateur de performance. Vous pouvez sélectionner l'en-tête pour trier les 10 machines virtuelles principales selon l'indicateur sélectionné, par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la fiche sont conservées jusqu'à ce que vous modifiiez ou effaciez le cache de votre navigateur. 
 
 
-| Datastore | Cette carte présente les 10 principaux datastores classés par mesure de performance. Vous pouvez sélectionner l'en-tête pour obtenir les 10 principaux datastores de la mesure sélectionnée triés par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la carte persistent jusqu'à ce que vous changiez ou effacez le cache du navigateur. Une liste déroulante Type de datastore permet de sélectionner le type de datastores : NFS, VMFS ou vVols. 
+| Datastore | Cette fiche présente les 10 meilleurs datastores, classés selon un indicateur de performance. Vous pouvez sélectionner l'en-tête pour trier les 10 meilleurs datastores pour l'indicateur sélectionné par ordre croissant ou décroissant. Les modifications de tri et de filtrage effectuées sur la fiche sont conservées jusqu'à ce que vous les modifiiez ou que vous vidiez le cache du navigateur. Utilisez la liste déroulante « Type de datastore » pour sélectionner le type de datastore : NFS, VMFS ou vVols. 
 
 
 | Carte de conformité de l'hôte ESXi | Cette fiche indique si tous les hôtes ESXi (pour le vCenter sélectionné) respectent les paramètres hôte NetApp recommandés par groupe ou catégorie. Vous pouvez sélectionner le lien *Appliquer les paramètres recommandés* pour appliquer les paramètres recommandés. Vous pouvez sélectionner l'état de conformité des hôtes pour afficher la liste des hôtes. 

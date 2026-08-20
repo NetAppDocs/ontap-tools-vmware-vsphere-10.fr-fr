@@ -11,9 +11,12 @@ summary: 'Créez des datastores NFS, VMFS ou vVols dans ONTAP tools au niveau de
 
 
 [role="lead"]
-Lorsque vous créez une banque de données au niveau du cluster hôte, les outils ONTAP la montent sur tous les hôtes de destination et activent l'action uniquement si vous disposez des privilèges requis.
+Créez une banque de données NFS, VMFS ou vVols au niveau de l’hôte ou du cluster d’hôtes. Lorsque vous créez une banque de données au niveau du cluster d’hôtes, ONTAP tools la monte sur tous les hôtes de destination, à condition que vous disposiez des privilèges requis.
 
-*Interopérabilité entre les banques de données natives avec les banques de données gérées par vCenter Server et les outils ONTAP*
+
+
+[[interoperability-between-native-datastores-and-ontap-tools-managed-datastores]]
+== Interopérabilité entre les magasins de données natifs et les magasins de données gérés par ONTAP tools
 
 À partir des ONTAP tools for VMware vSphere 10.4, les outils ONTAP créent des igroups imbriqués pour les banques de données, avec des igroups parents spécifiques aux banques de données et des igroups enfants mappés aux hôtes.  Vous pouvez créer des groupes i plats à partir d' ONTAP System Manager et les utiliser pour créer des banques de données VMFS sans utiliser les outils ONTAP . Se référer à https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Gérer les initiateurs et les groupes SAN"] pour plus d'informations.
 
@@ -43,7 +46,7 @@ NOTE: Le système ASA r2 prend en charge les protocoles iSCSI et FC pour les vVo
 . Sélectionnez la VM de stockage où vous souhaitez créer le datastore.
 . Sous *Options avancées* :
 +
-** Si vous sélectionnez la *règles d'export* personnalisée, exécutez la découverte dans vCenter pour tous les objets avant de continuer. Il est déconseillé d'utiliser cette option.
+** Si vous sélectionnez la *règles d'export personnalisées*, exécutez la découverte dans vCenter pour tous les objets avant de continuer. NetApp recommande de ne pas utiliser cette option.
 ** Vous pouvez sélectionner un nom de *groupe d'initiateurs personnalisé* pour les protocoles iSCSI et FC.
 +
 
@@ -61,7 +64,7 @@ Lors de la création d'un volume, vous pouvez activer la QoS sur la banque de do
 --
 .Créer un datastore NFS
 --
-Un datastore NFS connecte les hôtes ESXi à un stockage partagé via le protocole NFS. Il est simple et flexible et est utilisé dans les environnements VMware vSphere.
+Un datastore NFS connecte les hôtes ESXi à un stockage partagé via le protocole NFS. Il est simple et flexible, et il est couramment utilisé dans les environnements VMware vSphere.
 
 .Étapes
 . Connectez-vous au client vSphere.
@@ -84,7 +87,7 @@ NOTE: L'authentification Kerberos n'est disponible que lorsque le protocole NFS 
 NOTE: Vous ne pouvez pas créer une banque de données NFS à l'aide de la stratégie de volume racine ou par défaut de la SVM.
 
 +
-** Dans les *Options avancées*, le bouton *Asymétrique* n'est visible que si *Performances* ou *Capacité* est sélectionné dans le menu déroulant de la plateforme. Cependant, l'option *Asymétrique* ne s'applique pas à la création de datastore NFS.
+** Dans les *Options avancées*, le bouton *Asymétrique* n'est visible que si vous sélectionnez performance ou capacité dans la liste déroulante de la plateforme. Cependant, l'option *Asymétrique* ne s'applique pas à la création de datastore NFS.
 ** Lorsque vous sélectionnez l'option *Tout* dans le menu déroulant de la plateforme, toutes les SVM dans le vCenter sont visibles. Les paramètres de plateforme et d'asymétrie n'ont aucune incidence sur la visibilité.
 
 
@@ -118,7 +121,7 @@ NOTE: VMware vSphere 7.0 U3 et versions ultérieures prennent en charge le proto
 
 * Si vous utilisez le protocole NVMe/FC, procédez comme suit pour configurer l'hôte ESXi :
 +
-.. Si ce n'est pas déjà fait, activez NVMe over Fabrics (NVMe-oF) sur votre ou vos hôtes ESXi.
+.. Si ce n'est pas déjà fait, activez NVMe over Fabrics (NVMe-oF) sur vos hôtes ESXi.
 .. Segmentation SCSI complète.
 .. Assurez-vous que les hôtes ESXi et le système ONTAP sont connectés au niveau d'une couche physique et logique.
 

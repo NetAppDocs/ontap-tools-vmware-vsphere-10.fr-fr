@@ -11,7 +11,7 @@ summary: Gérez les systèmes de stockage utilisés par les hôtes ESXi pour le 
 
 
 [role="lead"]
-Les systèmes de stockage backend sont utilisés par les hôtes ESXi pour le stockage des données. Vous pouvez découvrir, modifier et supprimer les systèmes de stockage backend à l'aide des ONTAP tools for VMware vSphere.
+Les backends de stockage sont les ressources de stockage ONTAP que les hôtes ESXi utilisent pour le stockage des données. Vous pouvez les découvrir, les modifier et les supprimer dans ONTAP tools for VMware vSphere.
 
 
 
@@ -20,7 +20,7 @@ Les systèmes de stockage backend sont utilisés par les hôtes ESXi pour le sto
 
 Vous pouvez exécuter la découverte du système de stockage à la demande, sans attendre la prochaine découverte planifiée pour la mise à jour des informations de stockage. Pour les configurations MetroCluster, exécutez manuellement la découverte des outils ONTAP après un basculement.
 
-Suivez les étapes ci-dessous pour découvrir les systèmes back-end.
+Suivez ces étapes pour découvrir les systèmes de stockage backends.
 
 .Étapes
 . Connectez-vous au client vSphere.
@@ -52,10 +52,10 @@ Modifiez les clusters ONTAP globaux avec le gestionnaire d’outils ONTAP comme 
 
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
-. Sélectionnez les systèmes back-end de stockage dans la barre latérale.
+. Sélectionnez *systèmes back-end de stockage* dans la barre latérale.
 . Sélectionnez le back-end de stockage à modifier.
 . Sélectionnez le menu à trois points verticaux et sélectionnez *Modifier*.
-. Vous pouvez modifier les informations d'identification ou le port. Entrez *Nom d'utilisateur* et *Mot de passe* pour modifier le backend de stockage.
+. Vous pouvez modifier les identifiants ou le port. Saisissez le *nom d'utilisateur* et le *mot de passe* pour mettre à jour les identifiants du stockage backend.
 
 
 
@@ -85,7 +85,7 @@ Vous pouvez supprimer les clusters ONTAP globaux à l'aide du Gestionnaire d'out
 [[drill-down-view-of-storage-backend]]
 == Vue détaillée du système back-end de stockage
 
-La page relative aux backends de stockage répertorie tous les backends de stockage. Vous pouvez découvrir, modifier et supprimer les backends de stockage que vous avez ajoutés, mais vous ne pouvez pas effectuer ces opérations sur les SVM enfants individuelles du cluster.
+La page relative aux systèmes de stockage répertorie tous les systèmes de stockage. Vous pouvez découvrir, modifier et supprimer les systèmes de stockage que vous avez ajoutés, mais vous ne pouvez pas effectuer ces opérations sur les SVM enfants individuelles du cluster.
 
 Sélectionnez le cluster parent ou l’enfant pour afficher le résumé du composant.  Pour le cluster parent, utilisez la liste déroulante des actions pour découvrir le stockage, modifier ou supprimer le backend de stockage.
 
@@ -96,7 +96,7 @@ La page de résumé fournit les détails suivants :
 * Informations de base sur la machine virtuelle
 * Détails du certificat tels que le statut du certificat et la date d'expiration.
 * Informations réseau telles que l'adresse IP et le port du réseau.  Pour le SVM enfant, les informations sont les mêmes que celles du backend de stockage parent.
-* Privileges autorisés et restreints pour le stockage backend. Pour la SVM enfant, les informations sont identiques à celles du stockage backend parent. ONTAP tools affiche les privileges uniquement sur les stockages backend basés sur le cluster. Si vous ajoutez une SVM comme stockage backend, les informations relatives aux privileges ne sont pas affichées.
+* Privileges autorisés et restreints pour le stockage backend. Pour la SVM enfant, les informations sont identiques à celles du stockage backend parent. ONTAP tools affiche les privileges uniquement sur les stockages backend basés sur cluster. Si vous ajoutez une SVM comme stockage backend, les informations de privilege ne sont pas affichées.
 * La vue détaillée du cluster système ASA r2 n'inclut pas l'onglet des niveaux locaux lorsque la propriété désagrégée est définie sur « true » pour le SVM ou le cluster.
 * Pour les systèmes ASA r2 SVM, le portlet de capacité n'est pas affiché. Le portlet de capacité est requis uniquement lorsque la propriété « disaggregated » est définie sur « true » pour la SVM ou le cluster.
 * Pour les systèmes ASA r2 SVM, la section informations de base présente le type de plateforme.

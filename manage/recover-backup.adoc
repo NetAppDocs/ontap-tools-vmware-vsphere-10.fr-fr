@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
 summary: 'Restaurez les ONTAP tools à partir d"une sauvegarde et comprenez le comportement zéro RPO et quasi zéro RPO selon la version.' 
 ---
-= Récupérer la configuration des outils ONTAP
+= Récupérer les ONTAP tools for VMware vSphere à partir d'une sauvegarde
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez restaurer la configuration des ONTAP tools for VMware vSphere en la récupérant à partir d’un fichier de sauvegarde stocké sur le datastore. À partir de ONTAP tools for VMware vSphere 10.5, la fonction de sauvegarde est activée par défaut, de sorte qu’une sauvegarde récente est disponible si vous devez redéployer ou restaurer l’appliance.
+Restaurez ONTAP tools for VMware vSphere en restaurant un fichier de sauvegarde stocké sur le datastore. À partir de ONTAP tools for VMware vSphere 10.5, la sauvegarde est activée par défaut, donc une sauvegarde récente est généralement disponible si vous devez redéployer ou restaurer l’appliance.
 
-La banque de données dans laquelle vous déployez les ONTAP tools for VMware vSphere stocke les fichiers de sauvegarde.  Un dossier nommé d'après l'adresse IP des outils ONTAP (points remplacés par des traits de soulignement et suffixés par _OTV_backup_) conserve les deux fichiers de sauvegarde les plus récents (_OTV_backup_1.tar.enc_ et _OTV_backup_2.tar.enc_) et un fichier d'informations (_OTV_backup_info.txt_) qui contient le nom de la dernière sauvegarde.
+Le datastore où vous déployez ONTAP tools for VMware vSphere machines virtuelles stocke les fichiers de sauvegarde. Un dossier nommé d'après l'adresse IP des ONTAP tools contient les deux fichiers de sauvegarde les plus récents (_OTV_backup_1.tar.enc_ et _OTV_backup_2.tar.enc_) ainsi que le fichier d'information (_OTV_backup_info.txt_), qui identifie la dernière sauvegarde.
 
 Assurez-vous que la nouvelle machine virtuelle utilise la même adresse IP des outils ONTAP et correspond à la configuration initiale du système, y compris les services activés, la taille du nœud et le mode HA.
 

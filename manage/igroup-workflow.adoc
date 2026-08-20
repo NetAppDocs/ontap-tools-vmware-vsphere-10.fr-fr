@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: 'Comprenez comment ONTAP tools crée et gère les igroups et les export policies pour l"accès aux datastores.' 
 ---
-= Comment les ONTAP tools gèrent les igroups et les politiques d'exportation
+= Workflows de groupe initiateur (Igroup) et de règles d'export dans les outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Les groupes d'initiateurs (igroups) sont des tables de noms de port mondiaux (WWPN) d'hôte de protocole FC ou de noms de nœuds qualifiés d'hôte iSCSI. Vous pouvez définir des groupes initiateurs et les mapper sur des LUN pour contrôler l'accès des initiateurs aux LUN.
+Utilisez ces informations pour comprendre comment ONTAP tools for VMware vSphere crée et gère les igroups et les règles d'export pour l'accès aux datastores.
 
-Dans ONTAP tools for VMware vSphere 9.x, les igroups étaient créés et gérés selon une structure plate, chaque datastore dans vCenter étant associé à un seul igroup. Ce modèle limitait la flexibilité et la réutilisation des igroups entre plusieurs datastores. ONTAP tools for VMware vSphere 10.4 introduit les igroups imbriqués, où chaque datastore dans vCenter est associé à un igroup parent, tandis que chaque hôte est lié à un igroup enfant sous ce parent. Vous pouvez définir des igroups parents personnalisés avec des noms définis par l'utilisateur pour une réutilisation entre les datastores afin de faciliter la gestion des igroups. Comprenez le flux de travail des igroups pour gérer les LUN et les datastores dans ONTAP tools for VMware vSphere. Différents flux de travail génèrent des configurations d'igroups variées, comme illustré dans les exemples suivants :
+Dans ONTAP tools for VMware vSphere 9.x, les igroups étaient créés et gérés selon une structure plate, où chaque datastore dans vCenter était associé à un seul igroup. Ce modèle limitait la flexibilité et la réutilisation des igroups entre plusieurs datastores. ONTAP tools for VMware vSphere 10.4 introduit les igroups imbriqués, où chaque datastore dans vCenter est associé à un igroup parent, tandis que chaque hôte est lié à un igroup enfant sous ce parent. Vous pouvez définir des igroups parents personnalisés avec des noms définis par l'utilisateur pour une réutilisation entre les datastores afin de faciliter la gestion des igroups. Utilisez ces informations pour comprendre comment ONTAP tools for VMware vSphere gère les LUN et les datastores via les workflows d'igroup. Différents workflows génèrent des configurations d'igroup différentes, comme illustré dans les exemples suivants :
 
 
 NOTE: Les noms mentionnés sont uniquement à des fins d'illustration et ne font pas référence aux vrais noms de groupes i.  Les groupes gérés par les outils ONTAP utilisent le préfixe « otv_ ».  Les groupes i personnalisés peuvent recevoir n'importe quel nom.
@@ -78,7 +78,7 @@ Monter le magasin de données existant sur un hôte supplémentaire
 
 
 
-Les ONTAP tools for VMware vSphere créent un groupe i enfant host2Igroup et l'ajoutent au groupe i parent existant DS1Igroup.
+ONTAP tools for VMware vSphere crée un igroup enfant host2Igroup et l’ajoute à l’igroup parent existant DS1Igroup.
 
 .Exemple 3 :
 Démonter une banque de données d'un hôte
@@ -203,7 +203,7 @@ Migration des outils ONTAP 9 vers 10 (normalisation igroup)
 
 *Workflow*
 
-Les outils ONTAP pour les versions VMware vSPhere 9.x ne prennent pas en charge les groupes hiérarchiques.  Lors de la migration vers les versions 10.3 ou supérieures, les igroups doivent être normalisés dans la structure hiérarchique.
+ONTAP tools for VMware vSphere versions 9.x ne prennent pas en charge les igroups hiérarchiques. Lors de la migration vers les versions 10.3 ou supérieures, les igroups doivent être normalisés selon une structure hiérarchique.
 
 Avant la migration :
 
@@ -243,7 +243,7 @@ Lorsque vous créez une banque de données NFS dans les outils ONTAP pour VMware
 
 Lorsque vous montez une banque de données NFS sur un nouvel hôte ESXi, les outils ONTAP pour VMware vSphere ajoutent l'adresse IP de l'hôte à la stratégie d'exportation existante associée à la banque de données. Cela permet au nouvel hôte d'accéder à la banque de données sans créer de nouvelle stratégie d'exportation.
 
-Lorsque vous supprimez ou démontez une banque de données NFS d'un hôte ESXi, les ONTAP tools for VMware vSphere suppriment l'adresse IP de l'hôte de la stratégie d'exportation. Si aucun autre hôte n’utilise cette politique d’exportation, elle sera supprimée. Lorsque vous supprimez une banque de données NFS, les ONTAP tools for VMware vSphere suppriment la stratégie d'exportation associée à cette banque de données si elle n'est pas réutilisée par d'autres banques de données. Si la politique d’exportation est réutilisée, elle conserve l’adresse IP de l’hôte et ne change pas. Lorsque vous supprimez les banques de données, la politique d'exportation annule l'attribution de l'adresse IP de l'hôte et attribue une politique d'exportation par défaut, afin que les systèmes ONTAP puissent y accéder si nécessaire.
+Lorsque vous supprimez ou démontez une banque de données NFS d'un hôte ESXi, ONTAP tools for VMware vSphere supprime l'adresse IP de l'hôte de la règles d'export. Si aucun autre hôte n'utilise cette règles d'export, elle sera supprimée. Lorsque vous supprimez une banque de données NFS, ONTAP tools for VMware vSphere supprime la règles d'export associée à cette banque de données si elle n'est pas réutilisée par d'autres banques de données. Si la règles d'export est réutilisée, elle conserve l'adresse IP de l'hôte et ne change pas. Lorsque vous supprimez des banques de données, ONTAP tools supprime l'adresse IP de l'hôte de la règles d'export et attribue la règles d'export par défaut si ONTAP requiert un accès.
 
 L'attribution de la stratégie d'exportation diffère selon la réutilisation entre différents magasins de données. Lorsque vous réutilisez la stratégie d'exportation, vous pouvez lui ajouter la nouvelle adresse IP de l'hôte. Lorsque vous supprimez ou démontez un magasin de données utilisant une stratégie d'exportation partagée, celle-ci n'est pas supprimée. Elle reste inchangée et l'adresse IP de l'hôte n'est pas supprimée, car elle est partagée avec les autres magasins de données. La réutilisation des stratégies d'exportation est déconseillée, car elle peut entraîner des problèmes d'accès et de latence.
 

@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
 summary: Découvrez comment les ONTAP tools représentent et gèrent les igroups imbriqués pour un mappage efficace des hôtes et des banques de données. 
 ---
-= Comment les ONTAP tools gèrent les igroups
+= Gestion des igroups imbriqués dans les outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Si vous gérez à la fois les machines virtuelles ONTAP tools et les systèmes de stockage ONTAP, il est essentiel de comprendre le comportement des igroups, notamment lors du déplacement de datastores d'environnements non gérés par ONTAP tools vers des environnements qui le sont. ONTAP tools pour VMware vSphere représente et gère les igroups à l'aide d'un modèle d'igroup imbriqué, et comprendre ce modèle vous aide à interpréter les différences de comportement entre les versions précédentes et l'implémentation actuelle.
+Si vous déplacez des banques de données d'environnements non gérés par ONTAP tools vers des environnements qui le sont, il est important de comprendre le comportement des igroups. ONTAP tools for VMware vSphere utilise un modèle d'igroups imbriqués, ce qui permet d'expliquer les différences de comportement entre les versions précédentes et l'implémentation actuelle.
 
-À partir de ONTAP tools for VMware vSphere 10.4, ONTAP tools crée et gère automatiquement les objets ONTAP et vCenter, simplifiant la gestion des datastores dans les environnements de datacenter VMware. À partir de ONTAP tools for VMware vSphere 10.5 P2, les igroups migrés sont également supprimés automatiquement lorsqu'ils ne sont plus utilisés.
+À partir de ONTAP tools for VMware vSphere 10.4, ONTAP tools crée et gère automatiquement les objets ONTAP et vCenter, ce qui simplifie la gestion des datastores dans les environnements de datacenter VMware. À partir de ONTAP tools for VMware vSphere 10.5 P2, ONTAP tools supprime également automatiquement les igroups migrés lorsqu'ils ne sont plus utilisés.
 
 
 

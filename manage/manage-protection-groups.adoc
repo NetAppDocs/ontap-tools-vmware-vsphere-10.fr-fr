@@ -19,7 +19,7 @@ Utilisez cette tâche pour afficher, modifier et supprimer les groupes de protec
 
 
 
-IMPORTANT: Avant de modifier ou de supprimer une protection, consultez les messages d'avertissement dans la boîte de dialogue. La suppression de relations peut avoir une incidence sur le comportement de la sauvegarde et de la cohérence.
+IMPORTANT: Avant de modifier ou de supprimer un groupe de protection, veuillez lire attentivement les messages d'avertissement affichés dans la boîte de dialogue. La suppression de relations peut affecter le comportement de la sauvegarde et de la cohérence.
 
 .Description de la tâche
 * Les outils ONTAP mettent à jour les enregistrements de protection locaux dans l’instance d’outils ONTAP sélectionnée.

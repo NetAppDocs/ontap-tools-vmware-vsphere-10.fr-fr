@@ -11,7 +11,7 @@ summary: Gérez les certificats des ONTAP tools et du VASA Provider, renouvelez 
 
 
 [role="lead"]
-Un certificat auto-signé est généré par défaut pour les outils ONTAP et le fournisseur VASA lors du déploiement. Vous pouvez utiliser l'interface du gestionnaire d'outils ONTAP pour renouveler ce certificat ou le remplacer par un certificat d'autorité de certification personnalisé. Dans les déploiements multi-vCenter, l'utilisation de certificats d'autorité de certification personnalisés est requise.
+Les outils ONTAP et VASA Provider utilisent par défaut un certificat auto-signé. Dans ONTAP tools Manager, vous pouvez renouveler ce certificat ou le remplacer par un certificat CA personnalisé. Les déploiements multi-vCenter nécessitent des certificats CA personnalisés.
 
 
 WARNING: Si les certificats expirent sans être renouvelés à temps, ONTAP tools cesse de fonctionner. Renouvelez les certificats avant leur expiration afin de garantir un fonctionnement continu et d’éviter toute interruption de service.
@@ -25,7 +25,7 @@ Vous devriez avoir les éléments suivants avant de commencer :
 
 
 
-NOTE: Une adresse IP des ONTAP tools doit correspondre à un nom de domaine complet (FQDN). Les certificats doivent contenir le même FQDN associé à l'adresse IP des ONTAP tools dans le champ subject ou subject alternative names.
+NOTE: Une adresse IP des ONTAP tools doit correspondre à un nom de domaine complet (FQDN). Les certificats doivent contenir ce même FQDN dans le champ Subject Alternative Name (SAN).
 
 
 NOTE: Vous ne pouvez pas passer d'un certificat signé par une autorité de certification à un certificat auto-signé.
@@ -34,7 +34,7 @@ NOTE: Vous ne pouvez pas passer d'un certificat signé par une autorité de cert
 ====
 .Certificat de mise à niveau des outils ONTAP
 --
-L'onglet Outils ONTAP affiche des détails tels que le type de certificat (auto-signé/CA signé) et le nom de domaine. Pendant le déploiement, le certificat auto-signé est généré par défaut. Vous pouvez renouveler le certificat ou le mettre à niveau vers une autorité de certification.
+L’onglet ONTAP tools affiche des informations telles que le type de certificat (auto-signé ou signé par une autorité de certification) et le nom de domaine. Lors du déploiement, ONTAP tools génère par défaut un certificat auto-signé. Vous pouvez renouveler le certificat ou le mettre à niveau vers un certificat signé par une autorité de certification.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -45,7 +45,7 @@ Vous pouvez renouveler le certificat s'il a expiré ou si sa date d'expiration a
 
 +
 
-NOTE: Le système sera hors ligne jusqu'à ce que le certificat soit renouvelé et vous serez déconnecté de l'interface du Gestionnaire d'outils ONTAP.
+NOTE: Le système est hors ligne jusqu'à la fin du renouvellement du certificat, et ONTAP tools Manager vous déconnecte.
 
 . Pour mettre à niveau le certificat auto-signé vers un certificat CA personnalisé, sélectionnez *certificats* > *ONTAP Tools* > *mettre à niveau vers CA* option.
 +
@@ -62,7 +62,7 @@ NOTE: Le système sera hors ligne jusqu'à la fin de la mise à niveau et vous s
 --
 .Mettre à niveau le certificat VASA Provider
 --
-Les outils ONTAP pour VMware vSphere sont déployés avec un certificat auto-signé pour VASA Provider. Avec cela, une seule instance vCenter Server peut être gérée pour les datastores vVols. Lorsque vous gérez plusieurs instances de vCenter Server et que vous souhaitez activer la fonctionnalité vVols sur celles-ci, vous devez remplacer le certificat auto-signé par un certificat d'autorité de certification personnalisé.
+ONTAP tools for VMware vSphere utilise par défaut un certificat auto-signé pour le fournisseur VASA. Avec ce certificat, vous pouvez gérer uniquement une seule instance de serveur vCenter pour les datastores vVols. Lorsque vous gérez plusieurs instances de serveur vCenter et souhaitez activer la fonctionnalité vVols sur celles-ci, vous devez remplacer le certificat auto-signé par un certificat CA personnalisé.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host cluster configuration, manage host proximity, SVM mapping, ONTAP tools host cluster protection 
 summary: Afficher, modifier et supprimer les paramètres de configuration du cluster hôte pour la protection du cluster hôte. 
 ---
-= Gérer la configuration du cluster dans ONTAP tools
+= Gérer la configuration du cluster hôte dans ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ Les paramètres de configuration du cluster hôte sont répertoriés avec leur t
 +
 .. Pour modifier une configuration, sélectionnez *Modifier* et mettez à jour les paramètres requis. Pour plus d'informations, consultez link:../protect/config-proximity.html["Configurer le cluster pour la protection du datastore avec les outils ONTAP"].
 +
-Lorsqu'un nouvel hôte est ajouté à un cluster, les paramètres de configuration existants du cluster ne sont pas automatiquement appliqués à cet hôte. Modifiez la configuration existante du cluster et affectez le nouvel hôte au site approprié.
+Lorsque vous ajoutez un nouvel hôte à un cluster, ONTAP tools n'applique pas automatiquement les paramètres de configuration existants à cet hôte. Modifiez la configuration existante du cluster et affectez le nouvel hôte au site approprié.
 
 .. Pour supprimer une configuration, sélectionnez *Supprimer* et confirmez la suppression dans la boîte de dialogue.
 

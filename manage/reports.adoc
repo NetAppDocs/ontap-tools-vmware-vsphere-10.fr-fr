@@ -11,10 +11,10 @@ summary: Consultez les rapports sur les machines virtuelles et les banques de do
 
 
 [role="lead"]
-Le plug-in ONTAP tools for VMware vSphere fournit des rapports qui vous aident à surveiller les machines virtuelles et les datastores pris en charge par le stockage ONTAP. Pour consulter ces rapports, sélectionnez l’icône du plug-in ONTAP tools for VMware vSphere dans la section des raccourcis du client vCenter, puis sélectionnez l’onglet Rapports.
+Le plug-in ONTAP tools for VMware vSphere fournit des rapports qui vous aident à surveiller les machines virtuelles et les datastores pris en charge par le stockage ONTAP. Pour afficher les rapports, sélectionnez l’icône du plug-in ONTAP tools for VMware vSphere dans la section des raccourcis du client vSphere, puis sélectionnez l’onglet *Rapports*.
 
-Le rapport « Machines virtuelles » répertorie les machines virtuelles détectées qui possèdent au moins un disque sur une banque de données basée sur le stockage ONTAP, ainsi que les indicateurs de performance. Lorsque vous développez l’enregistrement de la machine virtuelle, l’interface affiche toutes les informations relatives à la banque de données associée au disque.
+Le rapport « Machines virtuelles » répertorie les machines virtuelles détectées qui possèdent au moins un disque sur une banque de données basée sur le stockage ONTAP, ainsi que leurs indicateurs de performance. En développant la fiche d'une machine virtuelle, vous pouvez consulter toutes les informations relatives à ses disques sur la banque de données.
 
 Le rapport sur les banques de données répertorie les banques de données que les ONTAP tools for VMware vSphere découvrent et qui utilisent le stockage ONTAP, ainsi que les indicateurs de performance.
 
-Vous pouvez utiliser l'option gérer les colonnes pour masquer ou afficher différentes colonnes.
+Vous pouvez utiliser l'option *Gérer les colonnes* pour masquer ou afficher des colonnes.

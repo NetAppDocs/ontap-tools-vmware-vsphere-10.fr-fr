@@ -11,7 +11,7 @@ summary: Ajoutez des instances de serveur vCenter aux ONTAP tools pour configure
 
 
 [role="lead"]
-Ajoutez des instances de serveur vCenter à ONTAP tools for VMware vSphere pour configurer, gérer et protéger les banques de données dans votre environnement vCenter Server. Lorsque vous ajoutez plusieurs instances de serveur vCenter, des certificats CA personnalisés sont requis pour assurer une communication sécurisée entre ONTAP tools et chaque serveur vCenter.
+Ajoutez des instances de serveur vCenter aux ONTAP tools for VMware vSphere afin de configurer, gérer et protéger les datastores dans votre environnement serveur vCenter. Lorsque vous ajoutez plusieurs instances de serveur vCenter, configurez des certificats CA personnalisés pour une communication sécurisée entre ONTAP tools et chaque serveur vCenter.
 
 .Description de la tâche
 Les outils ONTAP s'intègrent à vCenter Server pour effectuer des tâches de stockage telles que le provisionnement, les instantanés et la protection des données directement à partir du client vSphere.
@@ -19,8 +19,8 @@ Les outils ONTAP s'intègrent à vCenter Server pour effectuer des tâches de st
 L'ajout d'une instance de serveur vCenter aux outils ONTAP déclenche automatiquement les actions suivantes :
 
 * Les outils ONTAP enregistrent le plug-in client vCenter en tant que plug-in distant.
-* Les Privileges personnalisés pour les plug-ins et les API sont appliqués à l'instance de vCenter Server.
-* Des rôles personnalisés sont créés pour gérer les utilisateurs.
+* ONTAP tools applique des privilèges personnalisés pour les plug-ins et les API à l’instance du serveur vCenter.
+* ONTAP tools crée des rôles personnalisés pour gérer les utilisateurs.
 * Le plug-in apparaît sous la forme d'un raccourci dans l'interface utilisateur vSphere.
 
 
@@ -37,7 +37,7 @@ X509v3 extensions:
 Si le certificat ne comporte pas d'extension SAN, ou si l'extension SAN ne contient pas les valeurs DNS ou d'adresse IP correctes, les opérations des ONTAP tools peuvent échouer en raison d'erreurs de validation du certificat.
 
 * L'identifiant réseau principal (PNID) du vCenter Server doit figurer dans les détails du SAN. Le PNID et le nom DNS doivent être identiques et résolvables dans le DNS.
-* Il est recommandé de déployer vCenter Server en utilisant son domaine complet (FQDN), en veillant à ce que le SAN dans le certificat inclue DNS Name=machine_FQDN pour une compatibilité et un support optimaux.
+* Déployez le serveur vCenter en utilisant son nom de domaine complet (FQDN) et assurez-vous que le SAN dans le certificat inclut DNS Name=machine_FQDN pour une compatibilité et un support optimaux.
 * Pour plus d'informations, consultez la documentation VMware :
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["vSphere Exigences de certification pour les différents chemins de solution"]
@@ -49,7 +49,7 @@ Si le certificat ne comporte pas d'extension SAN, ou si l'extension SAN ne conti
 
 [NOTE]
 ====
-Si le FQDN n'est pas disponible, vous pouvez définir le PNID sur l'adresse IP et inclure l'adresse IP dans le SAN. Cependant, cela n'est pas recommandé par VMware.
+Si le nom de domaine complet (FQDN) n'est pas disponible, vous pouvez définir le PNID sur l'adresse IP et inclure l'adresse IP dans le SAN. Cependant, VMware déconseille cette configuration.
 
 ====
 .Étapes
@@ -59,6 +59,6 @@ Si le FQDN n'est pas disponible, vous pouvez définir le PNID sur l'adresse IP e
 . Dans les options avancées, récupérez automatiquement le certificat vCenter Server (autorisez-le) ou téléchargez-le manuellement.
 +
 
-NOTE: Vous n'avez pas besoin d'un compte d'administrateur pour ajouter des instances vCenter aux outils ONTAP. Vous pouvez créer un rôle personnalisé sans le compte admin avec des autorisations limitées. Voir link:../concepts/rbac-vcenter-use.html["Utilisez vCenter Server RBAC avec les outils ONTAP pour VMware vSphere 10"] pour plus de détails.
+NOTE: Vous n'avez pas besoin d'un compte administrateur pour ajouter des instances vCenter aux ONTAP tools. Vous pouvez créer un rôle personnalisé sans compte administrateur, avec des autorisations limitées. Reportez-vous à link:../concepts/rbac-vcenter-use.html["Utilisez vCenter Server RBAC avec les outils ONTAP pour VMware vSphere 10"] pour plus de détails.
 
 

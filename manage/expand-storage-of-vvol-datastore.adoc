@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: expand vVols datastore, increase vVol datastore capacity, ONTAP tools vVol storage expansion, VMware virtual volumes scaling 
 summary: Étendez le stockage du datastore vVols à partir de la vue objet vCenter en utilisant les actions des outils ONTAP. 
 ---
-= Développez les datastores vVols dans les outils ONTAP
+= Étendre une banque de données vVols dans les ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Lorsque vous cliquez avec le bouton droit sur l'objet datastore dans la vue d'objet vCenter, la section des plug-ins affiche les actions prises en charge pour les ONTAP tools for VMware vSphere. Des actions spécifiques sont activées en fonction du type de banque de données et des privilèges utilisateur actuels.
+Lorsque vous cliquez avec le bouton droit sur l'objet datastore dans la vue d'objets vCenter, la section du plug-in affiche les actions prises en charge pour ONTAP tools for VMware vSphere. Les actions disponibles dépendent du type de datastore et des privilèges de l'utilisateur actuel.
 
 
-NOTE: L'opération étendre le datastore vVols ne s'applique pas aux datastores vVols système ASA r2.
+NOTE: Cette procédure ne s'applique pas aux banques de données vVols basées sur le système ASA r2.
 
 .Étapes
 . Sur la page d'accueil de vSphere client, sélectionnez *hosts and clusters*.

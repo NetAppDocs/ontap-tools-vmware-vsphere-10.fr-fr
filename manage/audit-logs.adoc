@@ -11,7 +11,7 @@ summary: Examinez comment ONTAP tools capture, conserve et surveille les journau
 
 
 [role="lead"]
-Utilisez cette tâche pour gérer le comportement de la journalisation des audits et la réponse opérationnelle dans ONTAP tools for VMware vSphere. Les journaux des audits fournissent un historique des événements indiquant qui a effectué une action, quelle action a été effectuée, quand elle s'est produite, la source de la requête et si elle a réussi ou échoué.
+Gérez la journalisation d'audit dans ONTAP tools for VMware vSphere. Les journaux d'audit indiquent qui a effectué une action, ce qui s'est passé, quand cela s'est produit, la source de la requête et si l'action a réussi ou échoué.
 
 .Avant de commencer
 * Assurez-vous de disposer d'un accès administrateur à ONTAP tools Manager.

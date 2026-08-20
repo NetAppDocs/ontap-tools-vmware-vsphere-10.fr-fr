@@ -11,7 +11,7 @@ summary: Modifiez la valeur nconnect par défaut pour les hôtes ESXi dans un se
 
 
 [role="lead"]
-Utilisez cette tâche pour modifier le nombre de connexions par défaut (nconnect) pour les hôtes ESXi dans un vCenter Server sélectionné.
+Modifier le nombre de connexions par défaut (nconnect) pour les hôtes ESXi dans un vCenter Server sélectionné.
 
 .Description de la tâche
 * La valeur nconnect définie sur cette page est la valeur par défaut au niveau de l’hôte.

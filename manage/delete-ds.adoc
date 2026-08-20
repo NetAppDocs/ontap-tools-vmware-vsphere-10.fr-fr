@@ -11,7 +11,7 @@ summary: 'Supprimez un datastore NFS, VMFS ou vVols et examinez les machines vir
 
 
 [role="lead"]
-Utilisez cette tâche pour supprimer des banques de données NFS, VMFS ou vVols à l'aide des outils ONTAP dans le serveur vCenter. Le comportement de suppression et les options de nettoyage varient selon le type de banque de données.
+Supprimez les datastores NFS, VMFS ou vVols dans le serveur vCenter à l'aide des ONTAP tools. Le comportement de suppression et les options de nettoyage varient selon le type de datastore.
 
 .Comportement de suppression pour les datastores NFS et VMFS
 * Vous ne pouvez pas supprimer un datastore utilisé par des machines virtuelles.
@@ -24,7 +24,7 @@ Pour les magasins de données vVols, les actions suivantes sont effectuées :
 * Le conteneur vVol est démonté.
 * Si l'igroup n'est pas utilisé, ses initiateurs sont retirés de l'igroup.
 * Le conteneur vVol est supprimé.
-* Les volumes flexibles sont laissés sur la baie de stockage.
+* Les FlexVol® sont laissés sur le stockage backend.
 
 
 Pour les banques de données vVols, vous pouvez supprimer la banque de données uniquement si aucun vVols n'est présent sur la banque de données sélectionnée.
@@ -50,7 +50,7 @@ Pour les banques de données vVols, vous pouvez supprimer la banque de données 
 |===
 .Étapes
 . Connectez-vous au client vSphere.
-. Cliquez avec le bouton droit sur un système hôte, un cluster hôte ou un centre de données et sélectionnez * Outils NetApp ONTAP * > * Supprimer la banque de données *.
+. Cliquez avec le bouton droit sur un système hôte, un cluster d'hôtes ou un centre de données et sélectionnez *NetApp ONTAP tools* > *Supprimer la banque de données*.
 +
 
 NOTE: Vous ne pouvez pas supprimer un datastore utilisé par des machines virtuelles. Déplacez les machines virtuelles vers un autre datastore avant de supprimer.

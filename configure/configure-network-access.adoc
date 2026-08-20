@@ -11,14 +11,14 @@ summary: 'Configurez l"accès réseau pour contrôler quelles adresses IP d"hôt
 
 
 [role="lead"]
-Par défaut, toutes les adresses IP détectées depuis l'hôte ESXi sont automatiquement ajoutées à la stratégie d'exportation, sauf si vous configurez l'accès réseau.  Vous pouvez modifier la politique d'exportation pour autoriser l'accès uniquement à partir d'adresses IP spécifiques.  Si un hôte ESXi exclu tente une opération de montage, l'opération échoue.
+Par défaut, ONTAP tools ajoute automatiquement toutes les adresses IP détectées depuis l’hôte ESXi à la règle d'export, sauf si vous configurez l’accès réseau. Vous pouvez modifier la règle d'export pour autoriser l’accès uniquement à partir d’adresses IP spécifiques ; les opérations de montage échouent pour les hôtes ESXi exclus.
 
 .Étapes
 . Connectez-vous au client vSphere.
-. Sélectionnez *NetApp ONTAP Tools* dans la page des raccourcis sous la section des modules externes.
+. Sélectionnez *NetApp ONTAP tools* sur la page des raccourcis, dans la section des plug-ins.
 . Dans le volet gauche des outils ONTAP , accédez à *Paramètres* > *Gérer l'accès au réseau* > *Modifier*.
 +
-Pour ajouter plusieurs adresses IP, séparez la liste par des virgules, une plage, un routage CIDR (Classless Inter-Domain Routing) ou une combinaison des trois.
+Pour ajouter plusieurs adresses IP, séparez la liste par des virgules, des plages, la notation CIDR (Classless Inter-Domain Routing) ou une combinaison des trois.
 
 . Sélectionnez *Enregistrer*.
 

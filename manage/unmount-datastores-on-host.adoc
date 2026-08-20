@@ -19,11 +19,11 @@ Utilisez cette tâche pour démonter une banque de données NFS ou VMFS depuis d
 . Connectez-vous au client vSphere.
 . Cliquez avec le bouton droit sur un objet de datastore NFS ou VMFS et sélectionnez *Démonter le datastore*.
 +
-Le client vSphere ouvre une boîte de dialogue et affiche la liste des hôtes ESXi qui montent la banque de données. Si la banque de données est protégée, ONTAP tools bloque la requête et affiche un message indiquant que la banque de données est sous protection et ne peut pas être démontée.
+Le vSphere Client ouvre une boîte de dialogue et affiche la liste des hôtes ESXi qui montent la banque de données. Si la banque de données est protégée, ONTAP tools bloque la requête et affiche un message indiquant que la banque de données est sous protection et ne peut pas être démontée.
 
 . Sélectionnez un ou plusieurs hôtes ESXi pour démonter le datastore.
 +
-Vous ne pouvez pas démonter le datastore de tous les hôtes. L'interface utilisateur suggère d'utiliser l'opération de suppression de datastore.
+Il est impossible de démonter le datastore de tous les hôtes. L'interface utilisateur suggère d'utiliser plutôt l'opération de suppression du datastore.
 
 . Sélectionnez le bouton *Unmount*.
 +

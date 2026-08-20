@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools Manager UI, appliance administration interface, tenant and backend management, ONTAP tools manager portal 
 summary: 'Utilisez ONTAP tools Manager pour gérer l"appliance, les locataires et les backends de stockage.' 
 ---
-= Découvrez l'interface utilisateur du gestionnaire d'outils ONTAP
+= Interface utilisateur du Gestionnaire d'outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: 'Utilisez ONTAP tools Manager pour gérer l"appliance, les locataires e
 
 [role="lead"]
 ONTAP tools Manager est une console web que vous utilisez pour gérer ONTAP tools for VMware vSphere, y compris les instances de serveur vCenter, les backends de stockage et la configuration de l'appliance, comme la haute disponibilité (HA) et la mise à l'échelle des nœuds. Elle prend en charge la multi-location, ce qui vous permet de gérer plusieurs instances de serveur vCenter à partir d'une seule interface.
-
-ONTAP Tools Manager est une console Web permettant de gérer les ONTAP tools for VMware vSphere, les instances vCenter Server, les backends de stockage et la configuration des appliances telles que la haute disponibilité (HA) et la mise à l'échelle des nœuds.
 
 ONTAP Tools Manager offre les fonctionnalités suivantes :
 
@@ -38,7 +36,7 @@ image:../media/ontap-tools-manager-overview.png["Présentation du tableau de bor
 | Carte d'appareil | La carte Appliance affiche l'état général de l'appliance des outils ONTAP , les détails de configuration et l'état des services activés.  Pour afficher plus d'informations, sélectionnez le lien *Afficher les détails*.  Si vous modifiez un paramètre d'appareil, la carte affiche l'état et les détails de la tâche jusqu'à ce que la modification soit terminée. 
 
 
-| Carte d'alertes | La carte Alertes affiche les alertes des outils ONTAP classées par type, y compris les alertes au niveau du nœud HA.  Vous pouvez afficher les alertes détaillées en cliquant sur le lien hypertexte de comptage, qui vous amène à la page des alertes filtrées par le type d'alerte sélectionné. 
+| Carte d'alertes | La fiche « Alertes » affiche les alertes des outils ONTAP classées par type, y compris les alertes au niveau des nœuds HA. Vous pouvez consulter les alertes détaillées en sélectionnant le lien du nombre, ce qui vous redirige vers la page des alertes filtrée selon le type d’alerte sélectionné. 
 
 
 | Carte vCenters | La carte vCenter affiche l’état de santé de toutes les instances de vCenter Server gérées par les outils ONTAP .  Vous pouvez afficher les détails de chaque vCenter en sélectionnant le lien correspondant, qui accède à une page contenant plus d'informations sur l'instance sélectionnée. 

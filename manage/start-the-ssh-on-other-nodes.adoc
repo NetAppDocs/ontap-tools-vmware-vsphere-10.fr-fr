@@ -11,7 +11,7 @@ summary: 'Démarrez SSH sur les autres nœuds avant d"effectuer une mise à nive
 
 
 [role="lead"]
-Avant de mettre à niveau ONTAP tools for VMware vSphere, vous devez démarrer SSH sur chacun des autres nœuds de votre environnement.
+Avant de mettre à niveau les outils ONTAP pour VMware vSphere, démarrez SSH sur chacun des autres nœuds de votre environnement.
 
 .Avant de commencer
 Activez l'extension VASA Provider pour votre instance vCenter Server.
@@ -23,8 +23,8 @@ Répétez cette procédure sur chaque nœud avant la mise à niveau.
 . Connectez-vous au serveur vCenter.
 . Localisez la machine virtuelle du nœud ONTAP tools et lancez la console Web.
 . Connectez-vous en utilisant les `maint` identifiants.
-. Entrez `4` Pour sélectionner support et Diagnostics.
-. Entrez `1` Pour sélectionner accès au shell de diagnostic.
+. Entrez `4` pour sélectionner *support et diagnostic*.
+. Appuyez sur Entrée `1` pour sélectionner *Accéder à l'interface de diagnostic*.
 . Entrez `y` pour continuer.
-. Exécutez la commande _sudo systemctl restart ssh_.
+. Exécutez la commande `sudo systemctl restart ssh`.
 

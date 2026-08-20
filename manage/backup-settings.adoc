@@ -11,13 +11,13 @@ summary: Activez ou désactivez la sauvegarde des ONTAP tools et configurez la f
 
 
 [role="lead"]
-À partir des ONTAP tools for VMware vSphere 10.5, la fonction de sauvegarde est activée par défaut et une sauvegarde est créée toutes les 10 minutes.  Vous pouvez désactiver la sauvegarde ou modifier la fréquence de la sauvegarde.
+À partir de ONTAP tools for VMware vSphere 10.5, les sauvegardes sont activées par défaut et s’exécutent toutes les 10 minutes. Vous pouvez désactiver les sauvegardes ou modifier la fréquence des sauvegardes.
 
-Ne désactivez pas la sauvegarde car elle empêche les outils ONTAP de maintenir un RPO faible.  La désactivation de la sauvegarde ne supprime pas les fichiers de sauvegarde existants.  Vous pouvez modifier la fréquence de la sauvegarde à une valeur comprise entre 10 et 60 minutes.
+Ne désactivez pas la sauvegarde, car cela empêche ONTAP tools de maintenir un faible objectif de point de récupération (RPO). La désactivation de la sauvegarde ne supprime pas les fichiers de sauvegarde existants. Vous pouvez modifier la fréquence de la sauvegarde à une valeur comprise entre 10 et 60 minutes.
 
 .Étapes
 . Lancez le Gestionnaire d'outils ONTAP à partir d'un navigateur Web : `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Connectez-vous à l'aide des outils ONTAP pour les informations d'identification d'administrateur VMware vSphere que vous avez fournies lors du déploiement.
 . Sélectionnez l'option *Paramètres* > *Sauvegarde* > *Modifier*.
-. Dans la fenêtre d'édition, vous pouvez désactiver la sauvegarde ou modifier la fréquence de sauvegarde.
+. Dans la fenêtre d'édition, désactivez la sauvegarde ou modifiez la fréquence de sauvegarde.
 
