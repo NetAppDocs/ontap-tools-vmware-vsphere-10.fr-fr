@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install NFS VAAI plug-in, NetApp NFS Plug-in for VAAI, ONTAP tools VAAI installation, vSphere NFS offload 
 summary: 'Installez le plug-in NFS NetApp pour VAAI à l"aide des outils ONTAP pour VMware vSphere.' 
 ---
-= Installez le plug-in NFS VAAI à l'aide des ONTAP tools
+= Installez le plug-in NFS VAAI avec les outils ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

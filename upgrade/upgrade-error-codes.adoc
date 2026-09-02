@@ -119,6 +119,37 @@ Les trois derniers chiffres du code d'erreur indiquent l'erreur de flux de trava
 | 089 | La modification de la propriété du fichier de configuration de rotation du journal de synthèse a échoué | Réessayez la mise à niveau. 
 
 
+| 094 | La configuration NTP a échoué et le système est revenu à NTPsec  a| 
+Si la mise à niveau échoue en raison d'une défaillance de l'installation de Chrony :
+
+. Vérifiez si Chrony est installé :
++
+[listing]
+----
+systemctl status chrony
+----
+. Si Chrony est installé et que le problème provient des serveurs NTP que vous avez fournis, vérifiez si ces serveurs sont accessibles :
++
+[listing]
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+Si les serveurs sont accessibles, le problème ne provient pas de leur accessibilité. Si un serveur est réellement inaccessible, supprimez-le de ONTAP tools Manager et indiquez à la place un serveur NTP accessible.
+
+. Si la mise à niveau échoue pour une autre raison lors de la mise à niveau NTP, consultez les journaux suivants :
++
+[listing]
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
+
+
+
+
 | 095 | Échec de la mise à niveau du se | Aucune récupération pour la mise à niveau du système d'exploitation. Les services d'outils ONTAP sont mis à niveau et de nouveaux pods seront en cours d'exécution. 
 
 
