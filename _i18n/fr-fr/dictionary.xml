@@ -1910,7 +1910,6 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">L'identifiant réseau principal (PNID) du vCenter Server doit figurer dans les détails du SAN. Le PNID et le nom DNS doivent être identiques et résolvables dans le DNS.</block>
   <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">Pour plus d'informations, consultez la documentation VMware :</block>
   <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">vSphere Exigences de certification pour les différents chemins de solution</block>
-  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
   <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">Remplacez le certificat SSL de la machine vCenter par un certificat signé par une autorité de certification personnalisée</block>
   <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
   <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">Erreur : Le champ Subject Alternate Name (SAN) ne contient pas le PNID. Veuillez fournir un certificat valide</block>
@@ -3138,4 +3137,5 @@ Les codes d'erreur sont composés de cinq chiffres, les deux premiers chiffres r
   <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">Si Chrony est installé et que le problème provient des serveurs NTP que vous avez fournis, vérifiez si ces serveurs sont accessibles :</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">Si les serveurs sont accessibles, le problème ne provient pas de leur accessibilité. Si un serveur est réellement inaccessible, supprimez-le de ONTAP tools Manager et indiquez à la place un serveur NTP accessible.</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">Si la mise à niveau échoue pour une autre raison lors de la mise à niveau NTP, consultez les journaux suivants :</block>
+  <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
 </blocks>
