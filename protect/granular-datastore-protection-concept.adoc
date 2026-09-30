@@ -20,7 +20,12 @@ Cette fonctionnalité vous permet de :
 * Protégez uniquement les banques de données sélectionnées dans un cluster hôte.
 * Regroupez les banques de données sélectionnées en groupes de protection.
 * Appliquez les relations et les politiques SnapMirror au niveau du groupe de protection.
-* Utilisez des approches de protection différentes pour les différents groupes de banques de données dans le même cluster.
+* Utilisez des approches de protection différentes pour différents groupes de datastores dans le même cluster hôte.
+* Attribuez plusieurs paramètres de protection à un seul cluster d’hôtes.
+* Configurez les paramètres de protection sur la même machine virtuelle de stockage (SVM), sur différentes SVM ou sur différents systèmes de stockage.
+* Conservez certaines banques de données d’un cluster hôte non protégées.
+* Supprimez la protection d'un datastore individuel.
+* Protégez un datastore pendant son provisionnement.
 
 
 Cette fonctionnalité prend uniquement en charge les banques de données VMFS qui utilisent les protocoles iSCSI ou FC.
@@ -76,7 +81,7 @@ Considérez les limites et le comportement opérationnels suivants :
 * Déclenchez le basculement depuis ONTAP System Manager. Configurez ONTAP Mediator en dehors des outils ONTAP.
 
 
-Lors de la mise à niveau depuis ONTAP tools 10.5, les configurations de protection des clusters hôtes existantes sont migrées vers un format de protection granulaire des banques de données. Après la mise à niveau, vérifiez les groupes de protection et l'appartenance aux banques de données.
+Lors de la mise à niveau depuis ONTAP tools for VMware vSphere 10.5, les paramètres de protection des clusters hôtes existants sont automatiquement convertis en protection granulaire des banques de données. Après la mise à niveau, vérifiez les groupes de protection et l’appartenance aux banques de données.
 
 .Informations associées
 * link:../protect/protect-multiple-ds.html["Protégez les banques de données d'un cluster avec les outils ONTAP"]

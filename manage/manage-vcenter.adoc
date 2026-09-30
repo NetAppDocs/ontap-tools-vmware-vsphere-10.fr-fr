@@ -117,7 +117,8 @@ Les outils ONTAP vous avertissent lorsque le certificat vCenter approche de son 
 +
 [listing]
 ----
-echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+echo | openssl s_client -connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+// OTVDOC-378 updates
 ----
 . Vérifiez que le certificat est au format ASCII Base 64 et qu'il comprend les lignes de début et de fin, par exemple :
 +

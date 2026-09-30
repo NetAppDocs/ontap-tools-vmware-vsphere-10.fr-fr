@@ -16,6 +16,9 @@ Vérifiez les versions prises en charge, le dimensionnement, les exigences en ma
 Déployez les outils ONTAP pour VMware vSphere sur un environnement vSphere pris en charge comprenant des hôtes ESXi et VMware vCenter Server Virtual Appliance (vCSA).
 
 
+NOTE: Ne déployez pas la machine virtuelle ONTAP tools à l'intérieur d'un VMware vApp dans vCenter Server.
+
+
 
 [[system-requirements]]
 == Configuration minimale requise
