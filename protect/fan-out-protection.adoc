@@ -14,7 +14,7 @@ summary: Protégez un groupe de cohérence avec une protection de répartition e
 Utilisez la protection par répartition pour protéger un groupe de cohérence sur deux clusters ONTAP de destination. ONTAP tools maintient la relation synchrone via les workflows de création, modification et suppression de protection de synchronisation active SnapMirror, et VMware Live Site Recovery maintient la relation asynchrone via les workflows de basculement et de reprotection.
 
 
-NOTE: La fonction de diffusion n'est pas prise en charge pour les utilisateurs de SVM.
+NOTE: La protection en étoile n’est pas prise en charge pour les utilisateurs SVM. La protection en étoile nécessite une relation asynchrone en plus de la relation AutomatedFailOverDuplex, et ONTAP tools ne prend pas en charge la création d’une protection asynchrone pour un back-end de stockage ajouté avec les identifiants d’un utilisateur SVM.
 
 Pour configurer la protection en éventail, associez les trois clusters de sites et les SVM.
 
